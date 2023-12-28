@@ -1,0 +1,990 @@
+[
+    {
+        "id": 101882,
+        "metadata": {
+            "Meta Keywords": " Chkrootkit, rootkit detection, LKM trojans, CGI backdoors, system integrity, binary integrity, intrusion detection, AIDE, Tripwire replacement, file integrity checker, GNU Flex, GNU Bison, GNU Make, ANSI C-Compiler, Mhash library, compilation, freshmeat.net, configure, ld.so.conf, config.log, tar xzf, aide.conf, permissions, inode, number of links, user, group, size, block count, mtime, atime, ctime, md5, sha1, rmd160, tiger, Empty group, SAMAGRule, rules set, control",
+            "Meta Description": " Chkrootkit is a reliable tool for checking the entire system for rootkits, LKM trojans, and CGI backdoors. It also performs integrity checks on binaries. Download the latest version from the official website to benefit from new detections and bug fixes. Learn how to compile and run Chkrootkit, and explore its additional features for investigating network attacks and testing binary integrity. Additionally, this article provides a step-by-step guide on how to compile and configure AIDE, a powerful intrusion detection software. It covers necessary software dependencies like GNU Flex, GNU Bison, GNU Make, and ANSI C-Compiler, and provides instructions on installing the Mhash library. Customize the AIDE configuration file (aide.conf) according to your system requirements and utilize a sample rules set (SAMAGRule) for enhanced control. Links to related resources are also provided for further configuration assistance."
+        }
+    },
+    {
+        "id": 101883,
+        "metadata": {
+            "Meta Keywords": " Internet security, commercial Internet security, Internet Security Systems, cyberspace, Internet, mainstream culture, corporations, safe environment, business functions, direct mail, business phone calls, communications, commerce, business operations, desktop, cyber criminals, network harm, data security, authentication, firewall, intrusion detection systems, network security, virus scanners, spam filters, encryption, internal threats, access controls, application filters, content filters, technology, outsmart hackers, cyber vandals, Internet utopia",
+            "Meta Description": " Discover the importance of Internet security and its evolution over the past decade. From creating a safe environment for corporations to conducting business online to combating cybercriminals and internal threats, explore how various security mechanisms have been developed to protect networks and assets. Stay informed and stay secure as we continue the race against time to outsmart hackers and achieve an Internet utopia."
+        }
+    },
+    {
+        "id": 101884,
+        "metadata": {
+            "Meta Keywords": " Osiris, local deployment, continent deployment, secure communication channel, SSL, portable, Linux, BSD, Windows, AIX, Solaris, MacOS, logging, alerts, kernel modules, file scanning, scheduled scans, secure server, limited access, remote login, mass deployment, remote_update.pl, SSH, ccrypt, GnuPG, file encryption, static binary, multi-OS deployment, compile, management console, agent, tarball, source directory, scripts, hosts, password, install program.",
+            "Meta Description": " Osiris is a versatile security tool that can be deployed locally or on different continents. It ensures secure communication through an SSL channel and is compatible with various platforms including Linux, BSD, Windows, AIX, Solaris, and MacOS. With features like logging, alerts, kernel modules, file scanning, and scheduled scans, Osiris provides comprehensive protection. The secure server allows limited access and remote login. Learn how to mass deploy Osiris using the \"remote_update.pl\" script and how to encrypt sensitive information with tools like ccrypt and GnuPG. Instructions are provided on how to compile Osiris as a static binary, use the management console, and deploy it onto remote systems using scripts. Additionally, you will find guidance on creating directories, transferring files, and installing programs based on your specific operating system."
+        }
+    },
+    {
+        "id": 101897,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package, initscripts, lang.csh, resolv.conf, CHAP, ppp-watch, bug fix, /tmp race vulnerability, DNS entries, linuxconf, IP aliases, static routes, ipx_interface, /sbin/service, devfs incompatibility, shutdown with quotas, forced 'interactive' startup, pppd default route problem, netcfg, linuxconf failure, pppd error messages, device alias configurations, Bug IDs, security problem, sound mixer settings, Intel, Sparc, RPMs, Solution, Verification.",
+            "Meta Description": " This Red Hat, Inc. security advisory announces new initscripts packages that fix a /tmp race vulnerability and various bugs in the initscripts of Red Hat Linux 6.1. The bugs include issues with CHAP authentication, DNS entries, IP aliases, static routes, ipx_interface, /sbin/service, devfs incompatibility, shutdown with quotas, forced 'interactive' startup, pppd default route problem, netcfg, linuxconf failure, pppd error messages, and device alias configurations. Users are recommended to update to the fixed packages. Find solutions for common issues including PPP default route, PPP log filling, device aliases, typo in rc.sysinit, sound mixer settings, and erroneous default routes in Red Hat Linux 6.1. Get the required RPMs for Intel and Sparc architectures and follow the provided solution and verification steps."
+        }
+    },
+    {
+        "id": 101898,
+        "metadata": {
+            "Meta Keywords": "\nRed Hat, Inc., Security Advisory, syslogd, sysklogd, stream socket, denial of service attack, vulnerability, patches, bug IDs, Red Hat Linux 6.1, RPMs, solution, verification",
+            "Meta Description": "\nThis Security Advisory provides information about a denial of service attack in syslogd. The advisory includes details about the vulnerability, patches, and relevant releases/architectures. Red Hat Linux 6.1 is not vulnerable to this issue, but users may wish to upgrade to the latest package. The solution involves running specific RPMs for each architecture. Verification steps are provided along with the GPG signature for security purposes."
+        }
+    },
+    {
+        "id": 101899,
+        "metadata": {
+            "Meta Keywords": " Red Hat Inc., security advisory, bind vulnerability, DNS server, NXT, solinger, fdmax, RPM, GPG signed, Red Hat, security key, verify checksig, md5sum, RPM 3.0, GnuPG keys",
+            "Meta Description": " This is a security advisory from Red Hat, Inc. regarding vulnerabilities in the bind package, specifically in the DNS server. The advisory provides information about the vulnerabilities, recommended actions, and related RPMs for different architectures. It is advised that users of bind upgrade to the latest packages to ensure security. These packages are GPG signed by Red Hat, Inc. for security. The Red Hat key can be found at http://www.RedHat.com/corp/contact.html. Use the command \"rpm --checksig filename\" to verify each package or \"rpm --checksig --nogpg filename\" to only check the md5sum for integrity. RPM >= 3.0 is required for GnuPG key verification."
+        }
+    },
+    {
+        "id": 101910,
+        "metadata": {
+            "Meta Keywords": " \nDebian Security Advisory, bind vulnerability, Denial of Service attack, server access, Debian GNU/Linux, version 8.2.5p5-0slink1, package upgrade, source archives, Alpha architecture, Intel ia32 architecture, MD5 checksum, Motorola 680x0 architecture, Sun Sparc architecture, updates, binary-m68k, dnsutils, binary-sparc, ftp.debian.org, stable, sid, apt-get, dpkg-ftp, mailing list, PGP signature",
+            "Meta Description": " \nThis Debian Security Advisory announces a vulnerability in the bind version distributed in Debian GNU/Linux 2.1 that can be exploited in a Denial of Service attack or used to gain access to the server. Users are advised to upgrade their bind package to version 8.2.5p5-0slink1. The advisory provides links to the source archives, as well as the binary packages for the Alpha and Intel ia32 architectures, along with their respective MD5 checksums."
+        }
+    },
+    {
+        "id": 101911,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package, Netscape, Netscape 4.7 Communicator, Navigator, RHSA-1999:039-02, Linux, RPM, font directory, packages, post-install script, X11, 75dpi, verification, GnuPG keys, security",
+            "Meta Description 1": " A new version of Netscape (4.7) has been released by Red Hat, Inc. This release fixes security problems in Javascript and form signing. The update is available for Red Hat Linux 6.x, Intel architecture.",
+            "Meta Description 2": " This page provides information on a bug fix for the original packages released for Red Hat Linux 6.0 and 6.1. It explains how to fix the error in the post-install script and provides instructions for users to run a command to resolve the issue. The page also includes information on verifying the packages and the GnuPG keys for security purposes."
+        }
+    },
+    {
+        "id": 101912,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., XFree86, security advisory, package, xterm, xdm, xinit, xfs, xinitrc, xkb, bug IDs, RPMs, Xvfb, cyrillic fonts, devel, doc, libs, alpha, 100dpi fonts, 75dpi fonts, 3DLabs, FBDev, Mach64, Mono, P9000, S3, S3V, SVGA, TGA, Xnest, sparc, Sun, Sun24, SunMono, VGA16, updates, FTP, bug fixes, security improvements, installation instructions, verification, PGP signing, MD5 sum",
+            "Meta Description": " Red Hat, Inc. has released new XFree86 packages for Red Hat Linux, addressing security vulnerabilities, bug fixes, and providing updates. This advisory provides information on the updated packages, bug IDs fixed, relevant releases/architectures, dependencies, conflicts, and installation instructions. Learn about the updates available for XFree86 on Red Hat and how to install them using RPM. Verify package integrity and security through PGP signing and MD5 sum. Get detailed instructions for the installation process."
+        }
+    },
+    {
+        "id": 101913,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Security Advisory, mars_nwe, buffer overflow",
+            "Meta Description": " This Red Hat, Inc. Security Advisory provides information on a buffer overflow issue in the mars_nwe package, which can lead to a local root compromise. Red Hat Linux 6.0 users should update their mars_nwe RPMs to fix the issue."
+        }
+    },
+    {
+        "id": 101914,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package, inews, Buffer overflow, inn, rnews, uucp, setuid bit, Red Hat Linux, cleanfeed, migration, bugtraq mailing list, RPM, verification, MD5 sum, PGP signed",
+            "Meta Description": " This Red Hat, Inc. Security Advisory provides information about a buffer overflow problem in the inews program. New packages for INN are available for all Red Hat Linux platforms to fix this issue. This article discusses the importance of disabling the setuid bit on rnews if uucp is not being run on a machine. It also highlights the backporting of the latest INN version to older Red Hat Linux releases, providing tips for migration and updates. Additionally, it mentions the requirement of a new package called cleanfeed for Red Hat Linux 4.2 inn. The article concludes with information on package verification using MD5 sums and PGP signatures from Red Hat Inc."
+        }
+    },
+    {
+        "id": 101915,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, AMD, Buffer overrun, RHSA-1999:032-01, am-utils, buffer overflow, remote exploit",
+            "Meta Description": " Red Hat, Inc. has released a security advisory regarding a buffer overrun issue in the AMD package. This issue is actively being exploited on the Internet. To address this issue, Red Hat recommends upgrading to the fixed version immediately. More information and RPM downloads are available on Red Hat's website."
+        }
+    },
+    {
+        "id": 101916,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package, vixie-cron, Buffer overflow, cron daemon, Advisory ID, RHSA-1999:030-02, Issue Date, Updated on, vixie-cron crond, MAILTO, scripts, logrotate, Red Hat Linux 4.2, SIGCHLD handler, zombie processes, upgrade packages, security issues, fixes, RPM, cron, verification",
+            "Meta Description": " This article provides information about a buffer overflow vulnerability in the vixie-cron package, specifically in the cron daemon. It covers the security advisory from Red Hat, Inc., including the Advisory ID, issue date, and updates. It also highlights the potential risk of local users gaining privilege and the use of specially formatted 'MAILTO' environment variables. Additionally, the description touches on another article related to scripts in logrotate, the issue with the SIGCHLD handler causing zombie processes, the recommendation to upgrade to newer packages, and instructions for solution and verification using RPM and cron."
+        }
+    },
+    {
+        "id": 101917,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, wu-ftpd, buffer overflow",
+            "Meta Description": " New packages of wu-ftpd with important security fixes and fixes for known issues are available for Red Hat Linux platforms. RPMs required for various architectures can be downloaded from the provided links. For verification, each package can be checked using the provided commands."
+        }
+    },
+    {
+        "id": 101918,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, in.telnetd, Denial of service attack, RHSA-1999:029-01, telnet, telnetd",
+            "Meta Description": " This security advisory discusses a denial of service attack that has been fixed in in.telnetd. It provides information on bug fixes, relevant releases/architectures, RPMs required, and the problem description. Instructions for solution and verification are also included."
+        }
+    },
+    {
+        "id": 101919,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, libtermcap, buffer overflow, tgetent(), RHSA-1999:028-01, termcap, xterm, bug IDs, Red Hat Linux 6.0, architectures, RPMs, source, problem description, solution, verification, PGP signed, key, command, md5sum, corrupt, tampered",
+            "Meta Description": " This text discusses a security advisory for Red Hat, Inc.'s libtermcap library. It addresses a buffer overflow vulnerability in the tgetent() function and provides a solution for different architectures. The meta keywords and meta description are optimized for web search."
+        }
+    },
+    {
+        "id": 101920,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, pump, DHCP, RoadRunner, @Home",
+            "Meta Description": " Find out about the latest security advisory from Red Hat Inc. regarding pump, the DHCP client. Upgrade to pump 0.7.0 to fix potential security holes, especially if you use DHCP on a public network like cable modem or ADSL service. Bug IDs fixed include 3263. Relevant releases/architectures: Red Hat Linux 6.0, all architectures. No conflicts or obsoleted versions. RPMs required for Intel, Alpha, SPARC, and source architectures. The update resolves issues with DHCP not working with certain servers and a security hole with the potential for remote root exploit in certain configurations. Find out more by visiting Red Hat Inc's website."
+        }
+    },
+    {
+        "id": 101921,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, squid, cachemgr.cgi, connect",
+            "Meta Description": " This Red Hat, Inc. Security Advisory provides information about the potential misuse of squid cachemgr.cgi, allowing remote users to send connect() requests from the local machine to arbitrary hosts and ports. It also includes bug IDs fixed, relevant releases/architectures, RPMs required, problem description, solution, and verification steps."
+        }
+    },
+    {
+        "id": 101922,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Samba, smbd, nmbd, security, race condition, smbmnt, problems, security holes, Samba team, RPMs, verification, MD5 sum, PGP signed",
+            "Meta Description": " This Red Hat, Inc. security advisory provides new Samba packages for Red Hat Linux 4.2, 5.2, and 6.0. The Samba 2.0.5a release fixes several security issues present in previous releases, including a race condition in smbmnt that can cause problems if installed setuid root. Users are advised to update their Samba packages to address the security vulnerabilities and to follow the instructions provided by Red Hat Inc. for verification of the package integrity using MD5 sums and PGP signatures."
+        }
+    },
+    {
+        "id": 101923,
+        "metadata": {
+            "Meta Keywords": " gnumeric, security, Red Hat, Inc., advisory, potential security problem",
+            "Meta Description": " This Red Hat, Inc. security advisory addresses a potential security problem in the gnumeric spreadsheet package. Upgrade to the latest version to ensure security. Verification instructions are provided."
+        }
+    },
+    {
+        "id": 101924,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, net-tools, RHSA-1999:017-01, buffer overruns",
+            "Meta Description": " This security advisory addresses a potential security problem in the net-tools package for Red Hat 6.0. The issue is related to buffer overruns, and the advisory provides a solution for it. Several bug fixes have been implemented to correct the problem. Relevant releases and architectures include Red Hat Linux 6.0 for all architectures. The advisory also provides links to necessary RPMs for Intel, Alpha, and SPARC architectures. The packages have been PGP signed by Red Hat Inc. for additional security."
+        }
+    },
+    {
+        "id": 101925,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package, KDE, update, Red Hat Linux 6.0, security holes, bugs, RPMs, kdeadmin, kdebase, kdegames, kdegraphics, kdelibs, kdemultimedia, kdenetwork, kdesupport, kdetoys, kdeutils, korganizer, kpilot, problem, solution, upgrade, security, configuration, mime attachments, symlink attack, PGP signed, verification, md5sum",
+            "Meta Description": " Get the latest RPM files for KDE packages on Red Hat Linux 6.0 sparc architecture from the FTP server at updates.RedHat.com. Upgrade to KDE 1.1.1 final to fix bugs and security holes identified in the initial packages. Ensure package authenticity by verifying PGP signatures and md5sums provided by Red Hat Inc."
+        }
+    },
+    {
+        "id": 101926,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, package, dev, rxvt, screen, pts, devpts, tty, umount, error message, device is busy, unmount filesystem, close connections, xterm, remote connections, MD5 sum, package name, RPM, PGP signed",
+            "Meta Description": " This Red Hat, Inc. security advisory provides information about new dev, rxvt, and screen packages available for Red Hat Linux 6.0. The advisory includes details about the issue, bug IDs fixed, relevant releases/architectures, RPMs required, and the solution to fix the security issue. Upgrade to the latest errata releases of dev, screen, and rxvt for Red Hat Linux 6.0 on your particular platform.",
+            "If you encounter the error message \"umount": " /dev/pts: device is busy\" when trying to unmount a filesystem, this article provides a solution by explaining how to close all connections using the filesystem. It includes steps for closing connections in screen, xterm, and other X terminal programs, as well as some remote connections. Additionally, the article mentions the verification process and provides the MD5 sums and package names for various RPMs. It also mentions that these packages are PGP signed by Red Hat Inc. for security, and provides a link to their key."
+        }
+    },
+    {
+        "id": 101930,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Netscape, 4.7 Communicator, Navigator, RHSA-1999:039-02, Unix, Red Hat Linux, font path, packages, RPM, verification, GnuPG, security, Javascript, form signing, error, downloading",
+            "Meta Description": " This security advisory from Red Hat, Inc. announces the availability of new Netscape packages (version 4.7) that fix security issues in Javascript and form signing. The update is recommended for users of Red Hat Linux 6.x. This page provides information and solutions for an error in the original packages released for Red Hat Linux 6.0 and 6.1. It includes instructions for fixing the error, options for downloading new packages, and steps for verification using RPM and GnuPG."
+        }
+    },
+    {
+        "id": 101931,
+        "metadata": {
+            "Meta Keywords": " pam, security, login, NIS server",
+            "Meta Description": " This advisory discusses the availability of new PAM packages to address a vulnerability that allows access to locked NIS accounts under certain network configurations in Red Hat Linux 6.1. Upgrade the PAM packages on all affected workstations for improved security."
+        }
+    },
+    {
+        "id": 101932,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc, Security Advisory, Package Screen, Unix98 ptys, RHSA-1999:042-01, permissions, screen, unix98 pty",
+            "Meta Description": " This Red Hat, Inc. Security Advisory discusses an issue with the screen package on Red Hat Linux 6.1, where it defaults to not using Unix98 ptys, causing insecure permissions. The updated packages restore the Unix98 pty support. This advisory also provides bug IDs, relevant releases/architectures, solution instructions, and verification steps.\""
+        }
+    },
+    {
+        "id": 101933,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security, Advisory, Package, wu-ftpd, RHSA-1999:043-01, wu-ftp, security, remote exploit, vulnerabilities, MAPPING_CHDIR Buffer Overflow, Message File Buffer Overflow, SITE NEWER Consumes Memory, Red Hat Linux 6.1",
+            "Meta Description": " Find out about the security problems in WU-FTPD, the FTP server shipped with Red Hat Linux. Learn about the vulnerabilities and how they can be exploited, and find the necessary RPMs for a solution."
+        }
+    },
+    {
+        "id": 101934,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package, lpr, File access problems, lpd, Advisory ID, RHSA-1999:041-03, Cross references, Race condition, File access vulnerability, Remote printing bug, Bug IDs, RPM, updates, FTP, source, architecture, verification, GPG, security",
+            "Meta Description": " This security advisory from Red Hat, Inc. addresses file access problems in the lpr and lpd programs, which could allow unauthorized users to print files they do not have access to. The advisory includes information on the vulnerabilities, bug fixes, and recommended updates. It also provides relevant release and architecture details. Additionally, the page provides FTP links to various Red Hat updates and packages for different architectures, including i386, alpha, SPARC, and noarch. The page also includes instructions for installing and verifying the packages, as well as information about GPG signatures for security."
+        }
+    },
+    {
+        "id": 101935,
+        "metadata": {
+            "Meta Keywords": " ypserv, yppasswdd, rpc.yppasswdd, Red Hat Linux, security advisory, security holes, NIS server, password-change server, buffer overflow, md5 hash generation, packages, bug IDs, releases/architectures, RPMs, solution, verification, GPG signed.",
+            "Meta Description": " Discover security advisory for the ypserv package in Red Hat Linux. Upgrade to new packages to address security holes including password table injection and buffer overflow. Verify packages for security using RPM."
+        }
+    },
+    {
+        "id": 101936,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package bind, bind named, NXT, solinger, fdmax, vulnerability, DNS server, bug, remote attacker, denial-of-service attack",
+            "Meta Description": " This security advisory from Red Hat, Inc. addresses various vulnerabilities in the DNS server package 'bind'. It provides information on the vulnerabilities, recommended upgrades, bug IDs fixed, relevant releases and architectures, required RPMs, solution instructions, and verification details. These packages (f0c2e341fe81310d3031be7e0d67225f, 4f34e526ec52c94b9cd3411892f920df, 5cb10493b44f9fe2a9c6667ebe0a0a8f, 94e19627ae83388e7d4795f45676c4b6, 06932040ed8b8ff5eb8edb09c069acf9, de0fa8d33d877d2ed7f8d26949b4a937, 54b757c6e240d4c82ca740ac49eb3db7, 8453658392c3b2a321f7647eb875d5d2, 9894188ea1e8a5f657f13d940091114d, 987d55828aab270e14777a034d029cea) are GPG signed by Red Hat, Inc. for security. You can verify each package using the rpm --checksig command or check the md5sum to ensure they have not been corrupted or tampered with. To check GnuPG keys, RPM 3.0 or higher is required."
+        }
+    },
+    {
+        "id": 101937,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, syslogd, RHSA-1999:055-01, denial of service attack, sysklogd, stream socket, bugtraq id #809",
+            "Meta Description": " This security advisory from Red Hat, Inc. highlights a denial of service attack vulnerability in the syslogd system log daemon. It provides information on the issue, bug fixes, relevant releases/architectures, and the solution to mitigate the vulnerability."
+        }
+    },
+    {
+        "id": 101938,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, Package initscripts, RHSA-1999:052-04, lang.csh, resolv.conf, CHAP, ppp-watch, bug fixes, Red Hat Linux 6.1, PPP default route, PPP log filling, device aliases, typo in rc.sysinit, sound mixer settings, erroneous default routes, Intel, Sparc, RPMs, solution, verification",
+            "Meta Description": " \n1. Learn about the latest security advisory for Red Hat initscripts package. This advisory includes bug fixes for lang.csh, resolv.conf, CHAP, ppp-watch, and other issues in Red Hat Linux 6.1. It is recommended for users to update to the fixed packages.\n2. This page provides information and solutions for various issues such as PPP default route, PPP log filling, device aliases, typo in rc.sysinit, sound mixer settings, and erroneous default routes. It also includes relevant releases/architectures, RPMs required, and a verification process. The page is specifically related to Red Hat Linux 6.1 for Intel and Sparc architectures."
+        }
+    },
+    {
+        "id": 101939,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc, Security Advisory, ORBit, esound, gnome-core, denial-of-service, security hole, authentication keys, TCP Wrappers, bug IDs, Red Hat Linux 6.1, Intel, SPARC, RPMs required, solution, verification, rpm packages, GPG signed, md5sum",
+            "Meta Description": " This Red Hat, Inc. Security Advisory addresses new ORBit, esound, and gnome-core packages. The advisory highlights the security issues found in ORBit and gnome-session, such as a denial-of-service hole and easily guessable random data used for authentication. The solution involves updating the relevant RPMs for Red Hat Linux 6.1 on Intel and SPARC architectures. Verification is provided through MD5 sums. These RPM packages are GPG signed by Red Hat, Inc. for security. You can verify each package using the rpm --checksig command. If you only want to verify that the packages have not been corrupted or tampered with, you can examine the md5sum using the rpm --checksig --nogpg command. Note that RPM >= 3.0 is required for GnuPG key checks."
+        }
+    },
+    {
+        "id": 101940,
+        "metadata": {
+            "Meta Keywords": " SuSE, Security Announcement, netscape, unix, operating systems, communicator, security hole, update, disable, Linux distributions, vendor, quality enhancement, talkback, crash, file, pid, sym links, hard links, process, users, buffer overflow, solution, vulnerability, version, security vulnerabilities, installation, mailing list services, security discussions, security announcements, subscribe, bugs, SuSE Linux Distribution, report, email, support line, public key, confidentiality, redistribution ",
+            "Meta Description": " This SuSE security announcement addresses a security hole in the netscape-4.5-9 package for Unix operating systems using netscape communicator 4.5. It recommends updating or disabling the software and provides a solution. Subscribe to the SuSE security mailing list for general/Linux/SuSE security discussions and announcements. Report any new security bugs in the SuSE Linux Distribution to security@suse.de or call their support line."
+        }
+    },
+    {
+        "id": 101941,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, Linux distributions, security hole, update package, permissions, bug fix, vulnerabilities, IP-spoofing, root access, authentication, remote access, kernel, md5 checksum, ftp server, security mailing list, SuSE Linux Distribution, security bugs, SuSE Security Team",
+            "Meta Description": " The SuSE Security Announcement warns about a security hole in the SuSE Linux installation. It advises users to update or disable the affected service. The announcement highlights the vulnerabilities and risks related to blind IP-spoofing, root access, and authentication. The solution involves executing a specific command and installing a new kernel version. The announcement also provides links to download the update package and access security mailing lists for further information."
+        }
+    },
+    {
+        "id": 101942,
+        "metadata": {
+            "Meta Keywords": " \nSuSE Security Announcement, xf86, security hole, vulnerability, XFree86, update package, tempory fix, upgrade packages, md5 checksums, ea4c0301ee8f33339f5908d82a4b271d, d219a182a79723b258b28f87bc22ee68, d8ad0f9b0d57f887cc076e794a749738, ff0c37343e5bd30261ab7f05604ea6e7, e151bf1ed2d6c9824b2c521dcf2f7141, 9099ebe5428098f8ffacd1ab691b5937, 5627fc4da2eab1f56a9e636374982ede, libc5 archives, b07d322b63b4dc1f0810612907caaaa0, 7a56420b929cb1b3e8507d9b3b36b287, 494687ca8adbebaf213eee10f4be290c, 1cad4cdd644d4f17f4f936f5c2d95ff6, 39683c93132a16f0e79fc414bfb338f1, 7a2707ff0cb3ee59d3695f01256c1484, 5c0d05b4b1a53f039c35623c1669eb0f, cb707a8c22b77478236a81bc58f5edfa, e1083e3e18f5a5aeb8de1aff93bd9026, bb74f0e93121a8747e8c38bf1e0121e0, 1d38958dd9ac4fbdd1ccef960667ab45 ",
+            "Meta Description": " \nGet updates for the xf86 package and learn about a security hole discovered. You can update your software or disable the service to protect your system. Check the provided upgrade packages with md5 checksums for verification. The packages include xp9k, xs3, xs3v, xsvga, xvga16, xw32, xxprt, x8514, xagx, xdevel, xdoc, xextra, xf86, xfbdev, xfnt100, xfntbig, xfntcyr, xfntscl, xfsetup, xglint, xi128, xlkit, xmach32, and xmach64. Also, find updates for xmach8, xman, xmono, xp9k, xs3, xs3v, xshared, xsvga, xvga16, xw32, and xxprt on our FTP server. Visit the provided web pages for more information and a list of mirrors."
+        }
+    },
+    {
+        "id": 101943,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, INN, security holes, Unix operating systems, SuSE Linux, update package, SUID root, local root access, security mailing list, patch, security bugs, SuSE Linux Distribution, pgp, SuSE Security Team",
+            "Meta Description": " This is a SuSE security announcement regarding the INN package. It discusses security holes and provides instructions on how to update or disable the affected software. It also mentions the availability of security mailing lists for subscribing. If you have any new security bugs to report for SuSE Linux, contact their support line or send an email to security@suse.de."
+        }
+    },
+    {
+        "id": 101944,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, Linux kernel 2.2.x, security hole, update, SuSE Linux installation, Linux distributions, operating systems, vendor, problem description, kernel panic, impact, shutdown, network, malicious ICMP packets, solution, fixed kernel, upgrade package, md5 checksum, ftp server, patches, web pages, mirrors",
+            "Meta Description": " Discover a security hole in the Linux kernel 2.2.x affecting SuSE Linux systems. Take immediate action by updating or disabling the service. Find the fixed kernel on our ftp server, along with the md5 checksum for verification. Visit our web pages for patches and a list of mirrors for assistance. Ensure the security of your SuSE Linux installation today."
+        }
+    },
+    {
+        "id": 101945,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, pine-4.X, Unix operating systems, security hole, update, disable service, SuSE Linux installation, Linux distributions, operating systems, vendor, problem description, shell scripts, binary programs, impact, remote root compromise, solution, fixed pine package, ftp server, md5 checksums, upgrade packages, updates, libc5 version, patches, web pages, mirrors",
+            "Meta Description": " Read about a security hole discovered in the pine-4.X package affecting all Unix operating systems. Learn how to update or disable the service and prevent remote root compromise. Find the fixed pine package on the ftp server and verify the md5 checksums before installation. Explore additional resources for patches and a list of mirrors."
+        }
+    },
+    {
+        "id": 101946,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, man-2.3.10-42, Linux distributions, security hole, zsoelim program, attacker, symbolic links, man package, update package, md5 checksums, upgrade packages, ftp server, patches, mirrors",
+            "Meta Description": " Stay up to date with the latest security announcements from SuSE Linux. Update or disable the man-2.3.10-42 package to protect your system from a security hole. Learn more about the vulnerability and find the necessary upgrade packages on our ftp server. Verify the md5 checksums before installation. Visit our webpage for patches or check out our list of mirrors for alternative download options."
+        }
+    },
+    {
+        "id": 101947,
+        "metadata": {
+            "Meta Keywords": "\nSuSE Security Announcement, kbase, KDE screensaver, Unix operating systems, security hole, update, disable service, bug, password authentication, bypass, key sequence, solution, ftp server, md5 checksum, fixed package, patches, mirrors",
+            "Meta Description": "\nLearn about the SuSE Security Announcement for the kbase package, a KDE screensaver, which contains a security hole that allows for bypassing password authentication. Find out how to update or disable the service to protect your SuSE Linux installation(s). Visit the provided FTP server to download the updated package, verify the md5 checksum, and access patches for this issue."
+        }
+    },
+    {
+        "id": 101948,
+        "metadata": {
+            "Meta Keywords": "\nSuSE, Security Announcement, Samba, Linux systems, security holes, update, disable service, software, distribution, operating system, vendor, warranty, liability, installation, problem description, setuid root, race condition, denial-of-service attack, buffer overflow, impact, filesystem, DoS attack, CPU resources, message command, solution, updated package, ftp server, md5 checksum, new package, ftp-Server, patches, website, mirrors.",
+            "Meta Description": "\nThis SuSE Security Announcement discusses security vulnerabilities in the Samba package for Linux systems. It advises users to update or disable the affected service and provides a solution to the issues. Find the updated package and additional information on the vendor's website or through mirrors."
+        }
+    },
+    {
+        "id": 101949,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, i4l, xmonisdn, Linux, libc, security hole, update, disable service, ISDN network connections, root privileges, temporary fix, updated package, patches, ftp server, mirrors.",
+            "Meta Description": " This SuSE Security Announcement alerts users of a security hole in the i4l package. Users are advised to update or disable the affected service on their SuSE Linux installations. The issue may also impact other Linux distributions and operating systems. Find more information, patches, and mirrors on the provided webpages. Ensure the safety of your system by staying updated."
+        }
+    },
+    {
+        "id": 101950,
+        "metadata": {
+            "Meta Keywords": "\nSuSE Security Announcement, termcap, Linux distributions, libtermcap, security, vulnerability, buffer overflow, setuid root, root privileges, update package, termcap package, md5 checksums, upgrade packages, FTP server, patch, mirrors",
+            "Meta Description": "\nDiscover the latest security announcement for SuSE Linux and the termcap package. Find out if your Linux distribution is affected by this vulnerability and learn how to update or disable the affected software. Ensure the security of your system by installing the upgraded termcap package from the provided FTP server. Verify the integrity of the upgrade packages using the provided md5 checksums. Explore the web pages for patches and mirrors for more information. Please note that this information is provided on an \"as-is\" basis with no warranty or liability for any damage."
+        }
+    },
+    {
+        "id": 101951,
+        "metadata": {
+            "Meta Keywords": "\nSuSE Security, trn, Unix operating systems, security hole, update package, md5 checksums, FTP server, patches, mirrors",
+            "Meta Description": "\nStay informed about the latest security announcement from SuSE regarding the trn package. Update or disable the service on your SuSE Linux installation to protect against a known security vulnerability. Find the upgrade packages, md5 checksums, and patches on the SuSE FTP server or visit their website for more information and a list of mirrors."
+        }
+    },
+    {
+        "id": 101952,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, netcfg, Unix systems, auth daemon, security hole, update, disable service, SuSE Linux, Linux distributions, operating systems, vendor, information, warranty, liability, installation, problem description, in.identd, inetd, Denial-of-Service attack, system resources, unresponsive, solution, start flag, system administrators, security reasons, patches, web pages, mirrors",
+            "Meta Description": " Get the latest SuSE Security Announcement for netcfg package. This announcement highlights a security hole that affects all Unix systems using auth daemon without resource control. Take immediate action by updating or disabling the service on your SuSE Linux installation(s). Other Linux distributions or operating systems may also be affected. Contact your vendor for more information and visit the provided web pages for patches or a list of mirrors."
+        }
+    },
+    {
+        "id": 101953,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, rsync, Linux distributions, security hole, update package, directory permissions, remote rsync, ssh/rsh, local root compromise, PATH environment variable, upgrade packages, md5 checksums, FTP server, rsync.rpm, patches, mirrors",
+            "Meta Description": " Stay informed about the latest SuSE Security Announcement regarding a security hole in rsync package. Find out how this vulnerability can lead to local root compromise and learn how to protect your system by updating the rsync package from the FTP server. Verify the md5 checksums of the upgrade packages before installation. Explore the provided web pages for more information, patches, and mirrors."
+        }
+    },
+    {
+        "id": 101954,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, cron, Vixie Cron, Unix operating systems, security holes, update package, local buffer, sendmail, root compromise, denial-of-service attack, crond package, md5 checksums, upgrade packages, FTP server, webpages, patches",
+            "Meta Description": " \n\"Discover the latest SuSE Security Announcement regarding the cron-3.0.1-75 (Vixie Cron) package and previous versions. Learn about the security threats found, their impact, and the recommended solution. Check the md5 checksums of the upgrade packages before installing. Find the update and additional information on our FTP server and webpages.\""
+        }
+    },
+    {
+        "id": 101956,
+        "metadata": {
+            "Meta Keywords": " pine-4.x, earlier, patch, security bug, IMAP support, upgrade packages, md5 checksums, ftp-server, webpage patches, mirrors",
+            "Meta Description": " Get the latest pine package update to fix a security bug and restore IMAP support. Check the md5 checksums before installing the packages. Find the update on our ftp-server and visit our webpage for patches or a list of mirrors."
+        }
+    },
+    {
+        "id": 101957,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, lynx-2.8.2, Linux distributions, security hole, update, disable service, software, SuSE Linux, vendor, external programs, protocols, telnet, commandline parameters, tracefile options, .rhosts, impact, files, remote commands, ssh, rsh, solution, lynx package, md5 checksums, upgrade packages, FTP server, patches, mirrors",
+            "Meta Description": " Stay updated with the latest SuSE Security Announcement regarding the package lynx-2.8.2 and older. Find information on the security hole discovered and the recommended solution to update or disable the service. Protect your SuSE Linux installation from potential damage caused by external programs and protocols. Visit the provided FTP server link for the upgraded lynx package and check for md5 checksums before installation. Explore the webpage for patches and a list of mirrors for more information."
+        }
+    },
+    {
+        "id": 101958,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, proftpd, security hole, buffer overflow, remote attacker, root access, vulnerability, ftpd server, patches",
+            "Meta Description": " Discover the latest SuSE security announcement regarding proftpd. Learn about the security hole, buffer overflows, and the vulnerability to remote attackers. Find out how to protect your system by deactivating or uninstalling the affected package and using a secure ftpd server. Stay updated on patches and mirrors available for fix."
+        }
+    },
+    {
+        "id": 101959,
+        "metadata": {
+            "Meta Keywords": "\nSuSE Security Announcement, mars_nwe, Linux distributions, security hole, buffer overflows, root access, upgrade packages, md5 checksums, FTP server, patches, mirrors",
+            "Meta Description": "\nThis SuSE Security Announcement informs about a security hole discovered in the mars_nwe package, affecting all Linux distributions. It advises users to update or disable the software and provides links to the upgrade packages, FTP server, patches, and mirrors for further information."
+        }
+    },
+    {
+        "id": 101960,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, pbpg-1.x, Linux distributions, security hole, update, disable service, software, SuSE Linux, vendor, information, warranty, liability, direct damage, indirect damage, incidental damage, system file, /usr/bin/pg, /usr/bin/pb, /etc/shadow file, private email, solution, upgraded packages, md5 checksums, FTP server, patches, upgrade, ftp-Server, list of mirrors",
+            "Meta Description": " Discover a security hole in the pbpg-1.x package affecting all Linux distributions. Update or disable the service on your SuSE Linux installation to prevent data breaches. Read more for the solution and upgrade packages on our FTP server. Verify the md5 checksums before installation. Visit our website for patches and a list of mirrors."
+        }
+    },
+    {
+        "id": 101961,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, sccw, Linux distributions, security hole, update package, /usr/bin/sccw tool, /etc/shadow file, private email, md5 checksums, upgrade packages, ftp server, web pages, mirrors, security mailing list services, suse-security, suse-security-announce, subscribe",
+            "Meta Description": " Discover the latest SuSE Security Announcement regarding the sccw package. Learn about a security hole that can affect all Linux distributions using sccw, and find out how to update or disable the service. Protect your system from unauthorized access and potential data breaches. Subscribe to SuSE's security mailing list for regular security updates and announcements."
+        }
+    },
+    {
+        "id": 101962,
+        "metadata": {
+            "Meta Keywords": "\nsccw security, Linux distributions, vulnerability, update package, FTP server, md5 checksums, SuSE Linux, root compromise",
+            "Meta Description": "\nStay updated with the latest security announcement for the SuSE Linux distribution. Find information about a security vulnerability in the sccw package and learn how to update your system with the latest patch. Protect your system from potential root compromise. Access the update package and verify its authenticity using the provided md5 checksums."
+        }
+    },
+    {
+        "id": 101963,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, mutt package, security hole, buffer overflow, email security, system compromise",
+            "Meta Description": " Stay informed about the SuSE Security Announcement regarding the mutt package and its potential security vulnerabilities. Learn how to update or disable the software to avoid system compromise. Find upgrade packages and patches on the SuSE FTP server or visit the SuSE website for more information."
+        }
+    },
+    {
+        "id": 101964,
+        "metadata": {
+            "Meta Keywords": " SuSE, Security Announcement, Mirror, Linux distributions, vulnerability, update package",
+            "Meta Description": " SuSE Security Announcement: A security hole was discovered in the mirror package. Update as soon as possible or disable the service. Other Linux distributions may also be affected. Find the update packages and more information on the SuSE website."
+        }
+    },
+    {
+        "id": 101965,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, cdwtools, Linux distributions, security hole, update package, buffer overflows, /tmp vulnerabilities, local root compromise",
+            "Meta Description": " Find out about a security hole in the cdwtools package affecting Linux distributions. Update or disable the software on your SuSE Linux installation to prevent potential compromise to your system. Check out the provided upgrade packages and checksums for verification before installation. Visit the provided FTP server or webpages for patches and mirrors."
+        }
+    },
+    {
+        "id": 101966,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, ypserv, vulnerability, NIS, network user account management, buffer overflow, rpc.yppasswd, rpc.yppasswdd, GECO, login shell values, administrator access, domain, code execution, user information, restricted accounts, upgrade packages, md5 checksums, SuSE 6.0, FTP server, patches, mirrors.",
+            "Meta Description": " Stay informed about the latest security announcement for SuSE ypserv package. Patch vulnerabilities related to NIS and ensure the safety of your network user account management. Upgrade packages are available on our FTP server with md5 checksum verification. Visit our website for more information and a list of mirrors."
+        }
+    },
+    {
+        "id": 101967,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, lprold, security hole, Linux distributions, update package, file access permissions, race condition, user permissions, FTP server, md5 checksums, upgrade packages, ftp-Server, patches, mirrors",
+            "Meta Description": " This SuSE security announcement highlights a security hole in the lprold package, affecting all Linux distributions. The update package provides a solution by addressing file access permissions and preventing unauthorized printing. Visit the FTP server for the upgrade packages and verify md5 checksums before installation. Patch webpages and mirror lists are also available for further information."
+        }
+    },
+    {
+        "id": 101968,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, nfs-server, remote root compromise, buffer overflow, rpc.nfsd, vulnerability, update package, md5 checksums, FTP server, Intel processors, Alpha processors, web pages, mirrors, patches, security announcements, vulnerabilities, contact\n \nMeta Description: SuSE Security Announcement: A security hole was discovered in the nfs-server package, allowing for remote root compromise. Please update or disable the service as soon as possible. Find the update package on our FTP server and verify the md5 checksums before installing. Visit our web pages for a list of mirrors, patches, and security announcements. Contact us to report vulnerabilities."
+        }
+    },
+    {
+        "id": 101969,
+        "metadata": {
+            "Meta Keywords": " SuSE security announcement, bind8, bind4, remote root compromise, denial of service, vulnerability, Linux, update package, md5 checksums, ftp server, updates, Intel processors, Alpha processors, mirrors, web pages, patches, security announcements, vulnerabilities, contact, SUSE",
+            "Meta Description": " This SuSE security announcement highlights a vulnerability in bind8 and bind4, which can lead to remote root compromise and denial of service. The announcement advises users to update or disable the affected software on SuSE Linux installations and provides FTP links for updated packages. Users are also warned to verify the md5 checksums of the updates before installation. Find updates on SUSE's FTP server for Intel and Alpha processors. Check the provided web pages for mirrors, patches, security announcements, and information on reporting vulnerabilities. Contact security@suse.de for more details."
+        }
+    },
+    {
+        "id": 101970,
+        "metadata": {
+            "Meta Keywords": " SuSE, Security Announcement, thttpd, package, vulnerability, remote compromise, Unix systems, Linux distributions, update package, md5 checksums, FTP server, web pages, mirrors, patches, security announcements, vulnerabilities",
+            "Meta Description": " This SuSE Security Announcement informs users about a security vulnerability in thttpd web server. It provides information on the affected package, affected systems, impact, and solution. Users are advised to update the package or disable the service. Relevant md5 checksums and download links are provided for the update. For more information and security announcements, visit the provided webpages. Contact security@suse.de for reporting vulnerabilities."
+        }
+    },
+    {
+        "id": 101971,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, syslogd, vulnerability, local denial-of-service attack, SuSE versions, Linux systems, Unix Domain stream socket, log messages, syslog, package update, md5 checksums, FTP server, patches, security announcements",
+            "Meta Description": " Discover a security vulnerability in syslogd package affecting SuSE versions 6.2 and 6.3. Learn about the impact and solution for this local denial-of-service attack. Find the updated package on our FTP server and verify the md5 checksums before installation. Visit our website for patches and security announcements."
+        }
+    },
+    {
+        "id": 101972,
+        "metadata": {
+            "Meta Keywords": " SuSE Security Announcement, inn, vulnerability, denial-of-service attack, SuSE versions, unix systems, security hole, bounds checking, static buffers, update package, md5 checksums, ftp server, web pages, mirrors, patches, security announcements, vulnerabilities",
+            "Meta Description": " This SuSE Security Announcement informs users about a security vulnerability in the inn package. Users are advised to update their packages or disable the service. The announcement includes information on affected SuSE versions, the vulnerability type, and affected systems. It also provides solutions, md5 checksums for the updates, and links to the FTP server and web pages for downloading the updates. Additionally, users can find information on mirrors, patches, and reporting vulnerabilities."
+        }
+    },
+    {
+        "id": 101973,
+        "metadata": {
+            "Meta Keywords": " netstd, buffer overflow, bootp server, FTP client, netstd package, version 3.07-2hamm.4, upgrade, Debian GNU/Linux 2.0, hamm, Intel architecture, Motorola 680x0 architecture, source archives, security managers, debian-security-announce",
+            "Meta Description": " Upgrade your netstd package immediately to fix two buffer overflows in the bootp server and FTP client. This version of Debian GNU/Linux 2.0 was released for the Intel and Motorola 680x0 architecture. Source archives and installation files can be found at ftp://ftp.debian.org/debian. Contact debian-security-announce for any security concerns."
+        }
+    },
+    {
+        "id": 101974,
+        "metadata": {
+            "Meta Keywords": " ftpwatch, Debian GNU/Linux, security problem, root access, advisory, package removal, new version, security managers, security@debian.org, debian-security-announce@lists.debian.org, Christian Hudon, Wichert Akkerman, Martin Schulze. ",
+            "Meta Description": " Discover a security problem in the distributed ftpwatch package for Debian GNU/Linux. Learn how to gain root access and remove the package immediately. Stay tuned for updates on a new version to address these issues from Debian's security team. Contact security@debian.org for more information."
+        }
+    },
+    {
+        "id": 101975,
+        "metadata": {
+            "Meta Keywords": " proftpd, Debian GNU/Linux, vulnerability, buffer overflow, shell access, login access, logging mechanisms, upgrade, Intel, Motorola 680x0 architecture, source archives, FTP",
+            "Meta Description": " Learn about the vulnerability in the proftpd package for Debian GNU/Linux 2.0 and how it can be fixed. Upgrade your proftpd package immediately to ensure security. Read more about the issue and find the necessary files for installation."
+        }
+    },
+    {
+        "id": 101976,
+        "metadata": {
+            "Meta Keywords": " wu-ftpd, buffer overflow, security vulnerability, Debian GNU/Linux, shell access, login access, logging mechanisms, upgrade, Intel architecture, Motorola 680x0 architecture, checksum, ftp archives, PGP signature",
+            "Meta Description": " \n\"Discover the latest security updates for the wu-ftpd-academ package in Debian GNU/Linux 2.0. Learn how to fix the buffer overflow vulnerability and gain shell access. Upgrade your package now and ensure the safety of your system. Checksums and download links included.\""
+        }
+    },
+    {
+        "id": 101977,
+        "metadata": {
+            "Meta Keywords": " cfengine, Debian GNU/Linux, temporary files, tidy action, symlink attack, upgrade, homedirectories, fix, package, Intel, Motorola 680x0 architecture",
+            "Meta Description": " The maintainer of Debian GNU/Linux cfengine package has found an error in handling temporary files which makes it susceptible to a symlink attack. Upgrade your cfengine package immediately. Links to the relevant files and architectures are provided."
+        }
+    },
+    {
+        "id": 101978,
+        "metadata": {
+            "Meta Keywords": " Debian GNU/Linux, security, buffer overflow, super package, .supertab file, upgrade, wget url, dpkg -i file.deb, Debian 2.0, Debian 2.1, Debian unstable, source archives, Intel architecture, Motorola 68xxx architecture, PowerPC architecture, Sparc architecture, Debian security managers, Christian Hudon, Wichert Akkerman, Martin Schulze",
+            "Meta Description": " This text provides information about security vulnerabilities in the super package of Debian GNU/Linux, including buffer overflows in the per-user .supertab files. It recommends upgrading the super packages immediately. The text also includes download links for various architectures and upcoming releases."
+        }
+    },
+    {
+        "id": 101979,
+        "metadata": {
+            "Meta Keywords": "\nlsof package, buffer overflow, root-access, upgrade, Debian GNU/Linux 2.0, hamm, Intel architecture, Motorola 680x0 architecture",
+            "Meta Description": "\nUpgrade your Debian GNU/Linux 2.0 lsof package immediately to fix a buffer overflow issue that can allow local users to gain root-access. Find the necessary files and installation instructions in this article."
+        }
+    },
+    {
+        "id": 101980,
+        "metadata": {
+            "Meta Keywords": " procmail, buffer overflows, security checks, upgrade, Debian GNU/Linux, Intel, Motorola 680x0, alpha, Sun sparc architecture, source archives, Alpha architecture, Intel architecture, Motorola 680x0 architecture, Sun sparc architecture, Debian security",
+            "Meta Description": " Explore the new version of procmail, a package that fixes buffer overflows and enhances security. Upgrade your procmail package immediately to ensure safety. Available for Debian GNU/Linux 2.1 alias slink on multiple architectures. Find the source archives and installation files for Alpha, Intel, Motorola 680x0, and Sun sparc architectures. Stay up-to-date with the latest security updates from Debian security team."
+        }
+    },
+    {
+        "id": 101982,
+        "metadata": {
+            "Meta Keywords": " imap suite, Debian GNU/Linux 2.1, vulnerability, POP-2 daemon, ipopd package, remote users, shell access, upgrade, wget, dpkg, slink, Intel, Motorola 680x0, alpha, Sun sparc, source archives, Sparc architecture, Intel ia32 architecture, Motorola 680x0 architecture, m68k, alpha, deb, MD5 checksum, apt, security updates, Debian GNU/Linux",
+            "Meta Description": " This page provides information about a vulnerability in the imap suite in Debian GNU/Linux 2.1. It specifically focuses on the POP-2 daemon of the ipopd package and advises users to upgrade immediately. The page also includes instructions for upgrading using wget and dpkg, as well as information about different architectures supported by Debian GNU/Linux 2.1. Additionally, it provides MD5 checksums for relevant files and mentions the usage of apt for receiving security updates."
+        }
+    },
+    {
+        "id": 101983,
+        "metadata": {
+            "Meta Keywords": " Linux 2.2.x kernels, IP options, DoS attack, Debian GNU/Linux, Sun sparc architecture, kernel upgrade, kernel-image package, sun4u system, slink version, apt, security updates, Debian security managers, PGP signature",
+            "Meta Description": " This text discusses the problem with parsing IP options in Linux 2.2.x kernels and the vulnerability to a DoS attack. It recommends upgrading the kernel-image package for Debian GNU/Linux 2.1 on Sun sparc architecture. It also mentions the availability of security updates through apt and the contact information for Debian security managers."
+        }
+    },
+    {
+        "id": 101984,
+        "metadata": {
+            "Meta Keywords": " man-db package, vulnerability, Debian GNU/Linux, symlink attack, upgrade, Intel, Motorola 680x0, alpha, Sun sparc architecture, source archives, MD5 checksum, apt, security updates",
+            "Meta Description": " \nThis text discusses a vulnerability in the man-db package in Debian GNU/Linux 2.1, which has been fixed in version 2.3.10-69FIX.1. It recommends upgrading the man-db package immediately and provides instructions on how to fetch and install the file. The text also mentions specific architectures and MD5 checksums for different versions of the package. Additionally, it suggests using apt for always getting the latest security updates and provides instructions for adding it to /etc/apt/sources.list."
+        }
+    },
+    {
+        "id": 101985,
+        "metadata": {
+            "Meta Keywords": " mailman, Debian, GNU/Linux, vulnerability, upgrade, package, security updates",
+            "Meta Description": " This text discusses a vulnerability in the mailman package for Debian GNU/Linux 2.1 and recommends upgrading the package immediately. It also provides information about the affected architectures and checksums for the updated packages. Users are advised to use apt for receiving the latest security updates."
+        }
+    },
+    {
+        "id": 101986,
+        "metadata": {
+            "Meta Keywords": " samba, security problems, upgrade, configuration file, Debian GNU/Linux 2.1, smbfsx, smbfs, wget, dpkg, Intel, Motorola 680x0, alpha, Sun sparc architecture, source archives, architecture-independent archives, MD5 checksum, security, updates, binary, architecture, swat, common, smbclient, smbwrapper, alpha, ia32, i386, m68k, sparc, ftp, PGP signature",
+            "Meta Description": " This article discusses the security problems in the Debian GNU/Linux 2.1 version of Samba and recommends upgrading to version 2.0.5a-1. It also highlights the changes to the configuration file and the migration from smbfsx to smbfs. The article provides download links for source archives and architecture-independent archives, along with their MD5 checksums. Checksums and download links for security updates of various software packages for different architectures in Debian stable distribution are also included. Includes packages for alpha, ia32, m68k, and Sun Sparc architectures. The page also provides information about MD5 checksums for various Debian packages including smbclient, smbfs, smbwrapper, and swat. These files will be moved to the ftp.debian.org/debian/dists/stable/*/binary-$arch/ directory soon. For architectures that are not yet released, refer to the appropriate directory ftp.debian.org/debian/dists/sid/binary-$arch/. The page also includes a PGP signature.",
+            "Note": " There were some repetitive keywords in the given text, so I have consolidated them for better optimization."
+        }
+    },
+    {
+        "id": 101987,
+        "metadata": {
+            "Meta Keywords": " cfingerd, version vulnerability, root exploit, bugtraq, Debian, upgrade, package, security update, Debian GNU/Linux 2.1, slink, Source archives, Sun Sparc architecture, Intel architecture, Motorola 680x0 architecture, Alpha architecture, Debian GNU/Linux unstable, potato, MD5 checksum, PowerPC architecture, Security Managers, security@debian.org, debian-security-announce@lists.debian.org, Christian Hudon, Wichert Akkerman, Martin Schulze.",
+            "Meta Description": " This report highlights a vulnerability in all versions of cfingerd prior to 1.4.0 and 1.3.2-18.1, which could be exploited for root access. The recommended actions include upgrading the cfingerd package or disabling ALLOW_EXECUTION. This update applies to Debian GNU/Linux 2.1 (slink) and Debian GNU/Linux unstable (potato). Detailed information and download links for the security updates are provided. This page also provides the MD5 checksums for various architectures of the cfingerd_1.4.0-1.deb package available in the Debian GNU/Linux distribution, including Sun Sparc, Intel ia32, Motorola 680x0, Alpha, and PowerPC. It also includes contact information for the Debian Security Managers."
+        }
+    },
+    {
+        "id": 101988,
+        "metadata": {
+            "Meta Keywords": "\nxmonisdn, ISDN links, security problem, shell, IFS manipulation, PATH manipulation, ISDN system, dialouts, Debian GNU/Linux 2.1, slink, Intel, Motorola 680x0, alpha, Sun sparc, source archives, checksum, Alpha architecture, Intel ia32 architecture, Sun Sparc architecture, security managers, PGP signature",
+            "Meta Description": "\nLearn about a security problem with xmonisdn, an X applet that displays the status of ISDN links in Debian GNU/Linux 2.1. Find out how the scripts used by xmonisdn are vulnerable to attack due to IFS and PATH manipulation. Discover alternative methods for preventing dialouts and explore the available source archives and checksums for updating the isdnutils package. Stay informed with the latest security announcements from Debian GNU/Linux."
+        }
+    },
+    {
+        "id": 101989,
+        "metadata": {
+            "Meta Keywords": " rsync, security bug, permissions, upgrade, Debian GNU/Linux 2.1, Debian GNU/Linux unstable, Alpha architecture, Intel ia32 architecture, Motorola 680x0 architecture, Sun Sparc architecture, ftp, unstable, main, source, net, architecture, MD5 checksum",
+            "Meta Description": " This old report from May 1999 discusses a security-related bug in the rsync software. It provides information on how the bug can affect permissions on remote hosts and recommends upgrading the rsync package. The report also includes FTP links for downloading the necessary files for Debian GNU/Linux 2.1 and Debian GNU/Linux unstable. This page contains FTP links and MD5 checksums for various versions of the rsync package in the Debian GNU/Linux distribution. The links are organized by different architectures, including Alpha, ARM, Intel ia32, Motorola 680x0, PowerPC, and Sun Sparc."
+        }
+    },
+    {
+        "id": 101990,
+        "metadata": {
+            "Meta Keywords": " libtermcap, buffer overflow, Debian, termcap-compat, upgrade, download, install, Debian GNU/Linux 2.1, Debian GNU/Linux unstable, potato, MD5 checksum, Sun Sparc architecture, Intel ia32 architecture, Motorola 680x0 architecture, Alpha architecture, PowerPC architecture, ARM architecture, Security Managers, debian-security-announce, Christian Hudon, Wichert Akkerman, Martin Schulze",
+            "Meta Description": " Learn about the exploitable buffer overflow in former versions of libtermcap and how it affects Debian GNU/Linux. Find out how to upgrade your termcap-compat package immediately and download the necessary files for installation. Check the MD5 checksums for various architectures (Sun Sparc, Intel ia32, Motorola 680x0, Alpha, PowerPC, ARM) of the termcap-compat_1.1.1.1.1.deb package. For more information, refer to the appropriate directory on the Debian GNU/Linux website. Contact the Security Managers at security@debian.org or subscribe to debian-security-announce@lists.debian.org for security announcements. This page is maintained by Christian Hudon, Wichert Akkerman, and Martin Schulze."
+        }
+    },
+    {
+        "id": 101991,
+        "metadata": {
+            "Meta Keywords": " bug, smtp-refuser package, logging facility, root-owned files, upgrade, Debian GNU/Linux, source archives, architecture, unstable, main, binary, alpha, ARM, ia32, Motorola 680x0, PowerPC, Sun Sparc, mail, 1.0.1.deb, MD5 checksum",
+            "Meta Description": " This bug was experienced in May 1999 with the smtp-refuser package, allowing users to delete root-owned files by exploiting the unchecked logging facility. It is recommended to upgrade the package. This article provides source archives and architecture-specific download links for Debian GNU/Linux. This FTP link provides the smtp-refuser package for various architectures in the Debian unstable distribution. The provided MD5 checksum ensures the integrity of the files."
+        }
+    },
+    {
+        "id": 101992,
+        "metadata": {
+            "Meta Keywords": " vulnerability, seyon program, root compromise, exploit, license, fix, patch, exploit, minicom, maintainer, SGI, Debian GNU/Linux, Security Managers, Christian Hudon",
+            "Meta Description": "\nDiscover a vulnerability in the seyon program that can lead to a root compromise. Learn why switching to minicom is recommended and find out more about the security measures taken by the Debian GNU/Linux security team."
+        }
+    },
+    {
+        "id": 101993,
+        "metadata": {
+            "Meta Keywords": " man2html, Debian GNU/Linux, upgrade, package, installation, security, MD5 checksum, ftp, unstable, main, source, doc, Alpha architecture, ARM architecture, Intel ia32 architecture, Motorola 680x0 architecture, PowerPC architecture, Sun Sparc architecture, security managers",
+            "Meta Description": " Upgrade your man2html package on Debian GNU/Linux to ensure security. This webpage provides MD5 checksums and ftp links for different architectures, including Alpha, ARM, Intel ia32, Motorola 680x0, PowerPC, and Sun Sparc. It also lists contact information for security managers and Debian security announcements."
+        }
+    },
+    {
+        "id": 101994,
+        "metadata": {
+            "Meta Keywords": " trn, former versions, temporary storage, symbolic link, users files, upgrade, man2html package, wget, dpkg, Debian GNU/Linux, slink, source archives, alpha architecture, Intel ia32 architecture, Motorola 680x0 architecture, Sun Sparc architecture, unstable, potato, MD5 checksum, architecture, news, binary, ftp, http, security, Sparc, ia32, 680x0, PowerPC, ARM, Intel",
+            "Meta Description": " Learn about the former versions of trn and their hardcoded filename in /tmp as temporary storage. Find out how upgrading your man2html package is recommended. Fetch files using wget and install referenced files using dpkg. Discover the different source archives and checksums for trn on various architectures in Debian GNU/Linux, including alpha, Intel ia32, Motorola 680x0, and Sun Sparc. Explore the source archives for trn in Debian GNU/Linux unstable, known as potato."
+        }
+    },
+    {
+        "id": 101995,
+        "metadata": {
+            "Meta Keywords": " Debian, Security Advisory, epic4, denial of service vulnerability, upgrade, Debian GNU/Linux 2.1, Alpha architecture, Intel ia32 architecture, Motorola 680x0 architecture, Sun Sparc architecture, pre2.2, MD5 checksum, ARM architecture, PowerPC architecture, security information, stable updates, dpkg-ftp, PGP signature.",
+            "Meta Description": " This Debian Security Advisory informs about a denial of service vulnerability in epic4. It provides details about affected versions and recommends immediate upgrading. It also includes checksums for different architectures of Debian GNU/Linux 2.1 and Debian GNU/Linux pre2.2. This page provides the MD5 checksums for various architectures including Alpha, ARM, Intel ia32, Motorola 680x0, PowerPC, and Sun Sparc. It also contains information about Debian security updates, apt-get, dpkg-ftp, and PGP signature. For the latest information on not yet released architectures, please refer to the appropriate directory."
+        }
+    },
+    {
+        "id": 101996,
+        "metadata": {
+            "Meta Keywords": " Debian, Security Advisory, vixie cron package, reverse denial of service bug, root exploit, cron package, Debian GNU/Linux, slink, potato, Intel, Motorola 68xxx, alpha, Sun sparc, ia32, m68k, ARM, PowerPC, apt-get, dpkg-ftp, mailing list",
+            "Meta Description": " This Debian Security Advisory addresses a reverse denial of service bug in the vixie cron package and a root exploit in the cron package. It provides information on how to upgrade the cron package for different architectures in Debian GNU/Linux 2.1 (slink) and pre2.2 (potato)."
+        }
+    },
+    {
+        "id": 101997,
+        "metadata": {
+            "Meta Keywords": " Debian, amd, vulnerability, remote exploit, upgrade, package, Debian GNU/Linux 2.1, slink, Intel, Motorola 680x0, alpha, Sun sparc, architecture, source archives, checksum, apt-get, dpkg-ftp, mailing list, PGP signature",
+            "Meta Description": " This Debian Security Advisory provides information about a vulnerability in the amd package that was distributed with Debian GNU/Linux 2.1. It recommends immediate upgrade and provides instructions for fetching and installing the fixed version. The advisory includes information about the supported architectures, source archives, and checksums. It also mentions the mailing list for further updates and verifies the information with a PGP signature."
+        }
+    },
+    {
+        "id": 101998,
+        "metadata": {
+            "Meta Keywords": " mirror, Debian GNU/Linux 2.1, security advisory, remote exploit, upgrade, wget, dpkg, Intel, Motorola 680x0, alpha, Sun sparc, source archives, architecture independent archives, apt-get, dpkg-ftp, mailing list, PGP signature\n \nMeta Description: Debian GNU/Linux 2.1 security advisory - Upgrade your mirror package to version 2.9-2.1 to fix a remote exploit issue. Includes source and architecture independent archives. Instructions for wget and dpkg installation. Important security information for Debian users."
+        }
+    },
+    {
+        "id": 101999,
+        "metadata": {
+            "Meta Keywords": " Debian, GNU/Linux, amd, vulnerability, remote exploit, fix, upgrade, package, Debian Security Advisory, Security Information",
+            "Meta Description": " Learn about a security vulnerability in the amd package for Debian GNU/Linux 2.1 and how to fix it. Upgrade your amd package immediately to protect your system."
+        }
+    },
+    {
+        "id": 102000,
+        "metadata": {
+            "Meta Keywords": " Debian, nis, security, package, upgrade, vulnerabilities, buffer overflow, GNU/Linux",
+            "Meta Description": " This Debian Security Advisory addresses vulnerabilities in the nis package, including allowing machines in the NIS domain to insert new tables, buffer overflow in MD5 code, and unauthorized changes to user entries. It is recommended to upgrade the nis package to version 3.5-2 immediately."
+        }
+    },
+    {
+        "id": 102001,
+        "metadata": {
+            "Meta Keywords": " Debian Security Advisory, lpr, Debian GNU/Linux, race condition, permissions, upgrade, version, package, download, checksum, architecture, Intel, Motorola, alpha, Sun sparc, apt-get, dpkg-ftp, Mailing list, PGP signature",
+            "Meta Description": " \"This Debian Security Advisory addresses a race condition and permission issues in the lpr package for Debian GNU/Linux 2.1 (slink). Upgrading to version 0.46-1-0slink1 is recommended. Find the appropriate download for your architecture and install using dpkg. For more information and updates, visit the Debian Security website.\""
+        }
+    },
+    {
+        "id": 102002,
+        "metadata": {
+            "Meta Keywords": " proftpd, Debian GNU/Linux, buffer overrun, remote attackers, Y2K problems, security fixes, upgrade package, Debian architecture, MD5 checksum, Intel, Motorola, alpha, Sun sparc, apt-get, dpkg-ftp, Mailing list.",
+            "Meta Description": " This Debian Security Advisory addresses buffer overruns in the proftpd version distributed in Debian GNU/Linux, which could be exploited by remote attackers. The advisory also mentions fixes for some Y2K problems, and recommends upgrading to the new package version 1.2.0pre9-4. The meta keywords include proftpd, Debian GNU/Linux, security fixes, upgrade package, and the various supported Debian architectures for which the package is available."
+        }
+    },
+    {
+        "id": 102003,
+        "metadata": {
+            "Meta Keywords": " Debian Security Advisory, nfs-server, buffer overflow, path_max_name_max, upgrade, Debian GNU/Linux 2.1, slink, Intel, Alpha, Sun sparc architecture, source archives, MD5 checksum, fetch file, install, apt-get, dpkg-ftp, Mailing list, PGP signature",
+            "Meta Description": " This Debian Security Advisory addresses a buffer overflow vulnerability in the nfs-server package, which can be exploited by creating long paths in a read/write exported directory. Upgrading to version 2.2beta37-1slink.1 is highly recommended. This advisory provides information on the package versions and architectures affected, along with instructions on how to fetch and install the updated package. Additionally, it includes links to relevant resources for staying updated on Debian security announcements."
+        }
+    },
+    {
+        "id": 102004,
+        "metadata": {
+            "Meta Keywords": " \nDebian, GNU/Linux, vulnerability, NXT records, Denial of Service attack, server access, bind, package upgrade, Debian 2.1, slink, Intel, Motorola 680x0, alpha, Sun sparc architecture, checksums, architectures, apt-get, dpkg-ftp, dpkg, security.debian.org, stable, updates, mailing list, debian-security-announce",
+            "Meta Description": "\nLearn about the vulnerability in Debian GNU/Linux 2.1's bind version and how it can be exploited for a Denial of Service attack or server access. Upgrade your bind package to the fixed version 8.2.5p5-0slink1. Checksums and download links for different architectures are provided. Stay updated through the Debian security mailing list."
+        }
+    },
+    {
+        "id": 102005,
+        "metadata": {
+            "Meta Keywords": " Debian GNU/Linux, security advisory, dump package, symbolic links, upgrade, lchown, chown, restore, symlinks, malicious user, system files, Debian 2.1, Intel, Motorola 680x0, alpha, Sun sparc architecture, source archives, MD5 checksums, apt-get, dpkg-ftp, mailing list.",
+            "Meta Description": " This Debian security advisory addresses a problem with the dump package in Debian GNU/Linux 2.1, specifically related to restoring symbolic links. The issue has been resolved in the latest version, 0.4b9-0slink1, which offers better security by using lchown instead of chown. Users are strongly urged to upgrade their dump package to prevent potential corruption of important system files."
+        }
+    },
+    {
+        "id": 102006,
+        "metadata": {
+            "Meta Keywords": " sendmail, Debian GNU/Linux 2.1, security, upgrade, aliases database",
+            "Meta Description": " Upgrade your sendmail package to the new version to fix a security issue in Debian GNU/Linux 2.1 that allowed any user to regenerate the aliases database, leading to a broken database."
+        }
+    },
+    {
+        "id": 102007,
+        "metadata": {
+            "Meta Keywords": " sendmail, Debian Security Advisory, version, libc, 8.9.3-3slink1.0.1, Intel ia32 architecture, i386/sendmail_8.9.3-3slink1.0.1_i386.deb, MD5 checksum, apt-get, dpkg-ftp, stable, updates, Mailing list, PGP signature",
+            "Meta Description": " This Debian Security Advisory provides information about the version of sendmail that was listed in an earlier advisory, its compilation issue with libc, the corrected version 8.9.3-3slink1.0.1, and instructions for fetching and installing the referenced file. It also mentions the Intel ia32 architecture, provides the MD5 checksum of the file, and includes relevant links and contact information for further assistance."
+        }
+    },
+    {
+        "id": 102008,
+        "metadata": {
+            "Meta Keywords": " Debian Security Advisory, sendmail-wide, aliases database, upgrade, Debian GNU/Linux 2.1, Intel ia32, Motorola 680x0, alpha, Sun sparc architecture, source archives, checksum, architecture, apt-get, dpkg-ftp, Mailing list.",
+            "Meta Description": " This Debian Security Advisory addresses a problem in the sendmail-wide version distributed with Debian GNU/Linux 2.1, which allowed any user to regenerate the aliases database. The issue has been fixed in the new version 8.9.3+3.2W-3slink1. It is recommended to upgrade the sendmail package for improved security."
+        }
+    },
+    {
+        "id": 102009,
+        "metadata": {
+            "Meta Keywords": " htdig, remote exploit, vulnerability, Debian GNU/Linux, upgrade package, security advisory ",
+            "Meta Description": " This security advisory provides information about a remote exploit vulnerability in the htdig package for Debian GNU/Linux 2.1. The vulnerability allows for the execution of arbitrary commands on the affected machine. Upgrading to version 3.1.2-4slink6 is recommended to mitigate this issue."
+        }
+    },
+    {
+        "id": 102010,
+        "metadata": {
+            "Meta Keywords": " gnomehack, 1.0.1-7mdk, i586, rpm, src.rpm",
+            "Meta Description": " Upgrade to gnomehack-1.0.1-7mdk.i586.rpm and gnomehack-1.0.1-7mdk.src.rpm for improved performance and features."
+        }
+    },
+    {
+        "id": 102011,
+        "metadata": {
+            "Meta Keywords": " upgrade, f153130e30b21dd17b5d67e6abe13809, am-utils-6.0.1s11-1mdk.i586.rpm, 7cf7b619b58c7f7e060812712532dbbc, am-utils-6.0.1s11-1mdk.src.rpm",
+            "Meta Description": " Upgrade to f153130e30b21dd17b5d67e6abe13809 am-utils-6.0.1s11-1mdk.i586.rpm and 7cf7b619b58c7f7e060812712532dbbc am-utils-6.0.1s11-1mdk.src.rpm to enhance your system performance."
+        }
+    },
+    {
+        "id": 102012,
+        "metadata": {
+            "Meta Keywords": "\nvixie-cron, 3.0.1, 38mdk, i586.rpm, src.rpm ",
+            "Meta Description": "\nUpgrade to vixie-cron 3.0.1-38mdk.i586.rpm and vixie-cron 3.0.1-38mdk.src.rpm for enhanced performance and functionality."
+        }
+    },
+    {
+        "id": 102013,
+        "metadata": {
+            "Meta Keywords": " upgrade, lynx-2.8.3dev.6-3mdk.i586.rpm, lynx-2.8.3dev.6-3mdk.src.rpm",
+            "Meta Description": " Upgrade to lynx-2.8.3dev.6-3mdk.i586.rpm and lynx-2.8.3dev.6-3mdk.src.rpm with improved features and performance."
+        }
+    },
+    {
+        "id": 102014,
+        "metadata": {
+            "Meta Keywords": " upgrade, 8a57ca15bd7010eb59e15ca236fa62ae, BeroFTPD-1.3.4-2mdk.i586.rpm, 501e1842d6d60d3e6a13bbf3b57b1d14, BeroFTPD-1.3.4-2mdk.src.rpm",
+            "Meta Description": " Upgrade to BeroFTPD-1.3.4-2mdk.i586.rpm and BeroFTPD-1.3.4-2mdk.src.rpm with the specified checksums: 8a57ca15bd7010eb59e15ca236fa62ae and 501e1842d6d60d3e6a13bbf3b57b1d14."
+        }
+    },
+    {
+        "id": 102015,
+        "metadata": {
+            "Meta Keywords": " wu-ftpd, 2.5.0, 2mdk, i586.rpm, src.rpm",
+            "Meta Description": " Upgrade to wu-ftpd version 2.5.0-2mdk with the provided i586.rpm and src.rpm files for improved functionality and security."
+        }
+    },
+    {
+        "id": 102016,
+        "metadata": {
+            "Meta Keywords": " upgrade, isdn4k-utils, rpm, src.rpm",
+            "Meta Description": " Upgrade to isdn4k-utils-3.0-4mdk.i586.rpm and isdn4k-utils-3.0-4mdk.src.rpm for improved performance and functionality."
+        }
+    },
+    {
+        "id": 102017,
+        "metadata": {
+            "Meta Keywords": " upgrade, apache, squid, rpm, src.rpm, i586, STABLE4, 2mdk",
+            "Meta Description": " Upgrade to the latest versions of Apache and Squid RPM packages, including apache-1.3.6-28mdk.i586.rpm, squid-2.2.STABLE4-2mdk.i586.rpm, apache-1.3.6-28mdk.src.rpm, apache-devel-1.3.6-28mdk.i586.rpm, and squid-2.2.STABLE4-2mdk.src.rpm."
+        }
+    },
+    {
+        "id": 102018,
+        "metadata": {
+            "Meta Keywords": " samba upgrade, samba version, samba rpm, samba-2.0.5a-1mdk, i586",
+            "Meta Description": " Upgrade to the latest version of samba (samba-2.0.5a-1mdk.i586.rpm) for improved performance and functionality."
+        }
+    },
+    {
+        "id": 102019,
+        "metadata": {
+            "Meta Keywords": " upgrade, net-tools, 1.52-6mdk, i586.rpm",
+            "Meta Description": " Upgrade to net-tools version 1.52-6mdk with the i586.rpm package. Improve your network tools and optimize your web search experience."
+        }
+    },
+    {
+        "id": 102020,
+        "metadata": {
+            "Meta Keywords": " Upgrade, kdebase-1.1.1final-11mdk.i586.rpm",
+            "Meta Description": " Upgrade to kdebase-1.1.1final-11mdk.i586.rpm"
+        }
+    },
+    {
+        "id": 102021,
+        "metadata": {
+            "Meta Keywords": " \nupdate, kernel, network environment, machine, command line, upgrading, rpm, lilo.conf, Scsi users, initrd image, mkinitrd",
+            "Meta Description": " \nUpgrade your machine with our new kernel in a network environment. Follow the command line instructions for upgrading using rpm. Don't forget to modify lilo.conf and regenerate the initrd image for Scsi users."
+        }
+    },
+    {
+        "id": 102022,
+        "metadata": {
+            "Meta Keywords": " Linux-Mandrake, name server, upgrade, bugs, execution of arbitrary code, remote crashing, CERT advisory, bind-8.2.2P5-1mdk.i586.rpm, bind-8.2.2P5-1mdk.src.rpm",
+            "Meta Description": " If you're using Linux-Mandrake as a name server, it's recommended to upgrade to this package to fix numerous annoying bugs, including execution of arbitrary code and remote crashing. Check out CERT advisory CA-99-14 for more information."
+        }
+    },
+    {
+        "id": 102023,
+        "metadata": {
+            "Meta Keywords": " package, cure, bug, users, files, IRC, root, kvirc",
+            "Meta Description": " Discover how this package can help fix the \"!nick ../../../etc/shadow\" bug and prevent unauthorized access to your files. Learn why it's important not to IRC as root and check out the latest versions of kvirc-0.9.1 available for download."
+        }
+    },
+    {
+        "id": 102024,
+        "metadata": {
+            "Meta Keywords": "\nNIS domain, password tables, login shell, GECOS information, buffer overflow, MD5 hash generation, ypserv package",
+            "Meta Description": "\nFixes for multiple issues in the NIS domain: password table injection, unauthorized login shell changes, potential buffer overflow. Get the ypserv package for the updates."
+        }
+    },
+    {
+        "id": 102025,
+        "metadata": {
+            "Meta Keywords": "\nupgrade, am-utils, rpm, version, source, package",
+            "Meta Description": "\nUpgrade to the latest version of am-utils (6.0.1s11-1mdk). Download the rpm and source rpm packages for easy installation and maintenance of the am-utils software."
+        }
+    },
+    {
+        "id": 102026,
+        "metadata": {
+            "Meta Keywords": "\nupdate, buffer overflows, arbitrary code execution, memory usage condition, server, memory consumption, system unusable, CERT advisor, upgrade, b8e916297a78253fa29ce99d96d147ce, d647bd1b73149fbc7975c747f1863d35, wu-ftpd-2.6.0-1mdk.i586.rpm, wu-ftpd-2.6.0-1mdk.src.rpm",
+            "Meta Description": "\nThis update cures two problems - potential buffer overflows that could lead to arbitrary code execution and a memory usage condition issue that may cause excessive memory consumption in the server, rendering the system unusable. Upgrading to b8e916297a78253fa29ce99d96d147ce wu-ftpd-2.6.0-1mdk.i586.rpm (binary) and d647bd1b73149fbc7975c747f1863d35 wu-ftpd-2.6.0-1mdk.src.rpm (source) is recommended. Stay protected and optimize your server's performance."
+        }
+    },
+    {
+        "id": 102027,
+        "metadata": {
+            "Meta Keywords": " screen, Unix98 ptys, controlling terminal, world-writable, security bug, Red Hat, /etc/profile.d/screen.sh, sh-compatible shells, zsh, ash, upgrade, screen-3.9.4-3mdk.i586.rpm, screen-3.9.4-3mdk.src.rpm, binary, source",
+            "Meta Description": " This package fixes a security bug in the default settings of screen, preventing unauthorized access to the controlling terminal. It also ensures compatibility with various sh-compatible shells such as zsh and ash. Upgrade to the latest version, screen-3.9.4-3mdk, which includes both binary and source RPM packages."
+        }
+    },
+    {
+        "id": 102028,
+        "metadata": {
+            "Meta Keywords": " \nupgrade, 2078ba99d21f81bcd328a478424a51a8, lpr-0.43-1mdk.i586.rpm, fab2deed508d22659e359c6fb6c861f9, lpr-0.43-1mdk.src.rpm",
+            "Meta Description": "\nUpgrade to the latest version of lpr-0.43-1mdk.i586.rpm (binary) and fab2deed508d22659e359c6fb6c861f9 lpr-0.43-1mdk.src.rpm (source) for improved performance and functionality."
+        }
+    },
+    {
+        "id": 102029,
+        "metadata": {
+            "Meta keywords": " Red Hat, Inc., Security Advisory, lpr, lpd, DNS, sendmail, vulnerability, ftp, updates, 4.2, sparc, rpm, source packages, verification, MD5 sum, package name, GPG signed, security, key, command, checksig, md5sum, corrupted, tampered",
+            "Meta description": " This Red Hat security advisory provides information about new lpr packages available to fix two security problems in lpd. The vulnerabilities include insufficient authentication and the potential for executing sendmail with a user-specified configuration file, leading to a root compromise. Users are recommended to upgrade to the fixed packages. RPMs for different architectures are provided as the solution. This FTP link provides access to the Red Hat 4.2 update for the sparc architecture, specifically the lpr-0.48-0.4.2.sparc.rpm package. The source packages for this update can also be found at ftp://updates.RedHat.com/4.2/SRPMS/lpr-0.48-0.4.2.src.rpm. The MD5 sums for the package are provided for verification. Red Hat ensures the security of these packages by GPG signing them. The key for verification is available at http://www.RedHat.com/corp/contact.html. To verify the integrity of the packages, you can use the rpm --checksig command. If you only wish to verify that the packages have not been corrupted or tampered with, you can use the rpm --checksig --nogpg command."
+        }
+    },
+    {
+        "id": 102030,
+        "metadata": {
+            "Meta Keywords": " Red Hat, Inc., Security Advisory, usermode, PAM, root, userhelper, pam, bug, security, Red Hat Linux, vulnerability, dependency, upgrade",
+            "Meta Description": " Red Hat, Inc. Security Advisory: A new version of usermode has been released to fix a security bug in the userhelper program. The bug allowed local users to gain root access. The bug has been fixed in userhelper-1.17, and preventive measures have been implemented in pam-0.68-10. Red Hat Linux 6.1 users on all architectures are advised to upgrade to the latest version for optimal security."
+        }
+    },
+    {
+        "id": 102031,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, sliplogin, unauthorized access vulnerability, bug, patch, account, access permission, security, PGP",
+            "Meta Description": " This security advisory addresses a vulnerability in the sliplogin program in FreeBSD, allowing unauthorized access to the system. A patch is provided to fix the issue. Find workarounds to limit the vulnerability, along with contact information for security concerns, patches, and PGP key for reference."
+        }
+    },
+    {
+        "id": 102032,
+        "metadata": {
+            "Meta Keywords": " apache httpd, meta-character escaping, port, apache, security advisory, FreeBSD, vulnerability, remote access",
+            "Meta Description": " This security advisory discusses a vulnerability in the apache http daemon that allows remote users to gain unauthorized access to a system. The problem is only exploitable on systems where the apache http daemon has been installed and enabled. The Apache Group has released a fix for this vulnerability, and interested parties can obtain the updated package from the provided FTP links. It is recommended to update to a more recent version of apache or disable apache httpd to eliminate the vulnerability."
+        }
+    },
+    {
+        "id": 102033,
+        "metadata": {
+            "Meta keywords": " sendmail smrsh, FreeBSD security advisory, sendmail vulnerabilities, smrsh utility, automated mail filtering, vacation programs, program delivery system, restricted shell, undiscovered security holes, backwards compatibility, sendmail configuration files, FreeBSD, Apache, vulnerability, daemon, compilation, installation, enabling, ports and packages system, pre-compiled package, automatic port, security notifications, security discussion",
+            "Meta description": " This security advisory discusses the availability of the \"smrsh\" utility for sendmail on FreeBSD systems, highlighting potential security risks and recommending using smrsh as a protective measure. It also mentions the impact on FreeBSD systems is currently unknown, but suggests utilizing smrsh in conjunction with sendmail to safeguard against future security vulnerabilities. The meta description then transitions to talk about a different topic, mentioning a vulnerability in FreeBSD 2.1.0 related to Apache daemon and how it has been fixed. It also mentions the availability of pre-compiled FreeBSD packages and an automatic port for easy installation, as well as staying informed about security notifications and joining the security discussion."
+        }
+    },
+    {
+        "id": 102034,
+        "metadata": {
+            "Meta Keywords": " syslog vulnerability, FreeBSD, security advisory, libc, FreeBSD-SA-96:08, vulnerability, exploit, sendmail, operating system, FreeBSD 2.1, patches",
+            "Meta Description": " Learn about a vulnerability in the syslog library call affecting FreeBSD 2.0 and 2.0.5. Upgrade to a fixed version or apply patches to secure your system."
+        }
+    },
+    {
+        "id": 102035,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, unauthorized access, mount_union, mount_msdos, vulnerability, local users, permissions, setuid permissions, operating system sources, binaries, solution patches, stability problem, vfsload(3) library routine, makefile, source code, mount union, mount msdos",
+            "Meta Description": " This security advisory discusses a vulnerability in FreeBSD that allows unauthorized access via the mount_union and mount_msdos programs. Local users can exploit this vulnerability to gain unauthorized permissions. The advisory provides a workaround and suggests updating the operating system to fix the vulnerability. It also mentions a stability problem and recommends using both the workaround and the solution for optimal results. The meta keywords highlight the key points discussed in the advisory. This document contains the makefile for /usr/src/sbin/mount_union and /usr/src/sbin/i386/mount_msdos. It includes information on the C flags, binary ownership and mode, and source code paths. This document is part of the FreeBSD project and includes contact information for security-related matters."
+        }
+    },
+    {
+        "id": 102036,
+        "metadata": {
+            "Meta Keywords": " FreeBSD-SA-96:10, security advisory, system stability, compromise, mount_union program, bug, union file system, local user, vulnerability, solution, workaround, ls, l, sbin, mount_union, permissions, executable file, source code, patching, setuid bit",
+            "Meta Description": " This document discusses FreeBSD-SA-96:10, a security advisory addressing a bug in the union file system code that can compromise system stability. It provides solutions and workarounds for the vulnerability, including removing the setuid permission from the mount_union program. Additionally, it discusses the command \"ls -l /sbin/mount_union\" and provides instructions for changing the permissions on the executable file. It also suggests patching the source code to prevent the installation of mount_union with the setuid bit set."
+        }
+    },
+    {
+        "id": 102037,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, Security Advisory, security compromise, man page utility, vulnerability, setuid, local user, system security, trojan horse, workaround, patch",
+            "Meta Description": " This security advisory discusses a vulnerability in the man page utility in FreeBSD versions 2.x released before 1996-05-21. Learn about the setuid vulnerability in the man program and whether you should rebuild it from sources. Find information from the official FreeBSD website and their security advisory."
+        }
+    },
+    {
+        "id": 102038,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, perl vulnerability, suidperl, privilege processing, setuid perl scripts, superuser access, _POSIX_SAVED_IDS, vulnerability workaround, ls, l, /usr/local/bin/s*perl*, patch, perl, source, rebuild, reinstall, port, make, install, notification",
+            "Meta Description": "\nThis security advisory discusses a vulnerability in the suidperl utility in FreeBSD. It provides a workaround to disable the setuid bit on affected versions of perl, closing the vulnerability but rendering setuid perl scripts inoperable. Additionally, this document provides instructions on how to apply patches to fix the vulnerability in Perl on FreeBSD. It includes steps to rebuild and reinstall suidperl using patches available from both FreeBSD and the author of Perl, Larry Wall. Links to the official FreeBSD website and contact information for security-related matters are also provided."
+        }
+    },
+    {
+        "id": 102039,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, comsat, security advisory, unauthorized mail reading, vulnerability, patch, permissions problem, folder, cr, jkfprintf, tp, name, file, offset, fclose, _exit",
+            "Meta Description": " This security advisory discusses a vulnerability in FreeBSD's comsat daemon that allows unauthorized local users to read portions of other users' mail. The problem is present in all versions of FreeBSD released before 1996-06-03. A workaround is provided to disable the comsat daemon, and a patch is available to fix the permissions problem. This advisory provides information on the impact of the vulnerability, as well as instructions on how to implement the workaround and apply the patch. Additionally, this code snippet is a part of the FreeBSD operating system. It includes functions to write formatted output to a file, using the given name, file, and offset as parameters. It also demonstrates handling file operations like opening and closing files. The code snippet is related to file system management and is used in various parts of the FreeBSD OS."
+        }
+    },
+    {
+        "id": 102040,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, ipfw, packet filtering code, bug, mask addresses, filter, syntax, workaround, patches, solution, RCS file, revision, diff, command line interface, firewall facility, ip number, switch, arguments, web site, confidential contacts, PGP key, security notifications, public discussion",
+            "Meta Description": " This security advisory discusses a bug in the ipfw program in FreeBSD that affects the packet filtering code. The bug occurs when users specify mask addresses using the address:mask syntax, resulting in incorrect filtering. The impact is that more packets may be allowed or denied than intended. The advisory provides a simple workaround and patches to address the issue. Additionally, the text also describes an RCS file for the ipfw utility in FreeBSD, containing information about revisions and differences, along with a command line interface for the IP firewall facility. There is also meta information about FreeBSD, Inc. such as their website and contact details for security-related matters."
+        }
+    },
+    {
+        "id": 102041,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security compromise, ppp, vulnerability, root privileges, user privileges, superuser access, setuid bit, patch, source tree, rebuild, reinstall, command.c, setgid, getuid, perror, exit, TtyOldMode, argc, execvp, Index, RCS, diff, uucp, control sequences, open, dup2, getgid, strerror, pid, errno, command, vector, FreeBSd-current, 1996-06-10, chat.c, version control, changes",
+            "Meta Description": " Learn about a security vulnerability in FreeBSD's ppp program that allows users to run commands with root privileges. Find out how to disable the setuid bit and apply patches to eliminate the vulnerability. This code snippet shows a section of code that deals with privilege changes and executing commands in a Unix environment. The code uses functions like setuid, getuid, perror, and execvp to handle these tasks. It also includes patches for FreeBSd-current versions before 1996-06-10. The diff command is used to compare and display the differences between two files. In this specific example, it shows the changes made to the chat.c file between versions 1.10 and 1.11. The changes include adding support for UUCP compatible control sequences and switching back to original privileges."
+        }
+    },
+    {
+        "id": 102042,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, rdist, vulnerability, unauthorized access, bug, exploit, superuser privileges, buffer overflow, software update, workaround, solution, patch, 2.x systems, security issues, upgrade, version 6, protocol-compatible, FreeBSD, Inc., web site, contacts, PGP key, security notifications, security discussion, patches, digital signature, mailer software",
+            "Meta Description": " This security advisory highlights a vulnerability in the rdist utility in FreeBSD. The bug allows an unprivileged user to gain unauthorized access and execute arbitrary instructions, potentially obtaining superuser privileges. A workaround is provided, but a software update is recommended. Applying the available patch, recompiling, and reinstalling the rdist program is the recommended solution. This patch is known to apply to all FreeBSD 2.x systems and addresses a security vulnerability. Administrators are advised to consider upgrading to rdist version 6, available as a FreeBSD port. Contact FreeBSD, Inc. for more information, security notifications, and updates."
+        }
+    },
+    {
+        "id": 102043,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, Trojan Horse vulnerability, rz program, ports collection, rzsz, Z-Modem protocol, file transfer, command execution, vulnerability, workaround, impact, operating environment, fundamental flaw, solution, patch, upgrade, source code, version, security hole, PGP, digital signature, patches",
+            "Meta Description": " This security advisory discusses a \"Trojan Horse\" vulnerability in the rz program, which is part of the rzsz port in FreeBSD. The vulnerability allows malicious commands to be executed on the receiver's side during file transfer using the Z-Modem protocol. The impact is limited to changes in the user's operating environment. The advisory provides a workaround to disable the rz program and mentions a patch included in the official ports collection. This patch applies to rzsz v3.42. If you have an earlier version of the rzsz sources, please upgrade to the latest version first. This patch fixes a security hole in the code. It is recommended to apply the patch to ensure the security of your system."
+        }
+    },
+    {
+        "id": 102044,
+        "metadata": {
+            "Meta Keywords": " FreeBSD-SA-96:18, Buffer overflow, lpr, security advisory, core, FreeBSD 2.0, FreeBSD 2.0.5, FreeBSD 2.1, FreeBSD 2.1.5, FreeBSD-current, FreeBSD-stable, FreeBSD 2.2, FreeBSD 2.1.6, patches, AUSCERT, vulnerability, root privileges, wrapper, exploit, solution, FreeBSD, Inc., web site, security contacts, PGP Key.",
+            "Meta Description": " This security advisory discusses a buffer overflow vulnerability in the lpr program in FreeBSD. It allows intruders to execute arbitrary code and gain root privileges. Patches and a wrapper have been provided to mitigate this vulnerability. Visit the FreeBSD website for more details."
+        }
+    },
+    {
+        "id": 102045,
+        "metadata": {
+            "Meta Keywords": " FreeBSD-SA-96:19, security advisory, buffer overflow, modstat, FreeBSD, kernel modules, setuid, kmem privileges, patch, Makefile, modstat.c, FreeBSD, Inc.",
+            "Meta Description": " Learn about the security advisory FreeBSD-SA-96:19 regarding a buffer overflow vulnerability in the modstat program on FreeBSD. This vulnerability allows local users to gain kmem privileges. Find out how to apply the patch and prevent this issue."
+        }
+    },
+    {
+        "id": 102046,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, buffer overrun, cron, crontab, ppp, unauthorized access, vulnerability, workaround, solution, snprintf, process_crontab, cron, crontab, crontab.c, usr.sbin, void, fprintf, strcpy, panic, bad switch, lib/env.c, ppp/chat.c, ppp/systems.c",
+            "Meta Description": " This security advisory addresses the issue of unauthorized access via buffer overruns in FreeBSD. It provides background information on buffer overrun exploits and highlights specific vulnerabilities in the cron, crontab, and ppp utilities. It suggests workarounds to mitigate the risk and offers a solution through patches and instructions. The code snippet mentioned includes functions like snprintf and process_crontab, related to cron and crontab functionalities, and code snippets from files crontab.c, env.c, chat.c, and systems.c."
+        }
+    },
+    {
+        "id": 102047,
+        "metadata": {
+            "Meta Keywords": " FreeBSD, security advisory, buffer overrun, talkd, unauthorized access, vulnerability, exploit, intruders, root privileges, patches, talk, announce, message, connection, hostname, localclock, request, remote_machine",
+            "Meta Description": " This security advisory addresses a buffer overrun vulnerability in the talkd daemon in FreeBSD. The vulnerability allows intruders to execute arbitrary commands with root privileges. Patches are available to fix the vulnerability."
+        }
+    },
+    {
+        "id": 102048,
+        "metadata": {
+            "Meta Keywords": " FreeBSD-SA-97:02, security advisory, buffer overflow, lpd, remote attacker, root privs, printing functionality, vulnerability, patch, rebuild, libc, remote users, FreeBSD, security notifications",
+            "Meta Description": " This security advisory discusses a buffer overflow vulnerability in the lpd program in FreeBSD, which allows remote attackers to gain root privileges. The recommended solution is to apply the provided patch, rebuild and install libc. Disabling lpd will remove the printing functionality but won't affect the system's vulnerability. For more information and security notifications, visit the official FreeBSD website."
+        }
+    },
+    {
+        "id": 102049,
+        "metadata": {
+            "Meta keywords": " FreeBSD, sysinstall bug, security advisory, unauthorized access, ftp user, shell, password, patches, tconf.uid, gid, tconf.comment, tconf.homedir, anonFTP.c, patch, fopen, _PATH_MASTERPASSWD",
+            "Meta description": " This security advisory discusses a bug in the sysinstall module of FreeBSD that allows unauthorized access to system resources. The bug is related to the creation of an anonymous ftp setup, where an extra user 'ftp' is created with an empty password and a shell equal to '/bin/date'. The advisory provides a solution to change the ftp user's entry by setting an invalid password and an invalid shell. It also includes patches for different versions of FreeBSD to prevent the bug. This code snippet shows a patch for FreeBSD 2.1 in the anonFTP.c file. It modifies the sprintf function to include values for tconf.uid, gid, tconf.comment, and tconf.homedir. The patch also includes a link to the official FreeBSD website for more information."
+        }
+    }
+]
