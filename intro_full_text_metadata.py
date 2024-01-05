@@ -86,14 +86,12 @@ def process_context(contexts:list,logger:Logger):
             model="gpt-3.5-turbo",  # Specify the GPT-3.5-turbo model
             messages=[{"role": "system", "content": "You are a Seo Expert with Experience of 15 years in Industry."},
                     {"role": "user", "content": f"""
-                    Analyze the following blog text  You have to generate meta keywords and meta description for the text separate meta description with a newline.\n\n With high volume and keyword difficulity below 50 \n" 
-                    1.Generate 5-8 meta keywords
+                    Analyze the following blog text .You have to generate meta keywords and meta description and meta description must be seperate  with "\n\n" new line." 
+                    1.Generate 5-8 meta keywords.
                     2.The character length of the meta description should be 160 character. 
                      
                     Here is the blog text :
                     Blog Text: \"{contexts[0]}\"\n\n"
-                    Meta Keywords:"
-                    Meta Description:\n\n"
                     
                     The meta keywords and meta description should be relevant of the given text for web search optimization."""}]
             )
@@ -156,7 +154,7 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
             metadata=extract_record_text(record=record,logger=logger,max_words=max_words,max_tokens=max_tokens)
             if metadata is not None:
                 metadata = metadata.replace('\\n\\n', '\n\n')
-                dict_response = {item.split(':', 1)[0]: item.split(':', 1)[1] for item in metadata.split("\n\n") if ':' in item}
+                dict_response = {item.split(':', 1)[0]: item.split(':', 1)[1].strip() for item in metadata.split("\n\n") if ':' in item}
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
         except KeyboardInterrupt as e:
