@@ -38,7 +38,7 @@ def get_db_connection(config,logger):
     
 def get_total_rows(connection):
     """ To get the length the database records """
-    Sql="SELECT count(id) as total FROM aa_xu5gc_content"
+    Sql="SELECT count(id) as total FROM xu5gc_content"
     with connection.cursor() as cursor:
         cursor.execute(Sql)
         result=cursor.fetchone()
@@ -47,13 +47,13 @@ def get_total_rows(connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
     """ To get the records sequentially based  to limit """
     if id > 0:
-        sql = "SELECT c.id, c.introtext, c.fulltext FROM aa_xu5gc_content AS c WHERE id =%s"
+        sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
         args = id
     elif current_id>0:
-        sql="SELECT c.id , c.introtext , c.fulltext FROM aa_xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
         args=(current_id,limit)
     else:
-        sql="SELECT c.id , c.introtext , c.fulltext FROM aa_xu5gc_content AS c ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
         args=limit
     with connection.cursor() as cursor:
         cursor.execute(sql,args)
