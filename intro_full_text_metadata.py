@@ -85,21 +85,43 @@ def process_context(contexts:list,logger:Logger,temperature=0):
             response = client.chat.completions.create(
                         model="gpt-3.5-turbo-1106",    
                         temperature=temperature, 
+                        response_format={ "type": "json_object" },
                         messages=[
                            {
                                 "role": "system",
                                 "content": "You are an advanced AI language model developed by OpenAI, known as ChatGPT. Your capabilities include natural language processing, keyword extraction, and generating meta descriptions for SEO purposes. Your task is to analyze text, identify relevant keywords and phrases, and create concise, informative meta descriptions that align with SEO best practices. Utilize your understanding of context, language nuances, and SEO guidelines to optimize content for better search engine visibility."
                             },
+                            {
+                                "role": "user",
+                                "content": f"""Instructions:
+1. Analyze the given context and Identify the meta keywords and meta description.
+2. Identify the top 5 to 8 meta keywords for SEO purposes.
+3. Create consise and informative meta description for SEO purposes. 
+4. Ensure that each meta keyword is surrounded by single quotes and separated by
 
-                    {"role": "user", "content": f"""
-                    Analyze the following blog text .You have to generate meta keywords and meta description and meta description must be seperate  with "\n\n" new line." 
-                    1.Generate 5-8 meta keywords.
-                    2.The character length of the meta description should be 160 character. 
-                     
-                    Here is the blog text :
-                    Blog Text:"{contexts[0]}"\n\n"
-                    
-                    The meta keywords and meta description should be relevant of the given text for web search optimization."""}]
+5. Ensure that each meta keyword is distinct from one another.
+6. Ensure that meta keyword and meta description should be from given context for SEO best bractices.
+
+###
+
+Given Context: {contexts[0]}
+
+###
+
+Example Output: {{
+  "Meta keywords": [
+    "Love and Relationships",
+    "Friendship",
+    "Family"
+  ],
+  "Meta description":"Explore insightful articles and advice on nurturing your personal relationships, strengthening family bonds, and building lasting friendships. Join us in our journey"
+}}
+###
+
+
+JSON Output:"""
+}
+]
             )
             metadata.append(response.choices[0].message.content.strip())
             n_tokens.append(response.usage.completion_tokens)
