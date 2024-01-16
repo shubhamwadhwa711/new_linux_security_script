@@ -64,10 +64,10 @@ async def process_text_async(client, context, logger):
     """This function execute whwn contexts length is more than one """
     try:
         response = await client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-3.5-turbo-1106",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Generate meta keywords and description for: {context}"}
+                {"role": "user", "content": f"Consise the context for further analysis to find the informative insights from the context: {context}"}
             ]
         )
         return response.choices[0].message.content.strip(), response.usage.completion_tokens
@@ -97,7 +97,7 @@ def process_context(contexts:list,logger:Logger,temperature=0):
 1. Analyze the given context and Identify the meta keywords and meta description.
 2. Identify the top 5 to 8 meta keywords for SEO purposes.
 3. Create consise and informative meta description for SEO purposes. 
-4. Ensure that each meta keyword is surrounded by single quotes and separated by
+4. Ensure that each meta keyword is surrounded by quotes and separated by
 
 5. Ensure that each meta keyword is distinct from one another.
 6. Ensure that meta keyword and meta description should be from given context for SEO best bractices.
@@ -181,8 +181,9 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
             logger.info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
             metadata=extract_record_text(record=record,logger=logger,max_words=max_words,max_tokens=max_tokens)
             if metadata is not None:
-                metadata = metadata.replace('\\n\\n', '\n\n')
-                dict_response = {item.split(':', 1)[0]: item.split(':', 1)[1].strip() for item in metadata.split("\n\n") if ':' in item}
+                dict_response=json.loads(metadata)
+                # metadata = metadata.replace('\\n\\n', '\n\n')
+                # dict_response = {item.split(':', 1)[0]: item.split(':', 1)[1].strip() for item in metadata.split("\n\n") if ':' in item}
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
         except KeyboardInterrupt as e:

@@ -121,10 +121,11 @@ def clean_text(fulltext:str,logger:Logger,max_words:int):
          and return the text """
     soup=BeautifulSoup(fulltext,'html.parser')
     text=soup.get_text(separator=" ")
-    split_text=text.split()
+    cleaned_string = re.sub(r'\n\s*\n', '\n',text)
+    split_text=cleaned_string.split()
     if len(split_text)>max_words:
-        text=" ".join(split_text[:max_words])
-    return text
+        cleaned_string=" ".join(split_text[:max_words])
+    return cleaned_string
 
 
 
