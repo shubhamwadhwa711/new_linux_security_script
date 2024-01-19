@@ -6,7 +6,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            // "args":["--id","101911"],
+            "args":["--id","101911","--commit"],
             "justMyCode": false
         }
     ]

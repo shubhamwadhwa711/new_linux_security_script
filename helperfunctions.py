@@ -10,7 +10,7 @@ import pandas as pd
 import json
 import os
 tokenizer = tiktoken.get_encoding("cl100k_base")
-
+from pymysql import Connection,MySQLError
 class ColoredFormatter(logging.Formatter):
     datefmt = "%Y-%m-%d %H:%M:%S"
     MAPPING = {
@@ -184,3 +184,28 @@ def percentage(number, total):
     per = float(number)/float(total)
     to_str = "{:.1%}".format(per)
     return to_str
+
+
+def do_update(connection: Connection,id:int,metadata:list,description:str):
+    try:
+        if metadata is None and description is None:
+            return False
+        if metadata and description:
+            sql = ""
+            args = (metadata, description, id)
+        elif metadata and description is None or description=="":
+            sql = ""
+            args = (metadata, id)
+        elif description and metadata is None or metadata==[]:
+            sql = ""
+            args = (description, id)
+        else:
+            return False
+        with connection.cursor() as cursor:
+            cursor.execute(sql, args)
+        connection.commit()
+        return True
+    except MySQLError as e:
+        # logger.error(e)
+        connection.rollback()
+        raise e

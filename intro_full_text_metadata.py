@@ -1,6 +1,6 @@
 import configparser
 import os
-from helperfunctions import getlogger, percentage,aggregate_into_few,process_text,clean_text,write_into_the_json_file,current_state
+from helperfunctions import getlogger, percentage,aggregate_into_few,process_text,clean_text,write_into_the_json_file,current_state,do_update
 import pymysql
 import pymysql.cursors
 from logging import Logger
@@ -12,7 +12,7 @@ from pandas import DataFrame
 import json
 import argparse
 import concurrent.futures
-
+from pymysql import Connection
 client = OpenAI(api_key=os.getenv("OPENAI_SECRET_KEY"))
 
 
@@ -173,7 +173,7 @@ def extract_record_text(record:Dict[str,Any],logger:Logger,max_words:int,max_tok
 
 
 
-def process_records(result:list,logger:Logger, total:int,counter:int,max_words:int, max_tokens:int,json_file:str,store_state_file:str):
+def process_records(result:list,logger:Logger, total:int,counter:int,max_words:int, max_tokens:int,json_file:str,store_state_file:str,connection:Connection,commit: bool = False):
     """Process the extracting records """
     for record in result:
         counter+=1
@@ -186,6 +186,10 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
                 # dict_response = {item.split(':', 1)[0]: item.split(':', 1)[1].strip() for item in metadata.split("\n\n") if ':' in item}
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
+                if commit:
+                    succeed=do_update(connection=connection,id=response["id"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"])
+                    if succeed:
+                        logger.info(f'ID: {response.get("id")} has been updated in database')
         except KeyboardInterrupt as e:
             current_id = record.get("id")
             current_state(store_state_file, id=current_id, counter=counter, mode="w")
@@ -197,7 +201,7 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
       
 
 
-def main(id: Optional[int] = 0):
+def main(id: Optional[int] = 0,commit: bool = False,):
     '''
     This is the main fucntion that extracts the required data from the config file
     '''
@@ -222,7 +226,7 @@ def main(id: Optional[int] = 0):
             if len(result)==0:
                 logger.info(f'{"="*20} All records have been processed {"="*20}')
                 break
-            counter=process_records(result=result,logger=logger,total=total_records,counter=counter,max_words=max_words, max_tokens=max_tokens,json_file=json_file,store_state_file=store_state_file)
+            counter=process_records(result=result,logger=logger,total=total_records,counter=counter,max_words=max_words, max_tokens=max_tokens,json_file=json_file,store_state_file=store_state_file,commit=commit,connection=connection)
             current_id=result[-1]['id']
             if id > 0:
                 logger.info(f'{"="*20} All records have been processed {"="*20}')
@@ -235,6 +239,8 @@ def main(id: Optional[int] = 0):
 if __name__ =="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--id", default=0, type=int, help="Check for specific ID")
+    parser.add_argument("--commit", action="store_true", help="Update the database")
     args = parser.parse_args()
     specific_id = args.id
-    main(id=specific_id)
+    is_commit=args.commit
+    main(id=specific_id,commit=is_commit)
