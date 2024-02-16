@@ -191,13 +191,13 @@ def do_update(connection: Connection,id:int,metadata:list,description:str):
         if metadata is None and description is None:
             return False
         if metadata and description:
-            sql = ""
+            sql="UPDATE xu5gc_easyfrontendseo SET `keywords`=%s, `description`=%s WHERE id=%s"
             args = (metadata, description, id)
         elif metadata and description is None or description=="":
-            sql = ""
+            sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s  WHERE id=%s"
             args = (metadata, id)
         elif description and metadata is None or metadata==[]:
-            sql = ""
+            sql = "UPDATE xu5gc_easyfrontendseo SET `description`=%s WHERE id=%s"
             args = (description, id)
         else:
             return False
