@@ -186,17 +186,19 @@ def percentage(number, total):
     return to_str
 
 
-def do_update(connection: Connection,id:int,metadata:list,description:str):
+def do_update(connection: Connection, id: int, metadata: list, description: str):
     try:
+        if len(metadata)>=1:
+            metadata=",".join(metadata)
         if metadata is None and description is None:
             return False
-        if metadata and description:
-            sql="UPDATE xu5gc_easyfrontendseo SET `keywords`=%s, `description`=%s WHERE id=%s"
+        if metadata is not None and description is not None:
+            sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s, `description`=%s WHERE id=%s"
             args = (metadata, description, id)
-        elif metadata and description is None or description=="":
+        elif metadata is not None and (description is None or description == ""):
             sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s  WHERE id=%s"
             args = (metadata, id)
-        elif description and metadata is None or metadata==[]:
+        elif description is not None and (metadata is None or metadata == []):
             sql = "UPDATE xu5gc_easyfrontendseo SET `description`=%s WHERE id=%s"
             args = (description, id)
         else:
@@ -206,6 +208,5 @@ def do_update(connection: Connection,id:int,metadata:list,description:str):
         connection.commit()
         return True
     except MySQLError as e:
-        # logger.error(e)
         connection.rollback()
         raise e

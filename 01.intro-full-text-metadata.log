@@ -12,3 +12,18 @@
 2024-01-19 23:13:40 - INFO - ==================== Total records : 110458 ====================
 2024-01-19 23:13:40 - INFO - ******************** Processing ID: 101911 ******************** (1/110458 - 0.0%)
 2024-01-19 23:13:48 - INFO -  Successfully processed  the record ID:101911
+2024-02-16 18:53:00 - INFO - ==================== Total records : 110458 ====================
+2024-02-16 18:53:00 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-16 18:53:02 - INFO -  Successfully processed  the record ID:348482
+2024-02-16 18:55:22 - ERROR - Process records ERROR : (1241, 'Operand should contain 1 column(s)') Record_id: 348482
+2024-02-16 18:55:22 - INFO - ==================== All records have been processed ====================
+2024-02-16 18:58:31 - INFO - ==================== Total records : 110458 ====================
+2024-02-16 18:58:31 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-16 18:58:33 - INFO -  Successfully processed  the record ID:348482
+2024-02-16 19:00:14 - ERROR - Process records ERROR : (1241, 'Operand should contain 1 column(s)') Record_id: 348482
+2024-02-16 19:00:14 - INFO - ==================== All records have been processed ====================
+2024-02-16 19:01:31 - INFO - ==================== Total records : 110458 ====================
+2024-02-16 19:01:31 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-16 19:01:34 - INFO -  Successfully processed  the record ID:348482
+2024-02-16 19:02:00 - INFO - ID: 348482 has been updated in database
+2024-02-16 19:02:00 - INFO - ==================== All records have been processed ====================
