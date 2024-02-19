@@ -1,29 +1,56 @@
-2024-01-19 23:03:38 - INFO - ==================== Total records : 110458 ====================
-2024-01-19 23:03:38 - INFO - ******************** Processing ID: 101911 ******************** (1/110458 - 0.0%)
-2024-01-19 23:03:48 - INFO -  Successfully processed  the record ID:101911
-2024-01-19 23:07:00 - ERROR - Process records ERROR : do_update() got an unexpected keyword argument 'Meta keywords' Record_id: 101911
-2024-01-19 23:07:00 - INFO - ==================== All records have been processed ====================
-2024-01-19 23:09:16 - INFO - ==================== Total records : 110458 ====================
-2024-01-19 23:09:16 - INFO - ******************** Processing ID: 101911 ******************** (1/110458 - 0.0%)
-2024-01-19 23:09:24 - INFO -  Successfully processed  the record ID:101911
-2024-01-19 23:10:52 - INFO - ==================== Total records : 110458 ====================
-2024-01-19 23:10:52 - INFO - ******************** Processing ID: 101911 ******************** (1/110458 - 0.0%)
-2024-01-19 23:11:00 - INFO -  Successfully processed  the record ID:101911
-2024-01-19 23:13:40 - INFO - ==================== Total records : 110458 ====================
-2024-01-19 23:13:40 - INFO - ******************** Processing ID: 101911 ******************** (1/110458 - 0.0%)
-2024-01-19 23:13:48 - INFO -  Successfully processed  the record ID:101911
-2024-02-16 18:53:00 - INFO - ==================== Total records : 110458 ====================
-2024-02-16 18:53:00 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
-2024-02-16 18:53:02 - INFO -  Successfully processed  the record ID:348482
-2024-02-16 18:55:22 - ERROR - Process records ERROR : (1241, 'Operand should contain 1 column(s)') Record_id: 348482
-2024-02-16 18:55:22 - INFO - ==================== All records have been processed ====================
-2024-02-16 18:58:31 - INFO - ==================== Total records : 110458 ====================
-2024-02-16 18:58:31 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
-2024-02-16 18:58:33 - INFO -  Successfully processed  the record ID:348482
-2024-02-16 19:00:14 - ERROR - Process records ERROR : (1241, 'Operand should contain 1 column(s)') Record_id: 348482
-2024-02-16 19:00:14 - INFO - ==================== All records have been processed ====================
-2024-02-16 19:01:31 - INFO - ==================== Total records : 110458 ====================
-2024-02-16 19:01:31 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
-2024-02-16 19:01:34 - INFO -  Successfully processed  the record ID:348482
-2024-02-16 19:02:00 - INFO - ID: 348482 has been updated in database
-2024-02-16 19:02:00 - INFO - ==================== All records have been processed ====================
+2024-02-17 22:17:38 - INFO - ==================== Total records : 110458 ====================
+2024-02-17 22:17:38 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-17 22:17:40 - INFO -  Successfully processed  the record ID:348482
+2024-02-17 22:24:25 - INFO - ==================== Total records : 110458 ====================
+2024-02-17 22:24:25 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-17 22:24:28 - INFO -  Successfully processed  the record ID:348482
+2024-02-17 22:26:08 - INFO - ==================== Total records : 110458 ====================
+2024-02-17 22:26:08 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-17 22:26:18 - INFO -  Successfully processed  the record ID:348482
+2024-02-17 22:27:27 - INFO - ==================== Total records : 110458 ====================
+2024-02-17 22:27:27 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-17 22:27:30 - INFO -  Successfully processed  the record ID:348482
+2024-02-17 22:29:27 - ERROR - Process records ERROR : (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near \'\'description\': "\'Explore the critical role of open-source software in address...\' at line 1') Record_id: 348482
+2024-02-17 22:29:27 - INFO - ==================== All records have been processed ====================
+2024-02-17 22:29:38 - INFO - ==================== Total records : 110458 ====================
+2024-02-17 22:29:38 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-17 22:29:41 - INFO -  Successfully processed  the record ID:348482
+2024-02-17 22:30:07 - INFO - ID: 348482 has been updated in database
+2024-02-17 22:30:07 - INFO - ==================== All records have been processed ====================
+2024-02-19 19:33:05 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 19:33:05 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-19 19:33:10 - INFO -  Successfully processed  the record ID:348482
+2024-02-19 19:33:31 - ERROR - Process records ERROR : local variable 'cursor' referenced before assignment Record_id: 348482
+2024-02-19 19:33:31 - INFO - ==================== All records have been processed ====================
+2024-02-19 19:33:55 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 19:33:55 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-19 19:34:00 - INFO -  Successfully processed  the record ID:348482
+2024-02-19 19:34:21 - ERROR - Process records ERROR : 'int' object has no attribute 'fetchone' Record_id: 348482
+2024-02-19 19:34:21 - INFO - ==================== All records have been processed ====================
+2024-02-19 19:35:49 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 19:35:49 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-19 19:35:54 - INFO -  Successfully processed  the record ID:348482
+2024-02-19 19:42:08 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 19:42:08 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-19 19:42:12 - INFO -  Successfully processed  the record ID:348482
+2024-02-19 19:49:23 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 19:49:23 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-19 19:49:30 - INFO -  Successfully processed  the record ID:348482
+2024-02-19 20:01:53 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 20:01:53 - INFO - ******************** Processing ID: 348482 ******************** (1/110458 - 0.0%)
+2024-02-19 20:01:57 - INFO -  Successfully processed  the record ID:348482
+2024-02-19 20:02:13 - INFO - ID: 348482 has been updated in database
+2024-02-19 20:02:13 - INFO - ==================== All records have been processed ====================
+2024-02-19 20:03:26 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 20:03:26 - INFO - ******************** Processing ID: 348493 ******************** (1/110458 - 0.0%)
+2024-02-19 20:03:31 - INFO -  Successfully processed  the record ID:348493
+2024-02-19 20:04:33 - ERROR - Process records ERROR : Expecting value: line 1 column 1 (char 0) Record_id: 348493
+2024-02-19 20:04:33 - INFO - ==================== All records have been processed ====================
+2024-02-19 20:06:52 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 20:06:52 - INFO - ******************** Processing ID: 348493 ******************** (1/110458 - 0.0%)
+2024-02-19 20:06:58 - INFO -  Successfully processed  the record ID:348493
+2024-02-19 20:09:57 - INFO - ==================== Total records : 110458 ====================
+2024-02-19 20:09:57 - INFO - ******************** Processing ID: 348493 ******************** (1/110458 - 0.0%)
+2024-02-19 20:10:01 - INFO -  Successfully processed  the record ID:348493
+2024-02-19 20:10:20 - INFO - ID: 348493 has been updated in database
+2024-02-19 20:10:20 - INFO - ==================== All records have been processed ====================

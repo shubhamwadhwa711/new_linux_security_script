@@ -1,65 +1,50 @@
 [
     {
-        "id": 101911,
+        "id": 348482,
         "metadata": {
             "Meta keywords": [
-                "Netscape packages",
-                "Red Hat Linux 6.x",
-                "security problems",
-                "Javascript",
-                "form signing",
-                "RPMs",
-                "75dpi font directory",
-                "GnuPG"
+                "Software supply chain security",
+                "Open-source software",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security threats",
+                "Endpoint security",
+                "Open-source professionals"
             ],
-            "Meta description": "Discover the latest Netscape packages for Red Hat Linux 6.x, addressing security issues in Javascript and form signing. Obtain valid RPMs and fix the 75dpi font directory error with our comprehensive update, signed with GnuPG for enhanced security."
+            "Meta description": "Explore the critical role of open-source software in addressing software supply chain security threats and learn about the evolving landscape of Linux security. Uncover the truth about common Linux VPN myths and empower yourself with expert insights for enhanced online privacy and security."
         }
     },
     {
-        "id": 101911,
+        "id": 348482,
         "metadata": {
             "Meta keywords": [
-                "Red Hat Linux 6.x",
-                "Netscape packages",
-                "Intel architecture",
-                "security problems",
-                "JavaScript",
-                "form signing",
-                "75dpi font directory",
-                "MD5 sum"
+                "Software supply chain security",
+                "Open-source software",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security threats",
+                "Endpoint security",
+                "Linux VPN usage"
             ],
-            "Meta description": "Discover the latest Netscape packages for Red Hat Linux 6.x, Intel architecture, addressing security issues in JavaScript and form signing. Learn about the fix for the 75dpi font directory error and the verification process using MD5 sum for enhanced security."
+            "Meta description": "Explore the critical role of open-source software in supply chain security, current security trends, and the truth about Linux VPN usage. Gain expert insights on combating software supply chain security threats and dispelling common Linux VPN myths for enhanced online security."
         }
     },
     {
-        "id": 101911,
+        "id": 348482,
         "metadata": {
             "Meta keywords": [
-                "Red Hat security advisory",
-                "Netscape packages",
-                "Red Hat Linux 6.x",
-                "Javascript security problems",
-                "Form signing security",
-                "RPMs",
-                "GnuPG keys"
+                "Software supply chain security",
+                "Open-source software",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security threats",
+                "Linux",
+                "Open-source professionals"
             ],
-            "Meta description": "Stay updated with the latest Red Hat security advisory on Netscape packages for Red Hat Linux 6.x, addressing Javascript and form signing security problems. Obtain the necessary RPMs and verify packages with GnuPG keys for enhanced system security."
-        }
-    },
-    {
-        "id": 101911,
-        "metadata": {
-            "Meta keywords": [
-                "Red Hat security advisory",
-                "Netscape packages",
-                "security fixes",
-                "JavaScript",
-                "form signing",
-                "package update instructions",
-                "MD5 sums verification",
-                "GnuPG keys"
-            ],
-            "Meta description": "Stay informed about the latest Red Hat security advisory regarding Netscape packages. Learn about the security fixes for JavaScript and form signing, and find detailed instructions for updating the packages. Verify package integrity using MD5 sums and GnuPG keys for enhanced security."
+            "Meta description": "Explore the critical role of open-source software in addressing software supply chain security threats and dispelling common myths about Linux VPN usage. Gain expert insights into current security trends, technologies, and policies shaping the next five years of security software. Empower yourself with accurate information about VPNs and online privacy from Linux security experts."
         }
     },
     {
@@ -73,9 +58,9 @@
                 "Online privacy",
                 "Security threats",
                 "Digital resources",
-                "Linux security insights"
+                "Linux VPN usage"
             ],
-            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, and debunk common Linux VPN myths. Gain expert insights on Linux security and online privacy to make informed decisions for enhanced security."
+            "Meta description": "Explore the critical role of open-source software in addressing software supply chain security threats and learn about the evolving landscape of Linux security. Uncover the truth about common Linux VPN myths and empower yourself with accurate information for enhanced online privacy and security."
         }
     },
     {
@@ -89,9 +74,9 @@
                 "Online privacy",
                 "Security threats",
                 "Digital resources",
-                "Linux"
+                "Linux VPN usage"
             ],
-            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, and debunk common Linux VPN myths. Gain expert insights on Linux security, online privacy, and current security trends."
+            "Meta description": "Explore the critical role of open-source software in addressing software supply chain security threats and learn about the evolving landscape of open-source security. Separate fact from fiction about Linux VPN usage and safeguard your online privacy with expert insights on common VPN myths."
         }
     },
     {
@@ -107,7 +92,135 @@
                 "Digital resources",
                 "Linux"
             ],
-            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, and debunk common Linux VPN myths. Gain expert insights on Linux security, online privacy, and current security trends shaping the next five years."
+            "Meta description": "Explore the critical role of open-source software in addressing software supply chain security threats and learn about the evolving landscape of Linux security. Uncover the truth about common Linux VPN myths and empower yourself with knowledge for enhanced online privacy and security."
+        }
+    },
+    {
+        "id": 348482,
+        "metadata": {
+            "Meta keywords": [
+                "Software supply chain security",
+                "Open-source software",
+                "Supply chain attacks",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security software",
+                "Linux VPN usage"
+            ],
+            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, and debunk common Linux VPN myths. Gain expert insights on Linux security trends, technologies, and policies shaping the next five years of security software."
+        }
+    },
+    {
+        "id": 348482,
+        "metadata": {
+            "Meta keywords": [
+                "Software supply chain security",
+                "Open-source software",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security threats",
+                "Digital resources",
+                "Linux"
+            ],
+            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, unlock the secrets of Linux security, and learn the truth about Linux VPN usage. Stay informed about current security trends, technologies, and policies shaping the next five years of security software."
+        }
+    },
+    {
+        "id": 348482,
+        "metadata": {
+            "Meta keywords": [
+                "Software supply chain security",
+                "Open-source software",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security threats",
+                "Linux",
+                "Open-source professionals"
+            ],
+            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, uncover the truth about Linux VPN usage, and gain expert insights into Linux security trends and technologies. Stay informed and empowered in the ever-evolving landscape of security and privacy."
+        }
+    },
+    {
+        "id": 348482,
+        "metadata": {
+            "Meta keywords": [
+                "Software supply chain security",
+                "Open-source software",
+                "Supply chain attacks",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security software",
+                "Open-source security"
+            ],
+            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, and debunk common Linux VPN myths. Gain expert insights on Linux security trends, technologies, and policies shaping the next five years of security software."
+        }
+    },
+    {
+        "id": 348482,
+        "metadata": {
+            "Meta keywords": [
+                "Software supply chain security",
+                "Open-source software",
+                "Supply chain attacks",
+                "Linux security",
+                "VPN myths",
+                "Online privacy",
+                "Security software",
+                "Open-source security"
+            ],
+            "Meta description": "Explore the critical role of open-source software in supply chain security, combat software supply chain security threats, and debunk common Linux VPN myths. Gain expert insights on Linux security trends, technologies, and policies for enhanced online privacy and security."
+        }
+    },
+    {
+        "id": 348493,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "suse/pcp",
+                "security update",
+                "CVE-2023-31484",
+                "CVE-2023-32001",
+                "dbus-1",
+                "perl",
+                "glibc"
+            ],
+            "Meta description": "Stay informed about the latest SUSE container updates, including security patches for suse/pcp, dbus-1, perl, and glibc. This advisory addresses important security vulnerabilities such as CVE-2023-31484 and CVE-2023-32001, ensuring the safety and integrity of your containerized environment."
+        }
+    },
+    {
+        "id": 348493,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "suse/pcp",
+                "security update",
+                "CVE-2023-31484",
+                "CVE-2023-32001",
+                "dbus-1",
+                "perl",
+                "glibc"
+            ],
+            "Meta description": "Stay informed about the latest SUSE container updates, including security patches for suse/pcp, dbus-1, perl, and glibc. Learn about important security updates addressing CVE-2023-31484 and CVE-2023-32001 vulnerabilities."
+        }
+    },
+    {
+        "id": 348493,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "suse/pcp",
+                "security update",
+                "CVE-2023-31484",
+                "CVE-2023-32001",
+                "dbus-1",
+                "perl",
+                "glibc"
+            ],
+            "Meta description": "Stay informed about the latest SUSE container update advisory for suse/pcp, including important security updates for dbus-1, perl, and glibc. Learn about the addressed CVEs (CVE-2023-31484, CVE-2023-32001) and their impact."
         }
     }
 ]

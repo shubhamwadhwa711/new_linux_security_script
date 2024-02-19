@@ -187,20 +187,32 @@ def percentage(number, total):
 
 
 def do_update(connection: Connection, id: int, metadata: list, description: str):
+    open_graph,twitter_Cards={},{}
     try:
+        sql = "SELECT c.opengraph, c.twitterCards FROM xu5gc_easyfrontendseo AS c WHERE id =%s"
+        args = id
+        with connection.cursor() as cursor:
+            cursor.execute(sql,args)
+            record=cursor.fetchone()
+        try:
+            open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
+        except json.JSONDecodeError:
+            pass
+        open_graph["description"]=description
+        twitter_Cards["description"]=description
         if len(metadata)>=1:
             metadata=",".join(metadata)
         if metadata is None and description is None:
             return False
         if metadata is not None and description is not None:
-            sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s, `description`=%s WHERE id=%s"
-            args = (metadata, description, id)
+            sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s, `description`=%s, `openGraph`=%s, `twitterCards`=%s WHERE id=%s"
+            args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)
         elif metadata is not None and (description is None or description == ""):
             sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s  WHERE id=%s"
             args = (metadata, id)
         elif description is not None and (metadata is None or metadata == []):
-            sql = "UPDATE xu5gc_easyfrontendseo SET `description`=%s WHERE id=%s"
-            args = (description, id)
+            sql = "UPDATE xu5gc_easyfrontendseo SET `description`=%s, `openGraph`=%s, `twitterCards`=%s WHERE id=%s"
+            args = (description,json.dumps(open_graph),json.dumps(twitter_Cards), id)
         else:
             return False
         with connection.cursor() as cursor:
