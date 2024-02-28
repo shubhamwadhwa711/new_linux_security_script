@@ -47,13 +47,13 @@ def get_total_rows(connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
     """ To get the records sequentially based  to limit """
     if id > 0:
-        sql = "SELECT c.id, c.introtext, c.fulltext FROM xu5gc_content AS c WHERE id =%s"
+        sql = "SELECT c.id, c.introtext, c.fulltext, c.alias FROM xu5gc_content AS c WHERE id =%s"
         args = id
     elif current_id>0:
-        sql="SELECT c.id , c.introtext , c.fulltext FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext, c.alias FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
         args=(current_id,limit)
     else:
-        sql="SELECT c.id , c.introtext , c.fulltext FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext , c.alias FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
         args=limit
     with connection.cursor() as cursor:
         cursor.execute(sql,args)
@@ -182,12 +182,10 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
             metadata=extract_record_text(record=record,logger=logger,max_words=max_words,max_tokens=max_tokens)
             if metadata is not None:
                 dict_response=json.loads(metadata)
-                # metadata = metadata.replace('\\n\\n', '\n\n')
-                # dict_response = {item.split(':', 1)[0]: item.split(':', 1)[1].strip() for item in metadata.split("\n\n") if ':' in item}
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
                 if commit:
-                    succeed=do_update(connection=connection,id=response["id"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"])
+                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"])
                     if succeed:
                         logger.info(f'ID: {response.get("id")} has been updated in database')
         except KeyboardInterrupt as e:
@@ -233,6 +231,7 @@ def main(id: Optional[int] = 0,commit: bool = False,):
                 break
         except Exception as e:
             logger.info(f"ERROR : {e}")
+            current_id=result[-1]['id']
 
 
 

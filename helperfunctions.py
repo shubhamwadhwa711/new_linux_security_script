@@ -186,15 +186,15 @@ def percentage(number, total):
     return to_str
 
 
-def do_update(connection: Connection, id: int, metadata: list, description: str):
+def do_update(connection: Connection, alias: str, metadata: list, description: str):
     open_graph,twitter_Cards={},{}
     try:
-        sql = "SELECT c.opengraph, c.twitterCards FROM xu5gc_easyfrontendseo AS c WHERE id =%s"
-        args = id
+        sql=f"SELECT c.id,c.opengraph,c.twitterCards FROM `xu5gc_easyfrontendseo` as c WHERE `url` LIKE '%{alias}%'"
         with connection.cursor() as cursor:
-            cursor.execute(sql,args)
+            cursor.execute(sql)
             record=cursor.fetchone()
         try:
+            id=record['id']
             open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
         except json.JSONDecodeError:
             pass
@@ -222,3 +222,5 @@ def do_update(connection: Connection, id: int, metadata: list, description: str)
     except MySQLError as e:
         connection.rollback()
         raise e
+    except Exception as e:
+        pass
