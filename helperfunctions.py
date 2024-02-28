@@ -185,35 +185,65 @@ def percentage(number, total):
     to_str = "{:.1%}".format(per)
     return to_str
 
+def get_record(connection,alias):
+    sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM `xu5gc_easyfrontendseo` as c WHERE `url` LIKE '%{alias}%'"
+    with connection.cursor() as cursor:
+        cursor.execute(sql)
+        record=cursor.fetchone()
+    return record
 
-def do_update(connection: Connection, alias: str, metadata: list, description: str):
-    open_graph,twitter_Cards={},{}
-    try:
-        sql=f"SELECT c.id,c.opengraph,c.twitterCards FROM `xu5gc_easyfrontendseo` as c WHERE `url` LIKE '%{alias}%'"
-        with connection.cursor() as cursor:
-            cursor.execute(sql)
-            record=cursor.fetchone()
-        try:
-            id=record['id']
-            open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
-        except json.JSONDecodeError:
-            pass
-        open_graph["description"]=description
-        twitter_Cards["description"]=description
-        if len(metadata)>=1:
-            metadata=",".join(metadata)
+def get_prepare_json(record,description,base_url):
+    opengarph_json_data = {
+                "title": record['title'],
+                "description": description,
+                "image": "IMAGE",
+                "type": "article",
+                "site_name": "Linux Security",
+                "url": f"{base_url}/{record['url']}",
+                "image:alt": record['title']
+            }
+    twitter_Cards_json_data = {
+        "title": record['title'],
+        "description": description,
+        "image": "IMAGE",
+        "card":"summary_large_image",
+        "site":"lnxsec",
+        "creator":"lnxsec",
+        "image:alt": record['title']
+    }
+    opengarph_json_data = json.dumps(opengarph_json_data)
+    twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
+    return opengarph_json_data,twitter_Cards_json_data
+
+def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url=str):
+    try: 
         if metadata is None and description is None:
             return False
-        if metadata is not None and description is not None:
-            sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s, `description`=%s, `openGraph`=%s, `twitterCards`=%s WHERE id=%s"
-            args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)
-        elif metadata is not None and (description is None or description == ""):
-            sql = "UPDATE xu5gc_easyfrontendseo SET `keywords`=%s  WHERE id=%s"
-            args = (metadata, id)
-        elif description is not None and (metadata is None or metadata == []):
-            sql = "UPDATE xu5gc_easyfrontendseo SET `description`=%s, `openGraph`=%s, `twitterCards`=%s WHERE id=%s"
-            args = (description,json.dumps(open_graph),json.dumps(twitter_Cards), id)
+        if len(metadata)>=1:
+            metadata=",".join(metadata)
+        record=get_record(connection,alias)
+        if record:
+            id=record['id']
+            if record["opengraph"]=="" and record["twitterCards"]=="":
+                opengarph_json_data,twitter_Cards_json_data= get_prepare_json(record,description,base_url)
+                sql= """
+                    UPDATE xu5gc_easyfrontendseo
+                    SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
+                    WHERE id = %s AND (opengraph IS NULL OR opengraph = '') AND (twitterCards IS NULL OR twitterCards = '')
+                    """
+                args=(metadata,description,opengarph_json_data,twitter_Cards_json_data,id)
+            else:
+                sql= """
+                    UPDATE xu5gc_easyfrontendseo
+                    SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
+                    WHERE id = %s 
+                    """
+                open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
+                open_graph["description"]=description
+                twitter_Cards["description"]=description
+                args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)
         else:
+            logger.info(json.dumps({"id":content_table_id,"message":"Record not found in easyfrontseo table"}))
             return False
         with connection.cursor() as cursor:
             cursor.execute(sql, args)
@@ -223,4 +253,4 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
         connection.rollback()
         raise e
     except Exception as e:
-        pass
+        logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
