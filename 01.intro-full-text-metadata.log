@@ -1,0 +1,38 @@
+2024-02-29 16:52:48 - INFO - ==================== Total records : 110458 ====================
+2024-02-29 16:52:48 - INFO - ******************** Processing ID: 14 ******************** (1/110458 - 0.0%)
+2024-02-29 16:52:48 - INFO - Record ID: 14 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 16 ******************** (2/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 16 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 17 ******************** (3/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 17 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 18 ******************** (4/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 18 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 20 ******************** (5/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 20 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 86096 ******************** (6/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 86096 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 86097 ******************** (7/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 86097 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 86098 ******************** (8/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 86098 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 86099 ******************** (9/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 86099 fulltext field has  empty string.
+2024-02-29 16:52:52 - INFO - ******************** Processing ID: 86100 ******************** (10/110458 - 0.0%)
+2024-02-29 16:52:52 - INFO - Record ID: 86100 fulltext field has  empty string.
+2024-02-29 16:52:53 - INFO - ******************** Processing ID: 101882 ******************** (11/110458 - 0.0%)
+2024-02-29 16:52:59 - INFO -  Successfully processed  the record ID:101882
+2024-02-29 16:52:59 - INFO - ******************** Processing ID: 101883 ******************** (12/110458 - 0.0%)
+2024-03-02 00:59:55 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 00:59:55 - INFO - ERROR : (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.title c.catid FROM xu5gc_content AS c WHERE id =102098' at line 1")
+2024-03-02 01:00:58 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 01:00:58 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 01:00:59 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 01:03:18 - INFO - ID:102098 Record not found in easyfrontseo table Creating the new entry--
+2024-03-02 01:08:00 - ERROR - Process records ERROR : (1364, "Field 'generator' doesn't have a default value") Record_id: 102098
+2024-03-02 01:08:00 - INFO - ==================== All records have been processed ====================
+2024-03-02 01:09:46 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 01:09:46 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 01:09:48 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 01:09:58 - INFO - ID:102098 Record not found in easyfrontseo table Creating the new entry--
+2024-03-02 01:10:06 - INFO - ID:102098 "title":OpenBSD 2.5:  execve() system call vulnerability "Alias": openbsd-25-execve-system-call-vulnerability - has been updated in database
+2024-03-02 01:10:17 - INFO - ==================== All records have been processed ====================

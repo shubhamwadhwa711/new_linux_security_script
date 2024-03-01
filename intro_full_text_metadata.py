@@ -47,13 +47,13 @@ def get_total_rows(connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
     """ To get the records sequentially based  to limit """
     if id > 0:
-        sql = "SELECT c.id, c.introtext, c.fulltext, c.alias FROM xu5gc_content AS c WHERE id =%s"
+        sql = "SELECT c.id, c.introtext, c.fulltext, c.alias ,c.title, c.catid FROM xu5gc_content AS c WHERE id =%s"
         args = id
     elif current_id>0:
-        sql="SELECT c.id , c.introtext , c.fulltext, c.alias FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext, c.alias, c.title, c.catid FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
         args=(current_id,limit)
     else:
-        sql="SELECT c.id , c.introtext , c.fulltext , c.alias FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext , c.alias ,c.title ,c.catid FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
         args=limit
     with connection.cursor() as cursor:
         cursor.execute(sql,args)
@@ -185,9 +185,10 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
                 if commit:
-                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url)
+                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"))
                     if succeed:
-                        logger.info(f'ID: {response.get("id")} has been updated in database')
+                        pass
+                        # logger.info(f'ID: {response.get("id")} has been updated in database')
         except KeyboardInterrupt as e:
             current_id = record.get("id")
             current_state(store_state_file, id=current_id, counter=counter, mode="w")

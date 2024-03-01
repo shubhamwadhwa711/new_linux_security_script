@@ -1,0 +1,46 @@
+[
+    {
+        "id": 101882,
+        "metadata": {
+            "Meta keywords": [
+                "CHKROOTKIT",
+                "Linux AIDE",
+                "rootkits",
+                "LKM trojans",
+                "intrusion detection software",
+                "file integrity",
+                "Mhash library",
+                "system security"
+            ],
+            "Meta description": "Discover the significance of CHKROOTKIT and Linux AIDE in maintaining system security. Learn about identifying rootkits, LKM trojans, intrusion detection, file integrity, and the critical role of the Mhash library. Explore the setup, commands, and troubleshooting steps for these essential tools."
+        }
+    },
+    {
+        "id": 102098,
+        "metadata": {
+            "Meta keywords": [
+                "Apply by doing",
+                "cd /usr/src/sys/kern",
+                "patch -p0 < 010_profil.patch",
+                "rebuild your kernel",
+                "stopprofclock",
+                "fdcloseexec",
+                "execsigs"
+            ],
+            "Meta description": "Learn how to apply patches, rebuild your kernel, and manage system processes in the Unix environment. Explore insightful articles and advice on system administration and development."
+        }
+    },
+    {
+        "id": 102098,
+        "metadata": {
+            "Meta keywords": [
+                "kernel rebuild",
+                "patching kernel",
+                "stopprofclock",
+                "fdcloseexec",
+                "execsigs"
+            ],
+            "Meta description": "Learn how to apply patches to the kernel, rebuild the kernel, and execute kernel-related functions such as stopprofclock, fdcloseexec, and execsigs. Enhance your understanding of kernel operations and maintenance."
+        }
+    }
+]

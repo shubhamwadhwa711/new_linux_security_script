@@ -185,6 +185,17 @@ def percentage(number, total):
     to_str = "{:.1%}".format(per)
     return to_str
 
+def get_path_from_cateories_table(connection,catid):
+    sql=f"SELECT c.path FROM `xu5gc_categories` as c WHERE `id`={catid}"
+    with connection.cursor() as cursor:
+        cursor.execute(sql)
+        record=cursor.fetchone()
+    path=record.get('path')
+    if path=="uncategorised":
+        return None
+    return path
+
+
 def get_record(connection,alias):
     sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM `xu5gc_easyfrontendseo` as c WHERE `url` LIKE '%{alias}%'"
     with connection.cursor() as cursor:
@@ -215,7 +226,30 @@ def get_prepare_json(record,description,base_url):
     twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
     return opengarph_json_data,twitter_Cards_json_data
 
-def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url=str):
+def get_prepare_json_for_new_entry(title,description,url,base_url):
+    opengarph_json_data = {
+                "title": title,
+                "description": description,
+                "image": "IMAGE",
+                "type": "article",
+                "site_name": "Linux Security",
+                "url": f"{base_url}/{url}",
+                "image:alt": title
+            }
+    twitter_Cards_json_data = {
+        "title":title,
+        "description": description,
+        "image": "IMAGE",
+        "card":"summary_large_image",
+        "site":"lnxsec",
+        "creator":"lnxsec",
+        "image:alt": title
+    }
+    opengarph_json_data = json.dumps(opengarph_json_data)
+    twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
+    return opengarph_json_data,twitter_Cards_json_data
+
+def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int):
     try: 
         if metadata is None and description is None:
             return False
@@ -241,14 +275,23 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
                 open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
                 open_graph["description"]=description
                 twitter_Cards["description"]=description
-                args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)
+                args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)     
         else:
-            logger.info(json.dumps({"id":content_table_id,"message":"Record not found in easyfrontseo table"}))
-            return False
+            logger.info(f"ID:{content_table_id} Record not found in easyfrontseo table Creating the new entry--")
+            path=get_path_from_cateories_table(connection,catid)
+            if path is not None:
+                url=f"{path}/{alias}"
+            else:
+                url=alias
+            opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url)
+            sql="INSERT INTO xu5gc_easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+            args=(url,content_table_title,description,metadata,"","index, follow",opengarph_json_data,twitter_Cards_json_data,f"{base_url}/{url}","")
+     
         with connection.cursor() as cursor:
             cursor.execute(sql, args)
-        connection.commit()
-        return True
+            connection.commit()
+            logger.info(f'ID:{content_table_id} "title":{content_table_title} "Alias": {alias} - has been updated in database')
+            return True
     except MySQLError as e:
         connection.rollback()
         raise e
