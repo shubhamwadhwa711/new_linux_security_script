@@ -277,7 +277,7 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
                 twitter_Cards["description"]=description
                 args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)     
         else:
-            logger.info(f"ID:{content_table_id} Record not found in easyfrontseo table Creating the new entry--")
+            logger.info(f"""ID:{content_table_id} "title":{content_table_title} "Alias": {alias} Record not found in easyfrontseo table Creating the new entry--""")
             path=get_path_from_cateories_table(connection,catid)
             if path is not None:
                 url=f"{path}/{alias}"

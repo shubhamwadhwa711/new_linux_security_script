@@ -36,3 +36,53 @@
 2024-03-02 01:09:58 - INFO - ID:102098 Record not found in easyfrontseo table Creating the new entry--
 2024-03-02 01:10:06 - INFO - ID:102098 "title":OpenBSD 2.5:  execve() system call vulnerability "Alias": openbsd-25-execve-system-call-vulnerability - has been updated in database
 2024-03-02 01:10:17 - INFO - ==================== All records have been processed ====================
+2024-03-02 17:53:56 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 17:53:56 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 17:53:56 - ERROR - Process Context ERROR : Invalid format specifier
+2024-03-02 17:53:56 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 17:53:56 - ERROR - Extract_record_text ERROR : 0
+2024-03-02 17:54:37 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 17:55:47 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 17:56:11 - ERROR - Process Context ERROR : Invalid format specifier
+2024-03-02 17:56:38 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 17:56:38 - ERROR - Extract_record_text ERROR : 0
+2024-03-02 17:56:39 - INFO - ==================== All records have been processed ====================
+2024-03-02 17:57:13 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 17:57:16 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 17:57:54 - ERROR - Process Context ERROR : Invalid format specifier
+2024-03-02 17:57:54 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 17:57:54 - ERROR - Extract_record_text ERROR : 0
+2024-03-02 17:58:05 - INFO - ==================== All records have been processed ====================
+2024-03-02 17:59:59 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:00:04 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 18:01:33 - ERROR - Process Context ERROR : Invalid format specifier
+2024-03-02 18:01:33 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 18:01:33 - ERROR - Extract_record_text ERROR : 0
+2024-03-02 18:01:34 - INFO - ==================== All records have been processed ====================
+2024-03-02 18:01:46 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:01:48 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 18:02:30 - ERROR - Process Context ERROR : Invalid format specifier
+2024-03-02 18:02:30 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 18:02:30 - ERROR - Extract_record_text ERROR : 0
+2024-03-02 18:06:34 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:06:37 - INFO - ******************** Processing ID: 102098 ******************** (1/110458 - 0.0%)
+2024-03-02 18:07:03 - INFO -  Successfully processed  the record ID:102098
+2024-03-02 18:08:27 - INFO - ID:102098 "title":OpenBSD 2.5:  execve() system call vulnerability "Alias": openbsd-25-execve-system-call-vulnerability - has been updated in database
+2024-03-02 18:08:27 - INFO - ==================== All records have been processed ====================
+2024-03-02 18:09:10 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:09:14 - INFO - ******************** Processing ID: 102096 ******************** (1/110458 - 0.0%)
+2024-03-02 18:10:21 - INFO -  Successfully processed  the record ID:102096
+2024-03-02 18:11:14 - INFO - ID:102096 Record not found in easyfrontseo table Creating the new entry--
+2024-03-02 18:11:16 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-03-02 18:11:16 - INFO - ==================== All records have been processed ====================
+2024-03-02 18:11:58 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:12:01 - INFO - ******************** Processing ID: 102096 ******************** (1/110458 - 0.0%)
+2024-03-02 18:12:20 - INFO -  Successfully processed  the record ID:102096
+2024-03-02 18:14:56 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-03-02 18:14:56 - INFO - ==================== All records have been processed ====================
+2024-03-02 18:19:16 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:19:19 - INFO - ******************** Processing ID: 102096 ******************** (1/110458 - 0.0%)
+2024-03-02 18:19:46 - INFO -  Successfully processed  the record ID:102096
+2024-03-02 18:30:28 - INFO - ==================== Total records : 110458 ====================
+2024-03-02 18:30:31 - INFO - ******************** Processing ID: 102096 ******************** (1/110458 - 0.0%)
+2024-03-02 18:30:48 - INFO -  Successfully processed  the record ID:102096

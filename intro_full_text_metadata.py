@@ -89,18 +89,19 @@ def process_context(contexts:list,logger:Logger,temperature=0):
                         messages=[
                            {
                                 "role": "system",
-                                "content": "You are an advanced AI language model developed by OpenAI, known as ChatGPT. Your capabilities include natural language processing, keyword extraction, and generating meta descriptions for SEO purposes. Your task is to analyze text, identify relevant keywords and phrases, and create concise, informative meta descriptions that align with SEO best practices. Utilize your understanding of context, language nuances, and SEO guidelines to optimize content for better search engine visibility."
+                                "content": "Act as an SEO specialist and analyze the given context to identify meta keywords and create a concise meta description for SEO purposes. The meta description should be up to 106 characters long. Ensure the meta keywords are distinct, surrounded by quotes, and relevant to the given context. Provide a structured JSON output with the top 5 to 8 meta keywords and the meta description. Emphasize the importance of SEO best practices in generating accurate meta data for websites."
                             },
                             {
                                 "role": "user",
                                 "content": f"""Instructions:
-1. Analyze the given context and Identify the meta keywords and meta description.
-2. Identify the top 5 to 8 meta keywords for SEO purposes.
-3. Create consise and informative meta description for SEO purposes. 
-4. Ensure that each meta keyword is surrounded by quotes and separated by
+1. Analyze the provided text to identify the most relevant meta keywords for SEO optimization.
+2. Extract 5 to 10 high volume meta keywords from the given context.
+3. Generate a concise, compelling meta description that summarizes the core content, ensuring it is SEO-friendly and within 160 characters.
+4. Format each meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
 
 5. Ensure that each meta keyword is distinct from one another.
-6. Ensure that meta keyword and meta description should be from given context for SEO best bractices.
+6. The meta keywords and meta description must be directly derived from the provided context, aligning with SEO best practices.
+
 
 ###
 
@@ -108,13 +109,9 @@ Given Context: {contexts[0]}
 
 ###
 
-Example Output: {{
-  "Meta keywords": [
-    "Love and Relationships",
-    "Friendship",
-    "Family"
-  ],
-  "Meta description":"Explore insightful articles and advice on nurturing your personal relationships, strengthening family bonds, and building lasting friendships. Join us in our journey"
+Example Output:{{
+"Meta keywords": ["Keyword1", "Keyword2", "Keyword3"],
+"Meta description": "A succinct summary that encapsulates the main points of the content, optimized for search engines and not exceeding 160 characters."
 }}
 ###
 

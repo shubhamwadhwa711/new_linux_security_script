@@ -42,5 +42,71 @@
             ],
             "Meta description": "Learn how to apply patches to the kernel, rebuild the kernel, and execute kernel-related functions such as stopprofclock, fdcloseexec, and execsigs. Enhance your understanding of kernel operations and maintenance."
         }
+    },
+    {
+        "id": 102098,
+        "metadata": {
+            "Meta keywords": [
+                "apply by doing",
+                "rebuild kernel",
+                "patch command",
+                "usr src sys kern",
+                "stop profiling",
+                "kern exec c",
+                "fdcloseexec",
+                "execsigs"
+            ],
+            "Meta description": "Learn how to apply patches, rebuild your kernel, and execute commands in the sys kern directory. Stop profiling and handle close on exec with ease."
+        }
+    },
+    {
+        "id": 102096,
+        "metadata": {
+            "Meta keywords": [
+                "cron patching",
+                "012_cron.patch",
+                "reinstalling cron software",
+                "cron software configuration",
+                "cron.h file changes",
+                "do_command.c file changes",
+                "mail command execution",
+                "cron_popen function",
+                "error handling",
+                "task scheduling"
+            ],
+            "Meta description": "Learn about patching cron software, configuring files like cron.h, and executing commands using cron_popen. Understand error handling and task scheduling in Unix-based systems."
+        }
+    },
+    {
+        "id": 102096,
+        "metadata": {
+            "Meta keywords": [
+                "cron job scheduler",
+                "patch files",
+                "config.h",
+                "cron.h",
+                "do_command.c",
+                "reinstall",
+                "cron_popen() function",
+                "system administration"
+            ],
+            "Meta description": "Discover the process of applying patch files to the cron job scheduler, including modifications to config.h, cron.h, and do_command.c files. Learn how to reinstall the scheduler and explore the functionality of the cron_popen() function within the context of system administration."
+        }
+    },
+    {
+        "id": 102096,
+        "metadata": {
+            "Meta keywords": [
+                "patch command",
+                "cron application",
+                "config.h file",
+                "cron.h file",
+                "do_command.c file",
+                "code changes",
+                "enhance functionality",
+                "C programming"
+            ],
+            "Meta description": "Applying patch updates to cron application, modifying code in config.h, cron.h, and do_command.c files to enhance functionality."
+        }
     }
 ]
