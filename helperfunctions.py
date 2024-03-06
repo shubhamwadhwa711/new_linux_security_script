@@ -203,11 +203,11 @@ def get_record(connection,alias):
         record=cursor.fetchone()
     return record
 
-def get_prepare_json(record,description,base_url):
+def get_prepare_json(record,description,base_url,image_tag):
     opengarph_json_data = {
                 "title": record['title'],
                 "description": description,
-                "image": "IMAGE",
+                "image": image_tag,
                 "type": "article",
                 "site_name": "Linux Security",
                 "url": f"{base_url}/{record['url']}",
@@ -216,7 +216,7 @@ def get_prepare_json(record,description,base_url):
     twitter_Cards_json_data = {
         "title": record['title'],
         "description": description,
-        "image": "IMAGE",
+        "image": image_tag,
         "card":"summary_large_image",
         "site":"lnxsec",
         "creator":"lnxsec",
@@ -226,11 +226,11 @@ def get_prepare_json(record,description,base_url):
     twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
     return opengarph_json_data,twitter_Cards_json_data
 
-def get_prepare_json_for_new_entry(title,description,url,base_url):
+def get_prepare_json_for_new_entry(title,description,url,base_url,image_tag):
     opengarph_json_data = {
                 "title": title,
                 "description": description,
-                "image": "IMAGE",
+                "image": image_tag,
                 "type": "article",
                 "site_name": "Linux Security",
                 "url": f"{base_url}/{url}",
@@ -239,7 +239,7 @@ def get_prepare_json_for_new_entry(title,description,url,base_url):
     twitter_Cards_json_data = {
         "title":title,
         "description": description,
-        "image": "IMAGE",
+        "image": image_tag,
         "card":"summary_large_image",
         "site":"lnxsec",
         "creator":"lnxsec",
@@ -249,8 +249,10 @@ def get_prepare_json_for_new_entry(title,description,url,base_url):
     twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
     return opengarph_json_data,twitter_Cards_json_data
 
-def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int):
+def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str):
     try: 
+        images=json.loads(images)['image_fulltext'] if images!="" else ""
+        image_tag="IMAGE" if images!="" else ""
         if metadata is None and description is None:
             return False
         if len(metadata)>=1:
@@ -259,7 +261,7 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
         if record:
             id=record['id']
             if record["opengraph"]=="" and record["twitterCards"]=="":
-                opengarph_json_data,twitter_Cards_json_data= get_prepare_json(record,description,base_url)
+                opengarph_json_data,twitter_Cards_json_data= get_prepare_json(record,description,base_url,image_tag)
                 sql= """
                     UPDATE xu5gc_easyfrontendseo
                     SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
@@ -283,7 +285,7 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
                 url=f"{path}/{alias}"
             else:
                 url=alias
-            opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url)
+            opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
             sql="INSERT INTO xu5gc_easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             args=(url,content_table_title,description,metadata,"","index, follow",opengarph_json_data,twitter_Cards_json_data,f"{base_url}/{url}","")
      

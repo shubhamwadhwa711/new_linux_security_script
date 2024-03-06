@@ -47,13 +47,13 @@ def get_total_rows(connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
     """ To get the records sequentially based  to limit """
     if id > 0:
-        sql = "SELECT c.id, c.introtext, c.fulltext, c.alias ,c.title, c.catid FROM xu5gc_content AS c WHERE id =%s"
+        sql = "SELECT c.id, c.introtext, c.fulltext, c.alias ,c.images,c.title, c.catid FROM xu5gc_content AS c WHERE id =%s"
         args = id
     elif current_id>0:
-        sql="SELECT c.id , c.introtext , c.fulltext, c.alias, c.title, c.catid FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext, c.alias, c.images,c.title, c.catid FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
         args=(current_id,limit)
     else:
-        sql="SELECT c.id , c.introtext , c.fulltext , c.alias ,c.title ,c.catid FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
+        sql="SELECT c.id , c.introtext , c.fulltext , c.alias,c.images ,c.title ,c.catid FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
         args=limit
     with connection.cursor() as cursor:
         cursor.execute(sql,args)
@@ -96,7 +96,7 @@ def process_context(contexts:list,logger:Logger,temperature=0):
                                 "content": f"""Instructions:
 1. Analyze the provided text to identify the most relevant meta keywords for SEO optimization.
 2. Extract 5 to 10 high volume meta keywords from the given context.
-3. Generate a concise, compelling meta description that summarizes the core content, ensuring it is SEO-friendly and within 160 characters.
+3. Create a compelling, SEO-optimized meta description within 160 characters, summarizing the main content effectively. Ensure the description does not exceed 160 characters, aligning with best SEO practices.
 4. Format each meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
 
 5. Ensure that each meta keyword is distinct from one another.
@@ -182,7 +182,7 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
                 if commit:
-                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"))
+                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"),images=record.get("images"))
                     if succeed:
                         pass
                         # logger.info(f'ID: {response.get("id")} has been updated in database')

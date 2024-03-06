@@ -4,109 +4,92 @@
         "metadata": {
             "Meta keywords": [
                 "CHKROOTKIT",
+                "LKM trojans",
+                "network security issues",
+                "system binaries",
+                "Linux AIDE",
+                "Intrusion Detection Environment",
+                "file integrity",
+                "Tripwire actions"
+            ],
+            "Meta description": "Detect rootkits, trojans, and network security issues with CHKROOTKIT. Ensure file integrity and improve security with Linux AIDE."
+        }
+    },
+    {
+        "id": 101882,
+        "metadata": {
+            "Meta keywords": [
+                "'CHKROOTKIT'",
+                "'Linux AIDE'",
+                "'rootkit detection'",
+                "'intrusion detection'",
+                "'file integrity'",
+                "'network security'",
+                "'system integrity'",
+                "'AIDE functions'"
+            ],
+            "Meta description": "Enhance data and network security with CHKROOTKIT and Linux AIDE. Detect rootkits, ensure file integrity, and maintain system integrity."
+        }
+    },
+    {
+        "id": 101882,
+        "metadata": {
+            "Meta keywords": [
+                "CHKROOTKIT",
                 "Linux AIDE",
                 "rootkits",
                 "LKM trojans",
-                "intrusion detection software",
+                "intrusion detection system",
                 "file integrity",
-                "Mhash library",
-                "system security"
+                "infected binaries",
+                "network security threats"
             ],
-            "Meta description": "Discover the significance of CHKROOTKIT and Linux AIDE in maintaining system security. Learn about identifying rootkits, LKM trojans, intrusion detection, file integrity, and the critical role of the Mhash library. Explore the setup, commands, and troubleshooting steps for these essential tools."
+            "Meta description": "Explore CHKROOTKIT and Linux AIDE, tools for detecting rootkits, trojans, file integrity, and network security threats. Learn setup and troubleshooting."
         }
     },
     {
-        "id": 102098,
+        "id": 103880,
         "metadata": {
             "Meta keywords": [
-                "Apply by doing",
-                "cd /usr/src/sys/kern",
-                "patch -p0 < 010_profil.patch",
-                "rebuild your kernel",
-                "stopprofclock",
-                "fdcloseexec",
-                "execsigs"
+                "Debian Security Advisory",
+                "uucp",
+                "remote dos",
+                "security update",
+                "Debian GNU/Linux"
             ],
-            "Meta description": "Learn how to apply patches, rebuild your kernel, and manage system processes in the Unix environment. Explore insightful articles and advice on system administration and development."
+            "Meta description": "Debian Security Advisory for uucp package vulnerability. Immediate upgrade recommended for Debian GNU/Linux users."
         }
     },
     {
-        "id": 102098,
+        "id": 103880,
         "metadata": {
             "Meta keywords": [
-                "kernel rebuild",
-                "patching kernel",
-                "stopprofclock",
-                "fdcloseexec",
-                "execsigs"
+                "Debian Security Advisory",
+                "uucp package",
+                "remote dos vulnerability",
+                "Debian 2.2",
+                "potato release",
+                "woody release",
+                "automated update",
+                "security information"
             ],
-            "Meta description": "Learn how to apply patches to the kernel, rebuild the kernel, and execute kernel-related functions such as stopprofclock, fdcloseexec, and execsigs. Enhance your understanding of kernel operations and maintenance."
+            "Meta description": "Debian Security Advisory for uucp package with remote dos vulnerability. Upgrade to secure Debian 2.2 (potato) and upcoming (woody) release."
         }
     },
     {
-        "id": 102098,
+        "id": 103880,
         "metadata": {
             "Meta keywords": [
-                "apply by doing",
-                "rebuild kernel",
-                "patch command",
-                "usr src sys kern",
-                "stop profiling",
-                "kern exec c",
-                "fdcloseexec",
-                "execsigs"
+                "Debian Security Advisory",
+                "uucp package",
+                "remote dos vulnerability",
+                "Debian 2.2 (potato)",
+                "Debian GNU/Linux 2.2",
+                "security update",
+                "package upgrade",
+                "security announcement"
             ],
-            "Meta description": "Learn how to apply patches, rebuild your kernel, and execute commands in the sys kern directory. Stop profiling and handle close on exec with ease."
-        }
-    },
-    {
-        "id": 102096,
-        "metadata": {
-            "Meta keywords": [
-                "cron patching",
-                "012_cron.patch",
-                "reinstalling cron software",
-                "cron software configuration",
-                "cron.h file changes",
-                "do_command.c file changes",
-                "mail command execution",
-                "cron_popen function",
-                "error handling",
-                "task scheduling"
-            ],
-            "Meta description": "Learn about patching cron software, configuring files like cron.h, and executing commands using cron_popen. Understand error handling and task scheduling in Unix-based systems."
-        }
-    },
-    {
-        "id": 102096,
-        "metadata": {
-            "Meta keywords": [
-                "cron job scheduler",
-                "patch files",
-                "config.h",
-                "cron.h",
-                "do_command.c",
-                "reinstall",
-                "cron_popen() function",
-                "system administration"
-            ],
-            "Meta description": "Discover the process of applying patch files to the cron job scheduler, including modifications to config.h, cron.h, and do_command.c files. Learn how to reinstall the scheduler and explore the functionality of the cron_popen() function within the context of system administration."
-        }
-    },
-    {
-        "id": 102096,
-        "metadata": {
-            "Meta keywords": [
-                "patch command",
-                "cron application",
-                "config.h file",
-                "cron.h file",
-                "do_command.c file",
-                "code changes",
-                "enhance functionality",
-                "C programming"
-            ],
-            "Meta description": "Applying patch updates to cron application, modifying code in config.h, cron.h, and do_command.c files to enhance functionality."
+            "Meta description": "Debian Security Advisory: uucp package upgrade for remote dos vulnerability in Debian 2.2 (potato). Ensure security with this important update."
         }
     }
 ]
