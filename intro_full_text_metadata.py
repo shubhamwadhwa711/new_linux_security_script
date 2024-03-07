@@ -96,7 +96,7 @@ def process_context(contexts:list,logger:Logger,temperature=0):
                                 "content": f"""Instructions:
 1. Analyze the provided text to identify the most relevant meta keywords for SEO optimization.
 2. Extract 5 to 10 high volume meta keywords from the given context.
-3. Create a consise description and Ensure the description length should not exceed 160 characters, aligning with best SEO practices.
+3. Create a consise description and Ensure the description length should be less than 150 characters, aligning with best SEO practices.
 4. Format each meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
 
 5. Ensure that each meta keyword is distinct from one another.
