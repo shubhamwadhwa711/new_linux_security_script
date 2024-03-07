@@ -1,0 +1,13 @@
+2024-03-07 13:10:04 - INFO - ==================== Total records : 110458 ====================
+2024-03-07 13:10:04 - INFO - ******************** Processing ID: 101884 ******************** (1/110458 - 0.0%)
+2024-03-07 13:10:12 - INFO -  Successfully processed  the record ID:101884
+2024-03-07 13:11:52 - INFO - ==================== Total records : 110458 ====================
+2024-03-07 13:11:52 - INFO - ******************** Processing ID: 101882 ******************** (1/110458 - 0.0%)
+2024-03-07 13:12:10 - ERROR - Async Process Text ERROR: Request timed out.
+2024-03-07 13:12:13 - ERROR - Extract_record_text ERROR : can only concatenate str (not "NoneType") to str
+2024-03-07 13:12:13 - INFO - ==================== All records have been processed ====================
+2024-03-07 13:12:57 - INFO - ==================== Total records : 110458 ====================
+2024-03-07 13:12:57 - INFO - ******************** Processing ID: 101882 ******************** (1/110458 - 0.0%)
+2024-03-07 13:13:06 - INFO -  Successfully processed  the record ID:101882
+2024-03-07 13:13:45 - INFO - ID:101882 "title":AIDE and CHKROOTKIT "Alias": aide-and-chkrootkit - has been updated in database
+2024-03-07 13:13:45 - INFO - ==================== All records have been processed ====================

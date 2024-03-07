@@ -1,0 +1,34 @@
+[
+    {
+        "id": 101884,
+        "metadata": {
+            "Meta keywords": [
+                "Osiris security monitoring tool",
+                "SSL secure communication",
+                "portability across platforms",
+                "central server configuration",
+                "mass deployment",
+                "remote_update.pl",
+                "ccrypt password encryption",
+                "static binary compilation"
+            ],
+            "Meta description": "Deploy and manage Osiris, a security monitoring tool with SSL communication, mass deployment, and static binary compilation."
+        }
+    },
+    {
+        "id": 101882,
+        "metadata": {
+            "Meta keywords": [
+                "CHKROOTKIT",
+                "Linux AIDE",
+                "network security",
+                "data security",
+                "security tools",
+                "file integrity",
+                "system security",
+                "digital security"
+            ],
+            "Meta description": "Learn about CHKROOTKIT and Linux AIDE, essential security tools for network and data security. Understand their setup, functions, and importance."
+        }
+    }
+]

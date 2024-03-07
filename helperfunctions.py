@@ -252,7 +252,7 @@ def get_prepare_json_for_new_entry(title,description,url,base_url,image_tag):
 def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str):
     try: 
         images=json.loads(images)['image_fulltext'] if images!="" else ""
-        image_tag="IMAGE" if images!="" else ""
+        image_tag=images if images!="" else ""
         if metadata is None and description is None:
             return False
         if len(metadata)>=1:
