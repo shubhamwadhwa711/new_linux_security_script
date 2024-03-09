@@ -1,0 +1,291 @@
+2024-03-09 17:45:11 - INFO - ==================== Total records : 110458 ====================
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 14 ******************** (1/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 14 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 16 ******************** (2/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 16 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 17 ******************** (3/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 17 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 18 ******************** (4/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 18 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 20 ******************** (5/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 20 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 86096 ******************** (6/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 86096 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 86097 ******************** (7/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 86097 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 86098 ******************** (8/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 86098 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 86099 ******************** (9/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 86099 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 86100 ******************** (10/110458 - 0.0%)
+2024-03-09 17:45:11 - INFO - Record ID: 86100 fulltext field has  empty string.
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 101882 ******************** (11/110458 - 0.0%)
+2024-03-09 17:45:11 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:11 - INFO - ******************** Processing ID: 101883 ******************** (12/110458 - 0.0%)
+2024-03-09 17:45:14 - INFO -  Successfully processed  the record ID:101883
+2024-03-09 17:45:14 - INFO - ID:101883 "title":A Decade of Internet Security "Alias": a-decade-of-internet-security - has been updated in database
+2024-03-09 17:45:14 - INFO - ******************** Processing ID: 101884 ******************** (13/110458 - 0.0%)
+2024-03-09 17:45:14 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:14 - INFO - ******************** Processing ID: 101885 ******************** (14/110458 - 0.0%)
+2024-03-09 17:45:14 - INFO - Record ID: 101885 fulltext field has  empty string.
+2024-03-09 17:45:14 - INFO - ******************** Processing ID: 101887 ******************** (15/110458 - 0.0%)
+2024-03-09 17:45:14 - INFO - Record ID: 101887 fulltext field has  empty string.
+2024-03-09 17:45:14 - INFO - ******************** Processing ID: 101892 ******************** (16/110458 - 0.0%)
+2024-03-09 17:45:14 - INFO - Record ID: 101892 fulltext field has  empty string.
+2024-03-09 17:45:14 - INFO - ******************** Processing ID: 101897 ******************** (17/110458 - 0.0%)
+2024-03-09 17:45:14 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:14 - INFO - ******************** Processing ID: 101898 ******************** (18/110458 - 0.0%)
+2024-03-09 17:45:17 - INFO -  Successfully processed  the record ID:101898
+2024-03-09 17:45:17 - INFO - ID:101898 "title":RH6.0:  syslogd (RHSA-1999:055-01) "Alias": rh60-syslogd-rhsa-1999055-01 - has been updated in database
+2024-03-09 17:45:17 - INFO - ******************** Processing ID: 101899 ******************** (19/110458 - 0.0%)
+2024-03-09 17:45:17 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:17 - INFO - ******************** Processing ID: 101910 ******************** (20/110458 - 0.0%)
+2024-03-09 17:45:20 - INFO -  Successfully processed  the record ID:101910
+2024-03-09 17:45:20 - INFO - ID:101910 "title":Debian 2.1: New version of bind released "Alias": debian-21-new-version-of-bind-released - has been updated in database
+2024-03-09 17:45:20 - INFO - ******************** Processing ID: 101911 ******************** (21/110458 - 0.0%)
+2024-03-09 17:45:20 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:20 - INFO - ******************** Processing ID: 101912 ******************** (22/110458 - 0.0%)
+2024-03-09 17:45:20 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:20 - INFO - ******************** Processing ID: 101913 ******************** (23/110458 - 0.0%)
+2024-03-09 17:45:23 - INFO -  Successfully processed  the record ID:101913
+2024-03-09 17:45:23 - INFO - ID:101913 "title":RH6.0:  mars_nwe (RHSA-1999:037-01) "Alias": rh60-marsnwe-rhsa-1999037-01 - has been updated in database
+2024-03-09 17:45:23 - INFO - ******************** Processing ID: 101914 ******************** (24/110458 - 0.0%)
+2024-03-09 17:45:23 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:23 - INFO - ******************** Processing ID: 101915 ******************** (25/110458 - 0.0%)
+2024-03-09 17:45:26 - INFO -  Successfully processed  the record ID:101915
+2024-03-09 17:45:26 - INFO - ID:101915 "title":RH6.0:  amd (RHSA-1999:032-01) "Alias": rh60-amd-rhsa-1999032-01 - has been updated in database
+2024-03-09 17:45:26 - INFO - ******************** Processing ID: 101916 ******************** (26/110458 - 0.0%)
+2024-03-09 17:45:28 - INFO -  Successfully processed  the record ID:101916
+2024-03-09 17:45:29 - INFO - ID:101916 "title":RH6.0:  vixie-cron (RHSA-1999:030-02) "Alias": rh60-vixie-cron-rhsa-1999030-02 - has been updated in database
+2024-03-09 17:45:29 - INFO - ******************** Processing ID: 101917 ******************** (27/110458 - 0.0%)
+2024-03-09 17:45:32 - INFO -  Successfully processed  the record ID:101917
+2024-03-09 17:45:32 - INFO - ID:101917 "title":RH6.0:  wu-ftpd (RHSA-1999:031-01) "Alias": rh60-wu-ftpd-rhsa-1999031-01 - has been updated in database
+2024-03-09 17:45:32 - INFO - ******************** Processing ID: 101918 ******************** (28/110458 - 0.0%)
+2024-03-09 17:45:35 - INFO -  Successfully processed  the record ID:101918
+2024-03-09 17:45:35 - INFO - ID:101918 "title":RH6.0:  in.telnetd (RHSA-1999:029-01) "Alias": rh60-intelnetd-rhsa-1999029-01 - has been updated in database
+2024-03-09 17:45:35 - INFO - ******************** Processing ID: 101919 ******************** (29/110458 - 0.0%)
+2024-03-09 17:45:38 - INFO -  Successfully processed  the record ID:101919
+2024-03-09 17:45:38 - INFO - ID:101919 "title":RH6.0:  libtermcap (RHSA-1999:028-01) "Alias": rh60-libtermcap-rhsa-1999028-01 - has been updated in database
+2024-03-09 17:45:38 - INFO - ******************** Processing ID: 101920 ******************** (30/110458 - 0.0%)
+2024-03-09 17:45:41 - INFO -  Successfully processed  the record ID:101920
+2024-03-09 17:45:41 - INFO - ID:101920 "title":RH6.0:  pump (RHSA-1999:027-02) "Alias": rh60-pump-rhsa-1999027-02 - has been updated in database
+2024-03-09 17:45:41 - INFO - ******************** Processing ID: 101921 ******************** (31/110458 - 0.0%)
+2024-03-09 17:45:44 - INFO -  Successfully processed  the record ID:101921
+2024-03-09 17:45:44 - INFO - ID:101921 "title":RH6.0:  squid (RHSA-1999:025-01) "Alias": rh60-squid-rhsa-1999025-01 - has been updated in database
+2024-03-09 17:45:44 - INFO - ******************** Processing ID: 101922 ******************** (32/110458 - 0.0%)
+2024-03-09 17:45:44 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:44 - INFO - ******************** Processing ID: 101923 ******************** (33/110458 - 0.0%)
+2024-03-09 17:45:46 - INFO -  Successfully processed  the record ID:101923
+2024-03-09 17:45:47 - INFO - ID:101923 "title":RH6.0:  gnumeric (RHSA-1999:023-01) "Alias": rh60-gnumeric-rhsa-1999023-01 - has been updated in database
+2024-03-09 17:45:47 - INFO - ******************** Processing ID: 101924 ******************** (34/110458 - 0.0%)
+2024-03-09 17:45:49 - INFO -  Successfully processed  the record ID:101924
+2024-03-09 17:45:50 - INFO - ID:101924 "title":RH6.0:  net-tools (RHSA-1999:017-01) "Alias": rh60-net-tools-rhsa-1999017-01 - has been updated in database
+2024-03-09 17:45:50 - INFO - ******************** Processing ID: 101925 ******************** (35/110458 - 0.0%)
+2024-03-09 17:45:50 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:50 - INFO - ******************** Processing ID: 101926 ******************** (36/110458 - 0.0%)
+2024-03-09 17:45:50 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:50 - INFO - ******************** Processing ID: 101930 ******************** (37/110458 - 0.0%)
+2024-03-09 17:45:50 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:45:50 - INFO - ******************** Processing ID: 101931 ******************** (38/110458 - 0.0%)
+2024-03-09 17:45:52 - INFO -  Successfully processed  the record ID:101931
+2024-03-09 17:45:53 - INFO - ID:101931 "title":RH6.1:  PAM (RHSA-1999:040-01) "Alias": rh61-pam-rhsa-1999040-01 - has been updated in database
+2024-03-09 17:45:53 - INFO - ******************** Processing ID: 101932 ******************** (39/110458 - 0.0%)
+2024-03-09 17:45:55 - INFO -  Successfully processed  the record ID:101932
+2024-03-09 17:45:55 - INFO - ID:101932 "title":RH6.1:  screen (RHSA-1999:042-01) "Alias": rh61-screen-rhsa-1999042-01 - has been updated in database
+2024-03-09 17:45:55 - INFO - ******************** Processing ID: 101933 ******************** (40/110458 - 0.0%)
+2024-03-09 17:45:57 - INFO -  Successfully processed  the record ID:101933
+2024-03-09 17:45:58 - INFO - ID:101933 "title":RH6.1:  wu-ftpd (RHSA-1999:043-01) "Alias": rh61-wu-ftpd-rhsa-1999043-01 - has been updated in database
+2024-03-09 17:45:58 - INFO - ******************** Processing ID: 101934 ******************** (41/110458 - 0.0%)
+2024-03-09 17:46:00 - INFO -  Successfully processed  the record ID:101934
+2024-03-09 17:46:01 - INFO - ID:101934 "title":RH6.1:  lpr (RHSA-1999:041-03) "Alias": rh61-lpr-rhsa-1999041-03 - has been updated in database
+2024-03-09 17:46:01 - INFO - ******************** Processing ID: 101935 ******************** (42/110458 - 0.0%)
+2024-03-09 17:46:04 - INFO -  Successfully processed  the record ID:101935
+2024-03-09 17:46:04 - INFO - ID:101935 "title":RH6.1:  ypserv (RHSA-1999:046-01) "Alias": rh61-ypserv-rhsa-1999046-01 - has been updated in database
+2024-03-09 17:46:04 - INFO - ******************** Processing ID: 101936 ******************** (43/110458 - 0.0%)
+2024-03-09 17:46:04 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:46:04 - INFO - ******************** Processing ID: 101937 ******************** (44/110458 - 0.0%)
+2024-03-09 17:46:06 - INFO -  Successfully processed  the record ID:101937
+2024-03-09 17:46:07 - INFO - ID:101937 "title":RH6.1:  syslogd (RHSA-1999:055-01) "Alias": rh61-syslogd-rhsa-1999055-01 - has been updated in database
+2024-03-09 17:46:07 - INFO - ******************** Processing ID: 101938 ******************** (45/110458 - 0.0%)
+2024-03-09 17:46:07 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:46:07 - INFO - ******************** Processing ID: 101939 ******************** (46/110458 - 0.0%)
+2024-03-09 17:46:07 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:46:07 - INFO - ******************** Processing ID: 101940 ******************** (47/110458 - 0.0%)
+2024-03-09 17:46:10 - INFO -  Successfully processed  the record ID:101940
+2024-03-09 17:46:11 - INFO - ID:101940 "title":Security hole in Netscape Communicator's 4.5 "Alias": security-hole-in-netscape-communicators-45 - has been updated in database
+2024-03-09 17:46:11 - INFO - ******************** Processing ID: 101941 ******************** (48/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - ==================== Total records : 110458 ====================
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 14 ******************** (1/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 14 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 16 ******************** (2/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 16 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 17 ******************** (3/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 17 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 18 ******************** (4/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 18 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 20 ******************** (5/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 20 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 86096 ******************** (6/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 86096 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 86097 ******************** (7/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 86097 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 86098 ******************** (8/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 86098 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 86099 ******************** (9/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 86099 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 86100 ******************** (10/110458 - 0.0%)
+2024-03-09 17:49:41 - INFO - Record ID: 86100 fulltext field has  empty string.
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 101882 ******************** (11/110458 - 0.0%)
+2024-03-09 17:49:41 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:49:41 - INFO - ******************** Processing ID: 101883 ******************** (12/110458 - 0.0%)
+2024-03-09 17:49:43 - INFO -  Successfully processed  the record ID:101883
+2024-03-09 17:49:44 - INFO - ID:101883 "title":A Decade of Internet Security "Alias": a-decade-of-internet-security - has been updated in database
+2024-03-09 17:49:44 - INFO - ******************** Processing ID: 101884 ******************** (13/110458 - 0.0%)
+2024-03-09 17:49:44 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:49:44 - INFO - ******************** Processing ID: 101885 ******************** (14/110458 - 0.0%)
+2024-03-09 17:49:44 - INFO - Record ID: 101885 fulltext field has  empty string.
+2024-03-09 17:49:44 - INFO - ******************** Processing ID: 101887 ******************** (15/110458 - 0.0%)
+2024-03-09 17:49:44 - INFO - Record ID: 101887 fulltext field has  empty string.
+2024-03-09 17:49:44 - INFO - ******************** Processing ID: 101892 ******************** (16/110458 - 0.0%)
+2024-03-09 17:49:44 - INFO - Record ID: 101892 fulltext field has  empty string.
+2024-03-09 17:49:44 - INFO - ******************** Processing ID: 101897 ******************** (17/110458 - 0.0%)
+2024-03-09 17:49:44 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:49:44 - INFO - ******************** Processing ID: 101898 ******************** (18/110458 - 0.0%)
+2024-03-09 17:49:45 - INFO - State save till Record ID: 101898
+2024-03-09 17:52:50 - INFO - ==================== Total records : 110458 ====================
+2024-03-09 17:52:50 - INFO - ******************** Processing ID: 101899 ******************** (19/110458 - 0.0%)
+2024-03-09 17:52:50 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:52:50 - INFO - ******************** Processing ID: 101910 ******************** (20/110458 - 0.0%)
+2024-03-09 17:52:53 - INFO -  Successfully processed  the record ID:101910
+2024-03-09 17:52:53 - INFO - ID:101910 "title":Debian 2.1: New version of bind released "Alias": debian-21-new-version-of-bind-released - has been updated in database
+2024-03-09 17:52:53 - INFO - ******************** Processing ID: 101911 ******************** (21/110458 - 0.0%)
+2024-03-09 17:52:53 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:52:53 - INFO - ******************** Processing ID: 101912 ******************** (22/110458 - 0.0%)
+2024-03-09 17:52:53 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:52:53 - INFO - ******************** Processing ID: 101913 ******************** (23/110458 - 0.0%)
+2024-03-09 17:52:55 - INFO -  Successfully processed  the record ID:101913
+2024-03-09 17:52:56 - INFO - ID:101913 "title":RH6.0:  mars_nwe (RHSA-1999:037-01) "Alias": rh60-marsnwe-rhsa-1999037-01 - has been updated in database
+2024-03-09 17:52:56 - INFO - ******************** Processing ID: 101914 ******************** (24/110458 - 0.0%)
+2024-03-09 17:52:56 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:52:56 - INFO - ******************** Processing ID: 101915 ******************** (25/110458 - 0.0%)
+2024-03-09 17:52:58 - INFO -  Successfully processed  the record ID:101915
+2024-03-09 17:52:58 - INFO - ID:101915 "title":RH6.0:  amd (RHSA-1999:032-01) "Alias": rh60-amd-rhsa-1999032-01 - has been updated in database
+2024-03-09 17:52:58 - INFO - ******************** Processing ID: 101916 ******************** (26/110458 - 0.0%)
+2024-03-09 17:53:00 - INFO -  Successfully processed  the record ID:101916
+2024-03-09 17:53:01 - INFO - ID:101916 "title":RH6.0:  vixie-cron (RHSA-1999:030-02) "Alias": rh60-vixie-cron-rhsa-1999030-02 - has been updated in database
+2024-03-09 17:53:01 - INFO - ******************** Processing ID: 101917 ******************** (27/110458 - 0.0%)
+2024-03-09 17:53:03 - INFO -  Successfully processed  the record ID:101917
+2024-03-09 17:53:03 - INFO - ID:101917 "title":RH6.0:  wu-ftpd (RHSA-1999:031-01) "Alias": rh60-wu-ftpd-rhsa-1999031-01 - has been updated in database
+2024-03-09 17:53:03 - INFO - ******************** Processing ID: 101918 ******************** (28/110458 - 0.0%)
+2024-03-09 17:53:05 - INFO -  Successfully processed  the record ID:101918
+2024-03-09 17:53:06 - INFO - ID:101918 "title":RH6.0:  in.telnetd (RHSA-1999:029-01) "Alias": rh60-intelnetd-rhsa-1999029-01 - has been updated in database
+2024-03-09 17:53:06 - INFO - ******************** Processing ID: 101919 ******************** (29/110458 - 0.0%)
+2024-03-09 17:53:08 - INFO -  Successfully processed  the record ID:101919
+2024-03-09 17:53:09 - INFO - ID:101919 "title":RH6.0:  libtermcap (RHSA-1999:028-01) "Alias": rh60-libtermcap-rhsa-1999028-01 - has been updated in database
+2024-03-09 17:53:09 - INFO - ******************** Processing ID: 101920 ******************** (30/110458 - 0.0%)
+2024-03-09 17:53:11 - INFO -  Successfully processed  the record ID:101920
+2024-03-09 17:53:11 - INFO - ID:101920 "title":RH6.0:  pump (RHSA-1999:027-02) "Alias": rh60-pump-rhsa-1999027-02 - has been updated in database
+2024-03-09 17:53:11 - INFO - ******************** Processing ID: 101921 ******************** (31/110458 - 0.0%)
+2024-03-09 17:53:13 - INFO -  Successfully processed  the record ID:101921
+2024-03-09 17:53:14 - INFO - ID:101921 "title":RH6.0:  squid (RHSA-1999:025-01) "Alias": rh60-squid-rhsa-1999025-01 - has been updated in database
+2024-03-09 17:53:14 - INFO - ******************** Processing ID: 101922 ******************** (32/110458 - 0.0%)
+2024-03-09 17:53:14 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:14 - INFO - ******************** Processing ID: 101923 ******************** (33/110458 - 0.0%)
+2024-03-09 17:53:15 - INFO -  Successfully processed  the record ID:101923
+2024-03-09 17:53:16 - INFO - ID:101923 "title":RH6.0:  gnumeric (RHSA-1999:023-01) "Alias": rh60-gnumeric-rhsa-1999023-01 - has been updated in database
+2024-03-09 17:53:16 - INFO - ******************** Processing ID: 101924 ******************** (34/110458 - 0.0%)
+2024-03-09 17:53:18 - INFO -  Successfully processed  the record ID:101924
+2024-03-09 17:53:19 - INFO - ID:101924 "title":RH6.0:  net-tools (RHSA-1999:017-01) "Alias": rh60-net-tools-rhsa-1999017-01 - has been updated in database
+2024-03-09 17:53:19 - INFO - ******************** Processing ID: 101925 ******************** (35/110458 - 0.0%)
+2024-03-09 17:53:19 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:19 - INFO - ******************** Processing ID: 101926 ******************** (36/110458 - 0.0%)
+2024-03-09 17:53:19 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:19 - INFO - ******************** Processing ID: 101930 ******************** (37/110458 - 0.0%)
+2024-03-09 17:53:19 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:19 - INFO - ******************** Processing ID: 101931 ******************** (38/110458 - 0.0%)
+2024-03-09 17:53:21 - INFO -  Successfully processed  the record ID:101931
+2024-03-09 17:53:21 - INFO - ID:101931 "title":RH6.1:  PAM (RHSA-1999:040-01) "Alias": rh61-pam-rhsa-1999040-01 - has been updated in database
+2024-03-09 17:53:21 - INFO - ******************** Processing ID: 101932 ******************** (39/110458 - 0.0%)
+2024-03-09 17:53:23 - INFO -  Successfully processed  the record ID:101932
+2024-03-09 17:53:24 - INFO - ID:101932 "title":RH6.1:  screen (RHSA-1999:042-01) "Alias": rh61-screen-rhsa-1999042-01 - has been updated in database
+2024-03-09 17:53:24 - INFO - ******************** Processing ID: 101933 ******************** (40/110458 - 0.0%)
+2024-03-09 17:53:26 - INFO -  Successfully processed  the record ID:101933
+2024-03-09 17:53:26 - INFO - ID:101933 "title":RH6.1:  wu-ftpd (RHSA-1999:043-01) "Alias": rh61-wu-ftpd-rhsa-1999043-01 - has been updated in database
+2024-03-09 17:53:26 - INFO - ******************** Processing ID: 101934 ******************** (41/110458 - 0.0%)
+2024-03-09 17:53:28 - INFO -  Successfully processed  the record ID:101934
+2024-03-09 17:53:29 - INFO - ID:101934 "title":RH6.1:  lpr (RHSA-1999:041-03) "Alias": rh61-lpr-rhsa-1999041-03 - has been updated in database
+2024-03-09 17:53:29 - INFO - ******************** Processing ID: 101935 ******************** (42/110458 - 0.0%)
+2024-03-09 17:53:30 - INFO -  Successfully processed  the record ID:101935
+2024-03-09 17:53:31 - INFO - ID:101935 "title":RH6.1:  ypserv (RHSA-1999:046-01) "Alias": rh61-ypserv-rhsa-1999046-01 - has been updated in database
+2024-03-09 17:53:31 - INFO - ******************** Processing ID: 101936 ******************** (43/110458 - 0.0%)
+2024-03-09 17:53:31 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:31 - INFO - ******************** Processing ID: 101937 ******************** (44/110458 - 0.0%)
+2024-03-09 17:53:33 - INFO -  Successfully processed  the record ID:101937
+2024-03-09 17:53:34 - INFO - ID:101937 "title":RH6.1:  syslogd (RHSA-1999:055-01) "Alias": rh61-syslogd-rhsa-1999055-01 - has been updated in database
+2024-03-09 17:53:34 - INFO - ******************** Processing ID: 101938 ******************** (45/110458 - 0.0%)
+2024-03-09 17:53:34 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:34 - INFO - ******************** Processing ID: 101939 ******************** (46/110458 - 0.0%)
+2024-03-09 17:53:34 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:34 - INFO - ******************** Processing ID: 101940 ******************** (47/110458 - 0.0%)
+2024-03-09 17:53:36 - INFO -  Successfully processed  the record ID:101940
+2024-03-09 17:53:37 - INFO - ID:101940 "title":Security hole in Netscape Communicator's 4.5 "Alias": security-hole-in-netscape-communicators-45 - has been updated in database
+2024-03-09 17:53:37 - INFO - ******************** Processing ID: 101941 ******************** (48/110458 - 0.0%)
+2024-03-09 17:53:38 - INFO -  Successfully processed  the record ID:101941
+2024-03-09 17:53:39 - INFO - ID:101941 "title":The default permissions on /dev/kmem is insecure "Alias": the-default-permissions-on-devkmem-is-insecure - has been updated in database
+2024-03-09 17:53:39 - INFO - ******************** Processing ID: 101942 ******************** (49/110458 - 0.0%)
+2024-03-09 17:53:39 - ERROR - Extract_record_text ERROR : The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2024-03-09 17:53:39 - INFO - ******************** Processing ID: 101943 ******************** (50/110458 - 0.0%)
+2024-03-09 17:53:44 - INFO -  Successfully processed  the record ID:101943
+2024-03-09 17:53:44 - INFO - ID:101943 "title":Security hole in INN "Alias": security-hole-in-inn - has been updated in database
+2024-03-09 17:53:44 - INFO - ******************** Processing ID: 101944 ******************** (51/110458 - 0.0%)
+2024-03-09 17:53:46 - INFO -  Successfully processed  the record ID:101944
+2024-03-09 17:53:46 - INFO - ID:101944 "title":Denial of Service on the 2.2 kernel "Alias": denial-of-service-on-the-22-kernel - has been updated in database
+2024-03-09 17:53:46 - INFO - ******************** Processing ID: 101945 ******************** (52/110458 - 0.0%)
+2024-03-09 17:53:48 - INFO -  Successfully processed  the record ID:101945
+2024-03-09 17:53:49 - INFO - ID:101945 "title":Execution of commands in Pine 4.x "Alias": execution-of-commands-in-pine-4x - has been updated in database
+2024-03-09 17:53:49 - INFO - ******************** Processing ID: 101946 ******************** (53/110458 - 0.0%)
+2024-03-09 17:53:52 - INFO -  Successfully processed  the record ID:101946
+2024-03-09 17:53:53 - INFO - ID:101946 "title":Security hole in Man (man_db) "Alias": security-hole-in-man-mandb - has been updated in database
+2024-03-09 17:53:53 - INFO - ******************** Processing ID: 101947 ******************** (54/110458 - 0.0%)
+2024-03-09 17:53:55 - INFO -  Successfully processed  the record ID:101947
+2024-03-09 17:53:55 - INFO - ID:101947 "title":Security hole in Klock "Alias": security-hole-in-klock - has been updated in database
+2024-03-09 17:53:55 - INFO - ******************** Processing ID: 101948 ******************** (55/110458 - 0.0%)
+2024-03-09 17:53:58 - INFO -  Successfully processed  the record ID:101948
+2024-03-09 17:53:59 - INFO - ID:101948 "title":Security hole in samba "Alias": security-hole-in-samba - has been updated in database
+2024-03-09 17:53:59 - INFO - ******************** Processing ID: 101949 ******************** (56/110458 - 0.1%)
+2024-03-09 17:54:01 - INFO -  Successfully processed  the record ID:101949
+2024-03-09 17:54:02 - INFO - ID:101949 "title":Security hole in i4l (xmonisdn) "Alias": security-hole-in-i4l-xmonisdn - has been updated in database
+2024-03-09 17:54:02 - INFO - ******************** Processing ID: 101950 ******************** (57/110458 - 0.1%)
+2024-03-09 17:54:04 - INFO -  Successfully processed  the record ID:101950
+2024-03-09 17:54:04 - INFO - ID:101950 "title":Security hole in termcap "Alias": security-hole-in-termcap - has been updated in database
+2024-03-09 17:54:04 - INFO - ******************** Processing ID: 101951 ******************** (58/110458 - 0.1%)
+2024-03-09 17:54:06 - INFO -  Successfully processed  the record ID:101951
+2024-03-09 17:54:07 - INFO - ID:101951 "title":Security hole in trn "Alias": security-hole-in-trn - has been updated in database
+2024-03-09 17:54:07 - INFO - ******************** Processing ID: 101952 ******************** (59/110458 - 0.1%)
+2024-03-09 17:54:09 - INFO -  Successfully processed  the record ID:101952
+2024-03-09 17:54:10 - INFO - ID:101952 "title":Security hole in netcfg "Alias": security-hole-in-netcfg - has been updated in database
+2024-03-09 17:54:10 - INFO - ******************** Processing ID: 101953 ******************** (60/110458 - 0.1%)
+2024-03-09 17:54:12 - INFO -  Successfully processed  the record ID:101953
+2024-03-09 17:54:12 - INFO - ID:101953 "title":Security hole in rsync "Alias": security-hole-in-rsync - has been updated in database
+2024-03-09 17:54:12 - INFO - ******************** Processing ID: 101954 ******************** (61/110458 - 0.1%)
+2024-03-09 17:54:15 - INFO -  Successfully processed  the record ID:101954
+2024-03-09 17:54:15 - INFO - ID:101954 "title":Security hole in cron "Alias": security-hole-in-cron - has been updated in database
+2024-03-09 17:54:15 - INFO - ******************** Processing ID: 101956 ******************** (62/110458 - 0.1%)
+2024-03-09 17:54:18 - INFO -  Successfully processed  the record ID:101956
+2024-03-09 17:54:18 - INFO - ID:101956 "title":Update for Pine (fixed IMAP support) "Alias": update-for-pine-fixed-imap-support - has been updated in database
+2024-03-09 17:54:18 - INFO - ******************** Processing ID: 101957 ******************** (63/110458 - 0.1%)
+2024-03-09 17:54:20 - INFO -  Successfully processed  the record ID:101957
+2024-03-09 17:54:21 - INFO - ID:101957 "title":Security hole in lynx "Alias": security-hole-in-lynx - has been updated in database
+2024-03-09 17:54:21 - INFO - ******************** Processing ID: 101958 ******************** (64/110458 - 0.1%)
+2024-03-09 17:54:23 - INFO -  Successfully processed  the record ID:101958
+2024-03-09 17:54:24 - INFO - ID:101958 "title":Security hole in ProFTPD "Alias": security-hole-in-proftpd - has been updated in database
+2024-03-09 17:54:24 - INFO - ******************** Processing ID: 101959 ******************** (65/110458 - 0.1%)
+2024-03-09 17:54:26 - INFO -  Successfully processed  the record ID:101959
+2024-03-09 17:54:27 - INFO - ID:101959 "title":Security hole in mars_nwe "Alias": security-hole-in-marsnwe - has been updated in database
+2024-03-09 17:54:27 - INFO - ******************** Processing ID: 101960 ******************** (66/110458 - 0.1%)
+2024-03-09 17:54:29 - INFO -  Successfully processed  the record ID:101960
+2024-03-09 17:54:30 - INFO - ID:101960 "title":Security hole in pbpg "Alias": security-hole-in-pbpg - has been updated in database
+2024-03-09 17:54:30 - INFO - ******************** Processing ID: 101961 ******************** (67/110458 - 0.1%)
+2024-03-09 17:54:31 - INFO -  Successfully processed  the record ID:101961
+2024-03-09 17:54:33 - INFO - ID:101961 "title":Security hole in sccw "Alias": security-hole-in-sccw - has been updated in database
+2024-03-09 17:54:33 - INFO - ******************** Processing ID: 101962 ******************** (68/110458 - 0.1%)

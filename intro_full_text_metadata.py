@@ -13,7 +13,7 @@ import json
 import argparse
 import concurrent.futures
 from pymysql import Connection
-client = OpenAI(api_key=os.getenv("OPENAI_SECRET_KEY"))
+client = OpenAI(api_key="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")
 
 
 
@@ -89,18 +89,19 @@ def process_context(contexts:list,logger:Logger,temperature=0):
                         messages=[
                            {
                                 "role": "system",
-                                "content": "Act as an SEO specialist and analyze the given context to identify meta keywords and create a concise meta description for SEO purposes. The meta description should be up to 106 characters long. Ensure the meta keywords are distinct, surrounded by quotes, and relevant to the given context. Provide a structured JSON output with the top 5 to 8 meta keywords and the meta description. Emphasize the importance of SEO best practices in generating accurate meta data for websites."
+                                "content": "Act as an SEO specialist and analyze the given context to identify Meta keywords and create a concise Meta description for SEO purposes. The Meta description should be up to 20 Words long. Ensure the Meta keywords are distinct, surrounded by quotes, and relevant to the given context. Provide a structured JSON output with the top 5 to 8 Meta keywords and the Meta description. Emphasize the importance of SEO best practices in generating accurate Meta data for websites."
                             },
                             {
                                 "role": "user",
                                 "content": f"""Instructions:
-1. Analyze the provided text to identify the most relevant meta keywords for SEO optimization.
-2. Extract 5 to 10 high volume meta keywords from the given context.
-3. Create a consise description and Ensure the description length should be less than 150 characters, aligning with best SEO practices.
-4. Format each meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
+1. Analyze the provided text to identify the most relevant Meta keywords for SEO optimization.
+2. Extract 5 to 10 high volume Meta keywords from the given context.
+3. Create a consise Meta description that summarize the given context and ensure that the Meta descritpion Words length should not exceed the 20. 
+4. If the Meta description Words length is greater than 20 then trim the Meta descritpion that is more than 20 Words.
+4. Format each Meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
 
-5. Ensure that each meta keyword is distinct from one another.
-6. The meta keywords and meta description must be directly derived from the provided context, aligning with SEO best practices.
+5. Ensure that each Meta keyword is distinct from one another.
+6. The Meta keywords and Meta description must be directly derived from the provided context, aligning with SEO best practices.
 
 
 ###

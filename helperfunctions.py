@@ -251,6 +251,8 @@ def get_prepare_json_for_new_entry(title,description,url,base_url,image_tag):
 
 def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str):
     try: 
+        if len(description)>150:
+            print(f" The description length of {content_table_id} is {len(description)} -- ")
         images=json.loads(images)['image_fulltext'] if images!="" else ""
         image_tag=images if images!="" else ""
         if metadata is None and description is None:
@@ -277,6 +279,8 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
                 open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
                 open_graph["description"]=description
                 twitter_Cards["description"]=description
+                open_graph['image']=image_tag
+                twitter_Cards['image']=image_tag
                 args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)     
         else:
             logger.info(f"""ID:{content_table_id} "title":{content_table_title} "Alias": {alias} Record not found in easyfrontseo table Creating the new entry--""")
