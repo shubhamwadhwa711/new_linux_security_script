@@ -254,7 +254,7 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
         if len(description)>150:
             print(f" The description length of {content_table_id} is {len(description)} -- ")
         images=json.loads(images)['image_fulltext'] if images!="" else ""
-        image_tag=images if images!="" else ""
+        image_tag=f"{base_url}/{images}" if images!="" else ""
         if metadata is None and description is None:
             return False
         if len(metadata)>=1:
