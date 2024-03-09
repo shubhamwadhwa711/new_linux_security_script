@@ -13,7 +13,7 @@ import json
 import argparse
 import concurrent.futures
 from pymysql import Connection
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv("OPENAI_SECRET_KEY"))
 
 
 
