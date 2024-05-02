@@ -38,5 +38,163 @@
                 "server"
             ]
         }
+    },
+    {
+        "id": 102097,
+        "metadata": {
+            "Meta keywords": [
+                "security updates",
+                "Linux server management",
+                "patch",
+                "kernel",
+                "rebuild",
+                "fdesc",
+                "procfs"
+            ],
+            "Meta description": "Apply security updates, patch kernel, and rebuild for Linux server management.",
+            "Tags": [
+                "security",
+                "updates",
+                "Linux",
+                "server",
+                "management"
+            ]
+        }
+    },
+    {
+        "id": 102098,
+        "metadata": {
+            "Meta keywords": [
+                "security updates",
+                "Linux server management",
+                "patch",
+                "rebuild",
+                "kernel",
+                "profil",
+                "exec",
+                "signals"
+            ],
+            "Meta description": "Apply security updates, patch, and rebuild kernel for Linux server management. Stop profiling and handle signals for exec.",
+            "Tags": [
+                "security",
+                "Linux",
+                "patch",
+                "rebuild",
+                "kernel",
+                "profil",
+                "exec",
+                "signals"
+            ]
+        }
+    },
+    {
+        "id": 102099,
+        "metadata": {
+            "Meta keywords": [
+                "security updates",
+                "Linux server management",
+                "kernel patch",
+                "IPsec",
+                "network security"
+            ],
+            "Meta description": "Apply kernel patch for IPsec security updates in Linux server management.",
+            "Tags": [
+                "security",
+                "updates",
+                "Linux",
+                "server",
+                "management"
+            ]
+        }
+    },
+    {
+        "id": 102100,
+        "metadata": {
+            "Meta keywords": [
+                "Linux server management",
+                "security updates",
+                "patching",
+                "reboot",
+                "sysctl",
+                "motd",
+                "tmp"
+            ],
+            "Meta description": "Apply security updates, patch Linux server, and ensure system stability with reboot. Manage sysctl and motd for effective server maintenance.",
+            "Tags": [
+                "security",
+                "Linux",
+                "patching",
+                "reboot",
+                "sysctl",
+                "motd",
+                "tmp"
+            ]
+        }
+    },
+    {
+        "id": 102101,
+        "metadata": {
+            "Meta keywords": [
+                "Linux server management",
+                "security updates",
+                "kernel patch",
+                "rebuild kernel",
+                "VOP_SETATTR"
+            ],
+            "Meta description": "Apply kernel patch, rebuild kernel, and manage security updates for Linux server with VOP_SETATTR.",
+            "Tags": [
+                "security",
+                "Linux",
+                "patch",
+                "rebuild",
+                "VOP_SETATTR"
+            ]
+        }
+    },
+    {
+        "id": 102102,
+        "metadata": {
+            "Meta keywords": [
+                "security issue",
+                "BUGTRAQ",
+                "patch",
+                "reinstall",
+                "nroff",
+                "groff",
+                "Linux server management"
+            ],
+            "Meta description": "Apply patch to fix discussed security issue on Linux server with nroff and groff.",
+            "Tags": [
+                "security",
+                "Linux",
+                "patch",
+                "nroff",
+                "groff",
+                "management"
+            ]
+        }
+    },
+    {
+        "id": 102096,
+        "metadata": {
+            "Meta keywords": [
+                "patching commands",
+                "cron daemon",
+                "diff outputs",
+                "source code",
+                "reinstall",
+                "config.h",
+                "cron.h",
+                "do_command.c"
+            ],
+            "Meta description": "Patching commands and diff outputs for cron daemon source code with modifications in config.h, cron.h, and do_command.c files.",
+            "Tags": [
+                "security",
+                "Linux",
+                "patching",
+                "management",
+                "source code"
+            ]
+        }
     }
 ]

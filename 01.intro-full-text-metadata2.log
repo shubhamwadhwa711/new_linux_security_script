@@ -183,3 +183,23 @@
 2024-05-02 17:52:09 - INFO -  Successfully processed  the record ID:102096
 2024-05-02 17:52:30 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
 2024-05-02 17:54:03 - INFO - State save till Record ID: 102096
+2024-05-02 18:05:15 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 18:05:15 - INFO - ******************** Processing ID: 102097 ******************** (47/113482 - 0.0%)
+2024-05-02 18:05:17 - INFO -  Successfully processed  the record ID:102097
+2024-05-02 18:05:17 - INFO - ******************** Processing ID: 102098 ******************** (48/113482 - 0.0%)
+2024-05-02 18:05:19 - INFO -  Successfully processed  the record ID:102098
+2024-05-02 18:05:19 - INFO - ******************** Processing ID: 102099 ******************** (49/113482 - 0.0%)
+2024-05-02 18:05:21 - INFO -  Successfully processed  the record ID:102099
+2024-05-02 18:05:21 - INFO - ******************** Processing ID: 102100 ******************** (50/113482 - 0.0%)
+2024-05-02 18:05:23 - INFO -  Successfully processed  the record ID:102100
+2024-05-02 18:05:23 - INFO - ******************** Processing ID: 102101 ******************** (51/113482 - 0.0%)
+2024-05-02 18:05:25 - INFO -  Successfully processed  the record ID:102101
+2024-05-02 18:05:25 - INFO - ******************** Processing ID: 102102 ******************** (52/113482 - 0.0%)
+2024-05-02 18:05:27 - INFO -  Successfully processed  the record ID:102102
+2024-05-02 18:05:27 - INFO - ******************** Processing ID: 102103 ******************** (53/113482 - 0.0%)
+2024-05-02 18:05:28 - INFO - State save till Record ID: 102103
+2024-05-02 18:06:09 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 18:06:09 - INFO - ******************** Processing ID: 102096 ******************** (54/113482 - 0.0%)
+2024-05-02 18:06:25 - INFO -  Successfully processed  the record ID:102096
+2024-05-02 18:06:25 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-02 18:13:27 - INFO - State save till Record ID: 102096

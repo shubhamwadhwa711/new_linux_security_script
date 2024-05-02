@@ -381,20 +381,25 @@ def updatetags(connection,content_id,tags):
 
 def contentitem_tag_mapupdateu(connection,con_id, tag):
     try:
+        query = "SELECT * FROM xu5gc_contentitem_tag_map WHERE content_item_id = %s AND tag_id = %s"
         with connection.cursor() as cursor:
-            core_content = "SELECT  max(core_content_id) from xu5gc_contentitem_tag_map "
-            cursor.execute(core_content)
-            max_lft = cursor.fetchone()
-            core_id = max_lft["max(core_content_id)"]+1
-        
-           
-          
-            datatime = datetime.now()
-            # sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', '18', '355274', '19', CURRENT_TIMESTAMP(), '1')"
-            sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', %s, %s, %s, %s, '1')"
-            # cursor.execute(sql)
-            cursor.execute(sql,(con_id,core_id,tag,datatime))
-            connection.commit()
+            cursor.execute(query, (con_id, tag))
+            results = cursor.fetchone()
+        if results:
+            pass 
+        else:
+            with connection.cursor() as cursor:
+                core_content = "SELECT  max(core_content_id) from xu5gc_contentitem_tag_map"
+                cursor.execute(core_content)
+                max_lft = cursor.fetchone()
+                core_id = max_lft["max(core_content_id)"]+1
+            
+                datatime = datetime.now()
+                # sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', '18', '355274', '19', CURRENT_TIMESTAMP(), '1')"
+                sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', %s, %s, %s, %s, '1')"
+                # cursor.execute(sql)
+                cursor.execute(sql,(con_id,core_id,tag,datatime))
+                connection.commit()
 
     except Exception as e:
         print(e)
