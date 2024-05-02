@@ -250,7 +250,7 @@ def get_prepare_json_for_new_entry(title,description,url,base_url,image_tag):
     twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
     return opengarph_json_data,twitter_Cards_json_data
 
-def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str):
+def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str,tags:list):
     try: 
         if len(description)>150:
             print(f" The description length of {content_table_id} is {len(description)} -- ")
@@ -262,15 +262,20 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
             metadata=",".join(metadata)
         record=get_record(connection,alias)
         if record:
+            
             updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
+        if tags:
+            content_id=record['id']
+            excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
+            if id not in excluded_catids:
+                updatetags(connection,content_id,tags)
+
         
     except MySQLError as e:
         connection.rollback()
         raise e
     except Exception as e:
         logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
-
-
 
 
 
@@ -318,14 +323,11 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
 
 
 
-
-
-
-def updatetags(connection):
+def updatetags(connection,content_id,tags):
     try:
+        # content_id= 0
         excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
-        tags =["Testing", "Cross-browser", "Cross platform", "Linux", "Linux Security"]
-
+        # tags =["test-w1",]
         # Convert to lowercase and replace spaces with hyphens
         tags_lower_hyphen = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
@@ -358,7 +360,14 @@ def updatetags(connection):
                 
                     cursor.execute(sql,(lft, rgt, al, tag, al ,datatime,datatime,datatime))
                 
+                    # Now you can work with the inserted record as neede
                     connection.commit()
+                    sql = "SELECT * FROM xu5gc_tags  ORDER BY id DESC LIMIT 1"
+                    cursor.execute(sql)
+                    result = cursor.fetchone()
+                    tag_id = result["id"]
+                    contentitem_tag_mapupdateu(connection,content_id, tag_id)
+
 
         return tags
     except Exception as e:
@@ -369,5 +378,23 @@ def updatetags(connection):
 
                 
         
-                
+
+def contentitem_tag_mapupdateu(connection,con_id, tag):
+    try:
+        with connection.cursor() as cursor:
+            core_content = "SELECT  max(core_content_id) from xu5gc_contentitem_tag_map "
+            cursor.execute(core_content)
+            max_lft = cursor.fetchone()
+            core_id = max_lft["max(core_content_id)"]+1
         
+           
+          
+            datatime = datetime.now()
+            # sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', '18', '355274', '19', CURRENT_TIMESTAMP(), '1')"
+            sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', %s, %s, %s, %s, '1')"
+            # cursor.execute(sql)
+            cursor.execute(sql,(con_id,core_id,tag,datatime))
+            connection.commit()
+
+    except Exception as e:
+        print(e)

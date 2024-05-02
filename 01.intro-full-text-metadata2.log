@@ -133,3 +133,53 @@
 2024-05-02 13:46:13 - INFO - ==================== Total records : 113482 ====================
 2024-05-02 13:59:06 - INFO - ==================== Total records : 113482 ====================
 2024-05-02 14:00:16 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:28:07 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:28:10 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 14:28:16 - ERROR - Async Process Text ERROR: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 14:28:16 - ERROR - Async Process Text ERROR: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 14:30:21 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:30:26 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 14:30:31 - ERROR - Async Process Text ERROR: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 14:30:31 - ERROR - Async Process Text ERROR: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 14:31:20 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:31:21 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 14:31:36 - ERROR - Process Context ERROR : 'str' object has no attribute 'chat'
+2024-05-02 14:31:37 - INFO -  Successfully processed  the record ID:102096
+2024-05-02 14:31:37 - ERROR - Extract_record_text ERROR : 0
+2024-05-02 14:31:37 - INFO - ==================== All records have been processed ====================
+2024-05-02 14:32:10 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:32:11 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 14:32:45 - ERROR - Process Context ERROR : 'str' object has no attribute 'chat'
+2024-05-02 14:42:55 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:42:59 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 14:48:39 - INFO -  Successfully processed  the record ID:102096
+2024-05-02 15:03:59 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 15:04:09 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 15:05:40 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 15:05:41 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 15:30:06 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:23:38 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:23:39 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 16:28:55 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:28:59 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 16:29:18 - INFO -  Successfully processed  the record ID:102096
+2024-05-02 16:29:18 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-02 16:29:18 - INFO - {"id": 102096, "message": "updatetags() takes 1 positional argument but 2 were given"}
+2024-05-02 16:29:18 - INFO - ==================== All records have been processed ====================
+2024-05-02 16:30:54 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:32:38 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:45:51 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:45:53 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 16:46:45 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 16:57:23 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 17:11:58 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 17:12:19 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 17:12:20 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 17:17:19 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 17:17:19 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 17:46:52 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 17:51:49 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 17:51:50 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 17:52:09 - INFO -  Successfully processed  the record ID:102096
+2024-05-02 17:52:30 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-02 17:54:03 - INFO - State save till Record ID: 102096

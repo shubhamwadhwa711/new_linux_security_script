@@ -90,7 +90,9 @@ def process_context(contexts:list,logger:Logger,temperature=0):
                         messages=[
                            {
                                 "role": "system",
-                                "content": "Act as an SEO specialist and analyze the given context to identify Meta keywords and create a concise Meta description for SEO purposes. The Meta description should be up to 20 Words long. Ensure the Meta keywords are distinct, surrounded by quotes, and relevant to the given context. Provide a structured JSON output with the top 5 to 8 Meta keywords and the Meta description. Emphasize the importance of SEO best practices in generating accurate Meta data for websites."
+                                "content": "Act as an SEO specialist and analyze the given context to identify Meta keywords and create a concise Meta description for SEO purposes. The Meta description should be up to 20 Words long. Ensure the Meta keywords are distinct, surrounded by quotes, and relevant to the given context. Provide a structured JSON output with the top 5 to 8 Meta keywords and the Meta description. Emphasize the importance of SEO best practices in generating accurate Meta data for websites.                     Analyze the provided text related to text. Identify key single-word tags that are central to the themes of security updates and Linux server management.These tags should be chosen for their low difficulty and high search volume, relevant for boosting search engine visibility "
+                                
+                                
                             },
                             {
                                 "role": "user",
@@ -103,6 +105,11 @@ def process_context(contexts:list,logger:Logger,temperature=0):
 
 5. Ensure that each Meta keyword is distinct from one another.
 6. The Meta keywords and Meta description must be directly derived from the provided context, aligning with SEO best practices.
+
+7. Extract single-word Meta tags that reflect key concepts and terms from the text, focusing on security and Linux server management.
+8. Ensure these tags are direct, with each tag being a single, impactful word.
+9. List these tags in a format within brackets and separated by commas, like this: [Tag1, Tag2, Tag3].
+10. Tags should be unique, relevant, and derived strictly from the content provided.
 
 
 ###
@@ -185,7 +192,8 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
                 response={"id":record.get('id'),"metadata":dict_response}
                 write_into_the_json_file(response=response,json_file=json_file)
                 if commit:
-                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"),images=record.get("images"))
+                    succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"),images=record.get("images"),
+                    tags=response['metadata']["Tags"] )
                     if succeed:
                         pass
                         # logger.info(f'ID: {response.get("id")} has been updated in database')
@@ -218,7 +226,7 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     max_tokens:int=config.getint("metadata-01","max_tokens")
     base_url:str=config.get("metadata-01","base_url")
     connection=get_db_connection(config,logger)
-    updatetags(connection)
+    # updatetags(connection)
     total_records=get_total_rows(connection).get('total')
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
