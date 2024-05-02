@@ -105,3 +105,31 @@
 2024-03-09 19:45:39 - ERROR - Extract_record_text ERROR : 0
 2024-03-09 19:45:39 - INFO - ******************** Processing ID: 101932 ******************** (39/110458 - 0.0%)
 2024-03-09 19:45:40 - INFO - State save till Record ID: 101932
+2024-05-02 12:00:57 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 12:00:57 - INFO - ******************** Processing ID: 101933 ******************** (40/113482 - 0.0%)
+2024-05-02 12:00:58 - ERROR - Process Context ERROR : Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 12:00:58 - INFO -  Successfully processed  the record ID:101933
+2024-05-02 12:00:58 - ERROR - Extract_record_text ERROR : 0
+2024-05-02 12:00:58 - INFO - ******************** Processing ID: 101934 ******************** (41/113482 - 0.0%)
+2024-05-02 12:00:58 - INFO - State save till Record ID: 101934
+2024-05-02 13:05:36 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 13:05:36 - INFO - ******************** Processing ID: 101935 ******************** (42/113482 - 0.0%)
+2024-05-02 13:05:36 - ERROR - Process Context ERROR : Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 13:05:36 - INFO -  Successfully processed  the record ID:101935
+2024-05-02 13:05:36 - ERROR - Extract_record_text ERROR : 0
+2024-05-02 13:05:36 - INFO - ******************** Processing ID: 101936 ******************** (43/113482 - 0.0%)
+2024-05-02 13:05:37 - ERROR - Async Process Text ERROR: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 13:05:37 - ERROR - Async Process Text ERROR: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 13:05:37 - ERROR - Extract_record_text ERROR : unsupported operand type(s) for +: 'int' and 'NoneType'
+2024-05-02 13:05:37 - INFO - ******************** Processing ID: 101937 ******************** (44/113482 - 0.0%)
+2024-05-02 13:05:37 - ERROR - Process Context ERROR : Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-Yim7J***************************************wErN. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}
+2024-05-02 13:05:37 - INFO -  Successfully processed  the record ID:101937
+2024-05-02 13:05:37 - ERROR - Extract_record_text ERROR : 0
+2024-05-02 13:05:37 - INFO - ******************** Processing ID: 101938 ******************** (45/113482 - 0.0%)
+2024-05-02 13:05:37 - INFO - State save till Record ID: 101938
+2024-05-02 13:17:19 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 13:17:24 - INFO - ******************** Processing ID: 102096 ******************** (46/113482 - 0.0%)
+2024-05-02 13:19:17 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 13:46:13 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 13:59:06 - INFO - ==================== Total records : 113482 ====================
+2024-05-02 14:00:16 - INFO - ==================== Total records : 113482 ====================

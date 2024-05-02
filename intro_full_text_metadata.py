@@ -1,6 +1,6 @@
 import configparser
 import os
-from helperfunctions import getlogger, percentage,aggregate_into_few,process_text,clean_text,write_into_the_json_file,current_state,do_update
+from helperfunctions import getlogger, percentage,aggregate_into_few,process_text,clean_text,write_into_the_json_file,current_state,do_update,updatetags
 import pymysql
 import pymysql.cursors
 from logging import Logger
@@ -80,6 +80,7 @@ def process_context(contexts:list,logger:Logger,temperature=0):
     """ check the length if the contexts make a api call """
     metadata=[]
     n_tokens=[]
+
     if len(contexts) ==1:
         try:
             response = client.chat.completions.create(
@@ -112,7 +113,8 @@ Given Context: {contexts[0]}
 
 Example Output:{{
 "Meta keywords": ["Keyword1", "Keyword2", "Keyword3"],
-"Meta description": "A succinct summary that encapsulates the main points of the content, optimized for search engines and not exceeding 160 characters."
+"Meta description": "A succinct summary that encapsulates the main points of the content, optimized for search engines and not exceeding 160 characters.",
+"Tags" :[Tag1, Tag2, Tag3],
 }}
 ###
 
@@ -187,6 +189,7 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
                     if succeed:
                         pass
                         # logger.info(f'ID: {response.get("id")} has been updated in database')
+                    
         except KeyboardInterrupt as e:
             current_id = record.get("id")
             current_state(store_state_file, id=current_id, counter=counter, mode="w")
@@ -215,6 +218,7 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     max_tokens:int=config.getint("metadata-01","max_tokens")
     base_url:str=config.get("metadata-01","base_url")
     connection=get_db_connection(config,logger)
+    updatetags(connection)
     total_records=get_total_rows(connection).get('total')
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
@@ -224,6 +228,7 @@ def main(id: Optional[int] = 0,commit: bool = False,):
             if len(result)==0:
                 logger.info(f'{"="*20} All records have been processed {"="*20}')
                 break
+            # updatetags(connection)
             counter=process_records(result=result,logger=logger,total=total_records,counter=counter,max_words=max_words, max_tokens=max_tokens,json_file=json_file,store_state_file=store_state_file,commit=commit,connection=connection,base_url=base_url)
             current_id=result[-1]['id']
             if id > 0:

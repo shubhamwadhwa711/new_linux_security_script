@@ -11,6 +11,7 @@ import json
 import os
 tokenizer = tiktoken.get_encoding("cl100k_base")
 from pymysql import Connection,MySQLError
+from datetime import datetime
 class ColoredFormatter(logging.Formatter):
     datefmt = "%Y-%m-%d %H:%M:%S"
     MAPPING = {
@@ -261,6 +262,20 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
             metadata=",".join(metadata)
         record=get_record(connection,alias)
         if record:
+            updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
+        
+    except MySQLError as e:
+        connection.rollback()
+        raise e
+    except Exception as e:
+        logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
+
+
+
+
+
+def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger):
+    if record:
             id=record['id']
             if record["opengraph"]=="" and record["twitterCards"]=="":
                 opengarph_json_data,twitter_Cards_json_data= get_prepare_json(record,description,base_url,image_tag)
@@ -282,24 +297,77 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
                 open_graph['image']=image_tag
                 twitter_Cards['image']=image_tag
                 args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)     
+    else:
+        logger.info(f"""ID:{content_table_id} "title":{content_table_title} "Alias": {alias} Record not found in easyfrontseo table Creating the new entry--""")
+        path=get_path_from_cateories_table(connection,catid)
+        if path is not None:
+            url=f"{path}/{alias}"
         else:
-            logger.info(f"""ID:{content_table_id} "title":{content_table_title} "Alias": {alias} Record not found in easyfrontseo table Creating the new entry--""")
-            path=get_path_from_cateories_table(connection,catid)
-            if path is not None:
-                url=f"{path}/{alias}"
-            else:
-                url=alias
-            opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
-            sql="INSERT INTO xu5gc_easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-            args=(url,content_table_title,description,metadata,"","index, follow",opengarph_json_data,twitter_Cards_json_data,f"{base_url}/{url}","")
-     
+            url=alias
+        opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
+        sql="INSERT INTO xu5gc_easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        args=(url,content_table_title,description,metadata,"","index, follow",opengarph_json_data,twitter_Cards_json_data,f"{base_url}/{url}","")
+    
+    with connection.cursor() as cursor:
+        cursor.execute(sql, args)
+        connection.commit()
+        logger.info(f'ID:{content_table_id} "title":{content_table_title} "Alias": {alias} - has been updated in database')
+        return True
+
+
+
+
+
+
+
+
+def updatetags(connection):
+    try:
+        excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
+        tags =["Testing", "Cross-browser", "Cross platform", "Linux", "Linux Security"]
+
+        # Convert to lowercase and replace spaces with hyphens
+        tags_lower_hyphen = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
-            cursor.execute(sql, args)
-            connection.commit()
-            logger.info(f'ID:{content_table_id} "title":{content_table_title} "Alias": {alias} - has been updated in database')
-            return True
-    except MySQLError as e:
-        connection.rollback()
-        raise e
+            for al, tag in zip(tags_lower_hyphen, tags):
+                sql = "SELECT * FROM xu5gc_tags WHERE alias = %s"
+                cursor.execute(sql, (al,))
+                exiting_tags = cursor.fetchall()
+                if exiting_tags:
+                    pass
+                else:
+                    lft = "SELECT  max(rgt) from xu5gc_tags"
+                    lft = cursor.execute(lft)
+                    max_lft = cursor.fetchone()
+                    lft = max_lft["max(rgt)"]+1
+                    rgt = lft+1
+                    datatime = datetime.now()
+                    sql = '''INSERT INTO xu5gc_tags (
+                            parent_id, lft, rgt, level, path, title, alias, 
+                            note, description, published, checked_out, checked_out_time, 
+                            access, params, metadesc, metakey, metadata, created_user_id, 
+                            created_time, created_by_alias, modified_user_id, modified_time, 
+                            images, urls, hits, language, version, publish_up, publish_down
+                        ) VALUES (
+                            '1', %s, %s, '0', %s, %s, %s, 
+                            '', '', '1', NULL, NULL, '1', '', 'Linux Security related articles for 2024', 
+                            '', '', '10', %s, '', '0', %s, 
+                            '', '', '0', '*', '1', %s, NULL
+                        )'''
+                
+                
+                    cursor.execute(sql,(lft, rgt, al, tag, al ,datatime,datatime,datatime))
+                
+                    connection.commit()
+
+        return tags
     except Exception as e:
-        logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
+        print(e)
+
+
+
+
+                
+        
+                
+        
