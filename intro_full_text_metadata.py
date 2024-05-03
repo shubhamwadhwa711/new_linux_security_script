@@ -41,8 +41,9 @@ def get_db_connection(config,logger):
     
 def get_total_rows(config,connection):
     """ To get the length the database records """
-    runfortags =config.get("metadata-01","runfortags")
-    if runfortags =="yes":
+    runfortags = bool(int(config.get("metadata-01","runfortags")))
+
+    if runfortags:
         Sql = f'''SELECT COUNT(*)  as total FROM `{db_prefix}content` AS c
             LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
             WHERE c.`access` = 1
