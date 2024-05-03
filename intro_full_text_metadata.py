@@ -228,11 +228,8 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     max_words:int=config.getint("metadata-01","max_words")
     max_tokens:int=config.getint("metadata-01","max_tokens")
     base_url:str=config.get("metadata-01","base_url")
-    db_prefix=config.get("mysql","prefix"),
-    print(db_prefix)
     connection=get_db_connection(config,logger)
-    
-    updatetags(connection)
+
     total_records=get_total_rows(connection).get('total')
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
@@ -242,7 +239,6 @@ def main(id: Optional[int] = 0,commit: bool = False,):
             if len(result)==0:
                 logger.info(f'{"="*20} All records have been processed {"="*20}')
                 break
-            # updatetags(connection)
             counter=process_records(result=result,logger=logger,total=total_records,counter=counter,max_words=max_words, max_tokens=max_tokens,json_file=json_file,store_state_file=store_state_file,commit=commit,connection=connection,base_url=base_url)
             current_id=result[-1]['id']
             if id > 0:
