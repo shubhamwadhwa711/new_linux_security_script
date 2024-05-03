@@ -203,3 +203,121 @@
 2024-05-02 18:06:25 - INFO -  Successfully processed  the record ID:102096
 2024-05-02 18:06:25 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
 2024-05-02 18:13:27 - INFO - State save till Record ID: 102096
+2024-05-03 12:09:51 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:09:52 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:10:04 - INFO - ******************** Processing ID: 102096 ******************** (55/113482 - 0.0%)
+2024-05-03 12:10:24 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:10:24 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 12:23:43 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:23:44 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:23:57 - INFO - ******************** Processing ID: 102096 ******************** (55/113482 - 0.0%)
+2024-05-03 12:24:13 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:24:13 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 12:32:02 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:32:02 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:32:06 - INFO - ******************** Processing ID: 102096 ******************** (55/113482 - 0.0%)
+2024-05-03 12:32:29 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:35:15 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 12:35:59 - INFO - ==================== All records have been processed ====================
+2024-05-03 12:39:45 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:39:45 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:39:45 - INFO - ******************** Processing ID: 102097 ******************** (55/113482 - 0.0%)
+2024-05-03 12:39:48 - INFO -  Successfully processed  the record ID:102097
+2024-05-03 12:39:48 - INFO - ******************** Processing ID: 102098 ******************** (56/113482 - 0.0%)
+2024-05-03 12:39:49 - INFO -  Successfully processed  the record ID:102098
+2024-05-03 12:39:49 - INFO - ******************** Processing ID: 102099 ******************** (57/113482 - 0.1%)
+2024-05-03 12:39:51 - INFO -  Successfully processed  the record ID:102099
+2024-05-03 12:39:51 - INFO - ******************** Processing ID: 102100 ******************** (58/113482 - 0.1%)
+2024-05-03 12:39:53 - INFO -  Successfully processed  the record ID:102100
+2024-05-03 12:39:53 - INFO - ******************** Processing ID: 102101 ******************** (59/113482 - 0.1%)
+2024-05-03 12:39:55 - INFO - State save till Record ID: 102101
+2024-05-03 12:40:13 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:40:13 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:40:13 - INFO - ******************** Processing ID: 102102 ******************** (60/113482 - 0.1%)
+2024-05-03 12:40:15 - INFO -  Successfully processed  the record ID:102102
+2024-05-03 12:40:15 - INFO - ******************** Processing ID: 102103 ******************** (61/113482 - 0.1%)
+2024-05-03 12:40:17 - INFO -  Successfully processed  the record ID:102103
+2024-05-03 12:40:17 - INFO - ******************** Processing ID: 102104 ******************** (62/113482 - 0.1%)
+2024-05-03 12:40:18 - INFO -  Successfully processed  the record ID:102104
+2024-05-03 12:40:18 - INFO - ******************** Processing ID: 102105 ******************** (63/113482 - 0.1%)
+2024-05-03 12:40:20 - INFO -  Successfully processed  the record ID:102105
+2024-05-03 12:40:20 - INFO - ******************** Processing ID: 102106 ******************** (64/113482 - 0.1%)
+2024-05-03 12:40:23 - INFO -  Successfully processed  the record ID:102106
+2024-05-03 12:40:23 - INFO - ******************** Processing ID: 102107 ******************** (65/113482 - 0.1%)
+2024-05-03 12:40:24 - INFO -  Successfully processed  the record ID:102107
+2024-05-03 12:40:24 - INFO - ******************** Processing ID: 102108 ******************** (66/113482 - 0.1%)
+2024-05-03 12:40:29 - INFO -  Successfully processed  the record ID:102108
+2024-05-03 12:40:29 - INFO - ******************** Processing ID: 102109 ******************** (67/113482 - 0.1%)
+2024-05-03 12:40:33 - INFO -  Successfully processed  the record ID:102109
+2024-05-03 12:40:33 - INFO - ******************** Processing ID: 102111 ******************** (68/113482 - 0.1%)
+2024-05-03 12:40:34 - INFO -  Successfully processed  the record ID:102111
+2024-05-03 12:40:34 - INFO - ******************** Processing ID: 102112 ******************** (69/113482 - 0.1%)
+2024-05-03 12:40:38 - INFO -  Successfully processed  the record ID:102112
+2024-05-03 12:40:38 - INFO - ******************** Processing ID: 102115 ******************** (70/113482 - 0.1%)
+2024-05-03 12:40:43 - INFO -  Successfully processed  the record ID:102115
+2024-05-03 12:40:43 - INFO - ******************** Processing ID: 102117 ******************** (71/113482 - 0.1%)
+2024-05-03 12:40:44 - INFO -  Successfully processed  the record ID:102117
+2024-05-03 12:40:44 - INFO - ******************** Processing ID: 102118 ******************** (72/113482 - 0.1%)
+2024-05-03 12:40:46 - INFO -  Successfully processed  the record ID:102118
+2024-05-03 12:40:46 - INFO - ******************** Processing ID: 102119 ******************** (73/113482 - 0.1%)
+2024-05-03 12:40:51 - INFO -  Successfully processed  the record ID:102119
+2024-05-03 12:40:51 - INFO - ******************** Processing ID: 102120 ******************** (74/113482 - 0.1%)
+2024-05-03 12:40:53 - INFO -  Successfully processed  the record ID:102120
+2024-05-03 12:40:53 - INFO - ******************** Processing ID: 102121 ******************** (75/113482 - 0.1%)
+2024-05-03 12:40:54 - INFO -  Successfully processed  the record ID:102121
+2024-05-03 12:40:54 - INFO - ******************** Processing ID: 102122 ******************** (76/113482 - 0.1%)
+2024-05-03 12:40:58 - INFO -  Successfully processed  the record ID:102122
+2024-05-03 12:40:58 - INFO - ******************** Processing ID: 102123 ******************** (77/113482 - 0.1%)
+2024-05-03 12:41:40 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:41:40 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:41:40 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 12:41:44 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:41:44 - INFO - ==================== All records have been processed ====================
+2024-05-03 12:54:53 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:54:53 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:54:53 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 12:54:59 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:54:59 - INFO - ==================== All records have been processed ====================
+2024-05-03 12:56:06 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:56:06 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:56:06 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 12:56:11 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:56:11 - INFO - ==================== All records have been processed ====================
+2024-05-03 12:56:40 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:56:40 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:56:40 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 12:56:44 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:56:44 - INFO - ==================== All records have been processed ====================
+2024-05-03 12:57:34 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:57:34 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:57:34 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 12:57:38 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 12:57:38 - INFO - ==================== All records have been processed ====================
+2024-05-03 12:59:27 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 12:59:27 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 12:59:30 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 12:59:55 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 13:00:04 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 13:01:28 - INFO - ==================== All records have been processed ====================
+2024-05-03 13:16:19 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 13:16:19 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 13:16:19 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 13:16:24 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 13:16:24 - INFO - ==================== All records have been processed ====================
+2024-05-03 13:17:30 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 13:17:30 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 13:17:44 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 13:17:59 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 13:18:03 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 15:26:29 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 15:26:29 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 15:26:31 - INFO - ******************** Processing ID: 102096 ******************** (60/113482 - 0.1%)
+2024-05-03 15:26:51 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 15:26:53 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 15:28:20 - INFO - State save till Record ID: 102096
+2024-05-03 15:30:33 - INFO - ==================== Total records in tags.log: 113482 ====================
+2024-05-03 15:30:33 - INFO - ==================== Total records : 113482 ====================
+2024-05-03 15:30:34 - INFO - ******************** Processing ID: 102096 ******************** (61/113482 - 0.1%)
+2024-05-03 15:30:45 - INFO -  Successfully processed  the record ID:102096
+2024-05-03 15:30:47 - INFO - ID:102096 "title":OpenBSD 2.5:  Security fix with cron(8) "Alias": openbsd-25-security-fix-with-cron8 - has been updated in database
+2024-05-03 15:31:08 - INFO - ==================== All records have been processed ====================

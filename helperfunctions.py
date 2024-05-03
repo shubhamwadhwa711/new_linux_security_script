@@ -18,6 +18,7 @@ config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 db_prefix=config.get("mysql","prefix"),
 db_prefix = db_prefix[0]
+taglogfile_name=config.get('metadata-01',"tag_log_file")
 
 
 class ColoredFormatter(logging.Formatter):
@@ -57,6 +58,7 @@ def getlogger(name, level=logging.INFO):
     console.setFormatter(ColoredFormatter("%(asctime)s - %(levelname)s - %(message)s"))
     logger.addHandler(console)
     return logger
+
 
 
 def split_into_many(text: str, max_tokens: int = 100) -> list[str]:
@@ -207,6 +209,7 @@ def get_path_from_cateories_table(connection,catid):
 
 def get_record(connection,alias):
     sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM {db_prefix}easyfrontendseo as c WHERE `url` LIKE '%{alias}%'"
+
     with connection.cursor() as cursor:
         cursor.execute(sql)
         record=cursor.fetchone()
@@ -258,7 +261,7 @@ def get_prepare_json_for_new_entry(title,description,url,base_url,image_tag):
     twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
     return opengarph_json_data,twitter_Cards_json_data
 
-def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str,tags:list):
+def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str,tags:list,content_id:int):
     try: 
         if len(description)>150:
             print(f" The description length of {content_table_id} is {len(description)} -- ")
@@ -270,12 +273,10 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
             metadata=",".join(metadata)
         record=get_record(connection,alias)
         if record:
-            
             updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
-            content_id=record['id']
             excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
-            if id not in excluded_catids:
+            if content_id not in excluded_catids:
                 updatetags(connection,content_id,tags)
 
         
@@ -333,18 +334,21 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
 
 def updatetags(connection,content_id,tags):
     try:
+        tag_logger=getlogger(name=taglogfile_name)
         # content_id= 356646
         # excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
-        # tags =["Custom linux2","xxnew"]
+        tags =["Custom linux2","new tagasic","test100"]
         # Convert to lowercase and replace spaces with hyphens
         tags_lower_hyphen = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
             for al, tag in zip(tags_lower_hyphen, tags):
                 sql = f"SELECT * FROM {db_prefix}tags WHERE alias = %s"
                 cursor.execute(sql, (al,))
-                exiting_tags = cursor.fetchall()
+                exiting_tags = cursor.fetchone()
                 if exiting_tags:
-                    pass
+                    tag_id =exiting_tags["id"]
+                    tag_logger.info(f"{tag}  tag is already exists")
+                    contentitem_tag_mapupdate(connection,content_id, tag_id)
                 else:
                     lft = f"SELECT  max(rgt) from {db_prefix}tags"
                     lft = cursor.execute(lft)
@@ -372,13 +376,14 @@ def updatetags(connection,content_id,tags):
                     cursor.execute(sql)
                     result = cursor.fetchone()
                     tag_id = result["id"]
+                    tag_logger.info(f"Tag_id : {tag_id} , Tag :{tag} , content_id :{content_id} ")
+                
                     contentitem_tag_mapupdate(connection,content_id, tag_id)
         return tags
     except Exception as e:
         print(e)
 
 
-        
 
 def contentitem_tag_mapupdate(connection,con_id, tag):
     try:
@@ -394,9 +399,7 @@ def contentitem_tag_mapupdate(connection,con_id, tag):
                 cursor.execute(core_content)
                 max_lft = cursor.fetchone()
                 core_id = max_lft["max(core_content_id)"]+1
-            
                 datatime = datetime.now()
-                # sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', '18', '355274', '19', CURRENT_TIMESTAMP(), '1')"
                 sql = f"INSERT INTO {db_prefix}contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', %s, %s, %s, %s, '1')"
                 # cursor.execute(sql)
                 cursor.execute(sql,(core_id,con_id,tag,datatime))

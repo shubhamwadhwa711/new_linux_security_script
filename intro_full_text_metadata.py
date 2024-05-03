@@ -196,7 +196,7 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
                 write_into_the_json_file(response=response,json_file=json_file)
                 if commit:
                     succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"),images=record.get("images"),
-                    tags=response['metadata']["Tags"] )
+                    tags=response['metadata']["Tags"], content_id = response["id"])
                     if succeed:
                         pass
                         # logger.info(f'ID: {response.get("id")} has been updated in database')
@@ -229,8 +229,10 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     max_tokens:int=config.getint("metadata-01","max_tokens")
     base_url:str=config.get("metadata-01","base_url")
     connection=get_db_connection(config,logger)
-
+    # updatetags(connection)
     total_records=get_total_rows(connection).get('total')
+    filename ="tags.log"
+    logger.info(f'{"="*20} Total records in {filename}: {total_records} {"="*20}')
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
     while True:
@@ -250,6 +252,7 @@ def main(id: Optional[int] = 0,commit: bool = False,):
 
 
 
+
 if __name__ =="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--id", default=0, type=int, help="Check for specific ID")
@@ -257,4 +260,8 @@ if __name__ =="__main__":
     args = parser.parse_args()
     specific_id = args.id
     is_commit=args.commit
-    main(id=specific_id,commit=is_commit)
+    main(id=specific_id,commit=is_commit,)
+
+
+
+
