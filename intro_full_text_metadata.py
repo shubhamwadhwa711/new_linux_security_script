@@ -39,12 +39,23 @@ def get_db_connection(config,logger):
         logger.error(f"Get db connection ERROR : {e}")
         raise e
     
-def get_total_rows(connection):
+def get_total_rows(config,connection):
     """ To get the length the database records """
-    Sql= f"SELECT count(id) as total FROM {db_prefix}content"
+    runfortags =config.get("metadata-01","runfortags")
+    if runfortags =="yes":
+        Sql = f'''SELECT COUNT(*)FROM `{db_prefix}content` AS c
+            LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
+            WHERE c.`access` = 1
+            AND cat.published = 1
+            AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219);'''
+    else:
+        Sql= f"SELECT count(id) as total FROM {db_prefix}content"
     with connection.cursor() as cursor:
         cursor.execute(Sql)
         result=cursor.fetchone()
+        if "COUNT(*)" in result:
+            total = result["COUNT(*)"]
+            result = {"total":total}
         return result
 
 def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
@@ -230,9 +241,8 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     base_url:str=config.get("metadata-01","base_url")
     connection=get_db_connection(config,logger)
     # updatetags(connection)
-    total_records=get_total_rows(connection).get('total')
-    filename ="tags.log"
-    logger.info(f'{"="*20} Total records in {filename}: {total_records} {"="*20}')
+    total_records=get_total_rows(config,connection).get('total')
+    print("+++++++++++++++++",total_records)
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
     while True:
