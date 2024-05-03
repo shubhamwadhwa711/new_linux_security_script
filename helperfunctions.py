@@ -12,6 +12,14 @@ import os
 tokenizer = tiktoken.get_encoding("cl100k_base")
 from pymysql import Connection,MySQLError
 from datetime import datetime
+import configparser
+
+config = configparser.ConfigParser(interpolation=None)
+config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+db_prefix=config.get("mysql","prefix"),
+db_prefix = db_prefix[0]
+
+
 class ColoredFormatter(logging.Formatter):
     datefmt = "%Y-%m-%d %H:%M:%S"
     MAPPING = {
@@ -187,7 +195,7 @@ def percentage(number, total):
     return to_str
 
 def get_path_from_cateories_table(connection,catid):
-    sql=f"SELECT c.path FROM `xu5gc_categories` as c WHERE `id`={catid}"
+    sql=f"SELECT c.path FROM {db_prefix}categories` as c WHERE `id`={catid}"
     with connection.cursor() as cursor:
         cursor.execute(sql)
         record=cursor.fetchone()
@@ -198,7 +206,7 @@ def get_path_from_cateories_table(connection,catid):
 
 
 def get_record(connection,alias):
-    sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM `xu5gc_easyfrontendseo` as c WHERE `url` LIKE '%{alias}%'"
+    sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM {db_prefix}easyfrontendseo as c WHERE `url` LIKE '%{alias}%'"
     with connection.cursor() as cursor:
         cursor.execute(sql)
         record=cursor.fetchone()
@@ -284,15 +292,15 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
             id=record['id']
             if record["opengraph"]=="" and record["twitterCards"]=="":
                 opengarph_json_data,twitter_Cards_json_data= get_prepare_json(record,description,base_url,image_tag)
-                sql= """
-                    UPDATE xu5gc_easyfrontendseo
+                sql= f"""
+                    UPDATE {db_prefix}easyfrontendseo
                     SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
                     WHERE id = %s AND (opengraph IS NULL OR opengraph = '') AND (twitterCards IS NULL OR twitterCards = '')
                     """
                 args=(metadata,description,opengarph_json_data,twitter_Cards_json_data,id)
             else:
-                sql= """
-                    UPDATE xu5gc_easyfrontendseo
+                sql= f"""
+                    UPDATE {db_prefix}easyfrontendseo
                     SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
                     WHERE id = %s 
                     """
@@ -310,7 +318,7 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
         else:
             url=alias
         opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
-        sql="INSERT INTO xu5gc_easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        sql=f"INSERT INTO {db_prefix}easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
         args=(url,content_table_title,description,metadata,"","index, follow",opengarph_json_data,twitter_Cards_json_data,f"{base_url}/{url}","")
     
     with connection.cursor() as cursor:
@@ -325,26 +333,26 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
 
 def updatetags(connection,content_id,tags):
     try:
-        # content_id= 0
-        excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
-        # tags =["test-w1",]
+        # content_id= 356646
+        # excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
+        # tags =["Custom linux2","xxnew"]
         # Convert to lowercase and replace spaces with hyphens
         tags_lower_hyphen = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
             for al, tag in zip(tags_lower_hyphen, tags):
-                sql = "SELECT * FROM xu5gc_tags WHERE alias = %s"
+                sql = f"SELECT * FROM {db_prefix}tags WHERE alias = %s"
                 cursor.execute(sql, (al,))
                 exiting_tags = cursor.fetchall()
                 if exiting_tags:
                     pass
                 else:
-                    lft = "SELECT  max(rgt) from xu5gc_tags"
+                    lft = f"SELECT  max(rgt) from {db_prefix}tags"
                     lft = cursor.execute(lft)
                     max_lft = cursor.fetchone()
                     lft = max_lft["max(rgt)"]+1
                     rgt = lft+1
                     datatime = datetime.now()
-                    sql = '''INSERT INTO xu5gc_tags (
+                    sql = f'''INSERT INTO {db_prefix}tags (
                             parent_id, lft, rgt, level, path, title, alias, 
                             note, description, published, checked_out, checked_out_time, 
                             access, params, metadesc, metakey, metadata, created_user_id, 
@@ -356,32 +364,25 @@ def updatetags(connection,content_id,tags):
                             '', '', '10', %s, '', '0', %s, 
                             '', '', '0', '*', '1', %s, NULL
                         )'''
-                
-                
                     cursor.execute(sql,(lft, rgt, al, tag, al ,datatime,datatime,datatime))
                 
                     # Now you can work with the inserted record as neede
                     connection.commit()
-                    sql = "SELECT * FROM xu5gc_tags  ORDER BY id DESC LIMIT 1"
+                    sql = f"SELECT * FROM {db_prefix}tags  ORDER BY id DESC LIMIT 1"
                     cursor.execute(sql)
                     result = cursor.fetchone()
                     tag_id = result["id"]
-                    contentitem_tag_mapupdateu(connection,content_id, tag_id)
-
-
+                    contentitem_tag_mapupdate(connection,content_id, tag_id)
         return tags
     except Exception as e:
         print(e)
 
 
-
-
-                
         
 
-def contentitem_tag_mapupdateu(connection,con_id, tag):
+def contentitem_tag_mapupdate(connection,con_id, tag):
     try:
-        query = "SELECT * FROM xu5gc_contentitem_tag_map WHERE content_item_id = %s AND tag_id = %s"
+        query = f"SELECT * FROM {db_prefix}contentitem_tag_map WHERE content_item_id = %s AND tag_id = %s"
         with connection.cursor() as cursor:
             cursor.execute(query, (con_id, tag))
             results = cursor.fetchone()
@@ -389,16 +390,16 @@ def contentitem_tag_mapupdateu(connection,con_id, tag):
             pass 
         else:
             with connection.cursor() as cursor:
-                core_content = "SELECT  max(core_content_id) from xu5gc_contentitem_tag_map"
+                core_content = f"SELECT  max(core_content_id) from {db_prefix}contentitem_tag_map"
                 cursor.execute(core_content)
                 max_lft = cursor.fetchone()
                 core_id = max_lft["max(core_content_id)"]+1
             
                 datatime = datetime.now()
                 # sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', '18', '355274', '19', CURRENT_TIMESTAMP(), '1')"
-                sql = "INSERT INTO xu5gc_contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', %s, %s, %s, %s, '1')"
+                sql = f"INSERT INTO {db_prefix}contentitem_tag_map (type_alias, core_content_id, content_item_id, tag_id, tag_date, type_id) VALUES ('com_content.article', %s, %s, %s, %s, '1')"
                 # cursor.execute(sql)
-                cursor.execute(sql,(con_id,core_id,tag,datatime))
+                cursor.execute(sql,(core_id,con_id,tag,datatime))
                 connection.commit()
 
     except Exception as e:

@@ -14,7 +14,10 @@ import argparse
 import concurrent.futures
 from pymysql import Connection
 client = OpenAI(api_key=os.getenv("OPENAI_SECRET_KEY"))
-
+config = configparser.ConfigParser(interpolation=None)
+config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+db_prefix=config.get("mysql","prefix"),
+db_prefix = db_prefix[0]
 
 
 def get_db_connection(config,logger):
@@ -38,7 +41,7 @@ def get_db_connection(config,logger):
     
 def get_total_rows(connection):
     """ To get the length the database records """
-    Sql="SELECT count(id) as total FROM xu5gc_content"
+    Sql= f"SELECT count(id) as total FROM {db_prefix}content"
     with connection.cursor() as cursor:
         cursor.execute(Sql)
         result=cursor.fetchone()
@@ -47,13 +50,13 @@ def get_total_rows(connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
     """ To get the records sequentially based  to limit """
     if id > 0:
-        sql = "SELECT c.id, c.introtext, c.fulltext, c.alias ,c.images,c.title, c.catid FROM xu5gc_content AS c WHERE id =%s"
+        sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias ,c.images,c.title, c.catid FROM {db_prefix}content AS c WHERE id =%s"
         args = id
     elif current_id>0:
-        sql="SELECT c.id , c.introtext , c.fulltext, c.alias, c.images,c.title, c.catid FROM xu5gc_content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
+        sql=f"SELECT c.id , c.introtext , c.fulltext, c.alias, c.images,c.title, c.catid FROM {db_prefix}content AS c  WHERE id > %s ORDER BY id LIMIT %s" 
         args=(current_id,limit)
     else:
-        sql="SELECT c.id , c.introtext , c.fulltext , c.alias,c.images ,c.title ,c.catid FROM xu5gc_content AS c ORDER BY id LIMIT %s" 
+        sql=f"SELECT c.id , c.introtext , c.fulltext , c.alias,c.images ,c.title ,c.catid FROM {db_prefix}content AS c ORDER BY id LIMIT %s" 
         args=limit
     with connection.cursor() as cursor:
         cursor.execute(sql,args)
@@ -225,8 +228,11 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     max_words:int=config.getint("metadata-01","max_words")
     max_tokens:int=config.getint("metadata-01","max_tokens")
     base_url:str=config.get("metadata-01","base_url")
+    db_prefix=config.get("mysql","prefix"),
+    print(db_prefix)
     connection=get_db_connection(config,logger)
-    # updatetags(connection)
+    
+    updatetags(connection)
     total_records=get_total_rows(connection).get('total')
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
