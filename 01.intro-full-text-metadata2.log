@@ -483,3 +483,72 @@
 2024-05-06 13:33:06 - INFO - Content id : 101986, Meta keywords : ['Samba security update', 'Debian GNU/Linux', 'Samba packages upgrade', 'Configuration file changes', 'SMBFS replacement'], Meta description : Advisory message on Samba security issues in Debian GNU/Linux 2.1, including upgrade recommendations and configuration changes., Tags : ['Security update', 'Linux server management', 'Samba software', 'Debian GNU/Linux', 'SMBFS']
 2024-05-06 13:33:10 - INFO - ID:101986 "title":New version of samba released "Alias": new-version-of-samba-released - has been updated in database
 2024-05-06 13:33:44 - INFO - ==================== All records have been processed ====================
+2024-05-06 13:39:46 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 13:39:46 - INFO - ******************** Processing ID: 101986 ******************** (63/16917 - 0.4%)
+2024-05-06 13:39:50 - INFO -  Successfully processed  the record ID:101986
+2024-05-06 13:39:50 - INFO - Content id : 101986, Meta keywords : ['Samba security update', 'Debian GNU/Linux 2.1', 'Linux server management', 'Upgrade solution', 'Configuration file changes'], Meta description : Security update for Samba in Debian GNU/Linux 2.1, including upgrade solution and configuration file changes., Tags : ['Samba', 'Security update', 'Debian', 'Linux server', 'Upgrade']
+2024-05-06 13:39:50 - INFO - ==================== All records have been processed ====================
+2024-05-06 13:41:00 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 13:41:02 - INFO - ******************** Processing ID: 101986 ******************** (63/16917 - 0.4%)
+2024-05-06 13:41:05 - INFO -  Successfully processed  the record ID:101986
+2024-05-06 13:41:11 - INFO - Content id : 101986, Meta keywords : ['security updates', 'Linux server management', 'samba package', 'Debian GNU/Linux 2.1', 'upgrade'], Meta description : Urgent security updates for samba package in Debian GNU/Linux 2.1. Upgrade now for improved Linux server management., Tags : ['security', 'Linux', 'samba', 'Debian', 'upgrade']
+2024-05-06 13:41:17 - INFO - ID:101986 "title":New version of samba released "Alias": new-version-of-samba-released - has been updated in database
+2024-05-06 13:43:13 - INFO - ==================== All records have been processed ====================
+2024-05-06 13:45:19 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 13:45:20 - INFO - ******************** Processing ID: 101986 ******************** (63/16917 - 0.4%)
+2024-05-06 13:45:34 - INFO -  Successfully processed  the record ID:101986
+2024-05-06 13:45:36 - INFO - Content id : 101986, Meta keywords : ['Samba security advisory', 'Debian GNU/Linux 2.1', 'security issues', 'upgrade to version 2.0.5a-1', 'MD5 checksums'], Meta description : Security advisory for Samba in Debian GNU/Linux 2.1, urging immediate upgrade to version 2.0.5a-1 due to security issues., Tags : ['Samba', 'security', 'Debian', 'Linux', 'upgrade']
+2024-05-06 13:45:48 - INFO - ID:101986 "title":New version of samba released "Alias": new-version-of-samba-released - has been updated in database
+2024-05-06 13:47:57 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 13:48:05 - INFO - ******************** Processing ID: 104290 ******************** (63/16917 - 0.4%)
+2024-05-06 13:48:10 - INFO -  Successfully processed  the record ID:104290
+2024-05-06 13:48:15 - INFO - Content id : 104290, Meta keywords : ['SuSE Security Announcement', 'Perl-MailTools package', 'remote command execution', 'rpm package', 'md5sums'], Meta description : SuSE Security Announcement discusses Perl-MailTools package vulnerability, remote command execution, and rpm package authenticity verification., Tags : ['Security', 'Vulnerability', 'Linux', 'Server', 'Management']
+2024-05-06 13:53:42 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 13:53:45 - INFO - ******************** Processing ID: 104290 ******************** (63/16917 - 0.4%)
+2024-05-06 13:53:50 - INFO -  Successfully processed  the record ID:104290
+2024-05-06 13:53:58 - INFO - Content id : 104290, Meta keywords : ['SuSE Security Announcement', 'security vulnerability', 'perl-MailTools package', 'remote command execution', 'authenticity verification'], Meta description : SuSE Security Announcement about a security vulnerability in perl-MailTools package, allowing remote command execution and providing details on authenticity verification., Tags : ['SuSE', 'security', 'vulnerability', 'perl', 'command execution']
+2024-05-06 13:54:18 - INFO - ID:104290 "title":SuSe: perl-MailTools arbitrary command execution vulnerability "Alias": suse-perl-mailtools-arbitrary-command-execution-vulnerability - has been updated in database
+2024-05-06 13:54:37 - INFO - ==================== All records have been processed ====================
+2024-05-06 13:56:25 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 13:56:26 - INFO - ******************** Processing ID: 104290 ******************** (63/16917 - 0.4%)
+2024-05-06 13:56:33 - INFO -  Successfully processed  the record ID:104290
+2024-05-06 13:56:35 - INFO - Content id : 104290, Meta keywords : ['SuSE Security Announcement', 'perl-MailTools package', 'remote command execution', 'vulnerability', 'Linux server management'], Meta description : SuSE Security Announcement regarding perl-MailTools package vulnerability and remote command execution, emphasizing Linux server management., Tags : ['Security', 'Vulnerability', 'Linux', 'Server', 'Management']
+2024-05-06 13:56:39 - INFO - ID:104290 "title":SuSe: perl-MailTools arbitrary command execution vulnerability "Alias": suse-perl-mailtools-arbitrary-command-execution-vulnerability - has been updated in database
+2024-05-06 13:59:22 - INFO - ==================== All records have been processed ====================
+2024-05-06 14:01:40 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 14:01:41 - INFO - ******************** Processing ID: 104290 ******************** (63/16917 - 0.4%)
+2024-05-06 14:01:53 - INFO -  Successfully processed  the record ID:104290
+2024-05-06 14:01:54 - INFO - Content id : 104290, Meta keywords : ['SuSE security announcement', 'perl-MailTools package', 'remote command execution', 'Mail::Mailer package', 'package authenticity verification'], Meta description : SuSE security announcement regarding perl-MailTools package vulnerability and package authenticity verification., Tags : ['Security', 'Linux', 'Vulnerability', 'Package', 'Verification']
+2024-05-06 14:02:00 - INFO - ID:104290 "title":SuSe: perl-MailTools arbitrary command execution vulnerability "Alias": suse-perl-mailtools-arbitrary-command-execution-vulnerability - has been updated in database
+2024-05-06 14:02:37 - INFO - ==================== All records have been processed ====================
+2024-05-06 14:10:48 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 14:10:50 - INFO - ******************** Processing ID: 101930 ******************** (63/16917 - 0.4%)
+2024-05-06 14:11:00 - INFO -  Successfully processed  the record ID:101930
+2024-05-06 14:11:01 - INFO - Content id : 101930, Meta keywords : ['Red Hat Linux 6.x', 'Netscape packages', 'security advisory', 'bug fix', 'JavaScript security problems'], Meta description : Security advisory for Red Hat Linux 6.x Netscape packages, including bug fixes and JavaScript security problems., Tags : ['Red Hat', 'Netscape', 'Security', 'Bug Fix', 'JavaScript']
+2024-05-06 14:11:06 - INFO - ID:101930 "title":RH6.1:  netscape (RHSA-1999:039-02) "Alias": rh61-netscape-rhsa-1999039-02 - has been updated in database
+2024-05-06 15:01:16 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 15:01:16 - INFO - ******************** Processing ID: 104270 ******************** (63/16917 - 0.4%)
+2024-05-06 15:01:18 - INFO -  Successfully processed  the record ID:104270
+2024-05-06 15:01:18 - INFO - Content id : 104270, Meta keywords : ['Debian Security Advisory', 'kdegraphics', 'buffer overflow', 'CVE Id', 'Linux server management'], Meta description : Debian Security Advisory DSA 182-1 for kdegraphics with buffer overflow vulnerability. CVE Id: CAN-2002-0838. Linux server management., Tags : ['Security Update', 'Linux Server', 'Buffer Overflow', 'Vulnerability', 'CVE']
+2024-05-06 15:01:18 - INFO - ==================== All records have been processed ====================
+2024-05-06 15:03:14 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 15:03:16 - INFO - ******************** Processing ID: 104270 ******************** (63/16917 - 0.4%)
+2024-05-06 15:03:20 - INFO -  Successfully processed  the record ID:104270
+2024-05-06 15:03:21 - INFO - Content id : 104270, Meta keywords : ['Debian Security Advisory', 'kdegraphics', 'buffer overflow', 'CVE-2002-0838', 'Linux server management'], Meta description : Debian Security Advisory DSA 182-1 for kdegraphics with buffer overflow vulnerability. Linux server management and security updates., Tags : ['Security', 'Linux', 'Vulnerability', 'Buffer Overflow', 'CVE']
+2024-05-06 15:03:24 - INFO - ID:104270 "title":Debian: 'kdegraphics' Remote buffer overflow "Alias": debian-kdegraphics-remote-buffer-overflow - has been updated in database
+2024-05-06 15:07:18 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 15:07:18 - INFO - ******************** Processing ID: 104270 ******************** (63/16917 - 0.4%)
+2024-05-06 15:07:20 - INFO -  Successfully processed  the record ID:104270
+2024-05-06 15:07:20 - INFO - Content id : 104270, Meta keywords : ['Debian Security Advisory', 'kdegraphics', 'buffer overflow', 'Linux server management', 'security updates'], Meta description : Debian Security Advisory DSA 182-1: kdegraphics buffer overflow vulnerability fix for Linux server management., Tags : ['Debian Security Advisory', 'kdegraphics', 'buffer overflow', 'Linux server management', 'security updates']
+2024-05-06 15:07:20 - INFO - ==================== All records have been processed ====================
+2024-05-06 15:11:16 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 15:11:16 - INFO - ******************** Processing ID: 101939 ******************** (63/16917 - 0.4%)
+2024-05-06 15:11:22 - INFO -  Successfully processed  the record ID:101939
+2024-05-06 15:11:22 - INFO - Content id : 101939, Meta keywords : ['Red Hat security advisory', 'ORBit security vulnerabilities', 'GPG signatures', 'TCP Wrappers support', 'RPM package verification'], Meta description : Red Hat security advisory addressing ORBit and gnome-core vulnerabilities, recommending TCP Wrappers support for network access control., Tags : ['Security advisory', 'Vulnerabilities', 'GPG signatures', 'TCP Wrappers', 'RPM verification']
+2024-05-06 15:11:22 - INFO - ==================== All records have been processed ====================
+2024-05-06 15:12:21 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 15:12:21 - INFO - ******************** Processing ID: 101939 ******************** (63/16917 - 0.4%)
+2024-05-06 15:12:27 - INFO -  Successfully processed  the record ID:101939
+2024-05-06 15:12:27 - INFO - Content id : 101939, Meta keywords : ['Red Hat security update', 'Linux server management', 'ORBit security vulnerability', 'esound security hole', 'gnome-core security advisory'], Meta description : Red Hat security update for ORBit, esound, and gnome-core addressing security vulnerabilities and adding TCP Wrappers support for gnome-session., Tags : ['Security update', 'Linux server', 'ORBit', 'esound', 'gnome-core']
+2024-05-06 15:12:27 - INFO - ID:101939 "title":RH6.1:  ORBit, esound, gnome-core (RHSA-1999:058-01) "Alias": rh61-orbit-esound-gnome-core-rhsa-1999058-01 - has been updated in database
+2024-05-06 15:12:27 - INFO - ==================== All records have been processed ====================

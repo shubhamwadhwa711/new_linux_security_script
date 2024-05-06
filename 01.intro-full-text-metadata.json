@@ -1681,5 +1681,265 @@
                 "SMBFS"
             ]
         }
+    },
+    {
+        "id": 101986,
+        "metadata": {
+            "Meta keywords": [
+                "Samba security update",
+                "Debian GNU/Linux 2.1",
+                "Linux server management",
+                "Upgrade solution",
+                "Configuration file changes"
+            ],
+            "Meta description": "Security update for Samba in Debian GNU/Linux 2.1, including upgrade solution and configuration file changes.",
+            "Tags": [
+                "Samba",
+                "Security update",
+                "Debian",
+                "Linux server",
+                "Upgrade"
+            ]
+        }
+    },
+    {
+        "id": 101986,
+        "metadata": {
+            "Meta keywords": [
+                "security updates",
+                "Linux server management",
+                "samba package",
+                "Debian GNU/Linux 2.1",
+                "upgrade"
+            ],
+            "Meta description": "Urgent security updates for samba package in Debian GNU/Linux 2.1. Upgrade now for improved Linux server management.",
+            "Tags": [
+                "security",
+                "Linux",
+                "samba",
+                "Debian",
+                "upgrade"
+            ]
+        }
+    },
+    {
+        "id": 101986,
+        "metadata": {
+            "Meta keywords": [
+                "Samba security advisory",
+                "Debian GNU/Linux 2.1",
+                "security issues",
+                "upgrade to version 2.0.5a-1",
+                "MD5 checksums"
+            ],
+            "Meta description": "Security advisory for Samba in Debian GNU/Linux 2.1, urging immediate upgrade to version 2.0.5a-1 due to security issues.",
+            "Tags": [
+                "Samba",
+                "security",
+                "Debian",
+                "Linux",
+                "upgrade"
+            ]
+        }
+    },
+    {
+        "id": 104290,
+        "metadata": {
+            "Meta keywords": [
+                "SuSE Security Announcement",
+                "Perl-MailTools package",
+                "remote command execution",
+                "rpm package",
+                "md5sums"
+            ],
+            "Meta description": "SuSE Security Announcement discusses Perl-MailTools package vulnerability, remote command execution, and rpm package authenticity verification.",
+            "Tags": [
+                "Security",
+                "Vulnerability",
+                "Linux",
+                "Server",
+                "Management"
+            ]
+        }
+    },
+    {
+        "id": 104290,
+        "metadata": {
+            "Meta keywords": [
+                "SuSE Security Announcement",
+                "security vulnerability",
+                "perl-MailTools package",
+                "remote command execution",
+                "authenticity verification"
+            ],
+            "Meta description": "SuSE Security Announcement about a security vulnerability in perl-MailTools package, allowing remote command execution and providing details on authenticity verification.",
+            "Tags": [
+                "SuSE",
+                "security",
+                "vulnerability",
+                "perl",
+                "command execution"
+            ]
+        }
+    },
+    {
+        "id": 104290,
+        "metadata": {
+            "Meta keywords": [
+                "SuSE Security Announcement",
+                "perl-MailTools package",
+                "remote command execution",
+                "vulnerability",
+                "Linux server management"
+            ],
+            "Meta description": "SuSE Security Announcement regarding perl-MailTools package vulnerability and remote command execution, emphasizing Linux server management.",
+            "Tags": [
+                "Security",
+                "Vulnerability",
+                "Linux",
+                "Server",
+                "Management"
+            ]
+        }
+    },
+    {
+        "id": 104290,
+        "metadata": {
+            "Meta keywords": [
+                "SuSE security announcement",
+                "perl-MailTools package",
+                "remote command execution",
+                "Mail::Mailer package",
+                "package authenticity verification"
+            ],
+            "Meta description": "SuSE security announcement regarding perl-MailTools package vulnerability and package authenticity verification.",
+            "Tags": [
+                "Security",
+                "Linux",
+                "Vulnerability",
+                "Package",
+                "Verification"
+            ]
+        }
+    },
+    {
+        "id": 101930,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat Linux 6.x",
+                "Netscape packages",
+                "security advisory",
+                "bug fix",
+                "JavaScript security problems"
+            ],
+            "Meta description": "Security advisory for Red Hat Linux 6.x Netscape packages, including bug fixes and JavaScript security problems.",
+            "Tags": [
+                "Red Hat",
+                "Netscape",
+                "Security",
+                "Bug Fix",
+                "JavaScript"
+            ]
+        }
+    },
+    {
+        "id": 104270,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "kdegraphics",
+                "buffer overflow",
+                "CVE Id",
+                "Linux server management"
+            ],
+            "Meta description": "Debian Security Advisory DSA 182-1 for kdegraphics with buffer overflow vulnerability. CVE Id: CAN-2002-0838. Linux server management.",
+            "Tags": [
+                "Security Update",
+                "Linux Server",
+                "Buffer Overflow",
+                "Vulnerability",
+                "CVE"
+            ]
+        }
+    },
+    {
+        "id": 104270,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "kdegraphics",
+                "buffer overflow",
+                "CVE-2002-0838",
+                "Linux server management"
+            ],
+            "Meta description": "Debian Security Advisory DSA 182-1 for kdegraphics with buffer overflow vulnerability. Linux server management and security updates.",
+            "Tags": [
+                "Security",
+                "Linux",
+                "Vulnerability",
+                "Buffer Overflow",
+                "CVE"
+            ]
+        }
+    },
+    {
+        "id": 104270,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "kdegraphics",
+                "buffer overflow",
+                "Linux server management",
+                "security updates"
+            ],
+            "Meta description": "Debian Security Advisory DSA 182-1: kdegraphics buffer overflow vulnerability fix for Linux server management.",
+            "Tags": [
+                "Debian Security Advisory",
+                "kdegraphics",
+                "buffer overflow",
+                "Linux server management",
+                "security updates"
+            ]
+        }
+    },
+    {
+        "id": 101939,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat security advisory",
+                "ORBit security vulnerabilities",
+                "GPG signatures",
+                "TCP Wrappers support",
+                "RPM package verification"
+            ],
+            "Meta description": "Red Hat security advisory addressing ORBit and gnome-core vulnerabilities, recommending TCP Wrappers support for network access control.",
+            "Tags": [
+                "Security advisory",
+                "Vulnerabilities",
+                "GPG signatures",
+                "TCP Wrappers",
+                "RPM verification"
+            ]
+        }
+    },
+    {
+        "id": 101939,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat security update",
+                "Linux server management",
+                "ORBit security vulnerability",
+                "esound security hole",
+                "gnome-core security advisory"
+            ],
+            "Meta description": "Red Hat security update for ORBit, esound, and gnome-core addressing security vulnerabilities and adding TCP Wrappers support for gnome-session.",
+            "Tags": [
+                "Security update",
+                "Linux server",
+                "ORBit",
+                "esound",
+                "gnome-core"
+            ]
+        }
     }
 ]

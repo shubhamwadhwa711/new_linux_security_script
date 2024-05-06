@@ -337,7 +337,6 @@ def updatetags(connection,content_id,tags):
         tag_logger=getlogger(name=taglogfile_name)
         # content_id= 356646
         # excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
-        # tags =["Custom linux2","new tagasic","test100"]
         # Convert to lowercase and replace spaces with hyphens
         tags_lower_hyphen = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
