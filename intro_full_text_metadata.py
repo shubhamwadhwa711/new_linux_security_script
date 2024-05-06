@@ -115,14 +115,17 @@ def process_context(contexts:list,logger:Logger,temperature=0):
 3. Create a consise Meta description that summarize the given context and ensure that the Meta descritpion Words length should not exceed the 20. 
 4. If the Meta description Words length is greater than 20 then trim the Meta descritpion that is more than 20 Words.
 4. Format each Meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
+5. The Meta keywords and Meta description must be directly derived from the provided context, aligning with SEO best practices.
 
-5. Ensure that each Meta keyword is distinct from one another.
-6. The Meta keywords and Meta description must be directly derived from the provided context, aligning with SEO best practices.
+6. Ensure that each Meta keyword is distinct from one another. The tags provided above are preferred, even if they consist of multiple words.
+7.Clarified the objective: "Extract Meta tags that reflect key concepts and terms from the text, focusing on security and Linux server  management." This provides a clear direction for what the tags should represent.
 
-7. Extract single-word Meta tags that reflect key concepts and terms from the text, focusing on security and Linux server management.
-8. Ensure these tags are direct, with each tag being a single, impactful word.
-9. List these tags in a format within brackets and separated by commas, like this: [Tag1, Tag2, Tag3].
-10. Tags should be unique, relevant, and derived strictly from the content provided.
+8. Ensure these tags are direct, with each tag being a single or multiple , impactful word.
+9.  Specified the format for listing tags: "List these tags in a format within brackets and separated by commas." This ensures consistency in how the tags are presented.like this: [Tag1, Tag2, Tag3].
+10. Reinforced the importance of uniqueness and relevance: "Tags should be unique, relevant, and derived strictly from the content provided." This emphasizes the quality criteria for the tags.
+11. Meta keywords and Tags must be unique to each other or similar but not exactly the same.
+
+Please ensure the output consists of exactly 5 meta tags. 
 
 
 ###
@@ -200,9 +203,16 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
         try:
             logger.info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
             metadata=extract_record_text(record=record,logger=logger,max_words=max_words,max_tokens=max_tokens)
+            
             if metadata is not None:
                 dict_response=json.loads(metadata)
+
                 response={"id":record.get('id'),"metadata":dict_response}
+
+               
+
+                logger.info(f"Content id : {response['id']}, Meta keywords : {response['metadata']['Meta keywords']}, Meta description : {response['metadata']['Meta description']}, Tags : {response['metadata']['Tags']}")
+
                 write_into_the_json_file(response=response,json_file=json_file)
                 if commit:
                     succeed=do_update(connection=connection,alias=record["alias"],metadata=response["metadata"]["Meta keywords"],description=response['metadata']["Meta description"],content_table_id=record.get("id"),logger=logger,base_url=base_url,content_table_title=record.get('title'),catid=record.get("catid"),images=record.get("images"),
