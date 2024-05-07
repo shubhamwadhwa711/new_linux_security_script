@@ -20,7 +20,7 @@ config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 db_prefix=config.get("mysql","prefix"),
 db_prefix = db_prefix[0]
-
+max_run_count =0    # globelvariable for max record run 
 
 
 def get_db_connection(config,logger):
@@ -60,7 +60,8 @@ def get_total_rows(config,connection):
     
         return result
 
-def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int):
+def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int, max_records:int): 
+    global max_run_count
     """ To get the records sequentially based  to limit """
     if id > 0:
         sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias ,c.images,c.title, c.catid FROM {db_prefix}content AS c WHERE id =%s"
@@ -74,6 +75,9 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,current_id:int,id:int
     with connection.cursor() as cursor:
         cursor.execute(sql,args)
         result=cursor.fetchall()
+        max_run_count  +=limit
+    if max_run_count >  max_records:
+        return   None
     return result
 
 async def process_text_async(client, context, logger):
@@ -169,7 +173,6 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
 
                 response={"id":record.get('id'),"metadata":dict_response}
 
-    
                 logger.info(f"Content id : {response['id']}, Meta keywords : {response['metadata']['Meta keywords']}, Meta description : {response['metadata']['Meta description']}, Tags : {response['metadata']['Tags']}")
 
                 write_into_the_json_file(response=response,json_file=json_file)
@@ -207,14 +210,21 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     max_words:int=config.getint("metadata-01","max_words")
     max_tokens:int=config.getint("metadata-01","max_tokens")
     base_url:str=config.get("metadata-01","base_url")
+    
     connection=get_db_connection(config,logger)
     # updatetags(connection)
     total_records=get_total_rows(config,connection).get('total')
+    max_records  = config.get("metadata-01","max_record_run")
+    max_records_runs = int(max_records) if max_records else total_records
+   
     logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
     while True:
         try:
-            result=get_limit_rows(connection=connection, limit=limit,current_id=current_id,id=id)
+            result=get_limit_rows(connection=connection, limit=limit,current_id=current_id,id=id,max_records = max_records_runs)
+            if  not result:
+                logger.info(f'All records have been processed')
+                break
             if len(result)==0:
                 logger.info(f'{"="*20} All records have been processed {"="*20}')
                 break

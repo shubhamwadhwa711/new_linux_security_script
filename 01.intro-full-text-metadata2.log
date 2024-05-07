@@ -582,3 +582,105 @@
 2024-05-07 12:53:56 - INFO - ID:101939 "title":RH6.1:  ORBit, esound, gnome-core (RHSA-1999:058-01) "Alias": rh61-orbit-esound-gnome-core-rhsa-1999058-01 - has been updated in database
 2024-05-07 12:58:36 - INFO - ==================== All records have been processed ====================
 2024-05-07 13:12:32 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:20:11 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:23:14 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 13:23:48 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 13:24:06 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'Linux server management', 'security updates'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability fix for arbitrary code execution. Linux server management and security updates., Tags : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'Linux server management', 'security updates']
+2024-05-07 13:24:24 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 13:24:48 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 13:25:00 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux Security Update', 'perl-MailTools package', 'vulnerability', 'remote attackers', 'GPG public keys'], Meta description : Mandrake Linux Security Update Advisory addressing perl-MailTools package vulnerability, remote attacker risk, and GPG public keys for security verification., Tags : ['Linux server management', 'Security updates', 'Vulnerability', 'Remote attackers', 'GPG public keys']
+2024-05-07 13:28:31 - INFO - ******************** Processing ID: 104308 ******************** (70/16917 - 0.4%)
+2024-05-07 13:28:45 - INFO -  Successfully processed  the record ID:104308
+2024-05-07 13:28:48 - INFO - Content id : 104308, Meta keywords : ['Mandrake Linux Security Update Advisory', 'buffer overflow vulnerability', 'nss_ldap package', 'format string bug', 'pam_ldap', 'CVE identifiers', 'cert', 'PADL'], Meta description : Mandrake Linux Security Update Advisory addresses buffer overflow and format string vulnerabilities in nss_ldap and pam_ldap packages, urging users to upgrade for security., Tags : ['Mandrake Linux', 'Security Update', 'Buffer Overflow', 'Format String', 'Vulnerability', 'nss_ldap', 'pam_ldap', 'CVE']
+2024-05-07 13:28:49 - INFO - ******************** Processing ID: 104310 ******************** (71/16917 - 0.4%)
+2024-05-07 13:28:53 - INFO -  Successfully processed  the record ID:104310
+2024-05-07 13:28:58 - INFO - Content id : 104310, Meta keywords : ['Debian Security Advisory', 'buffer overflow', 'klisa package', 'security vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 193-1 addresses a buffer overflow vulnerability in the klisa package, emphasizing Linux server management., Tags : ['Security updates', 'Linux server management', 'Buffer overflow', 'Vulnerability', 'Debian Security Advisory']
+2024-05-07 13:34:35 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:36:00 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:36:39 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 13:36:46 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 13:36:50 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability allows arbitrary code execution. Linux server management and security updates., Tags : ['Security Update', 'Linux Server', 'Vulnerability', 'Code Execution']
+2024-05-07 13:36:50 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 13:37:23 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 13:37:34 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux', 'Security Update', 'perl-MailTools', 'vulnerability', 'Mail::Mailer', 'remote attackers', 'arbitrary commands', 'MandrakeUpdate'], Meta description : Mandrake Linux Security Update Advisory for perl-MailTools vulnerability affecting versions 7.2, 8.0, 8.1, 8.2, and 9.0, with potential risks and upgrade instructions., Tags : ['Linux', 'Security', 'Update', 'Perl', 'Vulnerability', 'Mailer', 'Commands', 'MandrakeUpdate']
+2024-05-07 13:41:23 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:41:36 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 13:41:44 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 13:41:58 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability allows arbitrary code execution. Linux server management and security updates., Tags : ['Security updates', 'Linux server management', 'Vulnerability', 'Debian Security Advisory', 'html2ps']
+2024-05-07 13:42:14 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 13:42:19 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 13:42:25 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux Security Update Advisory', 'perl-MailTools package', 'remote attackers', 'execute arbitrary commands', 'auto-response programs', 'spam filters', 'upgrade instructions', 'bug fixes'], Meta description : Details about security vulnerability in perl-MailTools package for Mandrake Linux, including upgrade instructions and bug fixes., Tags : ['Mandrake Linux', 'Security Update', 'perl-MailTools', 'vulnerability', 'upgrade', 'bug fixes', 'remote attackers', 'spam filters']
+2024-05-07 13:49:53 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:50:23 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:50:39 - INFO - ++++++++++++++All records have been processed 
+2024-05-07 13:53:23 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:53:45 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 13:53:51 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 13:53:52 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability allows arbitrary code execution. Linux server management and security updates., Tags : ['Security updates', 'Linux server management', 'Vulnerability', 'Debian Security Advisory', 'html2ps']
+2024-05-07 13:53:52 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 13:54:00 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 13:54:02 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux', 'Security Update', 'perl-MailTools', 'vulnerability', 'Mail::Mailer', 'remote attackers', 'arbitrary commands', 'Linux server management'], Meta description : Mandrake Linux Security Update for perl-MailTools package addressing vulnerability in Mail::Mailer module, allowing remote attackers to execute arbitrary commands., Tags : ['Mandrake Linux', 'Security Update', 'perl-MailTools', 'vulnerability', 'Mail::Mailer', 'remote attackers', 'arbitrary commands', 'Linux server management']
+2024-05-07 13:54:15 - INFO - ++++++++++++++All records have been processed 
+2024-05-07 13:54:38 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:57:10 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:58:00 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 13:58:02 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 13:58:07 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability allows arbitrary code execution. Linux server management and security updates., Tags : ['Security updates', 'Linux server management', 'Vulnerability', 'Debian Security Advisory', 'html2ps']
+2024-05-07 13:58:08 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 13:58:13 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 13:58:16 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux', 'Security Update', 'perl-MailTools', 'vulnerability', 'remote attackers', 'Mail::Mailer', 'MandrakeSoft', 'GPG public keys'], Meta description : Mandrake Linux Security Update Advisory for perl-MailTools package, addressing vulnerability in Mail::Mailer module, and providing GPG public key verification., Tags : ['Mandrake Linux', 'Security Update', 'perl-MailTools', 'vulnerability', 'remote attackers', 'Mail::Mailer', 'MandrakeSoft', 'GPG public keys']
+2024-05-07 13:58:29 - INFO - ++++++++++++++All records have been processed 
+2024-05-07 13:59:01 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 13:59:09 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 13:59:11 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 13:59:13 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps vulnerability', 'code execution', 'Linux server management', 'security updates'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability, arbitrary code execution, and Linux server management security updates., Tags : ['Debian Security Advisory', 'html2ps vulnerability', 'code execution', 'Linux server management', 'security updates']
+2024-05-07 13:59:13 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 13:59:25 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 13:59:28 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux', 'Security Update', 'Perl-MailTools', 'Vulnerability', 'Remote Attackers', 'Package Updates', 'Bug IDs', 'FTP Mirror Servers'], Meta description : Mandrake Linux Security Update Advisory for perl-MailTools package, addressing vulnerability to remote attackers. Includes bug IDs, package updates, and FTP mirror servers., Tags : ['Mandrake Linux', 'Security Update', 'Perl-MailTools', 'Vulnerability', 'Remote Attackers', 'Package Updates', 'Bug IDs', 'FTP Mirror Servers']
+2024-05-07 13:59:44 - INFO - ******************** Processing ID: 104308 ******************** (70/16917 - 0.4%)
+2024-05-07 13:59:49 - INFO -  Successfully processed  the record ID:104308
+2024-05-07 13:59:55 - INFO - Content id : 104308, Meta keywords : ['security update', 'nss_ldap package', 'Mandrake Linux', 'buffer overflow vulnerability', 'upgrading packages', 'CVE identifiers', 'checksums', 'Linux server management'], Meta description : Get the latest security update for nss_ldap package in Mandrake Linux. Upgrade to fix buffer overflow vulnerability and manage Linux server effectively., Tags : ['security update', 'nss_ldap', 'Mandrake Linux', 'buffer overflow', 'upgrading', 'CVE', 'checksums', 'server management']
+2024-05-07 13:59:55 - INFO - ******************** Processing ID: 104310 ******************** (71/16917 - 0.4%)
+2024-05-07 13:59:57 - INFO -  Successfully processed  the record ID:104310
+2024-05-07 14:00:01 - INFO - Content id : 104310, Meta keywords : ['Debian Security Advisory', 'buffer overflow', 'klisa package', 'security vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 193-1 reports a buffer overflow vulnerability in the klisa package, impacting Linux server management., Tags : ['Security updates', 'Linux server management', 'Buffer overflow', 'Vulnerability', 'Debian Security Advisory']
+2024-05-07 14:00:10 - INFO - ******************** Processing ID: 104311 ******************** (72/16917 - 0.4%)
+2024-05-07 14:00:17 - INFO -  Successfully processed  the record ID:104311
+2024-05-07 14:00:20 - INFO - Content id : 104311, Meta keywords : ['Red Hat Security Advisory', 'PHP vulnerability', 'Mail function', 'Safe mode bypass', 'MTA', 'Arbitrary commands', 'Spam proxy', 'RPM update'], Meta description : Red Hat Security Advisory addressing PHP vulnerability allowing local and remote script authors to execute arbitrary commands and modify mail content., Tags : ['Security Advisory', 'PHP vulnerability', 'Mail function', 'Safe mode bypass', 'MTA', 'Arbitrary commands', 'Spam proxy', 'RPM update']
+2024-05-07 14:00:20 - INFO - ******************** Processing ID: 104314 ******************** (73/16917 - 0.4%)
+2024-05-07 14:00:26 - INFO -  Successfully processed  the record ID:104314
+2024-05-07 14:05:40 - INFO - Content id : 104314, Meta keywords : ['SuSE Security Announcement Package', 'KDE vulnerabilities', 'buffer overflow', 'lan:// URL handler', 'remote attackers', 'KDE rlogin:// URL handler', 'md5sums', 'security mailing lists'], Meta description : Addressing vulnerabilities in KDE lanbrowsing service, LISa, and lan:// URL handler, providing upgrade information, and security mailing lists for SuSE products., Tags : ['Security', 'Vulnerabilities', 'KDE', 'Buffer Overflow', 'URL Handler', 'Remote Attackers', 'MD5sums', 'Mailing Lists']
+2024-05-07 14:05:56 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:06:57 - INFO - ++++++++++++++All records have been processed 
+2024-05-07 14:08:46 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:09:16 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:09:26 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 14:09:29 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 14:09:31 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'Linux server management', 'security updates'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability fix for arbitrary code execution. Linux server management and security updates., Tags : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'Linux server management', 'security updates']
+2024-05-07 14:09:46 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 14:09:55 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 14:10:00 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux', 'Security Update', 'Perl-MailTools', 'Vulnerability', 'Remote Attackers', 'Software Updates', 'Maintenance', 'Linux Server Management'], Meta description : Mandrake Linux Security Update Advisory for perl-MailTools package addressing a vulnerability allowing remote attackers to execute arbitrary commands., Tags : ['Security Update', 'Vulnerability', 'Software Updates', 'Linux Server Management']
+2024-05-07 14:10:26 - INFO - ******************** Processing ID: 104308 ******************** (70/16917 - 0.4%)
+2024-05-07 14:10:32 - INFO -  Successfully processed  the record ID:104308
+2024-05-07 14:10:37 - INFO - Content id : 104308, Meta keywords : ['Mandrake Linux Security Update Advisory', 'buffer overflow vulnerability', 'nss_ldap package', 'format string bug', 'pam_ldap', 'RPM packages', 'GPG public keys', 'security-related mailing lists'], Meta description : Mandrake Linux Security Update Advisory addresses buffer overflow and format string vulnerabilities in nss_ldap and pam_ldap packages, providing updated RPM packages and security-related instructions., Tags : ['Security Update', 'Linux Server Management', 'Buffer Overflow', 'Vulnerability', 'RPM Packages', 'GPG Public Keys', 'Mailing Lists']
+2024-05-07 14:11:15 - INFO - ++++++++++++++All records have been processed 
+2024-05-07 14:22:41 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:29:34 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:31:01 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:31:48 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:32:26 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 14:32:28 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 14:32:30 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps', 'arbitrary code execution', 'vulnerability', 'Linux server management'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability allows arbitrary code execution. Linux server management., Tags : ['Security update', 'Linux server', 'Vulnerability', 'Debian', 'HTML2PS']
+2024-05-07 14:32:37 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 14:32:44 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 14:33:16 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:33:21 - INFO - ******************** Processing ID: 104306 ******************** (68/16917 - 0.4%)
+2024-05-07 14:33:24 - INFO -  Successfully processed  the record ID:104306
+2024-05-07 14:33:25 - INFO - Content id : 104306, Meta keywords : ['Debian Security Advisory', 'html2ps vulnerability', 'code execution', 'Debian GNU/Linux', 'security update'], Meta description : Debian Security Advisory DSA 192-1: html2ps vulnerability fix for code execution in Debian GNU/Linux., Tags : ['Security Update', 'Linux Server Management', 'Vulnerability Fix']
+2024-05-07 14:33:28 - INFO - ******************** Processing ID: 104307 ******************** (69/16917 - 0.4%)
+2024-05-07 14:33:35 - INFO -  Successfully processed  the record ID:104307
+2024-05-07 14:33:36 - INFO - Content id : 104307, Meta keywords : ['Mandrake Linux Security Update Advisory', 'MDKSA-2002:076', 'Mail::Mailer perl module', 'remote attackers', 'perl-MailTools package', 'MD5 checksums', 'GPG signatures', 'FTP mirrors'], Meta description : Mandrake Linux Security Update Advisory MDKSA-2002:076 addresses remote execution vulnerability in Mail::Mailer perl module, providing updated packages and upgrade instructions., Tags : ['Security Update', 'Linux Server Management', 'Vulnerability', 'Remote Execution', 'Software Packages', 'MD5 Checksums', 'GPG Signatures', 'FTP Mirrors']
+2024-05-07 14:33:40 - INFO - ******************** Processing ID: 104308 ******************** (70/16917 - 0.4%)
+2024-05-07 14:33:53 - INFO -  Successfully processed  the record ID:104308
+2024-05-07 14:34:00 - INFO - Content id : 104308, Meta keywords : ['Mandrake Linux', 'nss_ldap', 'security update', 'buffer overflow', 'format string bug', 'pam_ldap', 'upgrade packages', 'CVE identifiers'], Meta description : Mandrake Linux Security Update Advisory for nss_ldap, addressing buffer overflow and format string bug vulnerabilities. Upgrade packages and CVE identifiers included., Tags : ['Mandrake Linux', 'nss_ldap', 'security update', 'buffer overflow', 'format string bug', 'pam_ldap', 'upgrade packages', 'CVE identifiers']
+2024-05-07 14:34:13 - INFO - ++++++++++++++All records have been processed 
+2024-05-07 14:37:44 - INFO - ==================== Total records : 16917 ====================
