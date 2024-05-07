@@ -212,6 +212,7 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     base_url:str=config.get("metadata-01","base_url")
     
     connection=get_db_connection(config,logger)
+
     total_records=get_total_rows(config,connection).get('total')
     max_records  = config.get("metadata-01","max_record_run")
     max_records_runs = int(max_records) if max_records else total_records

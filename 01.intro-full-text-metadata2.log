@@ -686,3 +686,42 @@
 2024-05-07 14:37:44 - INFO - ==================== Total records : 16917 ====================
 2024-05-07 14:56:10 - INFO - ==================== Total records : 16917 ====================
 2024-05-07 14:59:39 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 16:18:32 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 16:24:45 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 16:25:04 - INFO - ******************** Processing ID: 355554 ******************** (68/16917 - 0.4%)
+2024-05-07 16:25:09 - INFO -  Successfully processed  the record ID:355554
+2024-05-07 16:54:25 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 16:54:31 - INFO - ******************** Processing ID: 355554 ******************** (68/16917 - 0.4%)
+2024-05-07 16:54:37 - INFO -  Successfully processed  the record ID:355554
+2024-05-07 16:59:17 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 16:59:21 - INFO - ******************** Processing ID: 355554 ******************** (68/16917 - 0.4%)
+2024-05-07 16:59:26 - INFO -  Successfully processed  the record ID:355554
+2024-05-07 17:02:46 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:02:50 - INFO - ******************** Processing ID: 101884 ******************** (68/16917 - 0.4%)
+2024-05-07 17:02:55 - INFO -  Successfully processed  the record ID:101884
+2024-05-07 17:06:51 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:06:56 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:06:58 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:17:28 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:17:30 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:17:31 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:20:41 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:20:45 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:20:48 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:27:05 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:27:07 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:27:10 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:39:59 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:40:03 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:40:05 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:41:08 - INFO - Content id : 102000, Meta keywords : ['Debian Security Advisory', 'NIS package', 'Linux server management', 'security updates', 'rpc.yppasswd'], Meta description : Debian Security Advisory for NIS package with security updates for Linux server management., Tags : ['Debian', 'Security', 'NIS', 'Linux', 'Server']
+2024-05-07 17:42:15 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:42:18 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:42:20 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:45:14 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:45:17 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:45:19 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:52:16 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 17:52:19 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
+2024-05-07 17:52:22 - INFO -  Successfully processed  the record ID:102000
+2024-05-07 17:57:42 - INFO - State save till Record ID: 102000

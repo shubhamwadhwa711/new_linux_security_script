@@ -2613,5 +2613,25 @@
                 "CVE identifiers"
             ]
         }
+    },
+    {
+        "id": 102000,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "NIS package",
+                "Linux server management",
+                "security updates",
+                "rpc.yppasswd"
+            ],
+            "Meta description": "Debian Security Advisory for NIS package with security updates for Linux server management.",
+            "Tags": [
+                "Debian",
+                "Security",
+                "NIS",
+                "Linux",
+                "Server"
+            ]
+        }
     }
 ]
