@@ -552,3 +552,33 @@
 2024-05-06 15:12:27 - INFO - Content id : 101939, Meta keywords : ['Red Hat security update', 'Linux server management', 'ORBit security vulnerability', 'esound security hole', 'gnome-core security advisory'], Meta description : Red Hat security update for ORBit, esound, and gnome-core addressing security vulnerabilities and adding TCP Wrappers support for gnome-session., Tags : ['Security update', 'Linux server', 'ORBit', 'esound', 'gnome-core']
 2024-05-06 15:12:27 - INFO - ID:101939 "title":RH6.1:  ORBit, esound, gnome-core (RHSA-1999:058-01) "Alias": rh61-orbit-esound-gnome-core-rhsa-1999058-01 - has been updated in database
 2024-05-06 15:12:27 - INFO - ==================== All records have been processed ====================
+2024-05-06 16:41:28 - INFO - ==================== Total records : 16917 ====================
+2024-05-06 16:41:28 - INFO - ******************** Processing ID: 104299 ******************** (63/16917 - 0.4%)
+2024-05-06 16:41:30 - INFO -  Successfully processed  the record ID:104299
+2024-05-06 16:41:30 - INFO - Content id :   , Meta keywords : ['Debian Security Advisory', 'Linux server management', 'Security updates', 'Local root exploit', 'Vulnerability'], Meta description : Debian Security Advisory DSA 189-1: Linux server management and security updates for local root exploit vulnerability., Tags : ['Debian', 'Security', 'Linux', 'Server', 'Management']
+2024-05-06 16:41:30 - INFO - ******************** Processing ID: 104302 ******************** (64/16917 - 0.4%)
+2024-05-06 16:41:36 - INFO -  Successfully processed  the record ID:104302
+2024-05-06 16:41:36 - INFO - Content id : 104302, Meta keywords : ['Debian Security Advisory', 'buffer overflow problem', 'wmaker package', 'vulnerability exploitation', 'security updates'], Meta description : Debian Security Advisory DSA-190-1 highlights buffer overflow in wmaker package and provides security updates for Debian GNU/Linux 3.0., Tags : ['Security', 'Buffer Overflow', 'Linux Server Management', 'Vulnerability', 'Update']
+2024-05-06 16:41:36 - INFO - ******************** Processing ID: 104303 ******************** (65/16917 - 0.4%)
+2024-05-06 16:41:41 - INFO -  Successfully processed  the record ID:104303
+2024-05-06 16:41:41 - INFO - Content id : 104303, Meta keywords : ['Red Hat Security Advisory', 'glibc packages', 'buffer overflow vulnerability', 'Linux server management', 'security updates'], Meta description : Red Hat Security Advisory for glibc packages fixing buffer overflow vulnerability. Instructions for Linux server management and security updates., Tags : ['Red Hat', 'glibc', 'buffer overflow', 'Linux server', 'security updates']
+2024-05-06 16:41:41 - INFO - ******************** Processing ID: 104304 ******************** (66/16917 - 0.4%)
+2024-05-06 16:41:42 - INFO -  Successfully processed  the record ID:104304
+2024-05-06 16:41:42 - INFO - Content id : 104304, Meta keywords : ['Debian Security Advisory', 'squirrelmail', 'cross site scripting', 'vulnerabilities', 'Linux server management'], Meta description : Debian Security Advisory DSA 191-1: squirrelmail cross site scripting vulnerabilities fixed. Linux server management updates., Tags : ['Security', 'Vulnerabilities', 'Linux', 'Server', 'Management']
+2024-05-06 16:41:42 - INFO - ******************** Processing ID: 104305 ******************** (67/16917 - 0.4%)
+2024-05-06 16:41:46 - INFO - State save till Record ID: 104305
+2024-05-07 12:29:28 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 12:29:32 - INFO - ******************** Processing ID: 101939 ******************** (68/16917 - 0.4%)
+2024-05-07 12:32:05 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 12:32:08 - INFO - ******************** Processing ID: 101939 ******************** (68/16917 - 0.4%)
+2024-05-07 12:33:05 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 12:33:07 - INFO - ******************** Processing ID: 101939 ******************** (68/16917 - 0.4%)
+2024-05-07 12:33:38 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 12:33:42 - INFO - ******************** Processing ID: 101939 ******************** (68/16917 - 0.4%)
+2024-05-07 12:50:36 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 12:50:43 - INFO - ******************** Processing ID: 101939 ******************** (68/16917 - 0.4%)
+2024-05-07 12:51:15 - INFO -  Successfully processed  the record ID:101939
+2024-05-07 12:53:43 - INFO - Content id : 101939, Meta keywords : ['Red Hat Security Advisory', 'ORBit', 'esound', 'gnome-core', 'denial-of-service', 'authentication keys', 'RPM packages', 'GPG signature'], Meta description : Red Hat Security Advisory for ORBit, esound, and gnome-core packages addressing security vulnerabilities and providing instructions for updating and verifying package integrity., Tags : ['Security Advisory', 'Linux server management', 'RPM packages', 'GPG signature']
+2024-05-07 12:53:56 - INFO - ID:101939 "title":RH6.1:  ORBit, esound, gnome-core (RHSA-1999:058-01) "Alias": rh61-orbit-esound-gnome-core-rhsa-1999058-01 - has been updated in database
+2024-05-07 12:58:36 - INFO - ==================== All records have been processed ====================
+2024-05-07 13:12:32 - INFO - ==================== Total records : 16917 ====================

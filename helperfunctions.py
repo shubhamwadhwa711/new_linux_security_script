@@ -276,10 +276,10 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
             updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
             excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
+            #need to confirm 
             if content_id not in excluded_catids:
                 updatetags(connection,content_id,tags)
 
-        
     except MySQLError as e:
         connection.rollback()
         raise e
@@ -338,9 +338,9 @@ def updatetags(connection,content_id,tags):
         # content_id= 356646
         # excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
         # Convert to lowercase and replace spaces with hyphens
-        tags_lower_hyphen = [tag.lower().replace(' ', '-') for tag in tags]
+        tags_alias = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
-            for al, tag in zip(tags_lower_hyphen, tags):
+            for al, tag in zip(tags_alias, tags):
                 sql = f"SELECT * FROM {db_prefix}tags WHERE alias = %s"
                 cursor.execute(sql, (al,))
                 exiting_tags = cursor.fetchone()
@@ -363,7 +363,7 @@ def updatetags(connection,content_id,tags):
                             images, urls, hits, language, version, publish_up, publish_down
                         ) VALUES (
                             '1', %s, %s, '0', %s, %s, %s, 
-                            '', '', '1', NULL, NULL, '1', '', 'Linux Security related articles for 2024', 
+                            '', '', '1', NULL, NULL, '1', '', '', 
                             '', '', '10', %s, '', '0', %s, 
                             '', '', '0', '*', '1', %s, NULL
                         )'''
@@ -386,12 +386,13 @@ def updatetags(connection,content_id,tags):
 
 def contentitem_tag_mapupdate(connection,con_id, tag):
     try:
+        tag_logger=getlogger(name=taglogfile_name)
         query = f"SELECT * FROM {db_prefix}contentitem_tag_map WHERE content_item_id = %s AND tag_id = %s"
         with connection.cursor() as cursor:
             cursor.execute(query, (con_id, tag))
             results = cursor.fetchone()
         if results:
-            pass 
+            tag_logger.info(f" content_item_id : {con_id} and  tag_id {tag}  tag is already exists")
         else:
             with connection.cursor() as cursor:
                 core_content = f"SELECT  max(core_content_id) from {db_prefix}contentitem_tag_map"

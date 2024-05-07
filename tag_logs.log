@@ -34,3 +34,7 @@
 2024-05-06 15:12:27 - INFO - Tag_id : 80 , Tag :ORBit , content_id :101939 
 2024-05-06 15:12:27 - INFO - Tag_id : 81 , Tag :esound , content_id :101939 
 2024-05-06 15:12:27 - INFO - Tag_id : 82 , Tag :gnome-core , content_id :101939 
+2024-05-07 12:54:01 - INFO - Tag_id : 83 , Tag :Security Advisory , content_id :101939 
+2024-05-07 12:54:04 - INFO - Tag_id : 84 , Tag :Linux server management , content_id :101939 
+2024-05-07 12:58:31 - INFO - Tag_id : 85 , Tag :RPM packages , content_id :101939 
+2024-05-07 12:58:33 - INFO - Tag_id : 86 , Tag :GPG signature , content_id :101939 

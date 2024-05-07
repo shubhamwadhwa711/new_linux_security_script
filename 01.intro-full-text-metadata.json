@@ -1941,5 +1941,107 @@
                 "gnome-core"
             ]
         }
+    },
+    {
+        "id": 104299,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "Linux server management",
+                "Security updates",
+                "Local root exploit",
+                "Vulnerability"
+            ],
+            "Meta description": "Debian Security Advisory DSA 189-1: Linux server management and security updates for local root exploit vulnerability.",
+            "Tags": [
+                "Debian",
+                "Security",
+                "Linux",
+                "Server",
+                "Management"
+            ]
+        }
+    },
+    {
+        "id": 104302,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "buffer overflow problem",
+                "wmaker package",
+                "vulnerability exploitation",
+                "security updates"
+            ],
+            "Meta description": "Debian Security Advisory DSA-190-1 highlights buffer overflow in wmaker package and provides security updates for Debian GNU/Linux 3.0.",
+            "Tags": [
+                "Security",
+                "Buffer Overflow",
+                "Linux Server Management",
+                "Vulnerability",
+                "Update"
+            ]
+        }
+    },
+    {
+        "id": 104303,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat Security Advisory",
+                "glibc packages",
+                "buffer overflow vulnerability",
+                "Linux server management",
+                "security updates"
+            ],
+            "Meta description": "Red Hat Security Advisory for glibc packages fixing buffer overflow vulnerability. Instructions for Linux server management and security updates.",
+            "Tags": [
+                "Red Hat",
+                "glibc",
+                "buffer overflow",
+                "Linux server",
+                "security updates"
+            ]
+        }
+    },
+    {
+        "id": 104304,
+        "metadata": {
+            "Meta keywords": [
+                "Debian Security Advisory",
+                "squirrelmail",
+                "cross site scripting",
+                "vulnerabilities",
+                "Linux server management"
+            ],
+            "Meta description": "Debian Security Advisory DSA 191-1: squirrelmail cross site scripting vulnerabilities fixed. Linux server management updates.",
+            "Tags": [
+                "Security",
+                "Vulnerabilities",
+                "Linux",
+                "Server",
+                "Management"
+            ]
+        }
+    },
+    {
+        "id": 101939,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat Security Advisory",
+                "ORBit",
+                "esound",
+                "gnome-core",
+                "denial-of-service",
+                "authentication keys",
+                "RPM packages",
+                "GPG signature"
+            ],
+            "Meta description": "Red Hat Security Advisory for ORBit, esound, and gnome-core packages addressing security vulnerabilities and providing instructions for updating and verifying package integrity.",
+            "Tags": [
+                "Security Advisory",
+                "Linux server management",
+                "RPM packages",
+                "GPG signature"
+            ]
+        }
     }
 ]
