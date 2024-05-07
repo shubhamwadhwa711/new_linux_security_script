@@ -684,3 +684,5 @@
 2024-05-07 14:34:00 - INFO - Content id : 104308, Meta keywords : ['Mandrake Linux', 'nss_ldap', 'security update', 'buffer overflow', 'format string bug', 'pam_ldap', 'upgrade packages', 'CVE identifiers'], Meta description : Mandrake Linux Security Update Advisory for nss_ldap, addressing buffer overflow and format string bug vulnerabilities. Upgrade packages and CVE identifiers included., Tags : ['Mandrake Linux', 'nss_ldap', 'security update', 'buffer overflow', 'format string bug', 'pam_ldap', 'upgrade packages', 'CVE identifiers']
 2024-05-07 14:34:13 - INFO - ++++++++++++++All records have been processed 
 2024-05-07 14:37:44 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:56:10 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 14:59:39 - INFO - ==================== Total records : 16917 ====================

@@ -275,10 +275,10 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
         if record:
             updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
-            excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
-            #need to confirm 
-            if content_id not in excluded_catids:
-                updatetags(connection,content_id,tags)
+            # excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
+            # #need to confirm 
+            # if content_id not in excluded_catids:
+            updatetags(connection,content_id,tags)
 
     except MySQLError as e:
         connection.rollback()
