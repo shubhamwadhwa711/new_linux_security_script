@@ -22,7 +22,7 @@ python intro_full_text_metadata.py --commit
    - `logfile`  The name of log file in which intro_full_text_metadata.py  script will write the log
    - `store_state_file` The name of the state file, this will store the state of the runningscript when the keyboard is     interrupted.
    - `limit` The parameter will decide how many records will come in one SQL query .This parameter has nothing to do with the process number of records.
-   - `max_record_run`  This parameter decides how many records  run form whole database like if we run 100 just set the value in config file   max_record_run = 100 if  run whole records  just  leave this empty(None) like max_record_run=  .
+   - `max_record_run`  This parameter decides how many records  run form whole database like if we run 100 just set the value in config file   max_record_run = 100 if  run whole records  just  leave this empty(None) like max_record_run= .
    -`max_words` This parameter decides how many words from the fulltext are considered for generating keywords and metadescriptions.
    -`max_tokens`  This parameter divides the full text into sub-segments based on tokens and creates multiple asynchronous requests within a single request to process all the full text after max-words.
    -`json_file`  Name of the file where metekeywords and description will be written.

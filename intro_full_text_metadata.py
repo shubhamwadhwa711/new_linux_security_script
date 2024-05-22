@@ -106,9 +106,13 @@ def process_context(contexts:list,logger:Logger,temperature=0):
             response = client.chat.completions.create(
                         # model="gpt-3.5-turbo-1106",
                         model = get_model(),    
-                        temperature=temperature, 
+                        temperature=0.7, 
                         response_format={ "type": "json_object" },
-                        messages=get_prompt(contexts[0])
+                        messages=get_prompt(contexts[0]),
+                        n=1,
+                        stop=None,
+                        max_tokens=300,
+                        
             )
             metadata.append(response.choices[0].message.content.strip())
             n_tokens.append(response.usage.completion_tokens)
@@ -170,9 +174,7 @@ def process_records(result:list,logger:Logger, total:int,counter:int,max_words:i
             
             if metadata is not None:
                 dict_response=json.loads(metadata)
-
                 response={"id":record.get('id'),"metadata":dict_response}
-
                 logger.info(f"Content id : {response['id']}, Meta keywords : {response['metadata']['Meta keywords']}, Meta description : {response['metadata']['Meta description']}, Tags : {response['metadata']['Tags']}")
 
                 write_into_the_json_file(response=response,json_file=json_file)

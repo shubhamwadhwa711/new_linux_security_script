@@ -725,3 +725,387 @@
 2024-05-07 17:52:19 - INFO - ******************** Processing ID: 102000 ******************** (68/16917 - 0.4%)
 2024-05-07 17:52:22 - INFO -  Successfully processed  the record ID:102000
 2024-05-07 17:57:42 - INFO - State save till Record ID: 102000
+2024-05-07 18:56:50 - INFO - ==================== Total records : 16917 ====================
+2024-05-07 18:56:51 - INFO - ******************** Processing ID: 348482 ******************** (69/16917 - 0.4%)
+2024-05-07 18:56:53 - INFO -  Successfully processed  the record ID:348482
+2024-05-07 18:56:59 - INFO - Content id : 348482, Meta keywords : ['Software supply chain security', 'Open-source software', 'Linux security', 'VPN myths', 'Online privacy'], Meta description : Explore software supply chain security, open-source software's role, Linux security trends, and dispelling common VPN myths., Tags : ['Supply chain security', 'Open-source security', 'Linux security insights', 'VPN usage', 'Online privacy protection']
+2024-05-21 16:05:27 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:05:27 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:05:31 - ERROR - Process Context ERROR : Error code: 400 - {'error': {'message': "Invalid type for 'messages': expected an array of objects, but got null instead.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'invalid_type'}}
+2024-05-21 16:05:31 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:05:31 - ERROR - Extract_record_text ERROR : 0
+2024-05-21 16:05:31 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:06:58 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:06:58 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:07:01 - ERROR - Process Context ERROR : Error code: 400 - {'error': {'message': "Invalid type for 'messages': expected an array of objects, but got null instead.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'invalid_type'}}
+2024-05-21 16:07:01 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:07:01 - ERROR - Extract_record_text ERROR : 0
+2024-05-21 16:07:01 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:08:01 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:08:01 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:08:06 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:08:06 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerability assessment', 'penetration testing', 'access control measures'], Meta description : Explore securing Linux web apps, meeting SOC 2 compliance, vulnerability assessment, and access control for robust security., Tags : ['Securing Linux web apps', 'SOC 2 compliance standards', 'Vulnerability assessment', 'Penetration testing', 'Access control measures']
+2024-05-21 16:08:06 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:08:59 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:08:59 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:09:03 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:09:03 - ERROR - Process records ERROR : unhashable type: 'list' Record_id: 355554
+2024-05-21 16:09:03 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:09:27 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:09:27 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:09:31 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:09:31 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control measures'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, and implementing risk assessment and access control measures., Tags : ['Securing Linux web apps', 'SOC 2 compliance importance', 'Risk assessment best practices', 'Access control measures']
+2024-05-21 16:09:31 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:10:38 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:10:38 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:10:44 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:10:44 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security controls', 'risk assessment', 'access control measures'], Meta description : Explore securing Linux web apps, meeting SOC 2 compliance, and implementing robust security controls for risk assessment and access control., Tags : ['Securing Linux web apps', 'SOC 2 compliance standards', 'Security controls', 'Risk assessment', 'Access control measures']
+2024-05-21 16:10:44 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:13:32 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:13:32 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:13:36 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:13:36 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerability assessment', 'access controls', 'security measures', 'risk assessment', 'penetration testing', 'compliance standards'], Meta description : Comprehensive guide on securing Linux web apps, meeting SOC 2 compliance, and implementing robust access controls., Tags : ['security updates', 'Linux server management', 'vulnerability assessment', 'access controls', 'compliance standards']
+2024-05-21 16:13:36 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:15:04 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:15:04 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:15:08 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:15:08 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance standards', 'vulnerability assessment', 'access control measures', 'risk assessment', 'penetration testing', 'security policies'], Meta description : Explore Linux web apps security, SOC 2 compliance, vulnerability assessment, and access control measures for robust protection., Tags : ['Linux security', 'web app security', 'SOC 2 compliance', 'access control', 'vulnerability assessment']
+2024-05-21 16:15:08 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:15:57 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:15:57 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:16:02 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:16:02 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security best practices', 'vulnerability assessment', 'access control measures'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, and implementing robust security measures. Learn about vulnerability assessment and access control., Tags : ['Linux security updates', 'web app security', 'SOC 2 compliance', 'Linux server management', 'access control measures']
+2024-05-21 16:16:02 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:21:15 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:21:15 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:21:20 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:21:20 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'penetration testing', 'security policies'], Meta description : Importance of securing Linux web apps, achieving SOC 2 compliance, and mitigating vulnerabilities for data security., Tags : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'penetration testing', 'security policies']
+2024-05-21 16:21:20 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:23:42 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:23:42 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:23:47 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:23:47 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'SOC 2 compliance', 'web app vulnerabilities', 'security policies', 'access control measures', 'risk assessment', 'vulnerability scanning', 'penetration testing'], Meta description : Learn about securing Linux web apps, SOC 2 compliance, and best practices for risk assessment and access control measures., Tags : ['Security updates', 'Linux server management', 'SOC 2 compliance', 'Web app vulnerabilities', 'Access control measures', 'Risk assessment', 'Vulnerability scanning', 'Penetration testing']
+2024-05-21 16:23:47 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:45:42 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:45:42 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:45:47 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:45:47 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'SOC 2 compliance', 'vulnerability scanning', 'penetration testing', 'access control measures', 'risk assessment', 'web app vulnerabilities'], Meta description : Essentials of locking down Linux web apps, meeting SOC 2 compliance, and mitigating vulnerabilities. Best practices for security updates and Linux server management., Tags : ['Linux', 'security', 'compliance', 'vulnerability', 'penetration', 'access control', 'risk assessment', 'web app']
+2024-05-21 16:45:47 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:46:30 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:46:30 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:46:35 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:46:35 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security controls', 'vulnerability scanning', 'penetration testing', 'access control measures', 'risk assessment', 'user activity monitoring'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, and implementing robust security controls and access measures., Tags : ['Linux', 'web apps', 'SOC 2', 'compliance', 'security', 'vulnerability', 'access control', 'risk assessment']
+2024-05-21 16:46:35 - INFO - ==================== All records have been processed ====================
+2024-05-21 16:51:21 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 16:51:21 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 16:51:26 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 16:51:26 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'server security', 'system administration', 'network security'], Meta description : Explore the latest in Linux server management and security updates for robust system administration., Tags : ['Linux server management', 'security updates', 'server security', 'system administration', 'network security']
+2024-05-21 16:51:26 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:01:04 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:01:04 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:01:08 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:01:08 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'security policies', 'access control measures'], Meta description : Importance of securing Linux web apps for SOC 2 compliance, vulnerabilities, risk assessment, and robust security policies., Tags : ['Linux', 'web apps', 'SOC 2', 'compliance', 'vulnerabilities', 'risk assessment', 'security policies', 'access control']
+2024-05-21 17:01:08 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:03:08 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:03:08 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:03:13 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:03:13 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'SOC 2 compliance', 'web app vulnerabilities', 'access control measures'], Meta description : Essentials of securing Linux web apps, achieving SOC 2 compliance, and implementing access control measures for web app security., Tags : ['Linux server management', 'security updates', 'SOC 2 compliance', 'web app vulnerabilities', 'access control measures']
+2024-05-21 17:03:14 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:05:36 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:05:36 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:05:40 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:05:40 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerability assessment', 'penetration testing', 'access control measures'], Meta description : Securing Linux web apps, achieving SOC 2 compliance, and implementing robust access control measures for data security., Tags : ['Linux', 'web apps', 'SOC 2', 'compliance', 'vulnerability', 'penetration testing', 'access control', 'security']
+2024-05-21 17:05:40 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:06:26 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:06:26 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:06:30 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:06:30 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'penetration testing', 'access control measures'], Meta description : Importance of securing Linux web apps, achieving SOC 2 compliance, and implementing robust access control measures., Tags : ['Security updates', 'Linux server management']
+2024-05-21 17:06:30 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:09:12 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:09:12 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:09:16 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:09:16 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'SOC 2 compliance', 'web app security', 'vulnerability assessment', 'access control measures'], Meta description : Essentials of securing Linux web apps, achieving SOC 2 compliance, and implementing access control measures for data security., Tags : ['Security updates', 'Linux server management']
+2024-05-21 17:09:16 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:10:09 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:10:09 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:10:13 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:10:13 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerability scanning', 'penetration testing', 'access control measures'], Meta description : Essentials of securing Linux web apps, meeting SOC 2 compliance, and implementing access control measures for vulnerability mitigation., Tags : ['Security updates', 'Linux server management', 'SOC 2 compliance', 'vulnerability scanning', 'access control measures']
+2024-05-21 17:10:13 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:16:18 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:16:18 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:16:23 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:16:23 - INFO - Content id : 355554, Meta keywords : ['Linux server security', 'SOC 2 compliance', 'vulnerability assessment', 'risk management', 'access control measures', 'security policies'], Meta description : Securing Linux web apps, achieving SOC 2 compliance, and implementing robust access control measures are essential for safeguarding against vulnerabilities and attacks., Tags : ['Linux', 'security', 'compliance', 'vulnerability', 'risk assessment', 'access control', 'SOC 2', 'web apps']
+2024-05-21 17:16:23 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:26:20 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:26:20 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:26:23 - ERROR - Process Context ERROR : Error code: 400 - {'error': {'message': "Invalid type for 'messages': expected an array of objects, but got null instead.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'invalid_type'}}
+2024-05-21 17:26:23 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:26:23 - ERROR - Extract_record_text ERROR : 0
+2024-05-21 17:26:23 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:26:57 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:26:57 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:27:00 - ERROR - Process Context ERROR : Error code: 400 - {'error': {'message': "Invalid type for 'messages': expected an array of objects, but got null instead.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'invalid_type'}}
+2024-05-21 17:27:00 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:27:00 - ERROR - Extract_record_text ERROR : 0
+2024-05-21 17:27:00 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:27:25 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:27:25 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:27:30 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:27:30 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'penetration testing', 'access control measures'], Meta description : Essentials for securing Linux web apps and achieving SOC 2 compliance, covering vulnerabilities, attacks, and best practices for data security., Tags : ['Linux', 'security', 'SOC 2', 'compliance', 'vulnerabilities', 'access control']
+2024-05-21 17:27:30 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:28:38 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:28:38 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:28:41 - ERROR - Process Context ERROR : Error code: 400 - {'error': {'message': "Invalid type for 'messages': expected an array of objects, but got null instead.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'invalid_type'}}
+2024-05-21 17:28:41 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:28:41 - ERROR - Extract_record_text ERROR : 0
+2024-05-21 17:28:41 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:29:15 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:29:15 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:29:19 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:29:19 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control measures'], Meta description : Securing Linux web apps, achieving SOC 2 compliance, and implementing access control measures are crucial for enhancing web application security., Tags : ['Security updates', 'Linux server management', 'Compliance standards', 'Vulnerability scanning', 'Penetration testing']
+2024-05-21 17:29:19 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:31:43 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:31:43 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:31:47 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:31:47 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'security controls', 'access control measures'], Meta description : Protect Linux web apps with SOC 2 compliance and robust security controls. Assess vulnerabilities, implement access control measures., Tags : ['Linux', 'security', 'compliance', 'vulnerability', 'access control']
+2024-05-21 17:31:47 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:33:47 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:33:47 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:33:52 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:33:52 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:33:52 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:34:01 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:34:01 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:34:05 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:34:05 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:34:05 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:36:05 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:36:05 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:36:09 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:36:09 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:36:09 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:36:36 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:36:36 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:36:40 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:36:40 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:36:40 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:37:02 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:37:02 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:37:06 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:37:06 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:37:06 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:37:38 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:37:38 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:37:43 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:37:43 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'web app vulnerabilities', 'SOC 2 compliance', 'risk assessment', 'vulnerability scanning', 'penetration testing', 'access control measures'], Meta description : Ensure Linux web apps' security and SOC 2 compliance through risk assessment, vulnerability scanning, and access control measures., Tags : ['Linux server management', 'security updates', 'web app vulnerabilities', 'SOC 2 compliance', 'risk assessment', 'vulnerability scanning', 'penetration testing', 'access control measures']
+2024-05-21 17:37:43 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:38:54 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:38:54 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:38:58 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:38:58 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:38:58 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:39:42 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:39:42 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:39:47 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:39:47 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerability assessment', 'penetration testing', 'access control measures'], Meta description : Guidance on locking down Linux web apps for SOC 2 compliance, including vulnerability assessment, penetration testing, and access control measures., Tags : ['Linux', 'web apps', 'compliance', 'vulnerability assessment', 'penetration testing', 'access control', 'SOC 2', 'security measures']
+2024-05-21 17:39:47 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:40:48 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:40:48 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:40:53 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:40:53 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:40:53 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:41:14 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:41:14 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:41:19 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:41:19 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:41:19 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:41:31 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:41:31 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:41:36 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:41:36 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:41:36 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:41:58 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:41:58 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:42:03 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:42:03 - INFO - Content id : 355554, Meta keywords : ['Linux security', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control', 'web app security', 'penetration testing', 'security policies'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, vulnerabilities, risk assessment, and access control best practices., Tags : ['Linux security', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control']
+2024-05-21 17:42:03 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:42:24 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:42:24 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:42:30 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:42:30 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control', 'penetration testing', 'security policies'], Meta description : Essentials of securing Linux web apps and achieving SOC 2 compliance, addressing vulnerabilities, risk assessment, and access control measures., Tags : ['LinuxWebApps', 'SOC2Compliance', 'Vulnerabilities', 'RiskAssessment', 'AccessControl', 'PenetrationTesting', 'SecurityPolicies']
+2024-05-21 17:42:30 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:43:14 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:43:14 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:43:20 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:43:20 - INFO - Content id : 355554, Meta keywords : ['Linux server security', 'SOC 2 compliance', 'Vulnerability assessment', 'Access control measures', 'Penetration testing'], Meta description : Learn about securing Linux web apps, SOC 2 compliance, and best practices for vulnerability assessment and access control measures., Tags : ['Linux server security', 'SOC 2 compliance', 'Vulnerability assessment', 'Access control measures', 'Penetration testing']
+2024-05-21 17:43:20 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:44:25 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:44:25 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:44:29 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:44:29 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:44:29 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:45:21 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:45:21 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:45:26 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:45:26 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'penetration testing', 'access control measures', 'web app security', 'industry standards'], Meta description : Maximize Linux web app security and achieve SOC 2 compliance with robust access control measures. Learn about vulnerabilities, risk assessment, and industry standards., Tags : ['Linux', 'web apps', 'SOC 2', 'compliance', 'vulnerabilities', 'risk assessment', 'security', 'access control']
+2024-05-21 17:45:26 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:46:07 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:46:07 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:46:11 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:46:11 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:46:11 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:46:28 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:46:28 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:46:32 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:46:32 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'risk mitigation measures', 'access control measures'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, vulnerability assessment, and implementing access control measures for data security., Tags : ['Linux security', 'SOC 2', 'web app vulnerabilities', 'risk assessment', 'access control']
+2024-05-21 17:46:32 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:47:40 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:47:40 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:47:46 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:47:46 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'security controls', 'access controls', 'penetration testing', 'secure data'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, conducting risk assessment, and implementing security and access controls for protecting sensitive data., Tags : ['Linux', 'web apps', 'compliance', 'vulnerabilities', 'security controls', 'access controls', 'penetration testing', 'data security']
+2024-05-21 17:47:46 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:48:47 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:48:47 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:48:51 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:48:51 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'SOC 2 compliance', 'vulnerability scanning', 'penetration testing', 'access controls', 'risk assessment', 'security policies'], Meta description : Protect data with Linux server management, security updates, and SOC 2 compliance. Implement vulnerability scanning, penetration testing, and access controls for robust security., Tags : ['Linux server management', 'security updates', 'SOC 2 compliance', 'vulnerability scanning', 'penetration testing', 'access controls', 'risk assessment', 'security policies']
+2024-05-21 17:48:51 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:50:44 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:50:44 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:50:49 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:50:49 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:50:49 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:51:21 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:51:21 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:51:25 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:51:25 - ERROR - Process records ERROR : 'Meta keywords' Record_id: 355554
+2024-05-21 17:51:25 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:52:12 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:52:12 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:52:17 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:52:17 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance standards', 'vulnerability assessment', 'penetration testing', 'access control measures'], Meta description : Explore securing Linux web apps, meeting SOC 2 compliance, and implementing robust security measures., Tags : ['Linux security', 'web application security', 'SOC 2 compliance']
+2024-05-21 17:52:17 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:54:43 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:54:43 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:54:48 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:54:48 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'web app vulnerabilities', 'SOC 2 compliance', 'risk assessment', 'vulnerability scanning', 'access control measures', 'SOC 2 Trust Service Criteria'], Meta description : Securing Linux web apps, SOC 2 compliance, risk assessment, and access control measures for robust security and compliance with security updates and Linux server management., Tags : ['Linux server management', 'security updates', 'web app vulnerabilities', 'SOC 2 compliance', 'risk assessment', 'vulnerability scanning', 'access control measures', 'SOC 2 Trust Service Criteria']
+2024-05-21 17:54:48 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:55:43 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:55:43 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:55:47 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:55:47 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'access control measures', 'risk mitigation'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, vulnerability assessment, and access control measures for data security., Tags : ['Linux security updates', 'SOC 2 compliance standards', 'vulnerability assessment', 'access control measures', 'risk mitigation']
+2024-05-21 17:55:47 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:56:02 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:56:02 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:56:06 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:56:06 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'access control measures', 'risk assessment'], Meta description : Essentials of securing Linux web apps, achieving SOC 2 compliance, and implementing robust access control measures., Tags : ['Linux security', 'SOC 2', 'vulnerability assessment', 'access control', 'risk management']
+2024-05-21 17:56:06 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:56:24 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:56:24 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:56:28 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:56:28 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'penetration testing', 'access control measures'], Meta description : Guidance on securing Linux web apps, meeting SOC 2 compliance, and best practices for vulnerability assessment and access control., Tags : ['Linux security', 'web application security', 'SOC 2 compliance', 'vulnerability assessment', 'access control measures']
+2024-05-21 17:56:28 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:56:56 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:56:56 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:57:02 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:57:02 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security controls', 'vulnerability scanning', 'access control measures', 'risk assessment', 'penetration testing', 'security policies'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, and implementing security controls with risk assessment and access control measures., Tags : ['Linux', 'security', 'compliance', 'vulnerability', 'access control', 'risk assessment', 'penetration testing', 'policies']
+2024-05-21 17:57:02 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:57:26 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:57:26 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:57:31 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:57:31 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control measures'], Meta description : Importance of securing Linux web apps and achieving SOC 2 compliance, focusing on vulnerabilities, risk assessment, and access control measures., Tags : ['Security updates', 'Linux server management']
+2024-05-21 17:57:31 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:58:21 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:58:21 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:58:25 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:58:25 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'web app vulnerabilities', 'vulnerability scanning', 'access control measures'], Meta description : Essentials of securing Linux web apps, achieving SOC 2 compliance, addressing vulnerabilities, and implementing access control measures for data security., Tags : ['Linux', 'web apps', 'security', 'SOC 2', 'vulnerabilities', 'compliance', 'access control', 'data security']
+2024-05-21 17:58:25 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:58:49 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:58:49 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:58:54 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:58:54 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'Security updates', 'Server security', 'IT infrastructure', 'Network security'], Meta description : Explore the latest in Linux server management and security updates for robust IT infrastructure., Tags : ['Linux server management', 'Security updates', 'Server security', 'IT infrastructure', 'Network security']
+2024-05-21 17:58:54 - INFO - ==================== All records have been processed ====================
+2024-05-21 17:59:23 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 17:59:23 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 17:59:36 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 17:59:36 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'penetration testing', 'access control measures'], Meta description : Securing Linux web apps, achieving SOC 2 compliance, and implementing access control measures are vital for protecting against vulnerabilities and threats., Tags : ['Security updates', 'Linux server management']
+2024-05-21 17:59:36 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:00:27 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:00:27 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:00:34 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:00:34 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'network security', 'server maintenance', 'IT infrastructure'], Meta description : Explore the importance of security updates and Linux server management for robust IT infrastructure., Tags : ['security updates', 'Linux server management', 'network security', 'server maintenance', 'IT infrastructure']
+2024-05-21 18:00:34 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:00:50 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:00:50 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:00:54 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:00:54 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'access control measures', 'security best practices', 'penetration testing', 'security policies', 'risk assessment'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, and implementing robust security measures. Learn about vulnerabilities, attacks, and best practices., Tags : ['Linux security', 'SOC 2 compliance', 'vulnerability assessment', 'access control', 'penetration testing', 'security policies']
+2024-05-21 18:00:54 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:01:45 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:01:45 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:01:49 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:01:49 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'vulnerability assessment', 'penetration testing', 'security policies', 'access control measures', 'user activity monitoring'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, and best practices for vulnerability assessment and access control measures., Tags : ['Linux security', 'web app security', 'SOC 2', 'access control', 'vulnerability assessment']
+2024-05-21 18:01:49 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:02:06 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:02:06 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:02:09 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:02:09 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'web app vulnerabilities', 'data security', 'access control measures', 'vulnerability scanning', 'penetration testing', 'security policies'], Meta description : Learn about securing Linux web apps, SOC 2 compliance, and best practices for data security and access control measures., Tags : ['Linux', 'web apps', 'SOC 2', 'compliance', 'vulnerabilities', 'data security', 'access control', 'penetration testing']
+2024-05-21 18:02:10 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:06:06 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:06:06 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:06:10 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:06:10 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'web app vulnerabilities', 'risk assessment', 'access control measures', 'vulnerability scanning', 'penetration testing'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, and best practices for risk assessment and access control measures., Tags : ['Linux security updates', 'SOC 2 compliance management', 'vulnerability scanning best practices', 'access control measures implementation']
+2024-05-21 18:06:10 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:08:36 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:08:36 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:08:42 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:08:42 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security controls', 'vulnerabilities', 'access control measures'], Meta description : Learn about securing Linux web apps, meeting SOC 2 compliance, and implementing robust security controls and access measures., Tags : ['Linux', 'SOC 2', 'Security controls', 'Vulnerabilities', 'Access control']
+2024-05-21 18:08:42 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:10:18 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:10:18 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:10:25 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:10:25 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'risk assessment', 'access control measures', 'security policies', 'penetration testing'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, vulnerability assessment, and access control measures., Tags : ['security', 'compliance', 'vulnerabilities', 'risk assessment', 'access control', 'penetration testing']
+2024-05-21 18:10:25 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:11:05 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:11:05 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:11:10 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:11:10 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security controls', 'vulnerability scanning', 'penetration testing', 'access control measures', 'security policies', 'user activity monitoring'], Meta description : Learn about securing Linux web apps, ensuring SOC 2 compliance, and implementing robust security controls for vulnerability scanning and access control measures., Tags : ['Security', 'Linux', 'Compliance', 'Vulnerabilities', 'Access control']
+2024-05-21 18:11:10 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:11:40 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:11:40 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:11:44 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:11:44 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'security controls', 'vulnerability assessment', 'access control measures'], Meta description : Explore securing Linux web apps, achieving SOC 2 compliance, and implementing robust security controls for protecting customer data., Tags : ['Linux web apps security', 'SOC 2 standards compliance', 'vulnerability assessment', 'access control measures', 'information systems security']
+2024-05-21 18:11:44 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:12:19 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:12:19 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:12:24 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:12:24 - INFO - Content id : 355554, Meta keywords : ['Linux server security', 'SOC 2 compliance', 'Web application vulnerabilities', 'Risk assessment', 'Access control measures'], Meta description : Explore Linux server security, SOC 2 compliance, web app vulnerabilities, risk assessment, and access control measures for robust web app protection., Tags : ['Security updates', 'Linux server management']
+2024-05-21 18:12:24 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:12:57 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:12:57 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:13:02 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:13:02 - INFO - Content id : 355554, Meta keywords : ['Linux Web Apps Security', 'SOC 2 Compliance', 'Vulnerability Assessment', 'Penetration Testing', 'Access Control Measures'], Meta description : Essentials of securing Linux web apps, SOC 2 compliance, vulnerability assessment, and access control measures for data security., Tags : ['Linux Web Apps Security', 'SOC 2 Compliance', 'Vulnerability Assessment', 'Penetration Testing', 'Access Control Measures']
+2024-05-21 18:13:02 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:15:17 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:15:17 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:15:22 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:15:22 - INFO - Content id : 355554, Meta keywords : ['Securing Linux web apps', 'SOC 2 compliance', 'Risk assessment', 'Vulnerability scanning', 'Penetration testing', 'Security policies', 'Access control measures', 'Data security'], Meta description : Learn about securing Linux web apps, SOC 2 compliance, risk assessment, and best practices for data security. Explore robust access control measures and vulnerability scanning., Tags : ['Linux web apps', 'SOC 2 compliance', 'Risk assessment', 'Vulnerability scanning', 'Penetration testing', 'Security policies', 'Access control measures', 'Data security']
+2024-05-21 18:15:22 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:20:18 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:20:18 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:20:24 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:20:24 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'Risk assessment', 'Vulnerability scanning', 'Access control measures', 'Customer trust impact', 'Data security', 'Penetration testing'], Meta description : Learn about securing Linux web apps, achieving SOC 2 compliance, and implementing robust access control measures. Importance of customer trust and data security emphasized., Tags : ['Linux security', 'Server management', 'Data protection']
+2024-05-21 18:20:24 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:21:03 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:21:03 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:21:08 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:21:08 - INFO - Content id : 355554, Meta keywords : ['Linux web apps', 'SOC 2 compliance', 'vulnerabilities', 'security measures', 'access control', 'penetration testing', 'security policies', 'risk assessment'], Meta description : Guidance on securing Linux web apps, meeting SOC 2 compliance, and implementing robust security measures. Importance of vulnerability assessment and risk mitigation., Tags : ['Linux security updates', 'Linux server management', 'SOC 2 compliance standards', 'web app security best practices', 'access control measures', 'vulnerability assessment', 'risk mitigation', 'security policies']
+2024-05-21 18:21:08 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:21:56 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:21:56 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:22:00 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:22:00 - INFO - Content id : 355554, Meta keywords : ['Linux server management', 'security updates', 'server patching', 'system maintenance', 'network security'], Meta description : Manage Linux servers and ensure security through regular updates and patching for system maintenance., Tags : ['Linux server management', 'security updates', 'server patching', 'system maintenance', 'network security']
+2024-05-21 18:22:00 - INFO - ==================== All records have been processed ====================
+2024-05-21 18:23:43 - INFO - ==================== Total records : 16917 ====================
+2024-05-21 18:23:43 - INFO - ******************** Processing ID: 355554 ******************** (69/16917 - 0.4%)
+2024-05-21 18:23:47 - INFO -  Successfully processed  the record ID:355554
+2024-05-21 18:23:47 - INFO - Content id : 355554, Meta keywords : ['Linux web apps security', 'SOC 2 compliance', 'Vulnerability assessment', 'Security controls', 'Access control measures'], Meta description : Secure Linux web apps, achieve SOC 2 compliance, and implement robust security controls for protection and compliance., Tags : ['Linux web apps security', 'SOC 2 compliance', 'Vulnerability assessment', 'Access control measures']
+2024-05-21 18:23:47 - INFO - ==================== All records have been processed ====================
