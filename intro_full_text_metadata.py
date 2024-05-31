@@ -105,13 +105,14 @@ def process_context(contexts:list,logger:Logger,temperature=0):
         try:
             response = client.chat.completions.create(
                         # model="gpt-3.5-turbo-1106",
-                        model = get_model(),    
-                        temperature=0.7, 
-                        response_format={ "type": "json_object" },
+                        model = get_model(),  
+                        **({} if get_model() == "gpt-4" else {"response_format": {"type": "json_object"}}),
+                        temperature=0.1, 
+                        # response_format={ "type": "json_object" },
                         messages=get_prompt(contexts[0]),
                         n=1,
                         stop=None,
-                        max_tokens=300,
+                        max_tokens=1500,
                         
             )
             metadata.append(response.choices[0].message.content.strip())
