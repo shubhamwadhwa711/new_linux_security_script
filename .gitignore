@@ -1,2 +1,12 @@
 
 .env
+logs/
+output/
+test.py
+*.zip
+.venv
+.vscode
+__pycache__/
+*.sql
+*.bz2
+

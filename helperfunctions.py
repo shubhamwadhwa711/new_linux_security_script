@@ -338,6 +338,7 @@ def updatetags(connection,content_id,tags):
         # content_id= 356646
         # excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
         # Convert to lowercase and replace spaces with hyphens
+        existing_tags_list= []
         tags_alias = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
             for al, tag in zip(tags_alias, tags):
@@ -345,8 +346,10 @@ def updatetags(connection,content_id,tags):
                 cursor.execute(sql, (al,))
                 exiting_tags = cursor.fetchone()
                 if exiting_tags:
+                    if tag not in existing_tags_list:
+                        existing_tags_list.append(tag)
+                        tag_logger.info(f"{tag}  tag is already exists")
                     tag_id =exiting_tags["id"]
-                    tag_logger.info(f"{tag}  tag is already exists")
                     contentitem_tag_mapupdate(connection,content_id, tag_id)
                 else:
                     lft = f"SELECT  max(rgt) from {db_prefix}tags"

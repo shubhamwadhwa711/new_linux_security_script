@@ -1,0 +1,302 @@
+[
+    {
+        "id": 348485,
+        "metadata": {
+            "Meta keywords": [
+                "zabbix security update",
+                "openSUSE Backports",
+                "SLE-15-SP4",
+                "SLE-15-SP5",
+                "YaST online_update",
+                "zypper patch",
+                "CVE-2023-29454",
+                "zabbix-agent-4.0.47-bp155.3.3.1",
+                "vulnerability fix",
+                "package list"
+            ],
+            "Meta description": "Security update for zabbix software in openSUSE Backports SLE-15-SP4 and SLE-15-SP5, addressing CVE-2023-29454 and providing fixes and improvements.",
+            "Tags": [
+                "security update",
+                "vulnerability fix",
+                "package list",
+                "software update",
+                "openSUSE Backports",
+                "YaST online_update",
+                "zypper patch",
+                "zabbix-agent-4.0.47-bp155.3.3.1",
+                "SLE-15-SP5",
+                "SLE-15-SP5"
+            ]
+        }
+    },
+    {
+        "id": 348486,
+        "metadata": {
+            "Meta keywords": [
+                "WordPress vulnerabilities",
+                "website security",
+                "cyber attacks",
+                "WordPress best practices",
+                "security plugins",
+                "SQL injection",
+                "XSS vulnerabilities",
+                "brute force attacks",
+                "file upload vulnerabilities",
+                "content security policy"
+            ],
+            "Meta description": "Learn about common WordPress vulnerabilities and best practices to secure your website from cyber attacks.",
+            "Tags": [
+                "WordPress security",
+                "website protection",
+                "cyber threats",
+                "security best practices",
+                "data protection",
+                "website maintenance",
+                "security measures",
+                "online security",
+                "website defense",
+                "security awareness"
+            ]
+        }
+    },
+    {
+        "id": 348488,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "Container Tags",
+                "Container Release",
+                "Severity",
+                "Type",
+                "References",
+                "Advisory ID",
+                "Released",
+                "Summary",
+                "Security update"
+            ],
+            "Meta description": "SUSE Container Update Advisory: bci/golang, linux-glibc-devel, openssh - Security and recommended updates for containers and Linux packages.",
+            "Tags": [
+                "Advisory",
+                "Container",
+                "Security",
+                "Update",
+                "Linux",
+                "Package",
+                "Severity",
+                "References",
+                "Released",
+                "Summary"
+            ]
+        }
+    },
+    {
+        "id": 348490,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "Container Tags",
+                "Container Release",
+                "Security Update",
+                "CVE-2023-38408",
+                "openssh",
+                "PKCS#11 support",
+                "remote code execution",
+                "file descriptor leaks",
+                "memory management"
+            ],
+            "Meta description": "SUSE Container Update Advisory for bci/nodejs, including security updates for openssh and fixes for CVE-2023-38408.",
+            "Tags": [
+                "Container Advisory",
+                "Container Tags",
+                "Container Release",
+                "Security Update",
+                "CVE-2023-38408",
+                "openssh",
+                "PKCS#11 support",
+                "remote code execution",
+                "file descriptor leaks",
+                "memory management"
+            ]
+        }
+    },
+    {
+        "id": 348491,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "bci/openjdk-devel",
+                "security update",
+                "openssh",
+                "CVE-2023-38408",
+                "remote code execution",
+                "PKCS#11 support",
+                "file descriptor leaks",
+                "secrets lingering in memory",
+                "package changes"
+            ],
+            "Meta description": "SUSE Container Update Advisory for bci/openjdk-devel and security update for openssh, including fixes for CVE-2023-38408 and package changes.",
+            "Tags": [
+                "Container Update Advisory",
+                "bci/openjdk-devel",
+                "security update",
+                "openssh",
+                "CVE-2023-38408",
+                "remote code execution",
+                "PKCS#11 support",
+                "file descriptor leaks",
+                "secrets lingering in memory",
+                "package changes"
+            ]
+        }
+    },
+    {
+        "id": 348494,
+        "metadata": {
+            "Meta keywords": [
+                "SUSE Container Update Advisory",
+                "Container Tags",
+                "Container Release",
+                "Security Update",
+                "CVE-2023-38408",
+                "openssh",
+                "Package Changes",
+                "bci/python",
+                "Severity",
+                "References"
+            ],
+            "Meta description": "SUSE Container Update Advisory for bci/python:3-10.20 security update. Fixes CVE-2023-38408 and updates openssh packages.",
+            "Tags": [
+                "Advisory",
+                "Container",
+                "Security",
+                "CVE",
+                "openssh",
+                "Package",
+                "bci/python",
+                "Severity",
+                "References",
+                "Update"
+            ]
+        }
+    },
+    {
+        "id": 348496,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat Security Advisory",
+                "kernel-rt security update",
+                "bug fix update",
+                "Real Time Linux Kernel package",
+                "NFV TUS",
+                "RT TUS",
+                "kernel-rt-modules",
+                "kernel-rt-modules-extra",
+                "GPG signed packages",
+                "security vulnerabilities"
+            ],
+            "Meta description": "Red Hat Security Advisory for kernel-rt security and bug fix update for Red Hat Enterprise Linux 8.4, including Real Time Linux Kernel package and NFV TUS, RT TUS packages.",
+            "Tags": [
+                "Red Hat",
+                "Security Advisory",
+                "Kernel-rt",
+                "Real Time Linux",
+                "NFV TUS",
+                "RT TUS",
+                "GPG signed",
+                "Security vulnerabilities",
+                "Bug fix",
+                "Package details"
+            ]
+        }
+    },
+    {
+        "id": 348499,
+        "metadata": {
+            "Meta keywords": [
+                "Red Hat Security Advisory",
+                "kpatch-patch security update",
+                "kernel live patch module",
+                "RPM post-install script",
+                "CVE-2023-1281",
+                "CVE-2023-32233",
+                "security fixes",
+                "Red Hat Enterprise Linux",
+                "GPG signed packages",
+                "security vulnerabilities"
+            ],
+            "Meta description": "Red Hat Security Advisory for kpatch-patch security update addressing important security fixes for the kernel live patch module in Red Hat Enterprise Linux.",
+            "Tags": [
+                "RPM packages",
+                "architecture",
+                "kernel versions",
+                "debugsource packages",
+                "debugsource packages",
+                "security updates classification",
+                "GPG signature verification",
+                "Red Hat security contact",
+                "copyright notice",
+                "RHSA-announce mailing list"
+            ]
+        }
+    },
+    {
+        "id": 348503,
+        "metadata": {
+            "Meta keywords": [
+                "ReDoS bug fixed in Django",
+                "remotely exploitable security issue",
+                "Linux security analysis",
+                "significant security vulnerabilities",
+                "null pointer dereference flaw",
+                "use-after-free vulnerabilities",
+                "out-of-bounds read/write vulnerability",
+                "National Vulnerability Database severity rating",
+                "system crashes",
+                "privilege escalation attacks"
+            ],
+            "Meta description": "Stay updated on critical cybersecurity threats, Linux security analysis, and important system updates to protect against severe vulnerabilities.",
+            "Tags": [
+                "vulnerabilities",
+                "security updates",
+                "system access",
+                "compromise",
+                "firewall security",
+                "Denial of Service",
+                "memory consumption",
+                "system downtime",
+                "distro updates",
+                "cybersecurity threats"
+            ]
+        }
+    },
+    {
+        "id": 348514,
+        "metadata": {
+            "Meta keywords": [
+                "Debian LTS Advisory",
+                "pandoc vulnerabilities",
+                "arbitrary file write vulnerabilities",
+                "CVE-2023-35936",
+                "CVE-2023-38745",
+                "Debian 10 buster",
+                "security tracker page",
+                "Debian LTS security advisories",
+                "system upgrades",
+                "security status"
+            ],
+            "Meta description": "Debian LTS Advisory DLA-3507-1 for pandoc vulnerabilities and system upgrades. Refer to Debian LTS security advisories for detailed information.",
+            "Tags": [
+                "pandoc vulnerabilities",
+                "arbitrary file write",
+                "CVE-2023-38745",
+                "CVE-2023-38745",
+                "Debian 10 buster",
+                "security tracker",
+                "system upgrades",
+                "security status",
+                "Debian LTS",
+                "security advisories"
+            ]
+        }
+    }
+]
