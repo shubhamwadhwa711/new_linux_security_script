@@ -80,7 +80,14 @@ def get_total_rows(config,connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id:int,id:int, gte_date:str, id_desc:bool): 
     # global max_run_count
     """ To get the records sequentially based  to limit """
-    base_sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid FROM {db_prefix}content AS c"
+    if id:
+        base_sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid FROM {db_prefix}content AS c"
+    else:
+        base_sql = f"""SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid as total FROM `{db_prefix}content` AS c
+                LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
+                WHERE c.`access` = 1
+                AND cat.published = 1
+                AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)"""    
     where_clauses = []
     args = []
 
@@ -93,15 +100,10 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
         args.append(gte_date)
     # Construct WHERE clause
     if where_clauses:
-        cat_filter = []
-        if not id:
-            cat_filter = ['''c.`access` = 1
-                AND cat.published = 1
-                AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)''']
-        where_clause = " WHERE " + " AND ".join(where_clauses+cat_filter)
+        where_clause = " AND ".join(where_clauses)
+    # Add LIMIT and OFFSET if applicable
     else:
         where_clause = ""
-    # Add LIMIT and OFFSET if applicable
     order_by_clause = ""
     if id_desc:
         order_by_clause += " ORDER BY c.id DESC"
@@ -285,7 +287,6 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
 
                 # Extract tags from metadata
                 tags = dict_response.get("Tags", [])
-                tags
                 tags = list(set(filter(lambda x: "_" not in x and "-" not in x, tags)))
 
                 # Vectorize tags for the current record

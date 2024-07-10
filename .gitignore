@@ -10,3 +10,4 @@ __pycache__/
 *.sql
 *.bz2
 
+.vscode/launch.json
