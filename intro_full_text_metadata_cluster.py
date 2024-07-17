@@ -98,9 +98,16 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
     if not id and gte_date:
         where_clauses.append("c.created > %s")
         args.append(gte_date)
+    
+    if not id and offset is not None:
+        where_clause.append("c.id > %s")
+        args.append(offset)
     # Construct WHERE clause
     if where_clauses:
-        where_clause = " AND ".join(where_clauses)
+        if id:
+            where_clause = " WHERE " + " AND ".join(where_clauses) 
+        else:
+            where_clause = " AND ".join(where_clauses)
     # Add LIMIT and OFFSET if applicable
     else:
         where_clause = ""
@@ -111,9 +118,9 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
     if not id and limit is not None:
         limit_offset_clause += " LIMIT %s"
         args.append(limit)
-    if not id and offset is not None:
-        limit_offset_clause += " OFFSET %s"
-        args.append(offset)
+    # if not id and offset is not None:
+    #     limit_offset_clause += " OFFSET %s"
+    #     args.append(offset)
     # Combine the parts to form the final SQL query
     sql = base_sql + where_clause + order_by_clause + limit_offset_clause
 
@@ -368,8 +375,10 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     base_url:str=config.get("metadata-01","base_url")
     
     connection=get_db_connection(config,logger)
-
-    total_records=get_total_rows(config,connection).get('total')
+    if id:
+        total_records = 1
+    else:
+        total_records=get_total_rows(config,connection).get('total')
     if limit < total_records:
         total_records = limit
     # max_records  = config.get("metadata-01","max_record_run")
