@@ -99,9 +99,6 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
         where_clauses.append("c.created > %s")
         args.append(gte_date)
     
-    if not id and offset is not None:
-        where_clause.append("c.id > %s")
-        args.append(offset)
     # Construct WHERE clause
     if where_clauses:
         if id:
@@ -118,9 +115,9 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
     if not id and limit is not None:
         limit_offset_clause += " LIMIT %s"
         args.append(limit)
-    # if not id and offset is not None:
-    #     limit_offset_clause += " OFFSET %s"
-    #     args.append(offset)
+    if not id and offset is not None:
+        limit_offset_clause += " OFFSET %s"
+        args.append(offset)
     # Combine the parts to form the final SQL query
     sql = base_sql + where_clause + order_by_clause + limit_offset_clause
 
