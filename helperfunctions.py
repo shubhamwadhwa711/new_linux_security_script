@@ -261,7 +261,18 @@ def get_prepare_json_for_new_entry(title,description,url,base_url,image_tag):
     twitter_Cards_json_data=json.dumps(twitter_Cards_json_data)
     return opengarph_json_data,twitter_Cards_json_data
 
-def do_update(connection: Connection, alias: str, metadata: list, description: str,content_table_id:int,logger:Logger,base_url:str,content_table_title:str,catid:int,images:str,tags:list,content_id:int):
+def do_update(connection: Connection, record:dict, dict_response:dict, base_url:str, logger):
+    content_table_id=record.get("id")
+    description=dict_response["Description"]
+    alias=record["alias"]
+    tags=dict_response["Tags"]
+    content_id=record["id"]
+    title=dict_response['Title']
+    h1_title=dict_response['H1']
+    content_table_title=record.get("title")
+    catid=record.get("catid")
+    images=record.get("images")
+    metadata=dict_response["Keywords"]
     try: 
         if len(description)>150:
             print(f" The description length of {content_table_id} is {len(description)} -- ")
@@ -272,8 +283,9 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
         if len(metadata)>=1:
             metadata=",".join(metadata)
         record=get_record(connection,alias)
-        if record:
-            updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
+        updatecontent(connection, logger, h1_title, description, alias)
+        updatefieldvalue(connection, logger, title)
+        updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
             # excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
             # #need to confirm 
@@ -286,48 +298,90 @@ def do_update(connection: Connection, alias: str, metadata: list, description: s
     except Exception as e:
         logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
 
+def updatefieldvalue (connection, logger, title, field_id=29):
+    title = title if title and len(title)<150 else ''
+    sql = f"""
+                UPDATE {db_prefix}fields_values
+                SET value = %s
+                WHERE field_id = %s;
+    """
+    args = (title, field_id)
+    with connection.cursor() as cursor:
+        cursor.execute(sql, args)
+        connection.commit()
+        logger.info(f'Insert into {db_prefix}fields_values (title)')
+        return True
 
+def updatecontent(connection, logger, h1_title:str, meta_desc:str, alias:str):
+    #Confirm from Shubham if we want to check size of meta desc.
+    h1_title = h1_title if h1_title and len(h1_title)<150 else ''
+    meta_desc = meta_desc if meta_desc and len(meta_desc)<150 else ''
+    set_values = []
+    args = []
+    if h1_title:
+        set_values.append("title = %s")
+        args.append(h1_title)
+
+    if meta_desc:
+        set_values.append("`metadesc` = %s")
+        args.append(meta_desc)
+
+    if set_values:
+        values_to_update = ", ".join(set_values)
+        sql = f"""
+            UPDATE {db_prefix}content
+            SET {values_to_update}
+            WHERE alias = %s;
+        """
+        args.append(alias)
+        print(args)
+        with connection.cursor() as cursor:
+            cursor.execute(sql, args)
+            connection.commit()
+            logger.info(f'Insert into {db_prefix}Content (title, metadesc)')
+            return True
+    logger.info(f'Failed to insert into {db_prefix}Content (title, metadesc)')
+    return False
 
 def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger):
+    dataset = {
+        'keywords': metadata if metadata else record.get('metadata', ''),
+        'description': description if description and len(description) < 150 else record.get('description', ''),
+    }
     if record:
-            id=record['id']
-            if record["opengraph"]=="" and record["twitterCards"]=="":
-                opengarph_json_data,twitter_Cards_json_data= get_prepare_json(record,description,base_url,image_tag)
-                sql= f"""
-                    UPDATE {db_prefix}easyfrontendseo
-                    SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
-                    WHERE id = %s AND (opengraph IS NULL OR opengraph = '') AND (twitterCards IS NULL OR twitterCards = '')
-                    """
-                args=(metadata,description,opengarph_json_data,twitter_Cards_json_data,id)
-            else:
-                sql= f"""
-                    UPDATE {db_prefix}easyfrontendseo
-                    SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
-                    WHERE id = %s 
-                    """
-                open_graph,twitter_Cards=json.loads(record["opengraph"]),json.loads(record["twitterCards"])
-                open_graph["description"]=description
-                twitter_Cards["description"]=description
-                open_graph['image']=image_tag
-                twitter_Cards['image']=image_tag
-                args = (metadata, description,json.dumps(open_graph),json.dumps(twitter_Cards), id)     
+        dataset['id'] = record.get("id")
+        dataset['opengraph'], dataset['twitterCards'] = get_prepare_json(record,description,base_url,image_tag)
+        sql= f"""
+            UPDATE {db_prefix}easyfrontendseo
+            SET keywords = %s, description = %s, opengraph = %s, twitterCards = %s
+            WHERE id = %s AND (opengraph IS NULL OR opengraph = '') AND (twitterCards IS NULL OR twitterCards = '')
+        """
+        args=(dataset["keywords"], dataset["description"], dataset["opengraph"], dataset["twitterCards"], dataset["id"])
     else:
-        logger.info(f"""ID:{content_table_id} "title":{content_table_title} "Alias": {alias} Record not found in easyfrontseo table Creating the new entry--""")
         path=get_path_from_cateories_table(connection,catid)
         if path is not None:
             url=f"{path}/{alias}"
         else:
             url=alias
-        opengarph_json_data,twitter_Cards_json_data=get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
-        sql=f"INSERT INTO {db_prefix}easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
-        args=(url,content_table_title,description,metadata,"","index, follow",opengarph_json_data,twitter_Cards_json_data,f"{base_url}/{url}","")
-    
+        dataset['opengraph'], dataset['twitterCards'] = get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
+        sql= sql=f"INSERT INTO {db_prefix}easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        args = [
+            url, 
+            record.get("title"), 
+            dataset.get("description"),
+            dataset.get("keywords"),
+            "",
+            "index, follow",
+            dataset.get('opengraph'),
+            dataset['twitterCards'],
+            f"{base_url}/{url}",
+            ""
+        ]
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         connection.commit()
         logger.info(f'ID:{content_table_id} "title":{content_table_title} "Alias": {alias} - has been updated in database')
         return True
-
 
 
 

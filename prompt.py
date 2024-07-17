@@ -263,49 +263,43 @@ def promts_dict(key, context):
             {
                 "role": "user",
                 "content": f"""
-Instructions:
-1. Analyze the provided text to identify the most relevant Meta keywords for SEO optimization.
-2. Extract 3 to 5 high-volume Meta keywords from the given context.
-3. Extract 3 to 5 tags from the given context.
-4. Create a concise Meta description that summarizes the given context, ensuring that the Meta description's word length does not exceed 20 words.
-5. Use keywords that precisely describe the content.
-6. Ensure keywords are directly related to the main topics and themes of the content.
-7. Exclude terms that are too broad or unrelated to the core content.
-8. Use descriptive phrases that capture the essence of the content.
-9. For example, "Security update for OpenSSH" is more descriptive and useful than just "Security update."
-10. Please return only the tags that do not contain "_" or "-".
-11. Treat the tags as case-insensitive, meaning "System Update" and "System update" are considered the same tag.
-12. Exclude specific tags like "SLE-15-SP4, CVE-2023-38408, CVE-2023-3446, libopenssl1_1-1.1.1l-150400.7.48.1, sles15-image-15.0.0-27.14.85, SUSE-SU-2024:1437-1".
-13. keep ony one common tag for example either "Update" or "System Update". either use common phrase applicable to all.
-14. Keep singular form of verb rather than plural for example "CVE" and "CVEs", keep only singular form i.e "CVE".
-15. Keep keywords concise and to the point.
-16. Avoid adding filler words that don't contribute meaningful information.
-17. Consider what users might search for when looking for content similar to yours.
-18. Include keywords that match user queries and search intent.
-19. Avoid overly generic terms like "Summary" or "Released" or "Updates", "Ubuntu" that don't provide specific information about the content.
-20. Meta description must contains few generated keywords as well to help in SEO.
-21. If the Meta description's word length exceeds 20 words, trim it to meet the limit.
-22. Format each Meta keyword in quotes and separate them with commas, ensuring no repetition and high relevance to the context.
-23. The Meta keywords, tags, and Meta description must be strictly derived from the provided context, aligning with SEO best practices.
-24. Ensure that each Meta keyword is distinct from the others.
-25. Extract tags that reflect key concepts and terms from the text, focused on infosecurity and Linux server management.
-26. Ensure these tags are broad and general, with each tag being a single impactful word.
-27. List these tags in a format within brackets and separated by commas.
-28. Tags should be unique, relevant, and derived strictly from the content provided.
-29. Meta keywords and Tags must be unique from each other.
-30. Avoid words common to all content related to Linux and open source, including "linux" and "open source" and "cybersecurity".
-31. Results must be suitable for a Linux and info security professional audience who are generally highly-educated and experienced Linux sysadmins.
-32. The collection of tags should strictly relate to the context.
-33. Strictly adhere to SEO best practices in generating accurate Meta data for websites.
-34. Tags should be chosen for their relevance to the broader themes and topics of the content.
-35. Create primary single-word tags that are central to the themes of Linux, open source, infosecurity, and Linux server management.
+Instructions for the Assistant:
+The requirement is to create keywords, meta tags, meta description, title tag and H1 tag for an article related to Linux and open source security for a Linux admin and infosec professional audience. Results should be suitable for a sophisticated, professional audience specialized in Linux system administration and cybersecurity.
 
-Difference between "keywords" and "tags":
-- Keywords: high-level words or phrases that capture the primary topics and themes of the content.
-- Tags: broad, general labels that categorize the content into specific themes. These help with site navigation and categorizing content. Tags provide details that the keywords don’t convey, so it’s handy to use them together.
+Keyword requirements:
+Extract 3-5 meta keywords relevant to the context without using overly generic terms relevant to the article's context, focusing on high-volume terms
 
-After creating tags and keywords for this context, review above instructions again to ensure you have not used words like "linux" and "open source" and "cybersecurity" in your results.
+Tags requirements:
+Create a list of 4-6 relevant high-volume tags based on the specified criteria and context provided without using overly generic terms like "Linux" and "cybersecurity", focusing instead on the specific topics of interest directly related to the content. Tags should be case-insensitive, singular form, and in natural English without underscores or hyphens. Exclude specific tags like SLE-15-SP4, CVE-2023-38408, CVE-2023-3446, libopenssl1_1-1.1.1l-150400.7.48.1, sles15-image-15.0.0-27.14.85, SUSE-SU-2024:1437-1 and any others that are not natural English words.
 
+Meta description requirements:
+The created meta description should not exceed 20 words.  Compose a concise meta description summarizing the article's content within a 20-word limit
+
+Title Tag Requirements:
+Generate a title tag according to SEO best practices. Title tags and H1 tags must not be the same. Title can be no longer than seven words or 60 characters. Title tag must be unique from any other Title tag. For context of type "Advisory", titles must have non-English words like SLE-15-SP4 or CVE-2023-38408 or CVE-2023-3446 or ELSA-2024-3954, taken from content in the article to distinguish it from any other title tag. Include the level of detail necessary to ensure no other Title Tag has the same content. Include the application name in the Title Tag where it exists, like gdk-pixbuf2-2.42.6-4 or other data involving unique numbers or letters.
+
+H1 Tag Requirements:
+Generate an H1 tag according to SEO best practices. Title and H1 tags must not be the same. H1 Tag can be no longer than ten words or 100 characters. H1 Tag should be very descriptive and contain more detail about the article than title tags. H1 tags should be closer to a description of the main synopsis of the article. Include one of the unique keywords in the title to make the title unique.
+
+Overall requirements:
+Results must be suitable for a Linux and info security professional audience who are generally highly-educated and experienced Linux sysadmins.
+
+Identify the type of article as one of Advisory, which is content related to a security update of some kind, or Feature, which is a piece of news or a story that digs deep on a particular topic. 
+
+After creating tags and keywords and titles and H1 tags for this context, review above instructions again to ensure you have not used words like "linux" and "open source" and "open source security" and "cybersecurity" or other terms or phrases that generically apply to any content related to Linux and open source security in your results.
+
+###
+Given Context: {context}
+###
+Example Output:
+{{
+    "Keywords": ["Keyword1", "Keyword2", "Keyword3"],
+    "Description": "A succinct summary that encapsulates the main points of the content, optimized for search engines and not exceeding 160 characters.",
+    "Tags": ["Tag1", "Tag2", "Tag3", "Tag4"],
+    "Title": "Linux Security Article Title",
+    "H1": "Linux Security H1 Tag",
+    "Type": "Feature or Advisory"
+}}
 ###
 Given Context: {context}
 ###
@@ -317,7 +311,7 @@ Example Output:
 }}
 ###
 JSON Output:
-""",
+"""
             }
         ],
     }

@@ -20,10 +20,9 @@ from prompt import get_model , get_prompt
 from helperfunctions import getlogger, percentage, aggregate_into_few, process_text, clean_text, write_into_the_json_file, current_state, do_update, updatetags
 from nltk.tokenize import word_tokenize
 import nltk
+from log_handler import log_error as log_if_error
 simplefilter("ignore", category=ConvergenceWarning)
 nltk.download('punkt')
-# Initialize OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_SECRET_KEY"))
 
 # Load spaCy model
 nlp = spacy.load('en_core_web_md')
@@ -288,6 +287,7 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
             
             if metadata is not None:
                 dict_response = json.loads(metadata)
+                log_if_error(dict_response, record.get('id'))
 
                 # Extract tags from metadata
                 tags = dict_response.get("Tags", [])
@@ -335,10 +335,9 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
                 response = {"id": record.get('id'), "metadata": dict_response}
                 logger.info(f"Content id : {record['id']}, Tags : {dict_response['Tags']}")
                 write_into_the_json_file(response=response, json_file=json_file)
-
                 # Optionally update database with new tags
                 if commit:
-                    succeed = do_update(connection=connection, alias=record["alias"], metadata=dict_response["Meta keywords"], description=dict_response["Meta description"], content_table_id=record.get("id"), logger=logger, base_url=base_url, content_table_title=record.get("title"), catid=record.get("catid"), images=record.get("images"), tags=dict_response["Tags"], content_id=record["id"])
+                    succeed = do_update(connection=connection, record=record, dict_response=dict_response, base_url=base_url, logger=logger)
                     if succeed:
                         pass  # Successful update
         except KeyboardInterrupt as e:
@@ -394,7 +393,6 @@ def main(id: Optional[int] = 0,commit: bool = False,):
                 logger.info(f'{"="*20} All records have been processed {"="*20}')
                 break
             counter=process_records(result=result,logger=logger,total=total_records,counter=counter,max_words=max_words, max_tokens=max_tokens,json_file=json_file,store_state_file=store_state_file,commit=commit,connection=connection,base_url=base_url)
-            print("current id",current_id)
             current_id=result[-1]['id']
             logger.info(f'{"="*20} All records have been processed {"="*20}')
             break
