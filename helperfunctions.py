@@ -20,6 +20,10 @@ db_prefix=config.get("mysql","prefix"),
 db_prefix = db_prefix[0]
 taglogfile_name=config.get('metadata-01',"tag_log_file")
 
+h1_max_length = int(config.get('max_length', 'h1_tag'))
+title_max_length = int(config.get('max_length', 'title'))
+description_max_length = int(config.get('max_length', 'description'))
+
 
 class ColoredFormatter(logging.Formatter):
     datefmt = "%Y-%m-%d %H:%M:%S"
@@ -274,7 +278,7 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
     images=record.get("images")
     metadata=dict_response["Keywords"]
     try: 
-        if len(description)>150:
+        if len(description)>description_max_length:
             print(f" The description length of {content_table_id} is {len(description)} -- ")
         images=json.loads(images)['image_fulltext'] if images!="" else ""
         image_tag=f"{base_url}/{images}" if images!="" else ""
@@ -284,7 +288,7 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
             metadata=",".join(metadata)
         record=get_record(connection,alias)
         updatecontent(connection, logger, h1_title, description, alias)
-        updatefieldvalue(connection, logger, title)
+        updatefieldvalue(connection, logger, title, record.get("id"))
         updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
             # excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
@@ -298,24 +302,25 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
     except Exception as e:
         logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
 
-def updatefieldvalue (connection, logger, title, field_id=29):
-    title = title if title and len(title)<150 else ''
+def updatefieldvalue (connection, logger, title, id, field_id=29):
+    title = title if title and len(title)<title_max_length else ''
     sql = f"""
                 UPDATE {db_prefix}fields_values
-                SET value = %s
+                SET value = %s,
+                item_id = %s
                 WHERE field_id = %s;
     """
-    args = (title, field_id)
+    args = (title, id, field_id)
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         connection.commit()
-        logger.info(f'Insert into {db_prefix}fields_values (title)')
+        logger.info(f'Insert into {db_prefix}fields_values (field_id, value)')
         return True
 
 def updatecontent(connection, logger, h1_title:str, meta_desc:str, alias:str):
     #Confirm from Shubham if we want to check size of meta desc.
-    h1_title = h1_title if h1_title and len(h1_title)<150 else ''
-    meta_desc = meta_desc if meta_desc and len(meta_desc)<150 else ''
+    h1_title = h1_title if h1_title and len(h1_title)<h1_max_length else ''
+    meta_desc = meta_desc if meta_desc and len(meta_desc)<description_max_length else ''
     set_values = []
     args = []
     if h1_title:
@@ -346,7 +351,7 @@ def updatecontent(connection, logger, h1_title:str, meta_desc:str, alias:str):
 def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger):
     dataset = {
         'keywords': metadata if metadata else record.get('metadata', ''),
-        'description': description if description and len(description) < 150 else record.get('description', ''),
+        'description': description if description and len(description) < description_max_length else record.get('description', ''),
     }
     if record:
         dataset['id'] = record.get("id")
