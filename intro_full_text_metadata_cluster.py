@@ -287,6 +287,9 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
             
             if metadata is not None:
                 dict_response = json.loads(metadata)
+                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
+                print(dict_response)
+                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
                 log_if_error(dict_response, record.get('id'))
 
                 # Extract tags from metadata

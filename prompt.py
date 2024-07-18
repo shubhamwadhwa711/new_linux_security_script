@@ -301,15 +301,6 @@ Example Output:
     "Type": "Feature or Advisory"
 }}
 ###
-Given Context: {context}
-###
-Example Output:
-{{
-    "Meta keywords": ["Keyword1", "Keyword2", "Keyword3"],
-    "Meta description": "A succinct summary that encapsulates the main points of the content, optimized for search engines and not exceeding 160 characters.",
-    "Tags": ["Tag1", "Tag2", "Tag3"]
-}}
-###
 JSON Output:
 """
             }
@@ -340,7 +331,7 @@ def get_prompt(context):
 
     prompt_key = int(get_prompt_key) if get_prompt_key else 1
     try:
-        print("Prompt key used  : ", prompt_key)
+        # dave print("Prompt key used  : ", prompt_key)
         prompt = promts_dict(prompt_key, context)
         return prompt
     except Exception as e:

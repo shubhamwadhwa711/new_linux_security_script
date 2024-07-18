@@ -24,6 +24,8 @@ h1_max_length = int(config.get('max_length', 'h1_tag'))
 title_max_length = int(config.get('max_length', 'title'))
 description_max_length = int(config.get('max_length', 'description'))
 
+existing_tags_list= []
+
 
 class ColoredFormatter(logging.Formatter):
     datefmt = "%Y-%m-%d %H:%M:%S"
@@ -302,20 +304,41 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
     except Exception as e:
         logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
 
-def updatefieldvalue (connection, logger, title, id, field_id=29):
-    title = title if title and len(title)<title_max_length else ''
-    sql = f"""
-                UPDATE {db_prefix}fields_values
-                SET value = %s,
-                item_id = %s
-                WHERE field_id = %s;
-    """
-    args = (title, id, field_id)
+def updatefieldvalue(connection, logger, title, id, field_id=29):
+    # Check if title is valid
+    title = title if title and len(title) < title_max_length else ''
+    
+    # Query to check if the record exists
+    sql = f"SELECT * FROM {db_prefix}fields_values WHERE field_id = %s AND item_id = %s;"
+    args = (field_id, id)
+    
+    with connection.cursor() as cursor:
+        cursor.execute(sql, args)
+        record = cursor.fetchone()
+
+    # Prepare SQL for update or insert
+    if record:
+        sql = f"""
+            UPDATE {db_prefix}fields_values
+            SET value = %s
+            WHERE field_id = %s AND item_id = %s;
+        """
+        args = (title, field_id, id)
+    else:
+        sql = f"""
+            INSERT INTO {db_prefix}fields_values (value, item_id, field_id)
+            VALUES (%s, %s, %s);
+        """
+        args = (title, id, field_id)
+
+    # Execute the SQL command
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         connection.commit()
-        logger.info(f'Insert into {db_prefix}fields_values (field_id, value)')
-        return True
+        logger.info(f'Inserted/Updated into {db_prefix}fields_values (field_id={field_id}, value={title})')
+    
+    return True
+
 
 def updatecontent(connection, logger, h1_title:str, meta_desc:str, alias:str):
     #Confirm from Shubham if we want to check size of meta desc.
@@ -397,7 +420,7 @@ def updatetags(connection,content_id,tags):
         # content_id= 356646
         # excluded_catids = (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
         # Convert to lowercase and replace spaces with hyphens
-        existing_tags_list= []
+        global existing_tags_list
         tags_alias = [tag.lower().replace(' ', '-') for tag in tags]
         with connection.cursor() as cursor:
             for al, tag in zip(tags_alias, tags):
@@ -407,7 +430,7 @@ def updatetags(connection,content_id,tags):
                 if exiting_tags:
                     if tag not in existing_tags_list:
                         existing_tags_list.append(tag)
-                        tag_logger.info(f"{tag}  tag is already exists")
+                        print(f"{tag}  tag is already exists")
                     tag_id =exiting_tags["id"]
                     contentitem_tag_mapupdate(connection,content_id, tag_id)
                 else:
@@ -454,7 +477,7 @@ def contentitem_tag_mapupdate(connection,con_id, tag):
             cursor.execute(query, (con_id, tag))
             results = cursor.fetchone()
         if results:
-            tag_logger.info(f" content_item_id : {con_id} and  tag_id {tag}  tag is already exists")
+            print(f" content_item_id : {con_id} and  tag_id {tag}  tag is already exists")
         else:
             with connection.cursor() as cursor:
                 core_content = f"SELECT  max(core_content_id) from {db_prefix}contentitem_tag_map"
