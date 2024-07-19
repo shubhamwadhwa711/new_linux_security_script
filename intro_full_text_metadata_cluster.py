@@ -79,17 +79,22 @@ def get_total_rows(config,connection):
 def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id:int,id:int, gte_date:str, id_desc:bool): 
     # global max_run_count
     """ To get the records sequentially based  to limit """
+  # Base SQL query
     if id:
-        base_sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid FROM {db_prefix}content AS c"
+        base_sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid FROM `{db_prefix}content` AS c"
     else:
-        base_sql = f"""SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid as total FROM `{db_prefix}content` AS c
-                LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
-                WHERE c.`access` = 1
-                AND cat.published = 1
-                AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)"""    
+        base_sql = f"""
+        SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid as total FROM `{db_prefix}content` AS c
+        LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
+        WHERE c.`access` = 1
+        AND cat.published = 1
+        AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
+        """
+
     where_clauses = []
     args = []
 
+    # Add conditions based on id and gte_date
     if id > 0:
         where_clauses.append("c.id = %s")
         args.append(id)
@@ -97,19 +102,21 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
     if not id and gte_date:
         where_clauses.append("c.created > %s")
         args.append(gte_date)
-    
+
     # Construct WHERE clause
     if where_clauses:
+        where_clause = " AND ".join(where_clauses)
         if id:
-            where_clause = " WHERE " + " AND ".join(where_clauses) 
+            where_clause = " WHERE " + where_clause
         else:
-            where_clause = " AND ".join(where_clauses)
-    # Add LIMIT and OFFSET if applicable
+            where_clause = " AND " + where_clause
     else:
         where_clause = ""
-    order_by_clause = ""
-    if id_desc:
-        order_by_clause += " ORDER BY c.id DESC"
+
+    # Construct ORDER BY clause
+    order_by_clause = " ORDER BY c.id DESC" if id_desc else ""
+
+    # Construct LIMIT and OFFSET clause
     limit_offset_clause = ""
     if not id and limit is not None:
         limit_offset_clause += " LIMIT %s"
@@ -117,13 +124,14 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
     if not id and offset is not None:
         limit_offset_clause += " OFFSET %s"
         args.append(offset)
+
     # Combine the parts to form the final SQL query
     sql = base_sql + where_clause + order_by_clause + limit_offset_clause
 
     with connection.cursor() as cursor:
-        cursor.execute(sql,args)
-        result=cursor.fetchall()
-        # max_run_count  +=limit
+        cursor.execute(sql, args)
+        result = cursor.fetchall()
+    
     return result
 
 async def process_text_async(client, context, logger):
