@@ -1,6 +1,7 @@
 import os
 import json
 import configparser
+import logging
 from datetime import datetime
 
 # Define the log directory and log files
@@ -13,6 +14,7 @@ LOG_FILES = {
 
 config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+LOG_FILE = config.get('metadata-01', 'log_file')
 h1_max_length = int(config.get('max_length', 'h1_tag'))
 title_max_length = int(config.get('max_length', 'title'))
 description_max_length = int(config.get('max_length', 'description'))
@@ -74,3 +76,46 @@ def log_error(data_dictionary, id):
         # Write updated logs back to the file
         with open(log_file_path, 'w') as log_file:
             json.dump(logs, log_file, indent=4)
+
+def setup_logger(logger, log_file_path, log_type):
+    # Create a file handler
+    file_handler = logging.FileHandler(log_file_path)
+    # Create a console handler
+    console_handler = logging.StreamHandler()
+
+    # Set log levels for both handlers based on log_type
+    level = {
+        "info": logging.INFO,
+        "error": logging.ERROR,
+        "warn": logging.WARNING
+    }.get(log_type, logging.INFO)
+
+    file_handler.setLevel(level)
+    console_handler.setLevel(level)
+
+    # Create a logging format
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    file_handler.setFormatter(formatter)
+    console_handler.setFormatter(formatter)
+
+    # Add the handlers to the logger
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
+def log_info(message, log_type="info"):
+    # Create a logger object
+    log_file_path = LOG_FILE
+    logger = logging.getLogger('log_info_logger')
+    logger.setLevel(logging.DEBUG)  # Set to DEBUG to capture all levels of logging
+
+    # Check if handlers already exist to avoid duplicate logs
+    if not logger.hasHandlers():
+        setup_logger(logger, log_file_path, log_type)
+
+    # Log the provided message with appropriate log level
+    if log_type == "error":
+        logger.error(message)
+    elif log_type == "warn":
+        logger.warning(message)
+    else:
+        logger.info(message)

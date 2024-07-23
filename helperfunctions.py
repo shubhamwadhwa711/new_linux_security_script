@@ -13,6 +13,7 @@ tokenizer = tiktoken.get_encoding("cl100k_base")
 from pymysql import Connection,MySQLError
 from datetime import datetime
 import configparser
+from log_handler import log_info
 
 config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
@@ -302,7 +303,7 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
         connection.rollback()
         raise e
     except Exception as e:
-        logger.info(json.dumps({"id":content_table_id,"message":str(e)}))
+        log_info(json.dumps({"id":content_table_id,"message":str(e)}))
 
 def updatefieldvalue(connection, logger, title, id, field_id=29):
     # Check if title is valid
@@ -335,7 +336,7 @@ def updatefieldvalue(connection, logger, title, id, field_id=29):
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         connection.commit()
-        logger.info(f'Inserted/Updated into {db_prefix}fields_values (field_id={field_id}, value={title})')
+        log_info(f'Inserted/Updated into {db_prefix}fields_values (field_id={field_id}, value={title})')
     
     return True
 
@@ -366,9 +367,9 @@ def updatecontent(connection, logger, h1_title:str, meta_desc:str, alias:str):
         with connection.cursor() as cursor:
             cursor.execute(sql, args)
             connection.commit()
-            logger.info(f'Insert into {db_prefix}Content (title, metadesc)')
+            log_info(f'Insert into {db_prefix}Content (title, metadesc)')
             return True
-    logger.info(f'Failed to insert into {db_prefix}Content (title, metadesc)')
+    log_info(f'Failed to insert into {db_prefix}Content (title, metadesc)', log_type="error")
     return False
 
 def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger):
@@ -408,7 +409,7 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         connection.commit()
-        logger.info(f'ID:{content_table_id} "title":{content_table_title} "Alias": {alias} - has been updated in database')
+        log_info(f'ID:{content_table_id} "title":{content_table_title} "Alias": {alias} - has been updated in database')
         return True
 
 
@@ -460,7 +461,7 @@ def updatetags(connection,content_id,tags):
                     cursor.execute(sql)
                     result = cursor.fetchone()
                     tag_id = result["id"]
-                    tag_logger.info(f"Tag_id : {tag_id} , Tag :{tag} , content_id :{content_id} ")
+                    log_info(f"Tag_id : {tag_id} , Tag :{tag} , content_id :{content_id} ")
                 
                     contentitem_tag_mapupdate(connection,content_id, tag_id)
         return tags

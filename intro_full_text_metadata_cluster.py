@@ -20,7 +20,7 @@ from prompt import get_model , get_prompt
 from helperfunctions import getlogger, percentage, aggregate_into_few, process_text, clean_text, write_into_the_json_file, current_state, do_update, updatetags
 from nltk.tokenize import word_tokenize
 import nltk
-from log_handler import log_error as log_if_error
+from log_handler import log_error as log_if_error, log_info
 simplefilter("ignore", category=ConvergenceWarning)
 nltk.download('punkt')
 
@@ -55,7 +55,7 @@ def get_db_connection(config,logger):
         )
         return connection
     except pymysql.MySQLError as e:
-        logger.error(f"Get db connection ERROR : {e}")
+        log_info(f"Get db connection ERROR : {e}", log_type="error")
         raise e
     
 def get_total_rows(config,connection):
@@ -88,7 +88,7 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
         LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
         WHERE c.`access` = 1
         AND cat.published = 1
-        AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
+        AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219) 
         """
 
     where_clauses = []
@@ -127,11 +127,10 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
 
     # Combine the parts to form the final SQL query
     sql = base_sql + where_clause + order_by_clause + limit_offset_clause
-
+    print(sql)
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         result = cursor.fetchall()
-    
     return result
 
 async def process_text_async(client, context, logger):
@@ -146,7 +145,7 @@ async def process_text_async(client, context, logger):
         )
         return response.choices[0].message.content.strip(), response.usage.completion_tokens
     except Exception as e:
-        logger.error(f"Async Process Text ERROR: {e}")
+        log_info(f"Async Process Text ERROR: {e}", log_type="error")
         return None, None
 
 
@@ -171,7 +170,7 @@ def process_context(contexts:list,logger:Logger,temperature=0):
             metadata.append(response.choices[0].message.content.strip())
             n_tokens.append(response.usage.completion_tokens)
         except Exception as e:
-            logger.error(f"Process Context ERROR : {e}")
+            log_info(f"Process Context ERROR : {e}", log_type="error")
     else:
         async def process_texts_async(contexts, logger):
             async with AsyncOpenAI(api_key=os.getenv('OPENAI_SECRET_KEY')) as client:
@@ -207,13 +206,13 @@ def extract_record_text(record:Dict[str,Any],logger:Logger,max_words:int,max_tok
             text=clean_text(fulltext=fulltext,logger=logger, max_words=max_words)
             df=process_text(text=text,logger=logger,max_tokens=max_tokens)
             df=process_df(df=df,logger=logger)
-            logger.info(f" Successfully processed  the record ID:{id}")
+            log_info(f" Successfully processed  the record ID:{id}")
             return  str(df["text"][0]) 
         else:
-            logger.info(f"Record ID: {id} fulltext field has  empty string.")
+            log_info(f"Record ID: {id} fulltext field has  empty string.")
             return None
     except Exception as e:
-        logger.error(f"Extract_record_text ERROR : {e}")
+        log_info(f"Extract_record_text ERROR : {e}", log_type="error")
 
 def tokenize_text(text):
     """
@@ -290,14 +289,11 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
     for record in result:
         counter += 1
         try:
-            logger.info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
+            log_info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
             metadata = extract_record_text(record=record, logger=logger, max_words=max_words, max_tokens=max_tokens)
             
             if metadata is not None:
                 dict_response = json.loads(metadata)
-                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
-                print(dict_response)
-                print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
                 log_if_error(dict_response, record.get('id'))
 
                 # Extract tags from metadata
@@ -323,7 +319,7 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
                 global_vectors, global_valid_tags = vectorize_tags(global_normalized_tags_list)
                 num_clusters = min(10, len(global_valid_tags))
                 if num_clusters < 1:
-                    logger.warning(f'Not enough tags to form clusters for ID: {record.get("id")}')
+                    log_info(f'Not enough tags to form clusters for ID: {record.get("id")}', log_type="warn")
                     continue
 
                 # labels = cluster_tags(global_vectors, num_clusters=num_clusters)
@@ -344,7 +340,7 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
 
                 # Log and save the updated metadata
                 response = {"id": record.get('id'), "metadata": dict_response}
-                logger.info(f"Content id : {record['id']}, Tags : {dict_response['Tags']}")
+                log_info(f"Content id : {record['id']}, Tags : {dict_response['Tags']}")
                 write_into_the_json_file(response=response, json_file=json_file)
                 # Optionally update database with new tags
                 if commit:
@@ -354,10 +350,10 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
         except KeyboardInterrupt as e:
             current_id = record.get("id")
             current_state(store_state_file, id=current_id, counter=counter, mode="w")
-            logger.info(f"State saved till Record ID: {record.get('id')}")
+            log_info(f"State saved till Record ID: {record.get('id')}", log_type="warn")
             raise e
         except Exception as e:
-            logger.error(f"Process records ERROR: {e}, Record ID: {record.get('id')}")
+            log_info(f"Process records ERROR: {e}, Record ID: {record.get('id')}", log_type="error")
 
     return counter
 
@@ -391,27 +387,27 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     # max_records  = config.get("metadata-01","max_record_run")
     # max_records_runs = int(max_records) if max_records else total_records
    
-    logger.info(f'{"="*20} Total records : {total_records} {"="*20}')
+    log_info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
     counter = 0
     while True:
         try:
             result=get_limit_rows(connection=connection, limit=limit,offset=offset,current_id=current_id,id=id,gte_date=gte_date, id_desc=id_desc)
             if  not result:
-                logger.info(f'All records have been processed')
+                log_info(f'All records have been processed')
                 break
             if len(result)==0:
-                logger.info(f'{"="*20} All records have been processed {"="*20}')
+                log_info(f'{"="*20} All records have been processed {"="*20}')
                 break
             counter=process_records(result=result,logger=logger,total=total_records,counter=counter,max_words=max_words, max_tokens=max_tokens,json_file=json_file,store_state_file=store_state_file,commit=commit,connection=connection,base_url=base_url)
             current_id=result[-1]['id']
-            logger.info(f'{"="*20} All records have been processed {"="*20}')
+            log_info(f'{"="*20} All records have been processed {"="*20}')
             break
             # if id > 0:
             #     logger.info(f'{"="*20} All records have been processed {"="*20}')
             #     break
         except Exception as e:
-            logger.info(f"ERROR : {e}")
+            log_info(f"ERROR : {e}", log_type="error")
             current_id=result[-1]['id']
 
 
