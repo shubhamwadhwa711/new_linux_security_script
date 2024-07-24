@@ -4,10 +4,9 @@ import json
 
 config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
-title = config.get("chatgpt", "title")
 
 
-def promts_dict(key, context):
+def promts_dict(key, context, title):
     prompts = {
         1: f""" Instructions:
             1. Analyze the provided text to identify the most relevant Meta keywords for SEO optimization.
@@ -327,13 +326,13 @@ def get_model():
         print(e)
 
 
-def get_prompt(context):
+def get_prompt(context, title):
     get_prompt_key = config.get("chatgpt", "prompt_key")
 
     prompt_key = int(get_prompt_key) if get_prompt_key else 1
     try:
         # dave print("Prompt key used  : ", prompt_key)
-        prompt = promts_dict(prompt_key, context)
+        prompt = promts_dict(prompt_key, context, title)
         return prompt
     except Exception as e:
         print(e)

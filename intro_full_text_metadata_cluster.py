@@ -127,7 +127,6 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
 
     # Combine the parts to form the final SQL query
     sql = base_sql + where_clause + order_by_clause + limit_offset_clause
-    print(sql)
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         result = cursor.fetchall()
@@ -149,7 +148,7 @@ async def process_text_async(client, context, logger):
         return None, None
 
 
-def process_context(contexts:list,logger:Logger,temperature=0):
+def process_context(contexts:list,logger:Logger, title:str, temperature=0):
     """ check the length if the contexts make a api call """
     metadata=[]
     n_tokens=[]
@@ -161,7 +160,7 @@ def process_context(contexts:list,logger:Logger,temperature=0):
                         # model = get_model(),    
                         temperature=0.1, 
                         response_format={ "type": "json_object" },
-                        messages=get_prompt(contexts[0]),
+                        messages=get_prompt(contexts[0], title=title),
                         n=1,
                         stop=None,
                         max_tokens=1500,
@@ -185,10 +184,10 @@ def process_context(contexts:list,logger:Logger,temperature=0):
     return pd.DataFrame(data={'text':metadata,'n_tokens':n_tokens})
 
 
-def process_df(df:DataFrame,logger:Logger):
+def process_df(df:DataFrame,logger:Logger, title:str):
     """ Aggredate the data into list elements"""
     contexts = aggregate_into_few(df=df,logger=logger)
-    new_df = process_context(contexts=contexts,logger=logger)
+    new_df = process_context(contexts=contexts,logger=logger, title=title)
     if len(new_df) > 1:
         return process_df(new_df,logger)
     return new_df
@@ -200,12 +199,13 @@ def extract_record_text(record:Dict[str,Any],logger:Logger,max_words:int,max_tok
     """ process single  record  and extract the id introtext and fulltext .."""
     try:
         id=record.get('id')
+        title = record.get('title')
         introtext=record.get("introtext")
         fulltext=record.get("fulltext")
         if len(fulltext)>0:
             text=clean_text(fulltext=fulltext,logger=logger, max_words=max_words)
             df=process_text(text=text,logger=logger,max_tokens=max_tokens)
-            df=process_df(df=df,logger=logger)
+            df=process_df(df=df,logger=logger, title=title)
             log_info(f" Successfully processed  the record ID:{id}")
             return  str(df["text"][0]) 
         else:
