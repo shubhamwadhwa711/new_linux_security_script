@@ -4,6 +4,7 @@ import json
 
 config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+title = config.get("chatgpt", "title")
 
 
 def promts_dict(key, context):
@@ -262,7 +263,7 @@ def promts_dict(key, context):
         6: [
             {
                 "role": "user",
-                "content": f"""
+                "content": f""" 
 Instructions for the Assistant:
 The requirement is to create keywords, meta tags, meta description, title tag and H1 tag for an article related to Linux and open source security for a Linux admin and infosec professional audience. Results should be suitable for a sophisticated, professional audience specialized in Linux system administration and cybersecurity.
 
