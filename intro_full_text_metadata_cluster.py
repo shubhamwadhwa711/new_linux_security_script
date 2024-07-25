@@ -189,7 +189,7 @@ def process_df(df:DataFrame,logger:Logger, title:str):
     contexts = aggregate_into_few(df=df,logger=logger)
     new_df = process_context(contexts=contexts,logger=logger, title=title)
     if len(new_df) > 1:
-        return process_df(new_df,logger)
+        return process_df(new_df,logger, title)
     return new_df
 
 
