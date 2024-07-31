@@ -264,29 +264,19 @@ def promts_dict(key, context, title):
                 "role": "user",
                 "content": f""" 
 Instructions for the Assistant:
-The requirement is to create keywords, meta tags, meta description, title tag and H1 tag for an article related to Linux and open source security for a Linux admin and infosec professional audience. Results should be suitable for a sophisticated, professional audience specialized in Linux system administration and cybersecurity.
+Given the context of "Linux security" and "open source," you are tasked with creating specific SEO elements using the given content that focus on the more detailed aspects of this topic. Below are instructions with explicit instructions to generate the necessary SEO elements including keywords, tags, title tag and H1 for content related to Linux and open source security for a Linux admin and infosec professional audience.
 
-Keyword requirements:
-Extract 3-5 meta keywords relevant to the context without using overly generic terms relevant to the article's context, focusing on high-volume terms
+Prompt Instructions:
+Keywords: Identify five specific keywords related to detailed aspects of Linux security and open source security. These keywords should highlight particular vulnerabilities (called Advisories), security practices, or tools used in the Linux and open source ecosystems.  Ensure that these keywords exclude general terms like "Linux security," "Linux," "security," "open source," and "open source security" and relate to topics more specific than the broader Linux and open source security context.
 
-Tags requirements:
-Create a list of 4-6 relevant high-volume tags based on the specified criteria and context provided without using overly generic terms like "Linux" and "cybersecurity", focusing instead on the specific topics of interest directly related to the content. Tags should be case-insensitive, singular form, and in natural English without underscores or hyphens. Exclude specific tags like SLE-15-SP4, CVE-2023-38408, CVE-2023-3446, libopenssl1_1-1.1.1l-150400.7.48.1, sles15-image-15.0.0-27.14.85, SUSE-SU-2024:1437-1 and any others that are not natural English words.
+Tags: Convert the identified keywords into natural English terms that relate to the specific Linux security and open source context being discussed in the content. Each tag should be no more than two words. Use the text "{title}" as a basis for your title tag.
 
-Meta description requirements:
-The created meta description should not exceed 20 words.  Compose a concise meta description summarizing the article's content within a 20-word limit
+Meta Description: Write a concise and engaging meta description summarizing the article's core focus in no more than 20 words.  The meta description should clearly convey the article's specific context and entice readers to click on the link.
 
-Title Tag Requirements:
-Generate a title tag according to SEO best practices. Title tags and H1 tags must not be the same. Title can be no longer than seven words or 60 characters. Title tag must be unique from any other Title tag. For context of type "Advisory", titles must have non-English words like SLE-15-SP4 or CVE-2023-38408 or CVE-2023-3446 or ELSA-2024-3954, taken from content in the article to distinguish it from any other title tag. Include the level of detail necessary to ensure no other Title Tag has the same content. Include the application name in the Title Tag where it exists, like gdk-pixbuf2-2.42.6-4 or other data involving unique numbers or letters.
+Title Tag: Craft a unique and compelling title tag no longer than 7 words or 60 characters. Use the text "{title}" as a basis for your title tag.
 
-H1 Tag Requirements:
-Generate an H1 tag according to SEO best practices. Title and H1 tags must not be the same. H1 Tag can be no longer than ten words or 100 characters. H1 Tag should be very descriptive and contain more detail about the article than title tags. H1 tags should be closer to a description of the main synopsis of the article. Include one of the unique keywords in the title to make the title unique.
+H1 Tag: Provide a descriptive H1 tag that offers a more detailed overview of the article.  The H1 tag should differ slightly from the title tag, providing additional context while maintaining specificity.
 
-Overall requirements:
-Results must be suitable for a Linux and info security professional audience who are generally highly-educated and experienced Linux sysadmins.
-
-Identify the type of article as one of Advisory, which is content related to a security update of some kind, or Feature, which is a piece of news or a story that digs deep on a particular topic. 
-
-After creating tags and keywords and titles and H1 tags for this context, review above instructions again to ensure you have not used words like "linux" and "open source" and "open source security" and "cybersecurity" or other terms or phrases that generically apply to any content related to Linux and open source security in your results.
 
 ###
 Given Context: {context}
@@ -313,7 +303,8 @@ JSON Output:
 gpt_model = {
     1: "gpt-3.5-turbo-1106",
     2: "gpt-4",
-    3: "gpt-3.5-turbo"
+    3: "gpt-3.5-turbo",
+    4: "gpt-4o mini"
 }
 
 
@@ -326,9 +317,8 @@ def get_model():
         print(e)
 
 
-def get_prompt(context, title):
+def get_prompt(context, title:str=""):
     get_prompt_key = config.get("chatgpt", "prompt_key")
-
     prompt_key = int(get_prompt_key) if get_prompt_key else 1
     try:
         # dave print("Prompt key used  : ", prompt_key)
@@ -336,3 +326,4 @@ def get_prompt(context, title):
         return prompt
     except Exception as e:
         print(e)
+

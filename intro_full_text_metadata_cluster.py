@@ -156,7 +156,7 @@ def process_context(contexts:list,logger:Logger, title:str, temperature=0):
     if len(contexts) ==1:
         try:
             response = client.chat.completions.create(
-                        model="gpt-3.5-turbo-1106",
+                        model="gpt-3.5-turbo-0125",
                         # model = get_model(),    
                         temperature=0.1, 
                         response_format={ "type": "json_object" },
@@ -290,6 +290,7 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
         counter += 1
         try:
             log_info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
+            log_info(f'ALIAS of Article: {record.get("alias")}')
             metadata = extract_record_text(record=record, logger=logger, max_words=max_words, max_tokens=max_tokens)
             
             if metadata is not None:
@@ -298,10 +299,10 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
 
                 # Extract tags from metadata
                 tags = dict_response.get("Tags", [])
-                tags = list(set(filter(lambda x: "_" not in x and "-" not in x, tags)))
+                filtered_tags = list(set(filter(lambda x: "_" not in x and "-" not in x, tags)))
 
                 # Vectorize tags for the current record
-                current_vectors, current_valid_tags = vectorize_tags(tags)
+                current_vectors, current_valid_tags = vectorize_tags(filtered_tags)
 
                 # Update the global normalized tags list
                 global_normalized_tags_list.extend(current_valid_tags)
@@ -336,7 +337,7 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
                 normalized_tags = set(normalized_tags)
 
                 # Update metadata with normalized tags
-                dict_response["Tags"] = list(normalized_tags)
+                dict_response["Tags"] = filtered_tags
 
                 # Log and save the updated metadata
                 response = {"id": record.get('id'), "metadata": dict_response}
