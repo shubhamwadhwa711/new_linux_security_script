@@ -290,9 +290,10 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
         if len(metadata)>=1:
             metadata=",".join(metadata)
         record=get_record(connection,alias)
-        updatecontent(connection, logger, h1_title, description, alias)
-        updatefieldvalue(connection, logger, title, record.get("id"))
-        updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
+        if h1_title != title:
+            updatecontent(connection, logger, h1_title, description, alias)
+            updatefieldvalue(connection, logger, title, record.get("id"))
+            updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
             # excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
             # #need to confirm 
@@ -307,7 +308,7 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
 
 def updatefieldvalue(connection, logger, title, id, field_id=29):
     # Check if title is valid
-    title = title if title and len(title) < title_max_length else ''
+    title = checkTitle(connection, title, field_id)
     
     # Query to check if the record exists
     sql = f"SELECT * FROM {db_prefix}fields_values WHERE field_id = %s AND item_id = %s;"
@@ -340,11 +341,51 @@ def updatefieldvalue(connection, logger, title, id, field_id=29):
     
     return True
 
+def checkH1Unique(connection, h1):
+    sql = f"""
+        SELECT COUNT(*) as total FROM `{db_prefix}content` as c
+        WHERE c.title = %s;
+    """
+    args = (h1,)
+    with connection.cursor() as cursor:
+        cursor.execute(sql, args)
+        result=cursor.fetchone()
+    return not bool(result.get('total'))
+    
+
+def checkH1(connection, h1_title):
+    if h1_title and len(h1_title) <= h1_max_length and checkH1Unique(connection, h1_title):
+        return h1_title
+    return ''
+
+def checkTitleUnique(connection, title, field_id):
+    sql = f"""
+        SELECT COUNT(*) as total FROM `{db_prefix}fields_values` as c
+        WHERE c.value = %s AND field_id = %s;
+    """
+    args = (title, field_id)
+    with connection.cursor() as cursor:
+        cursor.execute(sql, args)
+        result=cursor.fetchone()
+
+    return not bool(result.get('total'))
+
+def checkTitle(connection, title, field_id):
+    if title and len(title) <= title_max_length and checkTitleUnique(connection, title):
+        return title
+    return ''
+
+def checkMetaDesc(connection, meta_desc):
+    if meta_desc and len(meta_desc)<description_max_length:
+        return meta_desc
+    return ''
+
 
 def updatecontent(connection, logger, h1_title:str, meta_desc:str, alias:str):
     #Confirm from Shubham if we want to check size of meta desc.
-    h1_title = h1_title if h1_title and len(h1_title)<h1_max_length else ''
-    meta_desc = meta_desc if meta_desc and len(meta_desc)<description_max_length else ''
+    h1_title = checkH1(connection, h1_title)
+    meta_desc = checkMetaDesc(connection, meta_desc)
+
     set_values = []
     args = []
     if h1_title:

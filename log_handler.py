@@ -1,5 +1,5 @@
 import os
-import json
+import csv
 import configparser
 import logging
 from datetime import datetime
@@ -7,9 +7,9 @@ from datetime import datetime
 # Define the log directory and log files
 LOG_DIR = 'logs'
 LOG_FILES = {
-    'h1_tags': 'h1_tags_logs.json',
-    'descriptions': 'descriptions_logs.json',
-    'title': 'title_logs.json'
+    'h1_tags': 'h1_tags_logs.csv',
+    'descriptions': 'descriptions_logs.csv',
+    'title': 'title_logs.csv'
 }
 
 config = configparser.ConfigParser(interpolation=None)
@@ -22,60 +22,84 @@ description_max_length = int(config.get('max_length', 'description'))
 # Ensure the log directory exists
 os.makedirs(LOG_DIR, exist_ok=True)
 
-def log_error(data_dictionary, id):
+def log_error(data_dictionary, id, connection, field_id=29):
+    from helperfunctions import checkH1Unique, checkTitleUnique
     h1_tag = data_dictionary.get('H1')
     title = data_dictionary.get('Title')
     description = data_dictionary.get('Description')
 
     error_list = []
-    if len(h1_tag)>h1_max_length:
-        temp = {}
-        temp['file_path'] = os.path.join(LOG_DIR, LOG_FILES.get('h1_tags'))
-        temp['value'] = h1_tag
-        temp['id'] = id
-        temp['type'] = "H1 Tag"
+    if len(h1_tag) > h1_max_length:
+        temp = {
+            'file_path': os.path.join(LOG_DIR, LOG_FILES.get('h1_tags')),
+            'value': h1_tag,
+            'id': id,
+            'type': "H1 Tag",
+            'reason': "max length exceed"
+        }
+        error_list.append(temp)
+
+    if not checkH1Unique(connection, h1_tag):
+        temp = {
+            'file_path': os.path.join(LOG_DIR, LOG_FILES.get('h1_tags')),
+            'value': h1_tag,
+            'id': id,
+            'type': "H1 Tag",
+            'reason': "Not Unique"
+        }
         error_list.append(temp)
     
-    if len(title)>title_max_length:
-        temp = {}
-        temp['file_path'] = os.path.join(LOG_DIR, LOG_FILES.get('title'))
-        temp['value'] = title
-        temp['id'] = id
-        temp['type'] = "Title"
+    if len(title) > title_max_length:
+        temp = {
+            'file_path': os.path.join(LOG_DIR, LOG_FILES.get('title')),
+            'value': title,
+            'id': id,
+            'type': "Title",
+            'reason': "max length exceed"
+        }
+        error_list.append(temp)
+
+    if not checkTitleUnique(connection, title, field_id):
+        temp = {
+            'file_path': os.path.join(LOG_DIR, LOG_FILES.get('title')),
+            'value': title,
+            'id': id,
+            'type': "Title",
+            'reason': "Not Unique"
+        }
         error_list.append(temp)
     
-    if len(description)>description_max_length:
-        temp = {}
-        temp['file_path'] = os.path.join(LOG_DIR, LOG_FILES.get('descriptions'))
-        temp['value'] = description
-        temp['id'] = id
-        temp['type'] = "Description"
+    if len(description) > description_max_length:
+        temp = {
+            'file_path': os.path.join(LOG_DIR, LOG_FILES.get('descriptions')),
+            'value': description,
+            'id': id,
+            'type': "Description",
+            'reason': "max length exceed"
+        }
         error_list.append(temp)
 
     for error in error_list:
-        log_file_path = error.get('file_path')
+        log_file_path = os.path.join(LOG_DIR, "Operations_Logs.csv")
         log_entry = {
             'Timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'Info': f"Limit of {error['type']} with content ID {error['id']} exceeded.",
+            'Article_ID': error['id'],
+            'Error_Type': error['type'],
+            'Info': error['reason'],
             'Value': error['value']
         }
 
-        # Read existing logs
-        if os.path.exists(log_file_path):
-            with open(log_file_path, 'r') as log_file:
-                try:
-                    logs = json.load(log_file)
-                except json.JSONDecodeError:
-                    logs = []
-        else:
-            logs = []
+        # Write the log entry to the CSV file
+        file_exists = os.path.exists(log_file_path)
 
-        # Append the new log entry
-        logs.append(log_entry)
+        with open(log_file_path, 'a', newline='') as log_file:
+            fieldnames = ['Timestamp', 'Article_ID', 'Error_Type', 'Info', 'Value']
+            writer = csv.DictWriter(log_file, fieldnames=fieldnames)
 
-        # Write updated logs back to the file
-        with open(log_file_path, 'w') as log_file:
-            json.dump(logs, log_file, indent=4)
+            if not file_exists:
+                writer.writeheader()
+
+            writer.writerow(log_entry)
 
 def setup_logger(logger, log_file_path, log_type):
     # Create a file handler

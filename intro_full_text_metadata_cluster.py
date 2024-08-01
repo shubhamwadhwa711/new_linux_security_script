@@ -295,7 +295,7 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
             
             if metadata is not None:
                 dict_response = json.loads(metadata)
-                log_if_error(dict_response, record.get('id'))
+                log_if_error(dict_response, record.get('id'), connection)
 
                 # Extract tags from metadata
                 tags = dict_response.get("Tags", [])
