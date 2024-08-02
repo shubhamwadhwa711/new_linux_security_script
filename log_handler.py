@@ -32,6 +32,8 @@ def log_error(data_dictionary, record, connection, field_id=29):
     description = data_dictionary.get('Description')
     existing_h1_tag = record.get('title')
     fieldRecord = getFieldRecord(connection, field_id, id)
+    existing_title = fieldRecord.get('value') if fieldRecord else "Not Available"
+    log_iteration(h1_tag, existing_h1_tag, title, existing_title)
 
     errors = {}
     if existing_h1_tag == h1_tag:
@@ -60,7 +62,7 @@ def log_error(data_dictionary, record, connection, field_id=29):
             'Current H1': record.get('title'),
             'Proposed H1': h1_tag,
             'H1 Length': len(h1_tag),
-            'Current Title': fieldRecord.get('value') if fieldRecord else "Not Available",
+            'Current Title': existing_title,
             'Proposed Title': title,
             'Title Length': len(title),
             'Same H1 Re-Generation': errors.get('Existing Tag', 'pass'),
@@ -112,6 +114,7 @@ def setup_logger(logger, log_file_path, log_type):
 def log_info(message, log_type="info"):
     # Create a logger object
     log_file_path = os.path.join(LOG_DIR, LOG_FILE)
+    print(log_file_path)
     logger = logging.getLogger('log_info_logger')
     logger.setLevel(logging.DEBUG)  # Set to DEBUG to capture all levels of logging
 
@@ -126,3 +129,9 @@ def log_info(message, log_type="info"):
         logger.warning(message)
     else:
         logger.info(message)
+
+def log_iteration(h1_tag, existing_h1_tag, title, existing_title):
+    log_info(f"Current H1 Title: {existing_h1_tag}, length:{len(existing_h1_tag)}")
+    log_info(f"Proposed H1 Title: {h1_tag}, length:{len(h1_tag)}")
+    log_info(f"Current Title: {existing_title}, length:{len(existing_title)}")
+    log_info(f"Proposed Title: {title}, length:{len(title)}")
