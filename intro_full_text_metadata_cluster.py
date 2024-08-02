@@ -201,7 +201,7 @@ def extract_record_text(record:Dict[str,Any],logger:Logger,max_words:int,max_tok
         id=record.get('id')
         h1_title = record.get('title')
         metadesc = record.get('metadesc') 
-        title = fieldRecord.get('value', '')
+        title = fieldRecord.get('value', '') if fieldRecord else ""
         introtext=record.get("introtext")
         fulltext=record.get("fulltext")
         if len(fulltext)>0:
