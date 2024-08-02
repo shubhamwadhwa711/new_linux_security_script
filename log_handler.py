@@ -53,38 +53,36 @@ def log_error(data_dictionary, record, connection, field_id=29):
     
     if len(description) > description_max_length:
         errors['Description Length'] = "fail"
-        
-    if len(errors) > 0:
 
-        log_entry = {
-            'Timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-            'Article_ID': id,
-            'Current H1': record.get('title'),
-            'Proposed H1': h1_tag,
-            'H1 Length': len(h1_tag),
-            'Current Title': existing_title,
-            'Proposed Title': title,
-            'Title Length': len(title),
-            'Same H1 Re-Generation': errors.get('Existing Tag', 'pass'),
-            'H1 Max Length': errors.get('H1 Max Length', 'pass'),
-            'H1 Unique': errors.get('H1 Unique', 'pass'),
-            'Title Max Length': errors.get('Title Max Length', 'pass'),
-            'Title Unique': errors.get('Title Unique', 'pass'),
-            'Description Length Check': errors.get('Description Length', 'pass'),
-            'Description Length': len(description)
-        }
+    log_entry = {
+        'Timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'Article_ID': id,
+        'Current H1': record.get('title'),
+        'Proposed H1': h1_tag,
+        'H1 Length': len(h1_tag),
+        'Current Title': existing_title,
+        'Proposed Title': title,
+        'Title Length': len(title),
+        'Same H1 Re-Generation': errors.get('Existing Tag', 'pass'),
+        'H1 Max Length': errors.get('H1 Max Length', 'pass'),
+        'H1 Unique': errors.get('H1 Unique', 'pass'),
+        'Title Max Length': errors.get('Title Max Length', 'pass'),
+        'Title Unique': errors.get('Title Unique', 'pass'),
+        'Description Length Check': errors.get('Description Length', 'pass'),
+        'Description Length': len(description)
+    }
 
-        # Write the log entry to the CSV file
-        file_exists = os.path.exists(log_file_path)
+    # Write the log entry to the CSV file
+    file_exists = os.path.exists(log_file_path)
 
-        with open(log_file_path, 'a', newline='') as log_file:
-            fieldnames = ['Timestamp', 'Article_ID', 'Current H1', 'Proposed H1', 'H1 Length', 'Current Title', 'Proposed Title', 'Title Length', 'Same H1 Re-Generation', 'H1 Max Length', 'H1 Unique', 'Title Max Length', 'Title Unique', 'Description Length Check', 'Description Length']
-            writer = csv.DictWriter(log_file, fieldnames=fieldnames)
+    with open(log_file_path, 'a', newline='') as log_file:
+        fieldnames = ['Timestamp', 'Article_ID', 'Current H1', 'Proposed H1', 'H1 Length', 'Current Title', 'Proposed Title', 'Title Length', 'Same H1 Re-Generation', 'H1 Max Length', 'H1 Unique', 'Title Max Length', 'Title Unique', 'Description Length Check', 'Description Length']
+        writer = csv.DictWriter(log_file, fieldnames=fieldnames)
 
-            if not file_exists:
-                writer.writeheader()
+        if not file_exists:
+            writer.writeheader()
 
-            writer.writerow(log_entry)
+        writer.writerow(log_entry)
 
 def setup_logger(logger, log_file_path, log_type):
     # Create a file handler
