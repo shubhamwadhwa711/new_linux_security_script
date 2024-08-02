@@ -317,7 +317,7 @@ def get_model():
         print(e)
 
 
-def get_prompt(context, title:str=""):
+def get_prompt(context, h1_title:str="", metadesc:str="", title:str=""):
     get_prompt_key = config.get("chatgpt", "prompt_key")
     prompt_key = int(get_prompt_key) if get_prompt_key else 1
     try:

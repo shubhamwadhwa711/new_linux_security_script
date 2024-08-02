@@ -17,7 +17,7 @@ import pymysql.cursors
 from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
 from prompt import get_model , get_prompt
-from helperfunctions import getlogger, percentage, aggregate_into_few, process_text, clean_text, write_into_the_json_file, current_state, do_update, updatetags
+from helperfunctions import getlogger, percentage, aggregate_into_few, process_text, clean_text, write_into_the_json_file, current_state, do_update, updatetags, getFieldRecord
 from nltk.tokenize import word_tokenize
 import nltk
 from log_handler import log_error as log_if_error, log_info
@@ -148,7 +148,7 @@ async def process_text_async(client, context, logger):
         return None, None
 
 
-def process_context(contexts:list,logger:Logger, title:str, temperature=0):
+def process_context(contexts:list,logger:Logger, h1_title:str, metadesc:str, title:str, temperature=0):
     """ check the length if the contexts make a api call """
     metadata=[]
     n_tokens=[]
@@ -160,7 +160,7 @@ def process_context(contexts:list,logger:Logger, title:str, temperature=0):
                         # model = get_model(),    
                         temperature=0.1, 
                         response_format={ "type": "json_object" },
-                        messages=get_prompt(contexts[0], title=title),
+                        messages=get_prompt(contexts[0], h1_title=h1_title, metadesc=metadesc, title=title),
                         n=1,
                         stop=None,
                         max_tokens=1500,
@@ -184,28 +184,30 @@ def process_context(contexts:list,logger:Logger, title:str, temperature=0):
     return pd.DataFrame(data={'text':metadata,'n_tokens':n_tokens})
 
 
-def process_df(df:DataFrame,logger:Logger, title:str):
+def process_df(df:DataFrame,logger:Logger, h1_title:str, metadesc:str, title:str):
     """ Aggredate the data into list elements"""
     contexts = aggregate_into_few(df=df,logger=logger)
-    new_df = process_context(contexts=contexts,logger=logger, title=title)
+    new_df = process_context(contexts=contexts,logger=logger, h1_title=h1_title, metadesc=metadesc, title=title)
     if len(new_df) > 1:
-        return process_df(new_df,logger, title)
+        return process_df(new_df,logger, h1_title=h1_title, metadesc=metadesc, title=title)
     return new_df
 
 
 
 
-def extract_record_text(record:Dict[str,Any],logger:Logger,max_words:int,max_tokens:int):
+def extract_record_text(record:Dict[str,Any],logger:Logger,max_words:int,max_tokens:int, fieldRecord:Dict[str, Any]):
     """ process single  record  and extract the id introtext and fulltext .."""
     try:
         id=record.get('id')
-        title = record.get('title')
+        h1_title = record.get('title')
+        metadesc = record.get('metadesc') 
+        title = fieldRecord.get('value', '')
         introtext=record.get("introtext")
         fulltext=record.get("fulltext")
         if len(fulltext)>0:
             text=clean_text(fulltext=fulltext,logger=logger, max_words=max_words)
             df=process_text(text=text,logger=logger,max_tokens=max_tokens)
-            df=process_df(df=df,logger=logger, title=title)
+            df=process_df(df=df,logger=logger, h1_title=h1_title, metadesc=metadesc, title=title)
             log_info(f" Successfully processed  the record ID:{id}")
             return  str(df["text"][0]) 
         else:
@@ -291,11 +293,12 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
         try:
             log_info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
             log_info(f'ALIAS of Article: {record.get("alias")}')
-            metadata = extract_record_text(record=record, logger=logger, max_words=max_words, max_tokens=max_tokens)
+            fieldRecord = getFieldRecord(connection, 29, record.get('id'))
+            metadata = extract_record_text(record=record, logger=logger, max_words=max_words, max_tokens=max_tokens, fieldRecord=fieldRecord)
             
             if metadata is not None:
                 dict_response = json.loads(metadata)
-                log_if_error(dict_response, record.get('id'), connection)
+                log_if_error(dict_response, record, connection)
 
                 # Extract tags from metadata
                 tags = dict_response.get("Tags", [])

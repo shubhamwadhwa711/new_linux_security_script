@@ -306,17 +306,19 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
     except Exception as e:
         log_info(json.dumps({"id":content_table_id,"message":str(e)}))
 
-def updatefieldvalue(connection, logger, title, id, field_id=29):
-    # Check if title is valid
-    title = checkTitle(connection, title, field_id)
-    
-    # Query to check if the record exists
+def getFieldRecord(connection, field_id, id):
     sql = f"SELECT * FROM {db_prefix}fields_values WHERE field_id = %s AND item_id = %s;"
     args = (field_id, id)
-    
+
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         record = cursor.fetchone()
+    return record
+
+def updatefieldvalue(connection, logger, title, id, field_id=29):
+    # Check if title is valid
+    title = checkTitle(connection, title, field_id)
+    record = getFieldRecord(connection, field_id, id)
 
     # Prepare SQL for update or insert
     if record:
