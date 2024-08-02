@@ -6,7 +6,7 @@ config = configparser.ConfigParser(interpolation=None)
 config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
 
-def promts_dict(key, context, title):
+def promts_dict(key, context, h1_title, metadesc, title):
     prompts = {
         1: f""" Instructions:
             1. Analyze the provided text to identify the most relevant Meta keywords for SEO optimization.
@@ -277,6 +277,7 @@ Title Tag: Craft a unique and compelling title tag no longer than 7 words or 60 
 
 H1 Tag: Provide a descriptive H1 tag that offers a more detailed overview of the article.  The H1 tag should differ slightly from the title tag, providing additional context while maintaining specificity.
 
+Title tag must not be the same as "{h1_title}" or "{title}"
 
 ###
 Given Context: {context}
@@ -322,7 +323,7 @@ def get_prompt(context, h1_title:str="", metadesc:str="", title:str=""):
     prompt_key = int(get_prompt_key) if get_prompt_key else 1
     try:
         # dave print("Prompt key used  : ", prompt_key)
-        prompt = promts_dict(prompt_key, context, title)
+        prompt = promts_dict(prompt_key, context, h1_title, metadesc, title)
         return prompt
     except Exception as e:
         print(e)
