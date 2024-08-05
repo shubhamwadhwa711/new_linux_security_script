@@ -373,7 +373,7 @@ def checkTitleUnique(connection, title, field_id):
     return not bool(result.get('total'))
 
 def checkTitle(connection, title, field_id):
-    if title and len(title) <= title_max_length and checkTitleUnique(connection, title):
+    if title and len(title) <= title_max_length and checkTitleUnique(connection, title, field_id):
         return title
     return ''
 

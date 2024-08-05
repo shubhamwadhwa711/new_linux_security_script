@@ -112,7 +112,6 @@ def setup_logger(logger, log_file_path, log_type):
 def log_info(message, log_type="info"):
     # Create a logger object
     log_file_path = os.path.join(LOG_DIR, LOG_FILE)
-    print(log_file_path)
     logger = logging.getLogger('log_info_logger')
     logger.setLevel(logging.DEBUG)  # Set to DEBUG to capture all levels of logging
 
