@@ -215,8 +215,28 @@ def get_path_from_cateories_table(connection,catid):
 
 
 def get_record(connection,alias):
-    sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM {db_prefix}easyfrontendseo as c WHERE `url` LIKE '%{alias}%'"
-
+    # sql=f"SELECT c.id,c.title,c.url,c.opengraph,c.twitterCards FROM {db_prefix}easyfrontendseo as c WHERE `url` LIKE '%{alias}%'"
+    sql = """
+        SELECT 
+            c.id,
+            c.title,
+            c.url,
+            c.opengraph,
+            c.twitterCards,
+            LOCATE('{alias}', c.url) AS position_score,
+            CASE 
+                WHEN c.url = '{alias}' THEN 1
+                ELSE 0
+            END AS exact_match_bonus,
+            (LOCATE('{alias}', c.url) * 1000) - exact_match_bonus AS final_score
+        FROM 
+            xu5gc_easyfrontendseo AS c
+        WHERE 
+            c.url LIKE '%{alias}%'
+        ORDER BY 
+            final_score ASC
+        LIMIT 1;
+    """
     with connection.cursor() as cursor:
         cursor.execute(sql)
         record=cursor.fetchone()
@@ -292,7 +312,7 @@ def do_update(connection: Connection, record:dict, dict_response:dict, base_url:
         record=get_record(connection,alias)
         if h1_title != title:
             updatecontent(connection, logger, h1_title, description, alias)
-            updatefieldvalue(connection, logger, title, record.get("id"))
+            updatefieldvalue(connection, logger, title, content_table_id)
             updateeasyfrontendseo(record,description,base_url,image_tag, metadata,content_table_id,content_table_title,connection,catid,alias,logger)
         if tags:
             # excluded_catids = [87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219]
@@ -439,7 +459,7 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
         sql= sql=f"INSERT INTO {db_prefix}easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
         args = [
             url, 
-            record.get("title"), 
+            content_table_title, 
             dataset.get("description"),
             dataset.get("keywords"),
             "",
