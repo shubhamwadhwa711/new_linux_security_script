@@ -228,7 +228,11 @@ def get_record(connection,alias):
                 WHEN c.url = '{alias}' THEN 1
                 ELSE 0
             END AS exact_match_bonus,
-            (LOCATE('{alias}', c.url) * 1000) - exact_match_bonus AS final_score
+            (LOCATE('{alias}', c.url) * 1000) - 
+            CASE 
+                WHEN c.url = '{alias}' THEN 1
+                ELSE 0
+            END AS final_score
         FROM 
             xu5gc_easyfrontendseo AS c
         WHERE 
@@ -236,6 +240,7 @@ def get_record(connection,alias):
         ORDER BY 
             final_score ASC
         LIMIT 1;
+
     """
     with connection.cursor() as cursor:
         cursor.execute(sql)
