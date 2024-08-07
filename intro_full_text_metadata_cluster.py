@@ -83,7 +83,7 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
     if id:
         base_sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid FROM `{db_prefix}content` AS c"
     elif current_id != 0:
-        limit = limit - counter
+        offset=0
         base_sql = f"""
             SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid as total FROM `{db_prefix}content` AS c
             LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
@@ -300,6 +300,8 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
     global global_normalized_tags_list  # Use the global normalized tags list
     for record in result:
         counter += 1
+        current_id = record.get("id")
+        current_state(store_state_file, id=current_id, counter=counter, mode="w")
         try:
             log_info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
             log_info(f'ALIAS of Article: {record.get("alias")}')
@@ -362,8 +364,6 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
                     if succeed:
                         pass  # Successful update
         except KeyboardInterrupt as e:
-            current_id = record.get("id")
-            current_state(store_state_file, id=current_id, counter=counter, mode="w")
             log_info(f"State saved till Record ID: {record.get('id')}", log_type="warn")
             raise e
         except Exception as e:
