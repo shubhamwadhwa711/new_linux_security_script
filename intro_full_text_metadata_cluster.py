@@ -76,12 +76,22 @@ def get_total_rows(config,connection):
     
         return result
 
-def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id:int,id:int, gte_date:str, id_desc:bool): 
+def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id:int,id:int, gte_date:str, id_desc:bool, counter:str): 
     # global max_run_count
     """ To get the records sequentially based  to limit """
   # Base SQL query
     if id:
         base_sql = f"SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid FROM `{db_prefix}content` AS c"
+    elif current_id != 0:
+        limit = limit - counter
+        base_sql = f"""
+            SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid as total FROM `{db_prefix}content` AS c
+            LEFT JOIN `{db_prefix}categories` AS cat ON c.catid = cat.id
+            WHERE c.`access` = 1
+            AND cat.published = 1
+            AND c.catid NOT IN (87, 89, 91, 98, 99, 100, 172, 197, 198, 199, 200, 202, 203, 217, 219)
+            AND c.id >= {current_id}
+        """
     else:
         base_sql = f"""
         SELECT c.id, c.introtext, c.fulltext, c.alias, c.images, c.title, c.catid as total FROM `{db_prefix}content` AS c
@@ -393,10 +403,9 @@ def main(id: Optional[int] = 0,commit: bool = False,):
    
     log_info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
-    counter = 0
     while True:
         try:
-            result=get_limit_rows(connection=connection, limit=limit,offset=offset,current_id=current_id,id=id,gte_date=gte_date, id_desc=id_desc)
+            result=get_limit_rows(connection=connection, limit=limit,offset=offset,current_id=current_id,id=id,gte_date=gte_date, id_desc=id_desc, counter=counter)
             if  not result:
                 log_info(f'All records have been processed')
                 break
