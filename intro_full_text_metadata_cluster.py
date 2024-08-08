@@ -137,7 +137,6 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
 
     # Combine the parts to form the final SQL query
     sql = base_sql + where_clause + limit_offset_clause
-    print(sql)
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         result = cursor.fetchall()

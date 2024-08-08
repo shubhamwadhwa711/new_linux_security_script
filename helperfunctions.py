@@ -1,4 +1,5 @@
 import logging
+import hashlib
 from logging import Logger
 from copy import copy
 from pandas import DataFrame
@@ -66,6 +67,10 @@ def getlogger(name, level=logging.INFO):
     logger.addHandler(console)
     return logger
 
+
+def get_sha1_hash(data):
+    result = hashlib.sha224(data.encode()) 
+    return result.hexdigest()
 
 
 def split_into_many(text: str, max_tokens: int = 100) -> list[str]:
@@ -204,7 +209,9 @@ def percentage(number, total):
     return to_str
 
 def get_path_from_cateories_table(connection,catid):
-    sql=f"SELECT c.path FROM {db_prefix}categories` as c WHERE `id`={catid}"
+    if not catid:
+        return None
+    sql=f"SELECT c.path FROM {db_prefix}categories as c WHERE id={catid}"
     with connection.cursor() as cursor:
         cursor.execute(sql)
         record=cursor.fetchone()
@@ -359,7 +366,6 @@ def updatefieldvalue(connection, logger, title, id, field_id=29):
             VALUES (%s, %s, %s);
         """
         args = (title, id, field_id)
-
     # Execute the SQL command
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
@@ -461,7 +467,8 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
         else:
             url=alias
         dataset['opengraph'], dataset['twitterCards'] = get_prepare_json_for_new_entry(content_table_title,description,url,base_url,image_tag)
-        sql= sql=f"INSERT INTO {db_prefix}easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        urlHash = get_sha1_hash(alias)
+        sql= sql=f"INSERT INTO {db_prefix}easyfrontendseo (url, title, description, keywords, generator,robots, openGraph, twitterCards, canonicalUrl,thumbnail, urlHash) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
         args = [
             url, 
             content_table_title, 
@@ -472,7 +479,8 @@ def updateeasyfrontendseo(record,description,base_url,image_tag, metadata,conten
             dataset.get('opengraph'),
             dataset['twitterCards'],
             f"{base_url}/{url}",
-            ""
+            "",
+            urlHash
         ]
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
