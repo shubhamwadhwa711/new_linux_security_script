@@ -124,19 +124,20 @@ def get_limit_rows(connection:pymysql.Connection,limit:int,offset:int,current_id
         where_clause = ""
 
     # Construct ORDER BY clause
-    order_by_clause = " ORDER BY c.id DESC" if id_desc else ""
+    # order_by_clause = " ORDER BY c.id DESC" if id_desc else ""
 
     # Construct LIMIT and OFFSET clause
     limit_offset_clause = ""
-    if not id and limit is not None:
+    if not id and limit != 0:
         limit_offset_clause += " LIMIT %s"
         args.append(limit)
-    if not id and offset is not None:
+    if not id and offset != 0:
         limit_offset_clause += " OFFSET %s"
         args.append(offset)
 
     # Combine the parts to form the final SQL query
-    sql = base_sql + where_clause + order_by_clause + limit_offset_clause
+    sql = base_sql + where_clause + limit_offset_clause
+    print(sql)
     with connection.cursor() as cursor:
         cursor.execute(sql, args)
         result = cursor.fetchall()
@@ -300,8 +301,6 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
     global global_normalized_tags_list  # Use the global normalized tags list
     for record in result:
         counter += 1
-        current_id = record.get("id")
-        current_state(store_state_file, id=current_id, counter=counter, mode="w")
         try:
             log_info(f'{"*"*20} Processing ID: {record.get("id")} {"*"*20} ({counter}/{total} - {percentage(counter, total)})')
             log_info(f'ALIAS of Article: {record.get("alias")}')
@@ -363,6 +362,8 @@ def process_records(result: list, logger: Logger, total: int, counter: int, max_
                     succeed = do_update(connection=connection, record=record, dict_response=dict_response, base_url=base_url, logger=logger)
                     if succeed:
                         pass  # Successful update
+                current_id = record.get("id")
+                current_state(store_state_file, id=current_id, counter=counter, mode="w")
         except KeyboardInterrupt as e:
             log_info(f"State saved till Record ID: {record.get('id')}", log_type="warn")
             raise e
@@ -381,10 +382,10 @@ def main(id: Optional[int] = 0,commit: bool = False,):
     store_state_file = config.get("metadata-01", "store_state_file")
     logger=getlogger(name=log_file_name)
     json_file=config.get('metadata-01',"json_file")
-    limit:int=config.getint("metadata-01","limit")
-    offset:int=config.getint("metadata-01","offset")
+    limit:int=config.getint("metadata-01","limit", fallback=0)
+    offset:int=config.getint("metadata-01","offset", fallback=0)
     id_desc:bool=bool(config.getint("metadata-01","id_desc"))
-    gte_date:int=config.get("metadata-01","gte_date")
+    gte_date:int=config.get("metadata-01","gte_date",fallback=None)
     current_id:int=config.getint("metadata-01","current_id")
     counter:int=config.getint("metadata-01","counter")
     max_words:int=config.getint("metadata-01","max_words")
@@ -396,16 +397,18 @@ def main(id: Optional[int] = 0,commit: bool = False,):
         total_records = 1
     else:
         total_records=get_total_rows(config,connection).get('total')
-    if limit < total_records:
-        total_records = limit
+    # if limit < total_records:
+    #     total_records = limit
     # max_records  = config.get("metadata-01","max_record_run")
     # max_records_runs = int(max_records) if max_records else total_records
    
     log_info(f'{"="*20} Total records : {total_records} {"="*20}')
     current_id, counter = current_state(store_state_file, mode="r")
+    counter = 0
     while True:
         try:
             result=get_limit_rows(connection=connection, limit=limit,offset=offset,current_id=current_id,id=id,gte_date=gte_date, id_desc=id_desc, counter=counter)
+            total_records = len(result)
             if  not result:
                 log_info(f'All records have been processed')
                 break
